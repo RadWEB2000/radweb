@@ -17,8 +17,30 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "app/*":["./app/*"],
+      "assets/*":["./src/assets/*"],
+      "components/*":["./src/components/*"],
+      "configs/*":["./src/lib/configs/*"],
+      "context/*":["./src/context/*"],
+      "css/*":["./src/styles/*"],
+      "data/*":["./src/data/*"],
+      "footer/*":["./src/components/Layout/Footer/*"],
+      "functions/*":["./src/lib/functions/*"],
+      "hooks/*":["./src/lib/hooks/*"],
+      "img/*":["./src/assets/images/*"],
+      "l-footer/*":["./src/components/Layout/Footer/*"],
+      "l-nav/*":["./src/components/Layout/Navigation/*"],
+      "l-seo/*":["./src/components/Layout/Seo/*"],
+      "layout/*":["./src/components/Layout/*"],
+      "lib/*":["./src/lib/*"],
+      "movies/*":["./src/assets/movies/*"],
+      "public/*": ["./public/*"],
+      "src/*":["./src/*"],
+      "ts/*":["./src/types/*"],
+      "utils/*":["./src/components/Utils/*"],
+      "views/*":["./src/components/Views/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
