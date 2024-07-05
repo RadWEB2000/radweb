@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "css/Global.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pl">
+      <head>
+        <title>RadWEB</title>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );

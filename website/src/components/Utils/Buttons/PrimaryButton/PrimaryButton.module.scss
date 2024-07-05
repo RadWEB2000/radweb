@@ -1,0 +1,40 @@
+@import "../../../../styles/Animations.scss";
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,center, row nowrap, .4rem, null);
+    background-color: $white;
+    border-radius: .33rem;
+    color:$black;
+    padding: 0.2rem 1.27rem;
+    height: 3.72rem;
+    transition:.12s linear background-color;
+
+    &:focus-within,
+    &:hover {
+        background-color: color-mix(in srgb, $seasalt 80%, $gray-cadet 20%);
+    }
+}
+
+
+.label {
+    @include font(2rem, 500, 1, null, null, center);
+}
+.icon {
+    @include flex(center,center);
+    @include size(2.75rem,2.75rem);
+    font-size: 2rem;
+}
+
+@media only screen {
+    @media (min-width:525px){
+        .wrapper {
+            height: 4.2rem;
+        }
+        .icon {
+            @include size(3.75rem,3.75rem);
+            font-size: 3.2rem;
+        }
+    }
+}

@@ -21,8 +21,9 @@
     "paths": {
       "app/*":["./app/*"],
       "assets/*":["./src/assets/*"],
+      "buttons/*":["./src/components/Utils/Buttons/*"],
       "components/*":["./src/components/*"],
-      "configs/*":["./src/lib/configs/*"],
+      "configs/*":["./src/configs/*"],
       "context/*":["./src/context/*"],
       "css/*":["./src/styles/*"],
       "data/*":["./src/data/*"],
@@ -41,6 +42,7 @@
       "ts/*":["./src/types/*"],
       "utils/*":["./src/components/Utils/*"],
       "views/*":["./src/components/Views/*"],
+      "v-home/*":["./src/components/Views/HomeView/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
