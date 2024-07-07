@@ -1,58 +1,14 @@
 import { Designation, Hero, HowWeWork } from "v-home/index"
 import wordpress from "configs/wordpress";
-import { homePageQuery, iHomePageResult, iHomePageQuery } from 'data/homePageQuery';
-
+import {query, IResponse,IResult} from "data/queries/home_page"
 
 
 
 export default async function HomePage(){
 
-  const {designation,hero,howWeWork, aboutUs}:iHomePageResult = await fetch(`${process.env.WP_ENDPOINT}`, 
-    {
-      ...wordpress({query:homePageQuery})
-    }
-  )
-  .then(res => res.json())
-  .then( ({data: { page:{homePage: {aboutUs,designation,hero,howWeWork}}, teammates}}:iHomePageQuery) => {
-    return {
-      hero:{
-          title:hero.title,
-          slogan:hero.slogan,
-          image:hero.image.node,
-          buttons: hero.buttons.map(({button}) => {
-            return {
-              label:button.title,
-              uri:button.url
-            }
-          })
-      },
-      designation: {
-        content:designation.content,
-        image:designation.image.node
-      },
-      howWeWork: {
-        cards:howWeWork.cards,
-        content:howWeWork.content,
-        title:howWeWork.title
-      },
-      aboutUs: {
-        button:aboutUs.button,
-        cards: teammates.nodes.map(({featuredImage,teammatePage:{fullname,industry,uri}}) => {
-          return {
-            image:featuredImage.node,
-            fullname: fullname,
-            industry:industry,
-            uri:uri
-          }
-        }),
-        content:aboutUs.content,
-        title:aboutUs.title
-      }
-    }
-  });
-
-  console.log(aboutUs)
-
+  const connection = await fetch(`${process.env.WP_ENDPOINT}`, {
+    ...wordpress({query:query})
+  })
   
   return (
     <>
