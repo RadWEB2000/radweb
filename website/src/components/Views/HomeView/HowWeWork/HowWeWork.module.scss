@@ -1,0 +1,101 @@
+@import "../../../../styles/Animations.scss";
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+@keyframes show_wrapper {
+    from {
+        background-color: transparent;
+        opacity: 0;
+    }
+    to {
+        background-color: $onyx;
+        opacity: 1;
+    }
+}
+
+.wrapper {
+    animation: show_wrapper linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    background-color: $onyx;
+    border-radius: 3.4rem;
+    color:$white;
+    display: grid;
+    gap:1.99454rem;
+    // grid-auto-flow: column;
+    // grid-template-columns: repeat(2,1fr);
+    margin:0 auto 1vh;
+    padding:5vh 7vw;
+    width:clamp(5rem, 1240rem, 95vw);
+}
+
+.box {
+    @include flex(flex-start, flex-start, column, null, 1rem);
+    animation: show_x_left linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.title {
+    @include font(clamp(5rem, 7.2vw, 9.2rem), 700, 1.05, null, null, start);
+    text-wrap:balance;
+}
+
+.content {
+    @include font(clamp(1.72rem, 1.9vw, 2.1rem), 500, 1.7, null, null, start);
+    color:color-mix(in srgb, $gray-cadet 40%, $seasalt 60%);
+    max-width: 50ch;
+}
+
+.cards {
+    @include flex(flex-start, flex-start, column, null, 1.99rem);
+    margin: 0 auto ;
+    width:clamp(5rem, 57rem,97%);
+}
+
+.card {
+    @include flex(flex-start, flex-start, column, null, .39rem);
+    animation: show_x_right linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    width: 100%;
+
+}
+
+.card__title {
+    @include font(clamp(2rem, 2.3vw,2.5rem),600,1,null,null,start);
+    padding: 0.23rem 0.51rem;
+
+}
+
+.card__line {
+    @include size(1.25px, 100%);
+    background-color: $white;
+    border-radius: 1rem;
+    display: block;
+}
+
+.card__content {
+    @include font(clamp(1.58rem, 1.67vw, 1.8rem), 300, 1.75, null, null, start);
+    padding: 0.23rem 0.51rem;
+    opacity: 0.7;
+}
+
+@media only screen {
+    @media (min-width:650px){
+        .wrapper {
+        
+            grid-template-columns: repeat(2,1fr);
+    padding:9.344vh 7vw;
+           
+        }
+        .cards {
+            margin: 10rem auto 0;
+        }
+    }
+    @media (min-width:1200px){
+        .title {
+            font-size: clamp(7.22rem, 9.7vw, 12rem);
+        }
+    }
+}

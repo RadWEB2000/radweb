@@ -1,4 +1,4 @@
-import { Designation, Hero } from "v-home/index"
+import { Designation, Hero, HowWeWork } from "v-home/index"
 import wordpress from "configs/wordpress";
 import { homePageQuery, iHomePageResult, iHomePageQuery } from 'data/homePageQuery';
 
@@ -7,13 +7,13 @@ import { homePageQuery, iHomePageResult, iHomePageQuery } from 'data/homePageQue
 
 export default async function HomePage(){
 
-  const {designation,hero,howWeWork}:iHomePageResult = await fetch(`${process.env.WP_ENDPOINT}`, 
+  const {designation,hero,howWeWork, aboutUs}:iHomePageResult = await fetch(`${process.env.WP_ENDPOINT}`, 
     {
       ...wordpress({query:homePageQuery})
     }
   )
   .then(res => res.json())
-  .then( ({data:{page:{homePage:{hero,designation,howWeWork}}}}:iHomePageQuery) => {
+  .then( ({data: { page:{homePage: {aboutUs,designation,hero,howWeWork}}, teammates}}:iHomePageQuery) => {
     return {
       hero:{
           title:hero.title,
@@ -34,6 +34,17 @@ export default async function HomePage(){
         cards:howWeWork.cards,
         content:howWeWork.content,
         title:howWeWork.title
+      },
+      aboutUs: {
+        button:aboutUs.button,
+        cards: teammates.nodes.map(({featuredImage,teammatePage:{fullname,industry}}) => {
+          return {
+            image:featuredImage.node,
+            fullname: fullname,
+            industry:industry
+          }
+        }),
+        title:aboutUs.title
       }
     }
   });
@@ -55,6 +66,11 @@ export default async function HomePage(){
         <Designation
           content={designation.content}
           image={designation.image}
+        />
+        <HowWeWork
+          cards={howWeWork.cards}
+          content={howWeWork.content}
+          title={howWeWork.title}
         />
       </main>
     </>

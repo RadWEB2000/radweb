@@ -39,6 +39,32 @@ query HomePage {
           content
         }
       }
+      aboutUs {
+        title
+        content
+        button {
+          url
+          title
+        }
+      }
+    }
+  }
+  teammates(first: 3) {
+    nodes {
+      teammatePage {
+        fullname {
+          firstname
+          lastname
+        }
+        industry
+      }
+      featuredImage {
+        node {
+          altText
+          sourceUrl(size: POST_THUMBNAIL)
+          title
+        }
+      }
     }
   }
 }
@@ -75,7 +101,29 @@ export interface iHomePageQuery {
                         content:string;
                     }[]
                 }
+                aboutUs : {
+                  title:string;
+                  content:string;
+                  button:{
+                    title:string;
+                    url:string;
+                  }
+                }
             };
+        };
+        teammates: {
+          nodes :{
+            teammatePage : {
+                fullname:{
+                  firstname:string;
+                  lastname:string;
+                };
+                industry:string;
+            };
+            featuredImage :{ 
+              node:tImage;
+            }
+          }[]
         }
     }
 }
@@ -101,5 +149,21 @@ export interface iHomePageResult  {
             title:string;
             content:string;
         }[];
+    }
+    aboutUs: {
+      title:string;
+      content:string;
+      button: {
+        title:string;
+        url:string;
+      };
+      cards : {
+        image:tImage;
+        fullname: {
+          firstname:string;
+          lastname:string;
+        }
+        industry:string;
+      }[];
     }
 }

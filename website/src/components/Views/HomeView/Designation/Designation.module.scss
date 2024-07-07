@@ -14,7 +14,7 @@
 .content__box {
     animation: show_x_left linear forwards;
     animation-timeline: view();
-    animation-range: entry 0% entry 40%;
+    animation-range: entry 0% cover 40%;
 }
 
 .content {
@@ -31,7 +31,7 @@
     @include size(60vh,100%);
     animation: show_x_right linear forwards;
     animation-timeline: view();
-    animation-range: entry 0% entry 40%;
+    animation-range: entry 0% cover 40%;
     display: block;
     margin-top: 5rem;
     position: relative;
