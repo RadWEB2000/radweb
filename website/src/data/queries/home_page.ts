@@ -58,6 +58,7 @@ query HomePage {
         }
         industry
       }
+      uri
       featuredImage {
         node {
           altText
@@ -104,6 +105,7 @@ export interface iHomePageQuery {
                 aboutUs : {
                   title:string;
                   content:string;
+                  uri:string;
                   button:{
                     title:string;
                     url:string;
@@ -119,7 +121,8 @@ export interface iHomePageQuery {
                   lastname:string;
                 };
                 industry:string;
-            };
+              };
+            uri:string;
             featuredImage :{ 
               node:tImage;
             }
@@ -164,6 +167,7 @@ export interface iHomePageResult  {
           lastname:string;
         }
         industry:string;
+        uri:string;
       }[];
     }
 }

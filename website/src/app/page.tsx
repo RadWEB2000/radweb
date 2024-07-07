@@ -37,17 +37,21 @@ export default async function HomePage(){
       },
       aboutUs: {
         button:aboutUs.button,
-        cards: teammates.nodes.map(({featuredImage,teammatePage:{fullname,industry}}) => {
+        cards: teammates.nodes.map(({featuredImage,teammatePage:{fullname,industry,uri}}) => {
           return {
             image:featuredImage.node,
             fullname: fullname,
-            industry:industry
+            industry:industry,
+            uri:uri
           }
         }),
+        content:aboutUs.content,
         title:aboutUs.title
       }
     }
   });
+
+  console.log(aboutUs)
 
   
   return (
