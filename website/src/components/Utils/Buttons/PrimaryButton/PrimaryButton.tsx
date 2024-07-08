@@ -1,18 +1,17 @@
 import Link from "next/link";
-import { tLink } from 'ts/types';
+import { tButton } from 'ts/types';
 import { AiOutlineSwapRight as Arrow } from "react-icons/ai";
 import css from "buttons/PrimaryButton/PrimaryButton.module.scss";
 
-export default function PrimaryButton({label,uri,hrefLang}:tLink){
+export default function PrimaryButton({title,url}:tButton){
     return (
         <Link
             className={css.wrapper}
-            href={uri}
-            hrefLang={hrefLang}
+            href={url}
         >
             <span
                 className={css.label}
-                dangerouslySetInnerHTML={{__html:label}}
+                dangerouslySetInnerHTML={{__html:title}}
             />
             <i
                 className={css.icon}

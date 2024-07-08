@@ -1,0 +1,61 @@
+@import "../../../../../styles/Animations.scss";
+@import "../../../../../styles/Mixins.scss";
+@import "../../../../../styles/Variables.scss";
+
+.wrapper{
+    @include size(55rem, 97.6%);
+    animation: show_x_right linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-areas: "layer";
+    overflow: hidden;
+    position: relative;
+}
+
+.image__wrapper {
+    @include size(100%,100%);
+    grid-area: layer;
+    position: absolute;
+    z-index: 0;
+}
+
+.image {
+    object-fit: cover;
+    object-position: center;
+}
+
+.box {
+    @include flex(flex-start,flex-end,column,null, 1rem);
+    @include size(100%,100%);
+    grid-area: layer;
+    background-image: linear-gradient(to top right, rgba($black,.75), rgba($seasalt-dark,.5));
+    padding:2.5rem;
+    z-index: 1;
+}
+
+.title {
+    @include font(clamp(4rem,5.2vw,7.2rem), 600, 1.2, null, null, start);
+}
+
+.excerpt {
+    @include font(clamp(1.45rem, 1.67rem, 1.72rem), 400, 1.6, null, null, start);
+    max-width: 70ch;
+}
+
+@media only screen {
+    @media (min-width:955px){
+        .wrapper{
+            height: 60rem;
+        }
+        .box {
+            padding:5rem;
+        }
+    }
+    @media (min-width:1200px){
+        .wrapper {
+            height: 72rem;
+        }
+    }
+}

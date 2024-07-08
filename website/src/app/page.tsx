@@ -1,4 +1,4 @@
-import { Designation, Hero, HowWeWork } from "v-home/index"
+import { AboutUs, Designation, Hero, HowWeWork, Services } from "v-home/index"
 import wordpress from "configs/wordpress";
 import {query, IResponse,IResult} from "data/queries/home_page"
 
@@ -6,31 +6,95 @@ import {query, IResponse,IResult} from "data/queries/home_page"
 
 export default async function HomePage(){
 
-  const connection = await fetch(`${process.env.WP_ENDPOINT}`, {
+  const connection:IResult = await fetch(`${process.env.WP_ENDPOINT}`, {
     ...wordpress({query:query})
   })
-  
+  .then(response => response.json())
+  .then((results:IResponse) => {
+    const {data: {page: {homePage: {aboutUs,designation,hero,howWeWork,services}}, teammates, services:servicesCards}} = results;
+    return {
+      aboutUs: {
+        button:aboutUs.button,
+        content:aboutUs.content,
+        title:aboutUs.title,
+        cards:teammates.nodes.map(({featuredImage,teammatePage:{fullname,industry},uri}) => {
+            return {
+              image:featuredImage.node,
+              fullname,
+              industry,
+              uri
+            }
+        })
+      },
+      designation: {
+        content:designation.content,
+        image:designation.image.node
+      },
+      hero:{
+        buttons:hero.buttons.map(({button:{title,url}}) => {
+          return {
+            title,
+            url
+          }
+        }),
+        image:hero.image.node,
+        slogan:hero.slogan,
+        title:hero.title
+      },
+      howWeWork: {
+        cards:howWeWork.cards.map(({title,content}) => {
+            return {
+              content,
+              title
+            }
+        }),
+        content:howWeWork.content,
+        title:howWeWork.title
+      },
+      services: {
+        button:services.button,
+        buttonCard:services.button_card,
+        cards:servicesCards.nodes.map(({excerpt,featuredImage,title,uri}) => {
+            return {
+              title,
+              uri,
+              image:featuredImage.node,
+              excerpt
+            }
+        }),
+        content:services.content,
+        title:services.title
+      }
+    }
+  })
+  console.log("services", connection.services)
   return (
     <>
       <Hero
         image={{
-          altText:hero.image.altText,
-          sourceUrl:hero.image.sourceUrl,
-          title:hero.image.title
+          altText:connection.hero.image.altText,
+          sourceUrl:connection.hero.image.sourceUrl,
+          title:connection.hero.image.title
         }}
-        slogan={hero.slogan}
-        title={hero.title}
-        buttons={hero.buttons}
+        slogan={connection.hero.slogan}
+        title={connection.hero.title}
+        buttons={connection.hero.buttons}
       />
       <main>
         <Designation
-          content={designation.content}
-          image={designation.image}
+          content={connection.designation.content}
+          image={connection.designation.image}
         />
         <HowWeWork
-          cards={howWeWork.cards}
-          content={howWeWork.content}
-          title={howWeWork.title}
+          cards={connection.howWeWork.cards}
+          content={connection.howWeWork.content}
+          title={connection.howWeWork.title}
+        />
+        <AboutUs
+          {...connection.aboutUs}
+        />
+        <Services
+          {...connection.services}
         />
       </main>
     </>

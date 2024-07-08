@@ -1,5 +1,5 @@
-import {tImage} from "../../types/types"
-// import {tImage} from "ts/types"
+import {tImage, tButton} from "ts/types"
+import {tAboutUs} from "v-home/AboutUs/AboutUs.models"
 
 export const query:string = `
   query HomePage {
@@ -48,6 +48,15 @@ export const query:string = `
             title
           }
         }
+        services {
+          title
+          content
+          button_card
+          button {
+            url
+            title
+          }
+        }
       }
     }
     teammates(first: 3) {
@@ -56,7 +65,7 @@ export const query:string = `
         featuredImage {
           node {
             altText
-            sourceUrl(size: THUMBNAIL)
+            sourceUrl(size: POST_THUMBNAIL)
             title(format: RENDERED)
           }
         }
@@ -67,6 +76,20 @@ export const query:string = `
           }
           industry
         }
+      }
+    }
+    services(first: 6) {
+      nodes {
+        title(format: RENDERED)
+        uri
+        featuredImage {
+          node {
+            altText
+            sourceUrl(size: POST_THUMBNAIL)
+            title(format: RENDERED)
+          }
+        }
+        excerpt(format: RENDERED)
       }
     }
   }
@@ -83,33 +106,33 @@ export interface IResponse {
             node:tImage;
           }
           buttons: {
-            button: {
-              title:string;
-              url:string;
-            }
+            button:tButton;
           }[];
-          designation: {
-            content:string;
-            image: {
-              node:tImage;
-            }
+        }
+        designation: {
+          content:string;
+          image: {
+            node:tImage;
           }
-          howWeWork: {
+        }
+        howWeWork: {
+          title:string;
+          content:string;
+          cards: {
             title:string;
             content:string;
-            cards: {
-              title:string;
-              content:string;
-            }[];
-          }
-          aboutUs : {
-            title:string;
-            content:string;
-            button: {
-              title:string;
-              url:string;
-            }
-          }
+          }[];
+        }
+        aboutUs : {
+          title:string;
+          content:string;
+          button:tButton;
+        }
+        services: {
+          title:string;
+          content:string;
+          "button_card":string;
+          button: tButton;
         }
       }
     },
@@ -125,7 +148,17 @@ export interface IResponse {
           };
           industry:string;
         };
-        url:string;
+        uri:string;
+      }[];
+    }
+    services: {
+      nodes: {
+        title:string;
+        uri:string;
+        featuredImage :{
+          node:tImage;
+        };
+        excerpt:string;
       }[];
     }
   }
@@ -136,10 +169,7 @@ export interface IResult {
     title:string;
     slogan:string;
     image: tImage;
-    buttons: {
-      title:string;
-      url:string;
-    }[];
+    buttons: tButton[];
   }
   designation: {
     content:string;
@@ -153,22 +183,18 @@ export interface IResult {
       content:string;
     }[];
   }
-  aboutUs : {
+  aboutUs : tAboutUs;
+  services: {
     title:string;
     content:string;
+    buttonCard:string;
+    button:tButton;
     cards: {
-      image:tImage;
-      fullname: {
-        firstname:string;
-        lastname:string;
-      }
-      industry:string;
-      uri:string;
-    }
-    button: {
       title:string;
-      url:string;
-    }
+      uri:string;
+      image:tImage;
+      excerpt:string;
+    }[]
   }
 }
 

@@ -34,13 +34,12 @@ export default function Hero({image, title, slogan, buttons}:tHero){
                         className={css.buttons}
                     >
                         {
-                            buttons.map(({label,uri}) => {
+                            buttons.map(({title,url}) => {
                                 return (
                                     <Button
-                                        label={label}
-                                        hrefLang="pl"
-                                        key={label}
-                                        uri="#"
+                                        title={title}
+                                        key={title}
+                                        url={url}
                                     />
                                 )
                             })

@@ -4,8 +4,8 @@ export type tImage = {
     title:string;
 }
 
-export type tLink = {
-    label:string;
-    hrefLang?:"pl"|string;
-    uri:string;
+export type tButton = {
+    title:string;
+    url:string;
 }
+

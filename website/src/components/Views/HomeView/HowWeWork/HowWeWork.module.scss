@@ -18,7 +18,7 @@
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
     background-color: $onyx;
-    border-radius: 3.4rem;
+    border-radius: .54rem;
     color:$white;
     display: grid;
     gap:1.99454rem;
@@ -30,19 +30,19 @@
 }
 
 .box {
-    @include flex(flex-start, flex-start, column, null, 1rem);
+    @include flex(flex-start, flex-start, column, null, .5rem);
     animation: show_x_left linear forwards;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
 
 .title {
-    @include font(clamp(5rem, 7.2vw, 9.2rem), 700, 1.05, null, null, start);
+    @include font(clamp(4.5rem, 9.2vw, 12.2rem), 700, 1.05, null, null, start);
     text-wrap:balance;
 }
 
 .content {
-    @include font(clamp(1.72rem, 1.9vw, 2.1rem), 500, 1.7, null, null, start);
+    @include font(clamp(1.52rem, 1.7vw, 1.9rem), 500, 1.7, null, null, start);
     color:color-mix(in srgb, $gray-cadet 40%, $seasalt 60%);
     max-width: 50ch;
 }
@@ -84,9 +84,8 @@
 @media only screen {
     @media (min-width:650px){
         .wrapper {
-        
             grid-template-columns: repeat(2,1fr);
-    padding:9.344vh 7vw;
+            padding:9.344vh 7vw;
            
         }
         .cards {
@@ -94,6 +93,9 @@
         }
     }
     @media (min-width:1200px){
+        .wrapper {
+            border-radius: 3rem;
+        }
         .title {
             font-size: clamp(7.22rem, 9.7vw, 12rem);
         }
