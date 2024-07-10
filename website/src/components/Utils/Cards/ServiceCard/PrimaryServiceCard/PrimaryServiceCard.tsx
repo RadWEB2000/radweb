@@ -1,6 +1,7 @@
 import Image from "next/image";
 import {tPrimaryServiceCard} from "c-service/PrimaryServiceCard/PrimaryServiceCard.models"
 import css from "c-service/PrimaryServiceCard/PrimaryServiceCard.module.scss";
+
 export default function PrimaryServiceCard({button,excerpt,uri, image, title}:tPrimaryServiceCard){
     return (
         <li

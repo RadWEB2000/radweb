@@ -2,7 +2,6 @@ import { PrimaryPersonCard as Card } from "cards/index"
 import {tAboutUs} from "v-home/AboutUs/AboutUs.models"
 import css from "v-home/AboutUs/AboutUs.module.scss"
 export default function AboutUs({button,cards,content,title}:tAboutUs){
-    console.log(cards)
     return (
         <>
             <section 

@@ -1,8 +1,6 @@
-import { AboutUs, Designation, Hero, HowWeWork, Services } from "v-home/index"
+import { AboutUs, Designation, Hero, HowWeWork, Projects, Services } from "v-home/index"
 import wordpress from "configs/wordpress";
 import {query, IResponse,IResult} from "data/queries/home_page"
-
-
 
 export default async function HomePage(){
 
@@ -11,7 +9,7 @@ export default async function HomePage(){
   })
   .then(response => response.json())
   .then((results:IResponse) => {
-    const {data: {page: {homePage: {aboutUs,designation,hero,howWeWork,services}}, teammates, services:servicesCards}} = results;
+    const {data: {page: {homePage: {aboutUs,designation,hero,howWeWork,services, projects}}, teammates, services:servicesCards, projects:projectCards}} = results;
     return {
       aboutUs: {
         button:aboutUs.button,
@@ -64,10 +62,24 @@ export default async function HomePage(){
         }),
         content:services.content,
         title:services.title
+      },
+      projects: {
+        title:projects.title,
+        content:projects.content,
+        button:projects.button,
+        buttonCard:projects.buttonCard,
+        cards:projectCards.nodes.map(({date,excerpt,featuredImage,title,uri}) => {
+          return {
+            date,
+            excerpt,
+            image:featuredImage.node,
+            title,
+            uri
+          }
+        })
       }
     }
   })
-  console.log("services", connection.services)
   return (
     <>
       <Hero
@@ -95,6 +107,9 @@ export default async function HomePage(){
         />
         <Services
           {...connection.services}
+        />
+        <Projects
+          {...connection.projects}
         />
       </main>
     </>

@@ -57,6 +57,15 @@ export const query:string = `
             title
           }
         }
+        projects {
+          title
+          content
+          buttonCard
+          button {
+            title
+            url
+          }
+        }
       }
     }
     teammates(first: 3) {
@@ -90,6 +99,21 @@ export const query:string = `
           }
         }
         excerpt(format: RENDERED)
+      }
+    }
+    projects(first: 6) {
+      nodes {
+        title(format: RENDERED)
+        uri
+        date
+        excerpt(format: RENDERED)
+        featuredImage {
+          node {
+            altText
+            sourceUrl(size: POST_THUMBNAIL)
+            title(format: RENDERED)
+          }
+        }
       }
     }
   }
@@ -133,6 +157,12 @@ export interface IResponse {
           content:string;
           "button_card":string;
           button: tButton;
+        },
+        projects: {
+          title:string;
+          content:string;
+          button:tButton;
+          buttonCard:string;
         }
       }
     },
@@ -159,6 +189,17 @@ export interface IResponse {
           node:tImage;
         };
         excerpt:string;
+      }[];
+    },
+    projects: {
+      nodes: {
+        title:string;
+        uri:string;
+        date:string;
+        excerpt:string;
+        featuredImage:{
+          node:tImage;
+        }
       }[];
     }
   }
@@ -194,7 +235,20 @@ export interface IResult {
       uri:string;
       image:tImage;
       excerpt:string;
-    }[]
+    }[];
+  }
+  projects: {
+    title:string;
+    content:string;
+    button:tButton;
+    buttonCard:string;
+    cards:{
+      title:string;
+      uri:string;
+      date:string;
+      excerpt:string;
+      image:tImage;
+    }[];
   }
 }
 
