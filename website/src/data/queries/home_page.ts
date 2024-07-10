@@ -66,6 +66,21 @@ export const query:string = `
             url
           }
         }
+        partners {
+            title
+            content
+            cards {
+              title
+              content
+              logo {
+                node {
+                  altText
+                  sourceUrl(size: THUMBNAIL)
+                  title(format: RENDERED)
+                }
+              }
+            }
+        }
       }
     }
     teammates(first: 3) {
@@ -163,6 +178,17 @@ export interface IResponse {
           content:string;
           button:tButton;
           buttonCard:string;
+        },
+        partners: {
+          title:string;
+          content:string;
+          cards:{
+            title:string;
+            content:string;
+            logo:{
+              node:tImage;
+            }
+          }[];
         }
       }
     },
@@ -236,7 +262,7 @@ export interface IResult {
       image:tImage;
       excerpt:string;
     }[];
-  }
+  };
   projects: {
     title:string;
     content:string;
@@ -248,6 +274,15 @@ export interface IResult {
       date:string;
       excerpt:string;
       image:tImage;
+    }[];
+  }
+  partners: {
+    title:string;
+    content:string;
+    cards:{
+      title:string;
+      content:string;
+      logo:tImage;
     }[];
   }
 }
