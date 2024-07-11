@@ -1,5 +1,6 @@
 import {tImage, tButton} from "ts/types"
 import {tAboutUs} from "v-home/AboutUs/AboutUs.models"
+import {tBlog} from "v-home/Blog/Blog.models";
 
 export const query:string = `
   query HomePage {
@@ -11,7 +12,7 @@ export const query:string = `
           image {
             node {
               altText
-              sourceUrl(size: POST_THUMBNAIL)
+              sourceUrl(size: THUMBNAIL)
               title(format: RENDERED)
             }
           }
@@ -27,7 +28,7 @@ export const query:string = `
           image {
             node {
               altText
-              sourceUrl(size: POST_THUMBNAIL)
+              sourceUrl(size: THUMBNAIL)
               title(format: RENDERED)
             }
           }
@@ -66,6 +67,14 @@ export const query:string = `
             url
           }
         }
+        blog {
+          title
+          content
+          button {
+            title
+            url
+          }
+        }
         partners {
             title
             content
@@ -89,7 +98,7 @@ export const query:string = `
         featuredImage {
           node {
             altText
-            sourceUrl(size: POST_THUMBNAIL)
+            sourceUrl(size: THUMBNAIL)
             title(format: RENDERED)
           }
         }
@@ -109,7 +118,7 @@ export const query:string = `
         featuredImage {
           node {
             altText
-            sourceUrl(size: POST_THUMBNAIL)
+            sourceUrl(size: THUMBNAIL)
             title(format: RENDERED)
           }
         }
@@ -125,8 +134,29 @@ export const query:string = `
         featuredImage {
           node {
             altText
-            sourceUrl(size: POST_THUMBNAIL)
+            sourceUrl(size: THUMBNAIL)
             title(format: RENDERED)
+          }
+        }
+      }
+    }
+    posts(first: 4) {
+      nodes {
+        title(format: RENDERED)
+        uri
+        featuredImage {
+          node {
+            altText
+            sourceUrl(size: THUMBNAIL)
+            title(format: RENDERED)
+          }
+        }
+        excerpt(format: RENDERED)
+        date
+        categories(first: 1) {
+          nodes {
+            name
+            uri
           }
         }
       }
@@ -147,13 +177,18 @@ export interface IResponse {
           buttons: {
             button:tButton;
           }[];
-        }
+        },
+        blog: {
+          title:string;
+          content:string;
+          button:tButton;
+        },
         designation: {
           content:string;
           image: {
             node:tImage;
           }
-        }
+        },
         howWeWork: {
           title:string;
           content:string;
@@ -161,12 +196,12 @@ export interface IResponse {
             title:string;
             content:string;
           }[];
-        }
+        },
         aboutUs : {
           title:string;
           content:string;
           button:tButton;
-        }
+        },
         services: {
           title:string;
           content:string;
@@ -227,6 +262,17 @@ export interface IResponse {
           node:tImage;
         }
       }[];
+    },
+    posts: {
+      nodes: {
+        title:string;
+        uri:string;
+        date:string;
+        excerpt:string;
+        featuredImage:{
+          node:tImage;
+        }
+      }[];
     }
   }
 }
@@ -237,11 +283,12 @@ export interface IResult {
     slogan:string;
     image: tImage;
     buttons: tButton[];
-  }
+  },
+  blog: tBlog,
   designation: {
     content:string;
     image: tImage;
-  }
+  },
   howWeWork: {
     title:string;
     content:string;
@@ -249,7 +296,7 @@ export interface IResult {
       title:string;
       content:string;
     }[];
-  }
+  },
   aboutUs : tAboutUs;
   services: {
     title:string;
@@ -262,7 +309,7 @@ export interface IResult {
       image:tImage;
       excerpt:string;
     }[];
-  };
+  },
   projects: {
     title:string;
     content:string;

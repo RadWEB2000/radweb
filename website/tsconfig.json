@@ -23,6 +23,7 @@
       "assets/*":["./src/assets/*"],
       "buttons/*":["./src/components/Utils/Buttons/*"],
       "c-person/*":["./src/components/Utils/Cards/PersonCard/*"],
+      "c-blog/*":["./src/components/Utils/Cards/BlogCard/*"],
       "c-projects/*":["./src/components/Utils/Cards/ProjectCard/*"],
       "c-service/*":["./src/components/Utils/Cards/ServiceCard/*"],
       "cards/*":["./src/components/Utils/Cards/*"],
