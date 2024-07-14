@@ -1,6 +1,6 @@
-@import "../../../../styles/Animations.scss";
 @import "../../../../styles/Mixins.scss";
 @import "../../../../styles/Variables.scss";
+
 
 .wrapper {
     display: grid;
@@ -17,6 +17,7 @@
     @include size(100%,100%);
     position: absolute;
     z-index: 0;
+    overflow: hidden;
 }
 
 .image {
@@ -26,7 +27,7 @@
 }
 
 .box {
-    @include flex(flex-start,center, column);
+    @include flex(center,center, column);
     color:$white;
     min-height: 94vh;
     padding: 4vh 1.4vw 1vh;
@@ -35,7 +36,7 @@
 
 .slogan,
 .title {
-    @include font(unset, unset,1.1, null, null, start);
+    @include font(unset, unset,1.1, null, null, center);
 
 }
 
@@ -45,13 +46,13 @@
 }
 
 .slogan {
-    font-size:clamp(3rem, 3.25vw, 5rem);
+    font-size:clamp(3rem, 3.25vw, 4.65rem);
     font-family: $thin;
     max-width: 25ch;
 }
 
 .buttons {
-    @include flex(flex-start,flex-start, row wrap, 1.72rem, 1.72rem);
+    @include flex(flex-start,center, row wrap, 1.72rem, 1.72rem);
     margin-top: 2rem;
     padding: 0.42rem 0.7rem;
 }
