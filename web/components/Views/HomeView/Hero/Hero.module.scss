@@ -1,0 +1,54 @@
+@import "../../../../styles/Animations.scss";
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    display: grid;
+    grid-template-areas: "layer";
+    position: relative;
+}
+
+.image__wrapper ,
+.box {
+    grid-area: layer;
+}
+
+.image__wrapper {
+    @include size(100%,100%);
+    position: absolute;
+    z-index: 0;
+}
+
+.image {
+    @include size(100%,100%);
+    object-fit: cover;
+    object-position: center;
+}
+
+.box {
+    @include flex(flex-start,center, column);
+    color:$white;
+    min-height: 94vh;
+    padding: 4vh 2vw 1vh;
+    z-index: 1;
+}
+
+.slogan,
+.title {
+    @include font(unset, unset,1.1, null, null, start);
+
+}
+
+.title {
+    @include font(clamp(5rem, 9vw, 16rem), 800);
+}
+
+.slogan {
+    @include font(clamp(2.85rem, 4.25vw, 5rem), 300);
+    max-width: 75vh;
+}
+
+.buttons {
+    @include flex(flex-start,flex-start, row wrap, 1.72rem, 1.72rem);
+    margin-top: 2rem;
+}

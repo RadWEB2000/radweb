@@ -1,0 +1,35 @@
+@import "../../../../styles/Animations.scss";
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,flex-start, row nowrap,.45rem);
+    position: relative;
+    &::after {
+        @include size(2px ,100%);
+        background-color: $white;
+        border-radius: 1rem;
+        bottom: -2px;
+        position: absolute;
+        left: 0;
+        transform:scaleX(0);
+        transform-origin: left;
+        transition:.12s linear transform;
+    }
+    &:focus-within,
+    &:hover {
+        &:after {
+            transform: scaleX(1)
+        }
+    }
+}
+
+.label {
+    @include font(2rem, 500,1);
+}
+
+.icon {
+    @include flex(center,center);
+    @include size(3.4rem,3.4rem);
+    font-size: 3rem;
+}

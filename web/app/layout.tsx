@@ -1,5 +1,29 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Black_Ops_One,Kaushan_Script, Turret_Road, Open_Sans} from "next/font/google";
+import "css/Global.scss";
+
+const blackOps = Black_Ops_One({
+  subsets:["latin-ext"],
+  weight:["400"],
+  variable:"--bold"
+})
+
+const script = Kaushan_Script({
+  subsets:["latin-ext"],
+  weight:["400"],
+  variable:"--script"
+})
+
+const turretRoad = Turret_Road({
+  subsets:["latin-ext"],
+  weight:["400","500","300"],
+  variable:"--thin"
+})
+
+const openSans = Open_Sans({
+  subsets:["latin-ext"],
+  variable:"--regular"
+})
 
 const inter = Open_Sans({ subsets: ["latin"] });
 
