@@ -1,4 +1,4 @@
-import { Hero } from "v-home/index"
+import { Hero, Offer } from "v-home/index"
 import hero_img from "img/hero.jpg"
 export default function HomePage(){
   return (
@@ -27,6 +27,28 @@ export default function HomePage(){
         title="RadWEB"
       />
       <main>
+        <Offer
+          cards={[
+            {
+              content:"Praesentium repudiandae ex necessitatibus veniam soluta officiis quod maxime eius accusantium d",
+              title:"Strona internetowa",
+            },
+            {
+              content:"Praesentium repudiandae ex necessitatibus veniam soluta officiis quod maxime eius accusantium d",
+              title:"Widoczność w Google",
+            },
+            {
+              content:"Praesentium repudiandae ex necessitatibus veniam soluta officiis quod maxime eius accusantium d",
+              title:"Tworzenie treści",
+            },
+            {
+              content:"Praesentium repudiandae ex necessitatibus veniam soluta officiis quod maxime eius accusantium d",
+              title:"Identyfikacja video",
+            },
+          ]}
+          content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic vero inventore a est recusandae dolor perferendis magni voluptatem illum architecto perspiciatis id omnis, doloremque nobis ipsam quae cupiditate! Cumque, perferendis."
+          title="Czym się zajmujemy?"
+        />
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic vero inventore a est recusandae dolor perferendis magni voluptatem illum architecto perspiciatis id omnis, doloremque nobis ipsam quae cupiditate! Cumque, perferendis.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repudiandae ex necessitatibus veniam soluta officiis quod maxime eius accusantium dolore blanditiis tenetur, qui debitis cupiditate porro architecto voluptate sed omnis.
         Quaerat molestias nulla nam odio, dolor itaque velit fuga provident. Impedit dolorum voluptatem vel? Quidem nulla et rem inventore doloremque facere deleniti molestiae sequi, neque voluptatum iste temporibus quam eveniet!
