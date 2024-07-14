@@ -1,13 +1,20 @@
+// FONTS ===================================
+$bold: var(--bold);
+$cursive: var(--script);
+$thin:var(--thin);
+$regular:var(--regular);
 // COLORS ===================================
 $black:rgb(0, 0, 0);
-$onyx:#404040;
-$gray:#919191;
-$platinum:#e2e2e2;
-$white:#fff;
-$fandango:#a01977;
-$purple:#710055;
-$magenta:#bd80aa;
-$pink:#ff10b3;
-$red:#ff0000;
-$orange:#ff8400;
-$green:#2fff00;
+$onyx:rgb(64, 64, 64);
+$gray:rgb(145, 145, 145);
+$platinum:rgb(226, 226, 226);
+$white:rgb(255, 255, 255);
+$erie:rgb(31, 31, 31);
+$jet:rgb(51, 51, 51);
+$fandango:rgb(160, 25, 119);
+$purple:rgb(113, 0, 85);
+$magenta:rgb(189, 128, 170);
+$pink:rgb(255, 16, 179);
+$red:rgb(255, 0, 0);
+$orange:rgb(255, 132, 0);
+$green:rgb(47, 255, 0);

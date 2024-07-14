@@ -42,10 +42,9 @@ button {
 }
 
 body {
-	background-attachment: fixed;
-	background-color: $onyx;
-	background-position: center;
+	background-color: color-mix(in srgb, $erie 60%, $black 40%);
 	color: $platinum;
+	font-family: $regular;
 	font-weight: 400;
 	font-size: 1.6rem;
 	overflow-x: hidden;

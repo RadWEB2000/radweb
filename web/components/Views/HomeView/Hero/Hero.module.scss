@@ -29,7 +29,7 @@
     @include flex(flex-start,center, column);
     color:$white;
     min-height: 94vh;
-    padding: 4vh 2vw 1vh;
+    padding: 4vh 1.4vw 1vh;
     z-index: 1;
 }
 
@@ -40,15 +40,18 @@
 }
 
 .title {
-    @include font(clamp(5rem, 9vw, 16rem), 800);
+    font-size: clamp(8.15rem, 10vw, 16rem);
+    font-family: $bold;
 }
 
 .slogan {
-    @include font(clamp(2.85rem, 4.25vw, 5rem), 300);
-    max-width: 75vh;
+    font-size:clamp(3rem, 3.25vw, 5rem);
+    font-family: $thin;
+    max-width: 25ch;
 }
 
 .buttons {
     @include flex(flex-start,flex-start, row wrap, 1.72rem, 1.72rem);
     margin-top: 2rem;
+    padding: 0.42rem 0.7rem;
 }

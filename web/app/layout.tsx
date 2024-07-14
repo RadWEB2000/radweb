@@ -25,7 +25,6 @@ const openSans = Open_Sans({
   variable:"--regular"
 })
 
-const inter = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -39,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${blackOps.variable} ${script.variable} ${turretRoad.variable} ${openSans.variable}`}>{children}</body>
     </html>
   );
 }
