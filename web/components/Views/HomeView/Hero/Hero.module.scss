@@ -1,58 +1,43 @@
 @import "../../../../styles/Mixins.scss";
 @import "../../../../styles/Variables.scss";
 
-
 .wrapper {
-    display: grid;
-    grid-template-areas: "layer";
-    position: relative;
+    @include flex(center,center,column,null,1.12rem);
+    background-color: $aurelion;
+    background-image: linear-gradient(to bottom left, $aurelion,  $yellow);
+    color:$black;
+    min-height:97vh;
+    padding: 4vh 5.2vw 2vh;
 }
 
-.image__wrapper ,
-.box {
-    grid-area: layer;
-}
-
-.image__wrapper {
-    @include size(100%,100%);
-    position: absolute;
-    z-index: 0;
-    overflow: hidden;
-}
-
-.image {
-    @include size(100%,100%);
-    object-fit: cover;
-    object-position: center;
-}
-
-.box {
-    @include flex(center,center, column);
-    color:$white;
-    min-height: 94vh;
-    padding: 4vh 1.4vw 1vh;
-    z-index: 1;
-}
-
-.slogan,
-.title {
-    @include font(unset, unset,1.1, null, null, center);
-
+.title,
+.slogan {
+    @include font(unset, 700, 1, null, null, center);
+    font-family: $heading;
 }
 
 .title {
-    font-size: clamp(8.15rem, 10vw, 16rem);
-    font-family: $bold;
+    font-size: clamp(7.5rem, 8.72vw, 17rem);
 }
 
 .slogan {
-    font-size:clamp(3rem, 3.25vw, 4.65rem);
-    font-family: $thin;
-    max-width: 25ch;
+    font-size: clamp(3rem, 4.2vw, 5.6rem);
+    max-width: 30ch;
 }
 
 .buttons {
-    @include flex(flex-start,center, row wrap, 1.72rem, 1.72rem);
+    @include flex(center,center, row wrap,2.25rem, 1.25rem);
     margin-top: 2rem;
-    padding: 0.42rem 0.7rem;
+}
+
+@media only screen {
+    @media (min-width:540px){
+        .title {
+            font-size: clamp(12.5rem, 10.72vw, 17rem);
+        }
+        
+        .slogan {
+            font-size: clamp(3.6rem, 4.2vw, 5.6rem);
+        }
+    }
 }

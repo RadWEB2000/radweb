@@ -1,30 +1,36 @@
 import type { Metadata } from "next";
-import { Black_Ops_One,Kaushan_Script, Turret_Road, Open_Sans} from "next/font/google";
+import { Roboto, Anton, Merienda, Alata, Source_Code_Pro} from "next/font/google";
 import "css/Global.scss";
 
-const blackOps = Black_Ops_One({
+const alata = Alata({
+  weight:["400"],
+  subsets:["latin-ext"],
+  variable:"--special"
+})
+
+const anton = Anton({
   subsets:["latin-ext"],
   weight:["400"],
-  variable:"--bold"
+  variable:"--heading"
 })
 
-const script = Kaushan_Script({
+const merienda = Merienda({
+  weight:["300","400","500","700"],
   subsets:["latin-ext"],
-  weight:["400"],
-  variable:"--script"
+  variable:"--cursive"
 })
 
-const turretRoad = Turret_Road({
+const sourceCode = Source_Code_Pro({
   subsets:["latin-ext"],
-  weight:["400","500","300"],
-  variable:"--thin"
+  weight:["400","700"],
+  variable:"--code"
 })
 
-const openSans = Open_Sans({
+const roboto = Roboto({
   subsets:["latin-ext"],
+  weight:["100","300","400","500","700","900"],
   variable:"--regular"
 })
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -38,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${blackOps.variable} ${script.variable} ${turretRoad.variable} ${openSans.variable}`}>{children}</body>
+      <body className={`${alata.variable} ${anton.variable} ${merienda.variable} ${sourceCode.variable} ${roboto.variable}`}>{children}</body>
     </html>
   );
 }

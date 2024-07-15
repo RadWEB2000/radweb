@@ -1,53 +1,17 @@
-import { Hero, Offer } from "v-home/index"
-import hero_img from "img/hero.jpg"
+import { home } from "data/home"
+import { AboutUs, Hero, Offer } from "v-home/index"
 export default function HomePage(){
   return (
     <>
       <Hero
-        buttons={[
-          {
-            title:"Wiedza",
-            url:"#"
-          },
-          {
-            title:"Oferta",
-            url:"#"
-          },
-          {
-            title:"Kontakt",
-            url:"#"
-          },
-        ]}
-        image={{
-          altText:"",
-          sourceUrl:hero_img.src,
-          title:""
-        }}
-        slogan="Strony internetowe / SEO / Copywriting / Video"
-        title="RadWEB"
+        {...home.hero}
       />
       <main>
         <Offer
-          cards={[
-            {
-              content:"Praesentium repudiandae ex necessitatibus veniam soluta officiis quod maxime eius accusantium d",
-              title:"Strona internetowa",
-            },
-            {
-              content:"Praesentium repudiandae ex necessitatibus veniam soluta officiis quod maxime eius accusantium d",
-              title:"Widoczność w Google",
-            },
-            {
-              content:"Praesentium repudiandae ex necessitatibus veniam soluta officiis quod maxime eius accusantium d",
-              title:"Tworzenie treści",
-            },
-            {
-              content:"Praesentium repudiandae ex necessitatibus veniam soluta officiis quod maxime eius accusantium d",
-              title:"Identyfikacja video",
-            },
-          ]}
-          content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic vero inventore a est recusandae dolor perferendis magni voluptatem illum architecto perspiciatis id omnis, doloremque nobis ipsam quae cupiditate! Cumque, perferendis."
-          title="Czym się zajmujemy?"
+          {...home.offer}
+        />
+        <AboutUs
+          {...home.aboutUs}
         />
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic vero inventore a est recusandae dolor perferendis magni voluptatem illum architecto perspiciatis id omnis, doloremque nobis ipsam quae cupiditate! Cumque, perferendis.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repudiandae ex necessitatibus veniam soluta officiis quod maxime eius accusantium dolore blanditiis tenetur, qui debitis cupiditate porro architecto voluptate sed omnis.

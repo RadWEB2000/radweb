@@ -28,6 +28,7 @@ export default function Offer({cards,content,title}:tOffer) {
                             return (
                                 <li
                                     className={css.card}
+                                    key={title}
                                 >
                                     <h3
                                         className={css.card__title}

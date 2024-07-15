@@ -4,10 +4,11 @@
 
 .wrapper {
     @include flex(center,flex-start, row nowrap,.45rem);
+    font-family: $code;
     position: relative;
     &::after {
-        @include size(2px ,100%);
-        background-color: $white;
+        @include size(1.2px ,100%);
+        background-color: $black;
         border-radius: 1rem;
         bottom: -2px;
         position: absolute;

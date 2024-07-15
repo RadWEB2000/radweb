@@ -8,3 +8,8 @@ export type tImage = {
     sourceUrl:string;
     title:string;
 }
+
+export type tFullname = {
+    firstname:string;
+    lastname:string;
+}
