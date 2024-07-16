@@ -69,7 +69,7 @@ export const home:i_home = {
                     title:""
                 },
                 industry:"web",
-                occupation:"Strony internetowe - SEO",
+                occupation:"Strony internetowe - SEO - Copywriting",
                 uri:"#"
             },
             {

@@ -16,6 +16,11 @@
     object-fit: cover;
     object-position: center;
 }
+.box {
+    animation: show_x_left linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
 
 .wrapper {
     margin:6vh auto;
@@ -35,5 +40,8 @@
 
 .cards {
     @include flex(flex-start,flex-end,row wrap, 1rem,1rem);
+    animation: show_x_right linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
     margin-top: 3rem;
 }
