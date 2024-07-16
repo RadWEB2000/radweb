@@ -1,5 +1,5 @@
 import { home } from "data/home"
-import { AboutUs, Hero, Offer } from "v-home/index"
+import { AboutUs, Hero, Offer, Services } from "v-home/index"
 export default function HomePage(){
   return (
     <>
@@ -12,6 +12,9 @@ export default function HomePage(){
         />
         <AboutUs
           {...home.aboutUs}
+        />
+        <Services
+          {...home.services}
         />
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic vero inventore a est recusandae dolor perferendis magni voluptatem illum architecto perspiciatis id omnis, doloremque nobis ipsam quae cupiditate! Cumque, perferendis.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repudiandae ex necessitatibus veniam soluta officiis quod maxime eius accusantium dolore blanditiis tenetur, qui debitis cupiditate porro architecto voluptate sed omnis.

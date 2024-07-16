@@ -1,2 +1,4 @@
 // PERSON CARDS
-export {default as PrimaryPersonCard} from "cards/PersonCard/PrimaryPersonCard/PrimaryPersonCard"
+export {default as PrimaryPersonCard} from "c-person/PrimaryPersonCard/PrimaryPersonCard"
+// SERVICE CARDS
+export {default as PrimaryServiceCard} from "c-service/PrimaryServiceCard/PrimaryServiceCard"

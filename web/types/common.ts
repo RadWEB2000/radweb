@@ -3,6 +3,11 @@ export type tButton = {
     url:string;
 }
 
+export type tCommonSection = {
+    title:string;
+    content:string;
+}
+
 export type tImage = {
     altText:string;
     sourceUrl:string;

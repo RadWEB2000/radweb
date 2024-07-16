@@ -23,6 +23,8 @@
       "assets/*":["./assets/*"],
       "buttons/*":["./components/Utils/Buttons/*"],
       "cards/*":["./components/Utils/Cards/*"],
+      "c-person/*":["./components/Utils/Cards/PersonCard/*"],
+      "c-service/*":["./components/Utils/Cards/ServiceCard/*"],
       "components/*":["./components/*"],
       "context/*":["./context/*"],
       "css/*":["./styles/*"],

@@ -3,12 +3,15 @@ import { tAboutUs } from 'v-home/AboutUs/AboutUs.models';
 import { tOffer } from 'v-home/Offer/Offer.models';
 import radek_img from "img/radek-adamczyk.webp";
 import filip_img from "img/fillip-bukowiecki.webp"
+import web_img from "img/strony-internetowe.webp"
 import head_img from "img/head.webp"
+import { tServices } from 'v-home/Services/Services.models';
 
 interface i_home {
     hero:tHero;
     aboutUs:tAboutUs;
     offer:tOffer;
+    services:tServices;
 }
 
 export const home:i_home = {
@@ -94,5 +97,45 @@ export const home:i_home = {
             title:""
         },
         title:"Kim jesteśmy"
+    },
+    services: {
+        title:"Nasza oferta",
+        button:{
+            title:"Wszystkie usługi",
+            url:"#"
+        },
+        content:`It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). `,
+        cards:[
+            {
+                content:"Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+                image:{
+                    altText:"",
+                    sourceUrl:web_img.src,
+                    title:""
+                },
+                title:"Strony internetowe",
+                uri:"#"
+            },
+            {
+                content:"Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+                image:{
+                    altText:"",
+                    sourceUrl:web_img.src,
+                    title:""
+                },
+                title:"SEO",
+                uri:"#"
+            },
+            {
+                content:"Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+                image:{
+                    altText:"",
+                    sourceUrl:web_img.src,
+                    title:""
+                },
+                title:"Videomaking",
+                uri:"#"
+            },
+        ]
     }
 }

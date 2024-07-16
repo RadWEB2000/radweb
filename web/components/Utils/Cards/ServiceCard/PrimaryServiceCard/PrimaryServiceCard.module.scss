@@ -1,0 +1,103 @@
+@import "../../../../../styles/Animations.scss";
+@import "../../../../../styles/Mixins.scss";
+@import "../../../../../styles/Variables.scss";
+
+.wrapper {
+    animation: show_x_right linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    width:clamp(5rem, 100rem, 97%);
+}
+
+.image__wrapper {
+    aspect-ratio: 16/9;
+    grid-column: 1/-1;
+    border-radius: 1rem;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    object-fit: cover;
+    object-position: center;
+}
+
+.button__wrapper,
+.details {
+    grid-row: 2;
+}
+
+.details {
+    grid-column: 1;
+}
+
+.button__wrapper {
+    grid-column: 2;
+}
+
+.box {
+    animation: show_x_right linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    background-color: color-mix(in srgb, $blue 70%, $indigo 30%);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    transform: translateY(-2rem);
+    padding: 1.72rem 2.3rem;
+}
+
+.button__wrapper,
+.button {
+    @include flex(center,center);
+    @include size(5.72rem, 5.72rem);
+}
+
+.button {
+    background-color: color-mix(in srgb, $blue 90%, $black 10%);
+    border-radius: .62rem;
+    font-size: 3.5rem;
+    transition:.12s linear background-color;
+    &:focus-within,
+    &:hover {
+        background-color: color-mix(in srgb, $blue 70%, $black 30%);
+    }
+}
+
+.title {
+    @include font(clamp(4.4rem, 5.2vw, 6.7rem), 700, 1.1, null, null, start);
+    font-family: $heading;
+}
+
+.content {
+    @include font(clamp(1.64rem, 1.72vw, 1.87rem), 400, 1.6, null, null, start);
+    color:$platinum;
+    margin-top: 1rem;
+    max-width: 75ch;
+
+}
+
+@media only screen {
+    @media (min-width:620px){
+        .box {
+            display: grid;
+            grid-template-columns: calc(100% - 10rem) 10rem;
+            padding: 2rem 3rem;
+        }
+        
+        .button__wrapper,
+        .button {
+            @include size(6.72rem, 6.72rem);
+        }
+        
+        .button__wrapper {
+            margin:auto;
+        }
+    }
+    @media (min-width:880px){
+        .title {
+            font-size: clamp(5.4rem, 6.2vw, 8.7rem);
+        }
+    }
+}

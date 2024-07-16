@@ -1,7 +1,7 @@
-import css from "cards/PersonCard/PrimaryPersonCard/PrimaryPersonCard.module.scss"
+import css from "c-person/PrimaryPersonCard/PrimaryPersonCard.module.scss"
 import Image from "next/image";
 import Link from "next/link";
-import {tPrimaryPersonCard} from "cards/PersonCard/PrimaryPersonCard/PrimaryPersonCard.models"
+import {tPrimaryPersonCard} from "c-person/PrimaryPersonCard/PrimaryPersonCard.models"
 
 export default function PrimaryPersonCard({fullname:{firstname,lastname},image,industry,occupation,uri}:tPrimaryPersonCard){
     return (

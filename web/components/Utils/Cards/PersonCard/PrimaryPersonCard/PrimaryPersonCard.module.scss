@@ -4,6 +4,7 @@
 
 .wrapper {
     @include size(48rem, clamp(5rem, 35rem, 95%));
+    
     border-radius: 1rem;
     display: grid;
     grid-template-areas: "layer";
