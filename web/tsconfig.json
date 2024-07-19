@@ -31,6 +31,7 @@
       "data/*":["./data/*"],
       "fonts/*":["./assets/fonts/*"],
       "footer/*":["./components/Layout/Footer/*"],
+      "icons/*":["./assets/icons/*"],
       "img/*":["./assets/images/*"],
       "layout/*":["./components/Layout/*"],
       "lib/*":["./lib/*"],

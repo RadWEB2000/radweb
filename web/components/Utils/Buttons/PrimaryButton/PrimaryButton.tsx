@@ -1,14 +1,14 @@
-import { MdArrowForward as Arrow } from "react-icons/md";
+import Link from "next/link";
 import {tPrimaryButton} from "buttons/PrimaryButton/PrimaryButton.models"
-import Link from "next/link"
+import { MdKeyboardArrowRight as Arrow } from "react-icons/md";
 import css from "buttons/PrimaryButton/PrimaryButton.module.scss";
 
-export default function PrimaryButton({title, url}:tPrimaryButton){
+export default function PrimaryButton({theme,title,url}:tPrimaryButton){
     return (
         <Link
             className={css.wrapper}
+            data-theme={theme}
             href={url}
-            rel="index follow"
         >
             <span
                 className={css.label}

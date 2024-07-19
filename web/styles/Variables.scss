@@ -1,9 +1,6 @@
 // FONTS ===================================
-$special:var(--special);
-$heading:var(--heading);
-$code:var(--code);
-$cursive:var(--cursive);
 $regular:var(--regular);
+$mono:var(--mono);
 // COLORS ===================================
 $black:rgb(0, 0, 0);
 $onyx:rgb(64, 64, 64);
@@ -20,3 +17,10 @@ $yellow:#f9ea32;
 $payne:#41617d;
 $indigo:#1c4364;
 $blue:#113a5d;
+$green-dark:rgb(7, 44, 11);
+$green-pigment:rgb(33, 160, 69);
+$green-pastelle:rgb(112, 255, 100);
+$green-lime:rgb(18, 255, 113);
+$green-malachite:rgb(22, 223, 103);
+$green-spring:rgb(89, 243, 151);
+$green-tea:rgb(206, 255, 202);
