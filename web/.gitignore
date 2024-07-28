@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/assets/videos
 /.pnp
 .pnp.js
 .yarn/install-state.gz
