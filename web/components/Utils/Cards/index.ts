@@ -1,0 +1,1 @@
+export {default as PrimaryPersonCards} from "c-person/PrimaryPersonCard/PrimaryPersonCard"
