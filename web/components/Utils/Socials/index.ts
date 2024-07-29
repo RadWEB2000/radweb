@@ -1,0 +1,1 @@
+export {default as PrimarySocial} from "socials/PrimarySocial/PrimarySocial"

@@ -1,8 +1,32 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Poppins, Ubuntu_Mono, Anton, Damion } from "next/font/google";
+import "css/Global.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const anton = Anton({
+  weight:["400"],
+  subsets:["latin-ext"],
+  variable:"--bold"
+})
+
+const damion = Damion({
+  weight:["400"],
+  subsets:["latin"],
+  variable:"--cursive"
+})
+
+const poppins = Poppins({
+  weight:["100","200","300","400","500","600","700","800","900"],
+  display:"swap",
+  subsets:["latin-ext"],
+  variable:"--regular"
+})
+
+const ubuntu = Ubuntu_Mono({
+  weight:["400","700"],
+  display:"swap",
+  subsets:["latin-ext"],
+  variable:"--mono"
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${anton.variable} ${damion.variable} ${poppins.variable} ${ubuntu.variable}`}>{children}</body>
     </html>
   );
 }
