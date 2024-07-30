@@ -20,38 +20,11 @@ export const home_page:i_home_page = {
                 url:"#"
             },
         ],
-        content:`However, with the introduction of a new version, it became necessary to separate them according to the new client and server system. A server component cannot be imported into a component that uses client-only hooks, and vice versa.`,
         image:{
             altText:"",
             sourceUrl:hero_img.src,
             title:""
         },
-        services: [
-            {
-                title:"Strony internetowe",
-                url:"#"
-            },
-            {
-                title:"Pozycjonowanie",
-                url:"#"
-            },
-            {
-                title:"Videomaking",
-                url:"#"
-            },
-            {
-                title:"Copywriting",
-                url:"#"
-            },
-            {
-                title:"Reklamy Google",
-                url:"#"
-            },
-            {
-                title:"Audyty stron",
-                url:"#"
-            },
-        ],
         slogan:"Współczesny marketing online",
         socials:[
             {

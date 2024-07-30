@@ -1,0 +1,103 @@
+@import "../../../../styles/Animations.scss";
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    border-radius: 1.4vw;
+    display: grid;
+    grid-template-areas: "layer";
+    margin:4vh auto 2vh;
+    overflow: hidden;
+    position: relative;
+    width:97%;
+    z-index: 1;
+}
+
+.image__wrapper {
+    @include size(100%,100%);
+    display: block;
+    grid-area: "layer";
+    position: absolute;
+    // position: relative;
+    z-index: 0;
+}
+
+.image {
+    @include size(100%,100%);
+    object-fit: cover;
+    object-position: center;
+}
+
+.box {
+    // background: red;
+    background-color: rgba($green,.63);
+    color:$black;
+    grid-area: "layer";
+    min-height: 85vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 1.3rem;
+    z-index: 1;
+    &> * {
+        padding: 1rem;
+    }
+}
+
+.details {
+    @include flex(flex-start,center,column);
+    grid-column: 1/3;
+    grid-column: 1/-1;
+    grid-row: 1/8;
+}
+
+.socials {
+    @include flex(center,flex-end,row wrap, null, 1rem);
+    grid-column:3 ;
+    grid-column:1/-1;
+}
+
+.title {
+    @include font(clamp(1.95rem,2.28vw,2.6rem),700, 1,null, null, start);
+    font-family: $font_mono;
+    margin-bottom: 1rem;
+}
+
+.buttons {
+    @include flex(center,flex-start, row wrap, 1rem , 1rem);
+    margin-top: 2rem;
+}
+
+.slogan {
+    @include font(clamp(5.2rem,7.71vw,15rem),400, .92,null, null, start);
+    font-family: $font_bold;
+    text-wrap:balance;
+}
+
+@media only screen {
+    @media (min-width:500px){
+        .slogan {
+            font-size: clamp(6.2rem,9.71vw,12rem);
+        }       
+        .title {
+            font-size: clamp(2.15rem,2.68vw,3.1rem);
+        }
+    }
+    @media (min-width:1050px){
+        .wrapper {
+            border-radius: .54vw;
+            width:95%;
+        }
+        
+        .details {
+            grid-column: 1/3;
+            grid-row: 1;
+            padding: 3rem;
+        }
+        
+        .socials {
+            @include flex(flex-end,flex-end,column, null, 1rem);
+            grid-column:3;
+        }
+        
+    }
+}

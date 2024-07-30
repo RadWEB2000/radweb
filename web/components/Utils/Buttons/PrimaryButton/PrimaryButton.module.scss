@@ -1,0 +1,47 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,center, row nowrap, .32rem);
+    padding: 0.65rem 1.72rem;
+    padding: 0.45rem 1.32rem;
+    border-radius: .72rem;
+    transition:.12s linear background-color;
+    &[data-theme="light"]{
+        background-color: $white;    
+        color:$black;
+        &:focus-within ,
+        &:hover {
+            background-color: color-mix(in srgb, $white 80%, $silver 20%);
+
+        }
+    }
+    &[data-theme="dark"]{
+        background-color: $black;
+        color:$white;
+        &:focus-within ,
+        &:hover {
+            background-color: color-mix(in srgb, $black 70%, $silver 30%);
+        }
+    }
+}
+
+.icon {
+    @include flex(center,center);
+    @include size(4rem,4rem);
+    font-size: 3.2rem;
+    @include size(3.4rem,3.4rem);
+    font-size: 2.2rem;
+}
+
+.title {
+    @include font(clamp(1.62rem, 2.2vw,2.4rem), 450, 1, null, null, center);
+}
+
+@media only screen {
+    @media (min-width:1050px){
+        .wrapper {
+            padding: 0.65rem 1.72rem;
+        }
+    }
+}

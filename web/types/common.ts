@@ -13,3 +13,7 @@ export type tFullname = {
     firstname:string;
     lastname:string;
 }
+
+export type tTheme = {
+    theme:"dark"|"light"
+}
