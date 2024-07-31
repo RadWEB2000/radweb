@@ -8,7 +8,7 @@ export default function HomePage(){
         {...home_page.hero}
       />
       <Banner
-        text={`Over the past 10 years, we’ve perfected our Design & Development game and are eager to help passionate Founders perfect theirs. Success is a team play, right? Let’s aim for the top together!`}
+        {...home_page.banner}
       />
       <div></div>
     </>

@@ -1,68 +1,43 @@
-"use client"
 import css from "v-home/Banner/Banner.module.scss";
-import { useEffect, useState } from "react";
-import {useAnimation, motion} from "framer-motion"
 import {tBanner} from "v-home/Banner/Banner.models";
-import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
-export default function Banner({text}:tBanner){
-    const controls = useAnimation();
-    const [ref,inView] = useInView({
-        threshold:.1
-    })
-    useEffect(() => {
-        if(inView){
-            controls.start('visible');
-        }else{
-            controls.start('hidden')
-        }
-    },[controls,inView]);
+export default function Banner({image,text}:tBanner){
+   
     const words = text.split(' ');
     return (
-        <div>
-            <picture>
-
+        <div
+            className={css.wrapper}
+        >
+            <picture
+                className={css.image__wrapper}
+            >
+                <Image
+                    alt={image.altText}
+                    className={css.image}
+                    fill
+                    loading="lazy"
+                    src={image.sourceUrl}
+                    title={image.title}
+                    quality={40}
+                />
             </picture>
-            <motion.section
-                animate={controls}
-                initial="hidden"
-                style={{
-                    fontSize:"4rem",
-                    fontWeight:600,
-                    width:"800px",
-                    margin:"32vh auto 20vh"
-                }}
-                ref={ref}
-                variants={{
-                    visible: {
-                        transition: {
-                            staggerChildren:.15
-                        }
-                    },
-                    hidden:{}
-                }}
+            <section
+                className={css.container}
             >
                 {
                     words.map((item,index) => {
                         return(
-                            <motion.span
+                            <span
+                                className={css.word}
                                 key={index}
-                                transition={{duration:.5}}
-                                variants={{
-                                    visible:{
-                                        color:"#ff6f61"
-                                    },
-                                    hidden:{
-                                        color:"#fff"
-                                    }
-                                }}
                             >
                                 {`${item} `}
-                            </motion.span>
+                            </span>
                         )
                     })
                 }
-            </motion.section>
+            </section>
         </div>
     )
 
