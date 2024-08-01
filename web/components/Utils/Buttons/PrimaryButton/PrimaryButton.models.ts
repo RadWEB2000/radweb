@@ -1,2 +1,2 @@
-import { tButton } from 'ts/common';
-export type tPrimaryButton = tButton;
+import { tButton, tTheme } from 'ts/common';
+export type tPrimaryButton = tButton & tTheme;

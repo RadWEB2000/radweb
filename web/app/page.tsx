@@ -1,4 +1,4 @@
-import { Banner, Hero } from "v-home/index";
+import { Banner, Hero, Services } from "v-home/index";
 import { home_page } from "data/home_page";
 
 export default function HomePage(){
@@ -10,6 +10,11 @@ export default function HomePage(){
       <Banner
         {...home_page.banner}
       />
+      <main>
+        <Services
+          {...home_page.services}
+        />
+      </main>
       <div></div>
     </>
   )
