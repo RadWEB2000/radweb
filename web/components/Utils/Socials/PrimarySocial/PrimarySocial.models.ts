@@ -1,3 +1,3 @@
-import { tButton } from 'ts/common';
+import { tButton, tTheme } from "ts/common";
 
-export type tPrimarySocial = tButton;
+export type tPrimarySocial = tTheme & tButton

@@ -1,56 +1,26 @@
 @import "../../../../styles/Mixins.scss";
 @import "../../../../styles/Variables.scss";
 
+
 .wrapper {
-    @include flex(center,center,row nowrap, 1rem);
-    color:$black;
-    padding: 0.15rem .5rem;
+    @include flex(center,center);
+    @include size(5rem,5rem);
+    font-size: 3.2rem;
     position: relative;
-    z-index: 0;
-    &:focus-within,
-    &:hover {
-        &::after {
-            transform: scaleX(1);
-        }
-        .title {
-            transform: translateX(0%);
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-    &::after{
-        @include size(2px , 100%);
+    &::after {
+        @include size(2px,100%);
         background-color: $black;
         bottom: 0;
         position: absolute;
         right: 0;
-        transition: .32s linear transform;
         transform: scaleX(0);
         transform-origin: right;
+        transition: .2s linear transform;
     }
-}
-
-.icon {
-    @include flex(center,center);
-    @include size(3.1rem,3.1rem);
-    font-size: 2.45rem;
-    z-index: 2;
-}
-
-.title {
-    @include font(1.6rem, 400, 1, null, null, center);
-    transform: translateX(150%);
-    transition:.32s linear opacity,.32s linear transform, .32s linear visibility;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1;
-    display: none;
-}
-
-@media only screen {
-    @media (min-width:1050px){
-        .title {
-            display: block;
+    &:focus-within,
+    &:hover {
+        &::after {
+            transform: scaleX(1);
         }
     }
 }

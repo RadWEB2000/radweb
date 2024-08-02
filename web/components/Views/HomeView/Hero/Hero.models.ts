@@ -1,9 +1,8 @@
-import { tButton, tImage } from "ts/common"
-
+import { tButton, tImage } from 'ts/common';
 export type tHero = {
-    buttons:tButton[];
-    image:tImage;
-    slogan:string;
     title:string;
+    slogan:string;
+    buttons:tButton[];
     socials:tButton[];
+    image:tImage;
 }

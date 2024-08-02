@@ -2,46 +2,69 @@
 @import "../../../../styles/Variables.scss";
 
 .wrapper {
-    @include flex(center,center, row nowrap, .32rem);
-    padding: 0.65rem 1.72rem;
-    padding: 0.45rem 1.32rem;
-    border-radius: .72rem;
-    transition:.12s linear background-color;
-    &[data-theme="light"]{
-        background-color: $white;    
-        color:$black;
-        &:focus-within ,
-        &:hover {
-            background-color: color-mix(in srgb, $white 80%, $silver 20%);
-
-        }
-    }
+    @include flex(center,center, row nowrap, 1.6rem);
+    @include flex(center,center, row nowrap, 1rem);
+    padding: 0.95rem 1.7rem;
+    padding: 0.55rem 1.37rem;
+    min-height: 4rem;
+    transition:.12s linear background-color,.12s linear color;
     &[data-theme="dark"]{
-        background-color: $black;
-        color:$white;
-        &:focus-within ,
+        border:3px solid $black;
+        border:2px solid $black;
+        color:$black;
+        &:focus-within,
         &:hover {
-            background-color: color-mix(in srgb, $black 70%, $silver 30%);
+            background-color: $black;
+            color:$white;
         }
     }
+    &[data-theme="white"]{
+        border:3px solid $white;
+        border:2px solid $white;
+        color:$white;
+        &:focus-within,
+        &:hover {
+            background-color: $white;
+            color:$black;
+        }
+    }
+}
+
+.title {
+    @include font(clamp(2.2rem, 2.5vw,2.83rem), 500, 1, null, null, start);
+    @include font(clamp(1.7rem, 2.5vw,2.83rem), 500, 1, null, null, start);
 }
 
 .icon {
     @include flex(center,center);
-    @include size(4rem,4rem);
-    font-size: 3.2rem;
-    @include size(3.4rem,3.4rem);
-    font-size: 2.2rem;
-}
-
-.title {
-    @include font(clamp(1.62rem, 2.2vw,2.4rem), 450, 1, null, null, center);
+    @include size(2.8rem,2.8rem);
+    @include size(2.38rem,2.38rem);
+    font-size: 2.6rem;
+    font-size: 2.1rem;
 }
 
 @media only screen {
-    @media (min-width:1050px){
+    @media (min-width:550px){
+               
         .wrapper {
-            padding: 0.65rem 1.72rem;
+            column-gap:1.6rem;
+            padding: 0.75rem 1.37rem;
+            &[data-theme="dark"]{
+                border:3px solid $black;
+            }
+            &[data-theme="white"]{
+                border:3px solid $white;
+            }
         }
+        
+        .title {
+            font-size: clamp(2.3rem, 2.7vw,3.1rem);
+        }
+        
+        .icon {
+            @include size(2.88rem,2.88rem);
+            font-size: 2.6rem;
+        }
+        
     }
 }

@@ -1,12 +1,8 @@
-import { tBanner } from "v-home/Banner/Banner.models";
-import hero_img from "img/hero.webp"
+import hero_img from "img/hero-small.webp"
 import person_img from "img/man-with-phone-holiday.webp";
 import { tHero } from 'v-home/Hero/Hero.models';
-import { tServices } from "v-home/Services/Services.models";
 interface i_home_page {
     hero:tHero;
-    banner:tBanner;
-    services:tServices;
 }
 
 export const home_page:i_home_page = {
@@ -34,7 +30,7 @@ export const home_page:i_home_page = {
         socials:[
             {
                 title:"Facebook",
-                url:"facebook.com"
+                url:"https://facebook.com"
             },
             {
                 title:"Instagram",
@@ -51,20 +47,5 @@ export const home_page:i_home_page = {
         ],
         title:"RadWEB"
     },
-    banner: {
-        image: {
-            altText:"",
-            sourceUrl:person_img.src,
-            title:""
-        },
-        text:`Over the past 10 years, we’ve perfected our Design & Development game and are eager to help passionate Founders perfect theirs. Success is a team play, right? Let’s aim for the top together!`
-    },
-    services: {
-        button:{
-            title:"Nasza oferta",
-            url:"#"
-        },
-        content:`We’ve helped hundreds of partners, ranging from startups to medium-sized businesses to achieve their goals. And stellar feedback — is our reward!`,
-        title:"Usługi RadWEB"
-    }
+    
 }

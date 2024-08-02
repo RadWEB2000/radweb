@@ -1,10 +1,11 @@
-import css from "buttons/PrimaryButton/PrimaryButton.module.scss"
-import Link from 'next/link';
-import { GoArrowRight as Arrow } from "react-icons/go";
+import css from "buttons/PrimaryButton/PrimaryButton.module.scss";
+import Link from "next/link";
 import {tPrimaryButton} from "buttons/PrimaryButton/PrimaryButton.models"
+import { BsArrowRight as Arrow} from "react-icons/bs";
+
 export default function PrimaryButton({theme,title,url}:tPrimaryButton){
     return (
-        <Link 
+        <Link
             className={css.wrapper}
             data-theme={theme}
             href={url}
@@ -18,6 +19,6 @@ export default function PrimaryButton({theme,title,url}:tPrimaryButton){
             >
                 <Arrow/>
             </i>
-        </Link>       
+        </Link>
     )
 }
