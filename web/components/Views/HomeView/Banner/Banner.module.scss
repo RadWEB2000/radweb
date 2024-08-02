@@ -1,0 +1,71 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    align-items: center;
+    margin:10vh auto;
+    width:clamp(5rem, 160rem, 95%);
+}
+
+.image__wrapper {
+    background-color:color-mix(in srgb, rgba($purple,.73) 30%, rgba($white,.94) 70%);
+    border-radius: 1rem;
+    display: none;
+    grid-column: 1/4;
+    height: 100%;
+    position: relative;
+}
+
+.image {
+    object-fit: contain;
+    object-position: center;
+    transform-origin: bottom;
+    transform: scale(1.05);
+}
+
+.box{
+    padding:2rem 1rem;
+}
+
+
+.title {
+    @include font(clamp(2.5rem, 2.75vw,3rem),400, 1.1, null, null,start);
+    color:$yellow;
+    font-family: $font_mono;
+}
+
+.content {
+    @include font(clamp(2.6rem,3.2vw,4.72rem),700, 1.47,null, null, start);
+    margin-top: 3rem;
+    text-wrap:balance;
+}
+
+@media only screen {
+    @media (min-width:815px){
+        .wrapper {
+            align-items: center;
+            display: grid;
+            gap:1rem;
+            grid-template-columns: repeat(8,1fr);
+        }
+        
+        .image__wrapper {
+            display: block;
+            grid-column: 1/4;
+        }
+        
+        .box{
+            grid-column: 4/-1;
+            padding:2rem 1rem;
+        }
+         
+    }
+    @media (min-width:1200px){
+        .box {
+            padding:1rem 2.6rem;
+        }
+        .image__wrapper {
+            min-height:80rem;
+        }
+    }
+}

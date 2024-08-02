@@ -1,0 +1,12 @@
+@import "../Animations.scss";
+@import "../Mixins.scss";
+@import "../Variables.scss";
+
+
+.hp_tile {
+    background-color: color-mix(in srgb, $black 90%, $purple 10%);
+    border-radius: 3rem;
+    padding: 2rem 3rem;
+    width:95%;
+    margin:5rem auto;
+}
