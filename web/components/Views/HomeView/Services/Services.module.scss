@@ -3,12 +3,13 @@
 
 .wrapper {
     margin:7vh auto;
-    width:clamp(5rem, 110rem, 90%);
+    width:clamp(5rem, 110rem, 95%);
 }
 
 .title {
     @include font(clamp(4.75rem, 6.7vw, 11.3rem),400, 1.2, null, null, start);
     font-family: $font_bold;
+    margin-bottom: 2.3rem;
 }
 
 .content {
@@ -19,8 +20,18 @@
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
     padding: 1.15rem;
+    padding: .45rem;
     gap:1rem;
+    gap:.63rem;
     margin-top: 4rem;
+}
+
+@media only screen {
+    @media (min-width:705px){
+        .cards {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
 }
