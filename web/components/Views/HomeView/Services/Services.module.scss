@@ -1,0 +1,26 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    margin:7vh auto;
+    width:clamp(5rem, 110rem, 90%);
+}
+
+.title {
+    @include font(clamp(4.75rem, 6.7vw, 11.3rem),400, 1.2, null, null, start);
+    font-family: $font_bold;
+}
+
+.content {
+    @include font(clamp(1.62rem, 1.7vw, 1.98rem), 400, 1.6, null, null, start);
+    max-width: 75ch;
+    opacity: 0.72;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 1.15rem;
+    gap:1rem;
+    margin-top: 4rem;
+}

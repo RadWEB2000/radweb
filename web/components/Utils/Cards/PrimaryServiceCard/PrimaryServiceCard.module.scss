@@ -1,0 +1,57 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    background: $purple;
+    padding: 1.5rem;
+    border-radius: 2rem;
+}
+
+.image__wrapper {
+    @include flex(center,center);
+    @include size(7rem, 7rem);
+    border-radius: 50%;
+    display: block;
+    background-color: color-mix(in srgb, $purple 30%, $white 70%);
+    position: relative;
+    margin-bottom: 2rem;
+
+}
+
+.image {
+    object-fit: contain;
+    object-position: center;
+}
+
+.title {
+    @include font(clamp(2.6rem, 3.3vw, 4.27rem), 600, 1, null, null, start);
+}
+
+.content {
+    @include font(clamp(1.55rem, 1.6vw, 1.7rem), 300, 1.5, null, null, start);
+    margin: 1rem 0;
+}
+
+.button {
+    @include font(1.8rem, 500, 1, null,null, start);
+    padding: 0.25rem 1.1rem;
+    position: relative;
+    &::after {
+        @include size(2px, 100%);
+        background-color: $white;
+        border-radius: 1rem;
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition:.23s linear transform;
+    }
+
+    &:focus-within,
+    &:hover {
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}
