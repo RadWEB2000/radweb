@@ -1,0 +1,25 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    margin:7vh auto;
+    width:clamp(5rem, 120rem, 95%);
+}
+
+.title {
+    @include font(clamp(5rem, 7.2vw, 13rem), 400, 1.2, null, null, start);
+    font-family: $font_bold;
+}
+
+.content {
+    @include font(clamp(1.5rem, 1.62vw, 1.89rem), 500, 1.9, null, null, start);
+    color:color-mix(in srgb, $silver 50% , $white 50%);
+    max-width: 75ch;
+    text-wrap:balance;
+}
+
+.cards {
+    @include flex(flex-start,flex-start,column, null, 2rem);
+    margin-top: 5vh;
+}
+

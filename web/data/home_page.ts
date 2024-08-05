@@ -3,14 +3,17 @@ import hero_img from "img/hero-small.webp"
 import person_img from "img/man-with-phone-holiday.webp";
 import { tHero } from 'v-home/Hero/Hero.models';
 import { tServices } from "v-home/Services/Services.models";
+import project_img from "img/projekt.webp"
 import web_icon  from "icons/strony-internetowe-radweb.webp"
 import seo_icon from "icons/pozycjonowanie-stron-interntowych-radweb.webp";
 import ppc_icon from "icons/reklamy-google-ads-radweb.webp";
 import video_icon from "icons/videomaking-radweb.webp";
+import { tProjects } from "v-home/Projects/Projects.models";
 interface i_home_page {
     hero:tHero;
     banner:tBanner;
     services:tServices;
+    projects:tProjects;
 }
 
 export const home_page:i_home_page = {
@@ -122,6 +125,59 @@ export const home_page:i_home_page = {
                 title:"Videomaking"
             },
         ]
+    },
+    projects: {
+        button: {
+            title:"Nasze realizacje",
+            url:"#"
+        },
+        cards:[
+            {
+                author:{
+                    fullname: {
+                        firstname:"Radosław",
+                        lastname:"Adamczyk"
+                    },
+                    uri:"#"
+                },
+                categories:[
+                    "Strony internetowe",
+                    "Pozycjonowanie"
+                ],
+                content:`Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney`,
+                image:{
+                    altText:"",
+                    sourceUrl:project_img.src,
+                    title:""
+                },
+                release:"Wed Feb 28 2024 06:16:57 GMT+0100 (Central European Standard Time)",
+                title:"Agromar",
+                url:"#"
+            },
+            {
+                author:{
+                    fullname: {
+                        firstname:"Radosław",
+                        lastname:"Adamczyk"
+                    },
+                    uri:"#"
+                },
+                categories:[
+                    "Strony internetowe",
+                    "Pozycjonowanie"
+                ],
+                content:`Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney`,
+                image:{
+                    altText:"",
+                    sourceUrl:project_img.src,
+                    title:""
+                },
+                release:"Wed Feb 28 2024 06:16:57 GMT+0100 (Central European Standard Time)",
+                title:"Mechanik Ludomy",
+                url:"#"
+            },
+        ],
+        content:`ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.`,
+        title:"Nasze prace"
     }
-    
 }

@@ -13,11 +13,12 @@ export default function  PrimaryServiceCard({button,content,icon,title}:tPrimary
                 <Image
                     alt={icon.altText}
                     className={css.image}
-                    fill
+                    height={150}
                     loading="lazy"
                     src={icon.sourceUrl}
                     title={icon.title}
                     quality={14}
+                    width={150}
                 />
             </picture>
             <article

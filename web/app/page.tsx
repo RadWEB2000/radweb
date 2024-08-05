@@ -1,5 +1,5 @@
 import "css/Views/HomeView.scss"
-import { Banner, Hero, Services } from "v-home/index"
+import { Banner, Hero, Projects, Services } from "v-home/index"
 import { home_page } from "data/home_page"
 
 export default function HomePage(){
@@ -19,6 +19,9 @@ export default function HomePage(){
             {...home_page.services}
           />
         </div>
+        <Projects
+          {...home_page.projects}
+        />
       </main>
       <div></div>
     </>

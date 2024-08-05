@@ -45,11 +45,9 @@ button {
 
 body {
 	background-color: $black;
-	background-image: linear-gradient(170deg, $black,$black,$black,rgba($purple,.15));
-
+	background-image: linear-gradient(170deg, $black,$black,$black,rgba($purple,.45));
 	background-size: cover;
 	background-attachment: fixed;
-	// background-color: color-mix(in srgb, $black 60%, $purple 40%);
 	color: $white;
 	font-family: $font_regular;
 	font-weight: 400;

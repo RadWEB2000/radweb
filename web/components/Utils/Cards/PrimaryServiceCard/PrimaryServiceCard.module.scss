@@ -3,6 +3,7 @@
 
 .wrapper {
     background: $purple;
+    filter:saturate(70%);
     padding: 1.5rem;
     border-radius: 2rem;
     border-radius: 1.2rem;
@@ -11,17 +12,16 @@
 .image__wrapper {
     @include flex(center,center);
     @include size(7rem, 7rem);
-    border-radius: 50%;
-    display: block;
-    background-color: color-mix(in srgb, $purple 30%, $white 70%);
+    border-radius: 2.5rem;
+    // display: block;
+    background-color: color-mix(in srgb, $purple 10%, $white 90%);
     position: relative;
     margin-bottom: 2rem;
 
 }
 
 .image {
-    object-fit: contain;
-    object-position: center;
+    @include size(5.2rem, 5.2rem);
 }
 
 .title {

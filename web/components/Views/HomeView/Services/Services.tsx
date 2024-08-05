@@ -1,7 +1,9 @@
 import {PrimaryServiceCard  as Card}from "cards/index";
 import {tServices} from "v-home/Services/Services.models";
 import css from "v-home/Services/Services.module.scss"
+import getDate from '../../../../lib/getDate';
 export default function Services({button,cards,content,title}:tServices){
+    
     return (
         <div
             className={css.wrapper}
