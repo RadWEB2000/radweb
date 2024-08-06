@@ -19,6 +19,7 @@
 .box {
     @include flex(flex-start,center,column, null, null, start);
     grid-column: 1/5;
+    grid-column: 1/-1;
 }
 
 .title {
@@ -33,13 +34,17 @@
 
 .content {
     @include font(clamp(1.6rem, 1.7vw, 2.3rem), 500, 1.4, null, null, start);
+    @include font(clamp(2.1rem, 2.3vw, 3.2rem), 500, 1.64, null, null, start);
     margin:2rem 0;
     opacity: 0.85;
+    text-wrap:balance;
+    max-width: 70ch;
 }
 
 .image__wrapper {
     // background: black;
     display: block;
+    display: none;
     grid-column: 5/-1;
     position: relative;
 }
@@ -59,4 +64,19 @@
     grid-row: 2;
     margin:auto;
     padding: 0 1.4vw;
+}
+
+@media only screen {
+    @media (min-width:715px){
+        .box {
+            grid-column: 1/5;
+        } 
+        .content {
+            font-size: clamp(1.73rem, 1.87vw, 2.7rem);
+        }
+
+        .image__wrapper {
+            display: block;
+        }
+    }
 }
