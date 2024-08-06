@@ -9,9 +9,9 @@ export default function HomePage(){
         {...home_page.hero}
       />
       <main>
-        {/* <WhyUs
+        <WhyUs
           {...home_page.whyUs}
-        /> */}
+        />
       </main>
     </>
   )
