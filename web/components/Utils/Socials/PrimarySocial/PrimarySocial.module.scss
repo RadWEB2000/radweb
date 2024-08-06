@@ -1,0 +1,36 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,center);
+    @include size(4rem, 4rem);
+    color:$white;
+    font-size: 3.7rem;
+    position: relative;
+    transition:.15s linear color;
+    & > * {
+        transform: translateY(0);
+        transition: .15s linear transform;
+    }
+    &::after {
+        @include size(5px,100%);
+        background-color: $yellow;
+        border-radius: 2rem;
+        bottom: -2px;
+        position: absolute;
+        right: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: .15s linear transform;
+    }
+    &:focus-within,
+    &:hover {
+        color:$yellow;
+        & > * {
+            transform: translateY(-.5rem);
+        }
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}
