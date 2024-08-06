@@ -9,6 +9,7 @@
     grid-template-columns: repeat(9,1fr);
     grid-template-rows:calc(100% - 8rem) 8rem;
     padding:6vh 2vw 1vh;
+    width: 100%;
 }
 
 .box,
@@ -24,10 +25,12 @@
 
 .title {
     @include font(clamp(2.2rem, 2.6vw, 3.1rem), 700, 1.82, null, null, start);
+    background: purple;
 }
 
 .slogan {
     @include font(clamp(5.2rem, 6.3vw, 15rem), 700, .82, null, null, start);
+    background: salmon;
 
 }
 
