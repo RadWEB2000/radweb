@@ -2,13 +2,23 @@ import whyUs_img from "img/why_us.svg";
 import hero_img from "img/hero.svg"
 import { tWhyUs } from "v-home/WhyUs/WhyUs.models";
 import { tHero } from "v-home/Hero/Hero.models";
+import { tAboutUs } from "v-home/AboutUs/AboutUs.models";
 
 interface i_home_page {
+    aboutUs:tAboutUs;
     hero:tHero;
     whyUs:tWhyUs;
 }
 
 export const home_page:i_home_page = {
+    aboutUs: {
+        button: {
+            title:"Poznaj nas",
+            url:"#"
+        },
+        content:`Projektujemy w taki sposób, aby zawsze realizować Twoje cele. Oferując tworzenie stron internetowych, wykorzystujemy wiodące technologie, aby dać Ci zupełnie nową jakość. Projektowanie stron www, jak również identyfikacja wizualna to nie tylko nasza praca, ale również ogromna pasja. Zaoferujemy Tobie tylko świeże i unikatowe rozwiązania.`,
+        title:"Kim jesteśmy?"
+    },
     hero: {
         buttons: [
             {
