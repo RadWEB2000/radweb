@@ -40,9 +40,12 @@ button {
 }
 
 body {
+	background-attachment: fixed;
 	background-color: $black;
-	color: $timberwolf;
-	font-family: $font_regular;
+	background-image: linear-gradient(170deg, $black,$black,$black,rgba($blue,.25));
+	background-size: cover;
+	color: $white;
+	font-family: "Outfit", sans-serif;
 	font-optical-sizing: auto;
 	font-size: 1.6rem;
 	font-style: normal;

@@ -1,21 +1,32 @@
-import {AboutUs, Hero,WhyUs} from "v-home/index"
-import "css/Views/HomeView.scss"
-import { home_page } from "data/home_page"
+import { Hero } from "v-home/index";
+import hero_img from "img/blop.png"
 
 export default function HomePage(){
-  return(
+  return (
     <>
       <Hero
-        {...home_page.hero}
+        buttons={[
+          {
+            title:"Wiedza",
+            url:"#"
+          },
+          {
+            title:"Oferta",
+            url:"#"
+          },
+          {
+            title:"Kontakt",
+            url:"#"
+          },
+        ]}
+        image={{
+          altText:"",
+          sourceUrl:hero_img.src,
+          title:""
+        }}
+        slogan="Współczesny marketing online"
+        title="RadWEB"
       />
-      <main>
-        <WhyUs
-          {...home_page.whyUs}
-        />
-        <AboutUs
-          {...home_page.aboutUs}
-        />
-      </main>
     </>
   )
 }
