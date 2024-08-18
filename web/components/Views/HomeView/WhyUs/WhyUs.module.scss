@@ -1,0 +1,29 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    margin:5vh auto;
+}
+
+.box {
+    @include font(clamp(3rem, 4.5vw, 5.7rem), 700, 1.5, null, null, start);
+    grid-column: 2/7;
+}
+
+
+.image__wrapper{
+    // background: lime;
+    display: block;
+    grid-column: 7/-1;
+    transform: translateY(8rem);
+    position: relative;
+}
+
+.image {
+    @include size(100%,100%);
+    object-fit: cover;
+    object-position: left;
+}

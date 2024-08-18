@@ -40,7 +40,7 @@ button {
 }
 
 body {
-	background-color: $black;
+	background-color: color-mix(in srgb, $dim 45%, $black 55%);
 	color: $timberwolf;
 	font-family: $font_regular;
 	font-optical-sizing: auto;
