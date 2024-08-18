@@ -1,0 +1,47 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    background-color: $black;
+    display: grid;
+    grid-template-areas: "layer";
+    position: relative;
+    z-index: 0;
+}
+
+.image__wrapper {
+    grid-area: layer;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.image {
+    object-fit: contain;
+    object-position: bottom right;
+    transform:translate(3rem,0) scale(1.6);
+}
+
+.box {
+    @include flex(flex-start,center,column, null, 2rem);
+    grid-area: layer;
+    min-height: 95vh;
+    padding: 5rem 5vw;
+    z-index: 2;
+}
+
+.slogan {
+    @include font(clamp(3.75rem, 8vw, 13rem), 900, 1.07, uppercase, null, start);
+    color:$white;
+    font-family: $font_bold;
+    max-width: 15ch;
+    text-shadow:0 0 1rem rgba($black,.5);
+}
+
+.title {
+    @include font(clamp(1.9rem, 4vw, 5.7rem), 400, 1.077, null, null, start)
+}
+
+.buttons {
+    @include flex(center,flex-start, row wrap, 1.2rem, 1.2rem);
+}

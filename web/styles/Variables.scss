@@ -1,22 +1,22 @@
 // FONTS ===================================
-$font_bold:var("--bold");
-$font_mono:var("--mono");
-$font_regular:var("--regular");
-$font_serif:var("--serif");
+$font_bold:var(--bold);
+$font_mono:var(--mono);
+$font_regular:var(--regular);
+$font_serif:var(--serif);
 
 // COLORS ===================================
-$black:#000;
-$chartreuse:#dcff05;
-$dim:#1f1f1f;
-$gray:#666666;
-$green:#73f588;
-$jet:#2a2a2a;
-$pearl:#d9d9d9;
-$platinum:#e4e2e2;
-$red:#F16060;
-$silver:#adadad;
-$timberwolf:#d2d2d2;
-$white:#fff;
+$black:rgb(0, 0, 0);
+$chartreuse:rgb(220, 255, 5);
+$dim:rgb(31, 31, 31);
+$gray:rgb(102, 102, 102);
+$green:rgb(115, 245, 136);
+$jet:rgb(42, 42, 42);
+$pearl:rgb(217, 217, 217);
+$platinum:rgb(228, 226, 226);
+$red:rgb(241, 96, 96);
+$silver:rgb(173, 173, 173);
+$timberwolf:rgb(210, 210, 210);
+$white:rgb(255, 255, 255);
 
 
 // GRADIENTS =================================

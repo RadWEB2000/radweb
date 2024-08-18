@@ -7,9 +7,9 @@ export type tPrimaryButton =   (
     } | {
         type: "button";
         action?: () => void;
+        attributes?: React.ButtonHTMLAttributes<HTMLButtonElement>;
     }
 ) & {
-    theme: "primary" | "secondary";
     icon: tIconType;
     title: string;
 };

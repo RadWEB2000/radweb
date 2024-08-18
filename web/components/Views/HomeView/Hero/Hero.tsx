@@ -48,7 +48,6 @@ export default function Hero({buttons,image,slogan, title}:tHero){
                                     {...item}
                                     key={index}
                                     icon={"arrow"}
-                                    theme="primary"
                                     type="link"
                                 />
                             )

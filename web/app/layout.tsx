@@ -1,29 +1,30 @@
 import type { Metadata } from "next";
 import { Roboto, Roboto_Condensed,Roboto_Mono, Roboto_Slab} from "next/font/google";
-import "Globals.scss";
+import "css/Global.scss";
 
-const fonts = {
-    regular: Roboto({
-      subsets:["latin-ext"],
-      weight:["100","300","400","500","700","900"],
-      variable:"--regular"
-    }),
-    mono: Roboto_Mono({
-      subsets:["latin-ext"],
-      weight:["100","200","300","400","500","600","700"],
-      variable:"--mono"     
-    }),
-    bold: Roboto_Condensed({
-      subsets:["latin-ext"],
-      weight:["100","200","300","400","500","600","700","800","900"],
-      variable:"--bold"
-    }),
-    serif: Roboto_Slab({
-      subsets:["latin-ext"],
-      weight:["100","200","300","400","500","600","700","800","900"],
-      variable:"--serif"
-    })
-}
+const regular = Roboto({
+  subsets:["latin-ext"],
+  weight:["100","300","400","500","700","900"],
+  variable:"--regular"
+})
+
+const mono = Roboto_Mono({
+  subsets:["latin-ext"],
+  weight:["100","200","300","400","500","600","700"],
+  variable:"--mono"     
+});
+
+const bold = Roboto_Condensed({
+  subsets:["latin-ext"],
+  weight:["100","200","300","400","500","600","700","800","900"],
+  variable:"--bold"
+})
+
+const serif = Roboto_Slab({
+  subsets:["latin-ext"],
+  weight:["100","200","300","400","500","600","700","800","900"],
+  variable:"--serif"
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -38,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body 
-        className={`${fonts.bold.variable} ${fonts.mono.variable} ${fonts.regular.variable} ${fonts.serif.variable}`}
+        className={`${bold.variable} ${mono.variable} ${regular.variable} ${serif.variable}`}
       >
         {children}
       </body>

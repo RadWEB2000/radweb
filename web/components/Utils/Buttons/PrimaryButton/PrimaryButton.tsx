@@ -1,5 +1,6 @@
-import { tPrimaryButton, tIconType } from "buttons/PrimaryButton/PrimaryButton.models";
+import css from "buttons/PrimaryButton/PrimaryButton.module.scss"
 import Link from "next/link";
+import { tPrimaryButton, tIconType } from "buttons/PrimaryButton/PrimaryButton.models";
 import { FaAngleRight as Arrow } from "react-icons/fa6";
 import { HiOutlineArrowNarrowRight as LongArrow } from "react-icons/hi";
 import { FaRegEnvelope as Envelope} from "react-icons/fa6";
@@ -20,20 +21,23 @@ function getIcon(type:tIconType):JSX.Element|null {
 }
 
 export default function PrimaryButton(props:tPrimaryButton){
-    const {type:kind, icon, theme,title} = props;
+    const {type:kind, icon, title} = props;
     if(kind === "link") {
         const {url} = props;
         return (
             <Link
-                data-theme={theme}
+                className={css.wrapper}
                 href={url}
             >
                 <span
+                    className={css.title}
                     dangerouslySetInnerHTML={{__html:title}}
                 />
                 {
                     icon !== null &&
-                    <i>
+                    <i
+                        className={css.icon}
+                    >
                         {getIcon(icon)}
                     </i>
                 }
@@ -41,17 +45,21 @@ export default function PrimaryButton(props:tPrimaryButton){
         )
     }
     if(kind === "button"){
-        const {action} = props;
+        const {action, attributes} = props;
         return (
             <button
-                data-theme={theme}
+                className={css.wrapper}
+                {...attributes}
             >
                 <span
+                    className={css.title}
                     dangerouslySetInnerHTML={{__html:title}}
                 />
                 {
                     icon !== null &&
-                    <i>
+                    <i
+                        className={css.icon}
+                    >
                         {getIcon(icon)}
                     </i>
                 }
