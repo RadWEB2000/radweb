@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import "css/Global.scss";
+import { Alexandria } from "next/font/google"
 
+const font = Alexandria({
+  subsets:["latin-ext","latin"],
+  preload:true,
+  weight:["100","200","300","400","500","600","700","800","900"]
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body 
+        className={font.className}
       >
         {children}
       </body>
