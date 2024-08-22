@@ -1,0 +1,40 @@
+@import "../../../styles/Mixins.scss";
+@import "../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,space-between, row nowrap, .75rem, null, false);
+    background-color: $gray;
+    border-radius: .45rem;
+    color:$navy;
+    padding: 0.45rem 1.1rem;
+    transition:.12s linear background-color, .12s linear transform;
+    &:focus-within,
+    &:hover {
+        background-color: $white;
+        transform: scale(.98)
+    }
+}
+
+.label {
+    @include font(clamp(1.55rem, 1.67vw, 1.9rem
+    ), 600, 1,null,null, start);
+}
+
+.icon {
+    @include flex(center,center);
+    @include size(3.15rem, 3.15rem);
+    font-size: 2.6rem;
+}
+
+@media only screen {
+    @media (min-width:890px){
+        .icon {
+            @include size(3.65rem, 3.65rem);
+            font-size: 3.1rem;
+        }
+        .label {
+            font-size: clamp(1.75rem, 1.87vw, 2.1rem
+            );
+        }
+    }
+}

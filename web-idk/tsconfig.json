@@ -44,6 +44,7 @@
       "video/*":["./assets/videos/*"],
       "views/*":["./components/Views/*"],
       "utils/*":["./components/Utils/*"],
+      "ui/*":["./components/Ui/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

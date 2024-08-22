@@ -1,0 +1,13 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    margin:2vh auto 2vh 2.5vw;
+    width:clamp(5rem, 110rem, 95%);
+}
+
+.content {
+    @include font(clamp(3rem,4.75vw, 5.2rem), 600, 1.3, null, null, start);
+    max-width: 30ch;
+    text-wrap: balance;
+}

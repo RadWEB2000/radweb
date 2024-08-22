@@ -1,0 +1,178 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
+    margin:4vh auto 2vh;
+    gap:.2rem;
+    width:95vw;
+    z-index: 0;
+   
+}
+
+.container {
+    @include size(85vh,100%);
+    display: grid;
+    grid-template-areas: "layer";
+    grid-column: 1/-1;
+    grid-row: 1;
+    position: relative;
+    border-radius: 3dvw;
+    overflow: hidden;
+    & > *{
+        @include size(100%,100%);
+
+        grid-area: layer;
+    }
+}
+
+.media {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    & >* {
+        @include size(100%,100%);
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.box {
+    @include flex(flex-start,center, column, null, null, null);
+    background: rgba($navy, .3);
+    color:$white;
+    padding: 2.5rem;
+    position: absolute;
+    z-index: 2;
+}
+
+.title {
+    @include font(clamp(1.67rem, 2.3vw, 3.2rem), 400, 1.1, null, null, start);
+}
+
+.slogan {
+    @include font(clamp(3.5rem, 6.25vw, 13rem), 700, 1.2, uppercase, null, start);
+    text-wrap: balance;
+}
+
+.buttons {
+    @include flex(center,flex-start, row wrap, 1rem, 1rem);
+    margin-top: 1.2rem;
+}
+
+.cards, .socials {
+    display: grid;
+    // grid-template-columns: repeat(2,1fr);
+    grid-column: 1/-1;
+    grid-gap: .2rem;
+
+    // min-height: 15vh;
+    // grid-row: 2;
+}
+
+.card, .social {
+    border-radius: 1.5dvh;
+
+}
+
+.cards {
+    // grid-column: 1/10;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.card {
+    @include flex(center, center, column, null, null, false);
+    background-color: $space;
+    color:$gray;
+    padding: .9rem .2rem;
+    & >* {
+        @include font(unset, 1, null, null, center);
+    }
+}
+
+.card__label {
+    @include font(clamp(1.45rem, 1.67vw,1.88rem),300);
+}
+
+.card__value {
+    @include font(clamp(3rem, 5.7vw,12rem),700);
+    color:$white;
+    margin-top: .72rem;
+}
+
+.socials {
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(4,1fr);
+    height: 100%;
+    // grid-column: 10/-1;
+}
+
+.social {
+    @include flex(center,center);
+    @include size(100%,100%);
+    color:$white;
+    font-size: 2.73dvw;
+    height: 5rem;
+    font-size: 3rem;
+    transition:.15s linear background-color, .15s linear border, .15s linear color;
+    &:focus-within,
+    &:hover {
+        background-color: $gray !important;
+        border:2px solid $navy;
+        color:$navy;
+    }
+}
+
+@media only screen {
+    @media (min-width:620px){
+        .container {
+            height: 75vh;
+        }
+        
+        .box {
+            padding: 3.65rem;
+        }
+        
+    } 
+    @media (min-width:900px){
+        .box {
+            padding: 5rem;
+        }
+        
+    }
+    @media (min-width:1000px){
+        .cards, .socials {
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: .2rem;
+            grid-row: 2;
+        }
+        .cards {
+            grid-column: 1/10;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .socials {
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: repeat(2,1fr);
+            height: 100%;
+            grid-column: 10/-1;
+        }
+
+        .social {
+            @include flex(center,center);
+            @include size(100%,100%);
+            color:$white;
+            font-size: 3.13dvw;
+            height: 100%;
+            transition:.15s linear background-color, .15s linear border, .15s linear color;
+            &:focus-within,
+            &:hover {
+                background-color: $gray !important;
+                border:2px solid $navy;
+                color:$navy;
+            }
+        }
+        
+    }
+}
