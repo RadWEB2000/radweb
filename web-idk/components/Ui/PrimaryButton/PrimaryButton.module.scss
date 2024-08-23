@@ -5,7 +5,7 @@
     @include flex(center,space-between, row nowrap, .75rem, null, false);
     background-color: $gray;
     border-radius: .45rem;
-    color:$navy;
+    color:$black;
     padding: 0.45rem 1.1rem;
     transition:.12s linear background-color, .12s linear transform;
     &:focus-within,
