@@ -1,0 +1,48 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    background-color: $space;
+    color:$gray;
+    padding: 12vh 5vw;
+}
+
+.title {
+    @include font(clamp(6rem, 8vw, 15rem), 700, 1.1, uppercase, null, start);
+    color:$white;
+    text-wrap:balance;
+}
+
+.content {
+    @include font(clamp(1.7rem, 2.2vw,2.4rem), 300, 1.7, null, null, start);
+    max-width: 60ch;
+}
+
+.cards {
+    @include flex(flex-end, flex-start, column, null, 1rem);
+    margin:6rem 0 2rem auto;
+    width:clamp(5rem, 120rem, 95%);
+}
+
+.grid__wrapper {
+    // background: purple;
+    padding: 1rem;
+}
+
+.grid__title {
+    @include font(clamp(4.7rem, 5.5vw, 6.6rem), 500, 1.2, null, null, start);
+    color:color-mix(in srgb, $navy 30%, $white 70%);
+    text-wrap: balance;
+}
+
+.grid__content {
+    @include font(clamp(1.5rem, 1.6vw, 1.92rem), 400, 1.7, null, null, start);
+    color:color-mix(in srgb, $space 30%, $gray 70%);
+}
+
+.grid__cards {
+    @include flex(flex-start,flex-end, row wrap, 1rem, 1rem, false);
+    // background: rgba(255, 192, 203, 0.582);
+    gap:1rem;
+    margin-top: 4rem;
+}
