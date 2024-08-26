@@ -1,4 +1,4 @@
-import { AboutUs, Hero, Services, WhyUs } from "v-home/index";
+import { AboutUs, Hero, Projects, Services, WhyUs } from "v-home/index";
 import radek_img from "img/radek-adamczyk.webp";
 import filip_img from "img/filip-bukowiecki.webp"
 
@@ -155,7 +155,7 @@ export default function Page(){
                 url:"#"
               },
               content:`Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.`,
-              title:"Strony internetowe",
+              title:"SEO",
               cards:[
                 {
                   content:`Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)`,
@@ -228,6 +228,52 @@ export default function Page(){
                   url:"#"
                 },
               ]
+            },
+          ]}
+        />
+        <Projects
+          button={{
+            title:"Nasze realizacje",
+            url:"#"
+          }}
+          content={`I understand your point but this won't scale. I have over 200 000 entries for ~150 000 different dates. It's impossible to create that many files and totally impossible to maintain those. That's why I'm wondering how to handle this in some sane way. Possibly some redirect on the server side? `}
+          title="Projekty"
+          cards={[
+            {
+              content:`The Link component with the as prop to create a "pretty" URL and pass a hidden ID as a query parameter. This way, the ID will be hidden in the visible URL while still being accessible within your Next.js components.`,
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/free-photo/front-view-black-sedan-sport-car-bridge_114579-4068.jpg?t=st=1724692463~exp=1724696063~hmac=935305cdb4dce6f9494199909fce3fff404b9d345ac808e8e6a7341885a15436&w=740",
+                title:""
+              },
+              release:2023,
+              slogan:"WWW & SEO",
+              title:"Mechanik Ludomy",
+              url:"#"
+            },
+            {
+              content:`The Link component with the as prop to create a "pretty" URL and pass a hidden ID as a query parameter. This way, the ID will be hidden in the visible URL while still being accessible within your Next.js components.`,
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/free-photo/woman-holding-basket-full-different-vegetables_23-2148580022.jpg?t=st=1724692781~exp=1724696381~hmac=30fdfa9165b3b5e1845e2e7ac1a6b7c5d174aa02a083bed8fdb28b9ebbe4c17d&w=996",
+                title:""
+              },
+              release:2024,
+              slogan:"WWW",
+              title:"Agromar",
+              url:"#"
+            },
+            {
+              content:`The Link component with the as prop to create a "pretty" URL and pass a hidden ID as a query parameter. This way, the ID will be hidden in the visible URL while still being accessible within your Next.js components.`,
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/free-photo/people-working-office-side-view_23-2149739377.jpg?t=st=1724692846~exp=1724696446~hmac=2f925dfaf11cbb23b6b6d9116bc103b1d5e61fc5e0d07b5263e6b095e0e0dca7&w=740",
+                title:""
+              },
+              release:2024,
+              slogan:"WWW",
+              title:"RadWEB CMS",
+              url:"#"
             },
           ]}
         />
