@@ -2,11 +2,17 @@
 @import "../../../../styles/Variables.scss";
 
 .wrapper {
+    background-color: $gray;
     display: grid;
     grid-template-columns:3fr 1fr;
     min-height:65vh;
+    transition:.23s linear filter;
     &:nth-of-type(odd){
         background-color: color-mix(in srgb, $white 12%, $gray 88%);
+    }
+    &:focus-within,
+    &:hover {
+        filter: brightness(95%);
     }
 }
 
