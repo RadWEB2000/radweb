@@ -1,0 +1,38 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    width:clamp(5rem, 50rem, 95%);
+}
+
+.image__wrapper {
+    aspect-ratio: 4/3;
+    border-radius: .4rem;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    object-fit: cover;
+    object-position: center;
+}
+
+.container {
+    padding: .45rem;
+}
+
+.title {
+    @include font(clamp(2.2rem, 2.5vw,2.7rem), 700, 1.1, null, null, start);
+    text-wrap: balance;
+}
+
+.excerpt {
+   @include font(clamp(1.44rem, 1.55vw, 1.6rem), 300, 1.6, null, null, start); 
+}
+
+.details {
+    @include flex(center, flex-start, row wrap, 1rem,.5rem, false);
+    padding: 0.45rem;
+}

@@ -1,4 +1,4 @@
-import { AboutUs, Hero, Projects, Services, WhyUs } from "v-home/index";
+import { AboutUs, Blog, Hero, Projects, Services, WhyUs } from "v-home/index";
 import radek_img from "img/radek-adamczyk.webp";
 import filip_img from "img/filip-bukowiecki.webp"
 
@@ -273,6 +273,130 @@ export default function Page(){
               release:2024,
               slogan:"WWW",
               title:"RadWEB CMS",
+              url:"#"
+            },
+          ]}
+        />
+        <Blog
+          button={{
+            title:"Wszystkie wpisy",
+            url:"#"
+          }}
+          content={`Gąska sosnowa rośnie głównie w lasach iglastych, zwłaszcza w okolicach sosen, z którymi tworzy mikoryzę. Obecnie najczęściej występuje w Azji (głównie w Chinach i Japonii), a także w USA. Szczególnie ceniona jest w kraju kwitnącej wiśni. Japończycy uważają ją za przysmak oraz symbol luksusu. Trudność w jej zdobyciu sprawia, że kilogram tych grzybów, kosztuje tam nawet dwa tysiące euro.`}
+          title="Blog"
+          cards={[
+            {
+              category:{
+                title:"Programownie",
+                url:"#"
+              },
+              excerpt:`Gąska sosnowa (Tricholoma matsutake), zwana należąca do rodzaju opieńka (Armillaria), zyskała sławę jako jeden z najdroższych grzybów na świecie. Ceniona za wyjątkowe walory smakowe i zdrowotne, ponownie została zaobserwowana w Polsce po blisko stu latach od pierwszego odkrycia. Rzadkość występowania tego grzyba sprawia, że cena za kilogram osiąga astronomiczne kwoty.`,
+              fullname: {
+                firstname:"Radosław",
+                lastname:"Adamczyk"
+              },
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/free-photo/warrior-leader-from-ancient-maya-inca-lost-empire_23-2151683551.jpg?t=st=1724785615~exp=1724789215~hmac=c23f95e097952d9612315f6998ed31324ea462b2b66a845cba6a5b225517c7d7&w=2000",
+                title:""
+              },
+              release:"21 kwi 2024",
+              title:"Najdroższy grzyb na świecie rośnie w Polsce. W Japonii wręcza się go nawet w prezencie ślubnym",
+              url:"#"
+            },
+            {
+              category:{
+                title:"Programownie",
+                url:"#"
+              },
+              excerpt:`Gąska sosnowa (Tricholoma matsutake), zwana należąca do rodzaju opieńka (Armillaria), zyskała sławę jako jeden z najdroższych grzybów na świecie. Ceniona za wyjątkowe walory smakowe i zdrowotne, ponownie została zaobserwowana w Polsce po blisko stu latach od pierwszego odkrycia. Rzadkość występowania tego grzyba sprawia, że cena za kilogram osiąga astronomiczne kwoty.`,
+              fullname: {
+                firstname:"Radosław",
+                lastname:"Adamczyk"
+              },
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/free-photo/fantasy-eye-illustrated_23-2151675280.jpg?t=st=1724785715~exp=1724789315~hmac=174c6fd1e421cda6d49d9beaa1d9920456e95511003fb51a6ee8971e87b65e04&w=2000",
+                title:""
+              },
+              release:"21 kwi 2024",
+              title:"Uber z gigantyczną karą. Firma zapłaci 300 mln euro przez UE",
+              url:"#"
+            },
+            {
+              category:{
+                title:"Programownie",
+                url:"#"
+              },
+              excerpt:`Gąska sosnowa (Tricholoma matsutake), zwana należąca do rodzaju opieńka (Armillaria), zyskała sławę jako jeden z najdroższych grzybów na świecie. Ceniona za wyjątkowe walory smakowe i zdrowotne, ponownie została zaobserwowana w Polsce po blisko stu latach od pierwszego odkrycia. Rzadkość występowania tego grzyba sprawia, że cena za kilogram osiąga astronomiczne kwoty.`,
+              fullname: {
+                firstname:"Radosław",
+                lastname:"Adamczyk"
+              },
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/free-photo/anime-style-entity-with-fire_23-2151152132.jpg?t=st=1724785709~exp=1724789309~hmac=3b72c28c011814a364aaeef4627ca9ec0c9e6983d72c2c62c751eae1d73cb089&w=2000",
+                title:""
+              },
+              release:"21 kwi 2024",
+              title:"Awaria w mBanku. Problemy z bankowością online",
+              url:"#"
+            },
+            {
+              category:{
+                title:"Programownie",
+                url:"#"
+              },
+              excerpt:`Gąska sosnowa (Tricholoma matsutake), zwana należąca do rodzaju opieńka (Armillaria), zyskała sławę jako jeden z najdroższych grzybów na świecie. Ceniona za wyjątkowe walory smakowe i zdrowotne, ponownie została zaobserwowana w Polsce po blisko stu latach od pierwszego odkrycia. Rzadkość występowania tego grzyba sprawia, że cena za kilogram osiąga astronomiczne kwoty.`,
+              fullname: {
+                firstname:"Radosław",
+                lastname:"Adamczyk"
+              },
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/free-photo/dragons-fantasy-artificial-intelligence-image_23-2150400916.jpg?t=st=1724785997~exp=1724789597~hmac=b42805b58a597992e8c6d8d27e276bbf256aa84c04cf60cee9d29eb96cb7ac6d&w=2000",
+                title:""
+              },
+              release:"21 kwi 2024",
+              title:"Apple szykuje się do pokazania iPhone'a 16. Poznaliśmy datę konferencji",
+              url:"#"
+            },
+            {
+              category:{
+                title:"Programownie",
+                url:"#"
+              },
+              excerpt:`Gąska sosnowa (Tricholoma matsutake), zwana należąca do rodzaju opieńka (Armillaria), zyskała sławę jako jeden z najdroższych grzybów na świecie. Ceniona za wyjątkowe walory smakowe i zdrowotne, ponownie została zaobserwowana w Polsce po blisko stu latach od pierwszego odkrycia. Rzadkość występowania tego grzyba sprawia, że cena za kilogram osiąga astronomiczne kwoty.`,
+              fullname: {
+                firstname:"Radosław",
+                lastname:"Adamczyk"
+              },
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/free-photo/cool-scene-with-futuristic-dragon-creature_23-2151201681.jpg?t=st=1724785948~exp=1724789548~hmac=9a1e1d9b4c276780e15820cb7cd0db577dafeb79e465ee2773fbb97a840539d1&w=2000",
+                title:""
+              },
+              release:"21 kwi 2024",
+              title:"Ludzkość nie odejdzie od ropy. Tak twierdzi gigant tego rynku",
+              url:"#"
+            },
+            {
+              category:{
+                title:"Programownie",
+                url:"#"
+              },
+              excerpt:`Gąska sosnowa (Tricholoma matsutake), zwana należąca do rodzaju opieńka (Armillaria), zyskała sławę jako jeden z najdroższych grzybów na świecie. Ceniona za wyjątkowe walory smakowe i zdrowotne, ponownie została zaobserwowana w Polsce po blisko stu latach od pierwszego odkrycia. Rzadkość występowania tego grzyba sprawia, że cena za kilogram osiąga astronomiczne kwoty.`,
+              fullname: {
+                firstname:"Radosław",
+                lastname:"Adamczyk"
+              },
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/free-photo/front-view-man-with-wings-flying_23-2151110190.jpg?t=st=1724785965~exp=1724789565~hmac=f438eb081f8d96e19ef43a356f7cb6d76bcb3a70556d9db9c05c8e17978501d6&w=2000",
+                title:""
+              },
+              release:"21 kwi 2024",
+              title:"Na Bliskim Wschodzie wybuchnie wielka wojna? Generał z USA tłumaczy",
               url:"#"
             },
           ]}
