@@ -1,12 +1,6 @@
 @import "../../../../styles/Mixins.scss";
 @import "../../../../styles/Variables.scss";
 
-.wrapper {
-    // background-color: red;
-    // width: 38.5rem;
-
-}
-
 .image__wrapper {
     aspect-ratio: 4/3;
     border-radius: .4rem;
@@ -26,8 +20,13 @@
 }
 
 .title {
-    @include font(clamp(2.2rem, 2.5vw,2.7rem), 700, 1.1, null, null, start);
+    @include font(clamp(1.9rem, 2.1vw,2.3rem), 700, 1.1, null, null, start);
     text-wrap: balance;
+    transition:.1s linear color;
+    &:focus-within,
+    &:hover {
+        color:$navy;
+    }
 }
 
 .excerpt {
@@ -36,9 +35,8 @@
 
 .details {
     @include flex(center, space-between, row wrap, 1rem,.5rem, false);
-    padding: 0.25rem;
     margin-top: 1.2rem;
-    // margin: 2rem 1rem 2rem auto;
+    padding: 0.25rem;
 }
 
 .author{ 
@@ -49,6 +47,7 @@
 .category {
     border:2px solid $black;
     border-radius: 2rem;
+    font-weight: 450;
     padding: 0.45rem 1.64rem;
     transition: .12s linear background-color, .12s linear color;
     &:focus-within,
