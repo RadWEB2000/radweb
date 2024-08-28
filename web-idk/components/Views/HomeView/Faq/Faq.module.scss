@@ -7,13 +7,13 @@
     color:$black;
     display: grid;
     gap:2rem;
-    grid-template-columns: 3fr 2fr;
+    // grid-template-columns: 3fr 2fr;
     margin:2vh 0;
     padding: 10vh 5vw;
 }
 
 .title {
-    @include font(clamp(6.25rem, 9vw, 15rem), 700, 1.1, null, null, start);
+    @include font(clamp(5.25rem, 9vw, 15rem), 700, 1.1, null, null, start);
 }
 
 .content {
@@ -26,5 +26,13 @@
     @include flex(flex-start,flex-start,column,null,.23rem);
     & > * {
         width: 100%;
+    }
+}
+
+@media only screen {
+    @media (min-width:1200px){
+        .wrapper {
+            grid-template-columns:3fr 2fr;
+        }
     }
 }
