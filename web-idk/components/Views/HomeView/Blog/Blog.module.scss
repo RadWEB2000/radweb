@@ -7,7 +7,7 @@
 }
 
 .title {
-    @include font(clamp(5rem, 9vw, 15rem), 700, 1.1, null, null, start);
+    @include font(clamp(6.25rem, 9vw, 15rem), 700, 1.1, null, null, start);
 }
 
 .content {
@@ -17,12 +17,19 @@
 }
 
 .cards {
-    // @include flex(flex-start, flex-start, row wrap, 1rem, 1rem, true);
-    // background: blue;
     display: grid;
-    grid-template-columns: repeat(auto-fit,45rem);
     gap:2rem;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(1,85%);
+    justify-content: end;
+    justify-items: center;
     margin-top: 5rem;
-    justify-self: end;
+}
 
+@media only screen {
+    @media (min-width:550px){
+        .cards {
+            grid-template-columns: repeat(auto-fill,37rem);
+        }
+    }
 }

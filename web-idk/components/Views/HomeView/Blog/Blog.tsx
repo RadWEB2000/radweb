@@ -25,7 +25,7 @@ export default function Blog(props:tBlog){
                     className={css.cards}
                 >
                     {
-                        props.cards.slice(0,6).map((item, index) => {
+                        props.cards.slice(0,4).map((item, index) => {
                             return (
                                 <Card
                                     {...item}

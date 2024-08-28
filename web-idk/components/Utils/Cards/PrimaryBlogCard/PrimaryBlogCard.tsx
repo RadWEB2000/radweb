@@ -5,9 +5,8 @@ import Image from "next/image";
 
 export default function PrimaryBlogCard(props:tPrimaryBlogCard) {
     return (
-        <Link
+        <li
             className={css.wrapper}
-            href={props.url}
         >
             <picture
                 className={css.image__wrapper}
@@ -29,10 +28,14 @@ export default function PrimaryBlogCard(props:tPrimaryBlogCard) {
                     className={css.author}
                     dangerouslySetInnerHTML={{__html:`${props.fullname.firstname.slice(0,1)}. ${props.fullname.lastname}`}}
                 />
-                <h3
-                    className={css.title}
-                    dangerouslySetInnerHTML={{__html:props.title}}
-                />
+                <Link
+                    href={props.url}
+                >
+                    <h3
+                        className={css.title}
+                        dangerouslySetInnerHTML={{__html:props.title}}
+                    />
+                </Link>
                 <p
                     className={css.exceprt}
                     dangerouslySetInnerHTML={{__html:props.excerpt.length < 110 ? props.excerpt : props.excerpt.substring(0,107).trim() + "..."}}
@@ -51,6 +54,6 @@ export default function PrimaryBlogCard(props:tPrimaryBlogCard) {
                     dangerouslySetInnerHTML={{__html:`21 kwi 2024`}}            
                 />                   
             </div>
-        </Link>
+        </li>
     )
 }

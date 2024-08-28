@@ -3,7 +3,8 @@
 
 .wrapper {
     // background-color: red;
-    margin: 0 auto;
+    // width: 38.5rem;
+
 }
 
 .image__wrapper {
@@ -21,7 +22,7 @@
 }
 
 .container {
-    padding: .45rem;
+    padding: .25rem;
 }
 
 .title {
@@ -35,9 +36,14 @@
 
 .details {
     @include flex(center, space-between, row wrap, 1rem,.5rem, false);
-    padding: 0.45rem;
+    padding: 0.25rem;
     margin-top: 1.2rem;
     // margin: 2rem 1rem 2rem auto;
+}
+
+.author{ 
+    @include font(clamp(1.44rem, 1.55vw,1.61rem), 300, 1.1, null, null,start);
+    margin: 0.5rem 0;
 }
 
 .category {
