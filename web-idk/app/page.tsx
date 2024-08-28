@@ -1,4 +1,4 @@
-import { AboutUs, Blog, Hero, Projects, Services, WhyUs } from "v-home/index";
+import { AboutUs, Blog, Faq, Hero, Projects, Services, WhyUs } from "v-home/index";
 import radek_img from "img/radek-adamczyk.webp";
 import filip_img from "img/filip-bukowiecki.webp"
 
@@ -398,6 +398,32 @@ export default function Page(){
               release:"21 kwi 2024",
               title:"Na Bliskim Wschodzie wybuchnie wielka wojna? Generał z USA tłumaczy",
               url:"#"
+            },
+          ]}
+        />
+        <Faq
+          content={`Widoczność w internecie stała się jednym z najważniejszych wyznaczników sukcesu dla firm. Agencje SEO i SEM odgrywają w tym obszarze fundamentalną rolę. Pomagają przedsiębiorcom wspinać się coraz wyżej w wynikach wyszukiwania Google, a tym samym zwiększać świadomość marki wśród przedstawicieli konkretnej grupy docelowej i przyciągać nowych klientów.<br/><br/>Poniżej odpowiadamy na najczęściej pojawiające się pytania w kontekście tego rodzaju agencji. Wyjaśniamy różnice pomiędzy SEM i SEO, omawiamy zakres usług, a także podpowiadamy, jak rozpocząć kariery w tych dynamicznie rozwijających się branżach. Sprawdzamy również, jakich kosztów muszą się spodziewać firmy chcące wypromować swój biznes w internecie.`}        
+          title="Pytania i odpowiedzi"
+          cards={[
+            {
+              title:"Co to jest SEO i SEM?",
+              content:`SEO (Search Engine Optimization), czyli optymalizacja stron internetowych pod kątem wyszukiwarek, to proces polegający na takim dostosowywaniu strony internetowej, aby uzyskała jak najwyższą pozycję w wynikach wyszukiwania dla określonych fraz kluczowych. SEO obejmuje zarówno optymalizację techniczną strony, jak i jej treści. <br/><br/>SEM (Search Engine Marketing) to szerszy termin, który oprócz SEO oznacza także płatne strategie marketingu w wyszukiwarkach, takie jak reklamy PPC (pay-per-click). SEM skupia się na zwiększeniu widoczności strony w wynikach wyszukiwania zarówno przez optymalizację, jak i poprzez wykorzystanie nowoczesnych platform reklamowych.<br/><br/>SEO i SEM to dwa rodzaje digital marketingu, choć ich metody i cel są nieco różne. SEO koncentruje się na długoterminowej widoczności w organicznych wynikach wyszukiwania i wymaga ciągłej pracy nad stroną. Działania te obejmują nie tylko optymalizację techniczną (jak poprawa szybkości ładowania, zapewnienie responsywności czy usprawnienie struktury URL), ale również tworzenie treści odpowiadających na potrzeby i zapytania użytkowników.`
+            },
+            {
+              title:"Jak długo uczyłeś się programowania przed pierwszą pracą?",
+              content:`Od początku! A tak serio – sposobów może być wiele, ale warto na początku poczytać trochę na temat samego programowania i dziedzin, którymi możemy się potencjalnie zajmować. Frontend, Backend, Machine Learning, Devops, Aplikacje Mobilne – tego jest naprawdę sporo. Jeśli jednak zdecydujesz się na frontend, to nagrałem o tym odcinek, który na bank Ci pomoże.`
+            },
+            {
+              title:"W czym programujesz?",
+              content:`Zacząłem w 2014 roku, ale miałem po drodze kilka przerw. Najbardziej intensywny okres nauki przypada na 2016-2017 gdzie przez te dwa lata cisnąłem naprawdę solidnie. Kilka miesięcy przed dostaniem się do pracy zrealizowałem kilka projektów jako freelancer.`
+            },
+            {
+              title:"W czym programujesz?",
+              content:`Jestem Frontendowcem, więc na co dzień posługuję się HTMLem, CSSem, JavaScriptem. Znam też podstawy Pythona, Ruby, Go, a ostatnio rozwijam swoje umiejętności związane z Node.js (w uproszczeniu – backendowym stackiem JavaScriptowym).`
+            },
+            {
+              title:"Co frontendowiec musi umieć?",
+              content:`Dobre pytanie! Frontend to jedna z tych dziedzin programowania, która zmienia się bardzo dynamicznie. To co było aktualne 2-3 lata temu, obecnie odchodzi w niepamięć. Aby pozostać na bieżąco warto czytać artykuły na Medium, słuchać podcastów i śledzić ciekawe projekty na GitHubie. Mam też odcinek, w którym opowiadam co warto wiedzieć o Frontendzie w 2020 roku.`
             },
           ]}
         />

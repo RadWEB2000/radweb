@@ -1,0 +1,59 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.head {
+    align-items: center;
+    display: grid;
+    grid-template-columns:calc(100% - 5rem) 5rem;
+    min-height: 5rem;
+    background-color: color-mix(in srgb, $navy 10%, $white 90%);
+
+    // background: green;
+}
+.button {
+    @include flex(center,center);
+    @include size(4.5rem, 4.5rem);
+    position: relative;
+    &[data-open=true]{
+        .line {
+            &:nth-of-type(1){
+                transform: rotate(45deg);
+            }
+            &:nth-of-type(2){
+                transform: rotate(-45deg);
+            }
+        }    
+    }
+}
+
+.line {
+    @include size(3px,80%);
+    background-color: $black;
+    border-radius: 2rem;
+    position: absolute;
+    transition: .2s linear transform;
+    &:nth-of-type(1){
+        transform: rotate(0deg);
+    }
+    &:nth-of-type(2){
+        transform: rotate(90deg);
+    }
+}
+
+.title {
+    @include font(clamp(1.9rem,2.1vw, 2.35rem), 600, 1.4, null, null, start);
+    padding: 1.05rem;
+    text-wrap:balance;
+}
+
+.box {
+    background-color: color-mix(in srgb, $red 15%, $white 85%);
+    background-color: color-mix(in srgb, $navy 5%, $white 95%);
+
+    transition:.2s linear all;
+}
+
+.content {
+    @include font(clamp(1.6rem, 1.67vw,1.75rem), 300, 1.4,null, null, start);
+    padding: 1.6rem;
+}
