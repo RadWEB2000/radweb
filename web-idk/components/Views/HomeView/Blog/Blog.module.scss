@@ -17,7 +17,12 @@
 }
 
 .cards {
-    @include flex(flex-start, flex-start, row wrap, 1rem, 1rem, true);
+    // @include flex(flex-start, flex-start, row wrap, 1rem, 1rem, true);
+    // background: blue;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,45rem);
+    gap:2rem;
     margin-top: 5rem;
+    justify-self: end;
 
 }
