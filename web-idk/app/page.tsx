@@ -1,4 +1,4 @@
-import { AboutUs, Blog, Faq, Hero, Projects, Services, WhyUs } from "v-home/index";
+import { AboutUs, Blog, Faq, Hero, Projects, Services, Testimonials, WhyUs } from "v-home/index";
 import radek_img from "img/radek-adamczyk.webp";
 import filip_img from "img/filip-bukowiecki.webp"
 
@@ -424,6 +424,90 @@ export default function Page(){
             {
               title:"Co frontendowiec musi umieć?",
               content:`Dobre pytanie! Frontend to jedna z tych dziedzin programowania, która zmienia się bardzo dynamicznie. To co było aktualne 2-3 lata temu, obecnie odchodzi w niepamięć. Aby pozostać na bieżąco warto czytać artykuły na Medium, słuchać podcastów i śledzić ciekawe projekty na GitHubie. Mam też odcinek, w którym opowiadam co warto wiedzieć o Frontendzie w 2020 roku.`
+            },
+          ]}
+        />
+        <Testimonials
+          content={``}
+          title="Opinie i rekomendacje klientów"
+          cards={[
+            {
+              company:"Agromar",
+              content:`Polecamy do współpracy agencję Lumo, która dba o nas kompleksowo. Zespół, który się nami opiekuje jest dla nas istotnym wsparciem. Często otrzymujemy propozycje niestandardowych działań, estymacje wyników i wyjaśnienia.`,
+              fullname:{
+                firstname:"Mateusz",
+                lastname:"Wasiewicz"
+              },
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/premium-photo/face-portrait-skincare-senior-man-studio-gray-background-wellness-cosmetics-retired-elderly-happy-male-model-with-healthy-skin-after-spa-treatment-beauty-grooming_590464-123992.jpg?w=1480",
+                title:""
+              }
+            },
+            {
+              company:"Borówky Gaj",
+              content:`Widać, że specjaliści mają ogromną wiedzę i wyczucie biznesu. Jednym z ważniejszych plusów jest ich stuprocentowe zaangażowanie w nasz biznes, maksymalnie szybka reakcja na nieoczekiwane sytuacje i ekspresowo wdrażane rozwiązania.`,
+              fullname:{
+                firstname:"Andrzej",
+                lastname:"Nowak"
+              },
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/premium-photo/face-portrait-skincare-senior-man-studio-gray-background-wellness-cosmetics-retired-elderly-happy-male-model-with-healthy-skin-after-spa-treatment-beauty-grooming_590464-123992.jpg?w=1480",
+                title:""
+              }
+            },
+            {
+              company:"Mechanik Ludomy",
+              content:`Absolutnie polecam agencję i specjalistów, z którymi przyszło mi pracować! Jestem przekonana, że trudno trafić lepiej. To prawdziwi profesjonaliści.`,
+              fullname:{
+                firstname:"Patryk",
+                lastname:"Łusiewicz"
+              },
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/premium-photo/face-portrait-skincare-senior-man-studio-gray-background-wellness-cosmetics-retired-elderly-happy-male-model-with-healthy-skin-after-spa-treatment-beauty-grooming_590464-123992.jpg?w=1480",
+                title:""
+              }
+            },
+            {
+              company:"Agromar",
+              content:`Polecamy do współpracy agencję Lumo, która dba o nas kompleksowo. Zespół, który się nami opiekuje jest dla nas istotnym wsparciem. Często otrzymujemy propozycje niestandardowych działań, estymacje wyników i wyjaśnienia.`,
+              fullname:{
+                firstname:"Mateusz",
+                lastname:"Wasiewicz"
+              },
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/premium-photo/face-portrait-skincare-senior-man-studio-gray-background-wellness-cosmetics-retired-elderly-happy-male-model-with-healthy-skin-after-spa-treatment-beauty-grooming_590464-123992.jpg?w=1480",
+                title:""
+              }
+            },
+            {
+              company:"Borówky Gaj",
+              content:`Widać, że specjaliści mają ogromną wiedzę i wyczucie biznesu. Jednym z ważniejszych plusów jest ich stuprocentowe zaangażowanie w nasz biznes, maksymalnie szybka reakcja na nieoczekiwane sytuacje i ekspresowo wdrażane rozwiązania.`,
+              fullname:{
+                firstname:"Andrzej",
+                lastname:"Nowak"
+              },
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/premium-photo/face-portrait-skincare-senior-man-studio-gray-background-wellness-cosmetics-retired-elderly-happy-male-model-with-healthy-skin-after-spa-treatment-beauty-grooming_590464-123992.jpg?w=1480",
+                title:""
+              }
+            },
+            {
+              company:"Mechanik Ludomy",
+              content:`Absolutnie polecam agencję i specjalistów, z którymi przyszło mi pracować! Jestem przekonana, że trudno trafić lepiej. To prawdziwi profesjonaliści.`,
+              fullname:{
+                firstname:"Patryk",
+                lastname:"Łusiewicz"
+              },
+              image:{
+                altText:"",
+                sourceUrl:"https://img.freepik.com/premium-photo/face-portrait-skincare-senior-man-studio-gray-background-wellness-cosmetics-retired-elderly-happy-male-model-with-healthy-skin-after-spa-treatment-beauty-grooming_590464-123992.jpg?w=1480",
+                title:""
+              }
             },
           ]}
         />

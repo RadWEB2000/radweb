@@ -4,8 +4,8 @@ export type tPrimaryBlogCard = {
     category:tButton;
     excerpt:string;
     fullname:tFullname;
-    release:string;
     image:tImage;
     title:string;
+    release:string;
     url:string;
 }
