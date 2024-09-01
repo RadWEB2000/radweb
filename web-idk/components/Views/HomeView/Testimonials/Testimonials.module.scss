@@ -7,31 +7,14 @@
 }
 
 .title {
-    @include font(clamp(5.25rem, 7.5vw, 10rem), 700, 1.1, null, null, start);
+    @include font(clamp(3.25rem, 7.5vw, 10rem), 700, 1.1, null, null, start);
     text-wrap: balance;
     max-width: 30ch;
 }
 
 
 .cards {
-    @include flex(flex-start,flex-start, row nowrap, 1rem, 1rem,true);
-    margin:2rem 0 1rem;
-    overflow-x: scroll;
+    padding: 1rem;
 }
 
-.buttons {
-    @include flex(center,flex-start, row nowrap, .45rem);
-    padding: 0.45rem;
-}
 
-.button {
-    @include flex(center,center);
-    @include size(4.5rem,4.5rem);
-    color:color-mix(in srgb, $space 40%, $gray 60%);
-    font-size: 3.45rem;
-    transition: .12s linear color;
-    &:focus-within,
-    &:hover {
-        color:color-mix(in srgb, $space 60%, $gray 30%);
-    }
-}

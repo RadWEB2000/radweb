@@ -27,7 +27,7 @@
 }
 
 .line {
-    @include size(3px,80%);
+    @include size(2px,80%);
     background-color: $black;
     border-radius: 2rem;
     position: absolute;
@@ -41,7 +41,7 @@
 }
 
 .title {
-    @include font(clamp(1.9rem,2.1vw, 2.35rem), 600, 1.4, null, null, start);
+    @include font(clamp(1.9rem,2.1vw, 2.35rem), 400, 1.4, null, null, start);
     padding: 1.05rem;
     text-wrap:balance;
 }
