@@ -1,4 +1,4 @@
-import { FaFacebookSquare as Facebook, FaMedium as Medium,FaTiktok as Tiktok, FaTwitch as Twitch } from "react-icons/fa";
+import { FaFacebookSquare as Facebook, FaMedium as Medium,FaTiktok as Tiktok, FaTwitch as Twitch, FaLinkedin as Linkedin, FaGithubAlt as Github, FaYoutube as YouTube } from "react-icons/fa";
 import { FaXTwitter as Twitter, FaInstagram as Instagram } from "react-icons/fa6";
 
 type tGetSocialResponse = {
@@ -34,7 +34,21 @@ export default function getSocial(url:string):tGetSocialResponse|null {
             color:"#9146ff",
             icon:<Twitch/>
         }
-    }else if(url.includes("medium")){
+    }else if(url.includes("linkedin")){
+        return {
+            color:"#0e76a8",
+            icon:<Linkedin/>
+        }
+    }else if(url.includes("github")){
+        return {
+            color:"#fafbfc",
+            icon:<Github/>
+        }
+    }else if(url.includes("youtube")){
+        return {
+            color:"#FF0000",
+            icon:<YouTube/>
+        }}else if(url.includes("medium")){
         return {
             color:"#076b46",
             icon:<Medium/>

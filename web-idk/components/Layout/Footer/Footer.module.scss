@@ -1,1 +1,36 @@
-// adsadsa÷
+@import "../../../styles/Mixins.scss";
+@import "../../../styles/Variables.scss";
+
+.wrapper {
+    background-color: $black;
+    color:$white;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
+
+.container {
+    grid-column: 1/3;
+}
+
+.menu {
+    @include flex(flex-start,flex-start,row wrap, 1rem, 1rem);
+    grid-column: 3/-1;
+}
+
+.menu__column {
+    width: 22.5rem;
+}
+
+.menu__column__title {
+    @include font(clamp(1.6rem,1.7vw,1.8rem),600, 1.1, null, null, start);
+    margin-bottom: 1rem;
+}
+
+.menu__column__cards {
+    @include flex(flex-start,flex-start,column, null, .25rem);
+}
+
+
+.box {
+    grid-column: 1/-1;
+}

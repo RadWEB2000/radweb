@@ -1,8 +1,9 @@
 import Image from "next/image";
-import {tFooter} from "layout/Footer/Footer.models"
-import css from "layout/Footer/Footer.module.scss"
+import {tFooter} from "footer/Footer.models"
+import css from "footer/Footer.module.scss"
 import Link from "next/link";
 import { HiOutlineMail as Mail, HiPhone as Phone} from "react-icons/hi";
+import getSocial from "lib/getSocial";
 
 export default function Footer(props:tFooter){
     return (
@@ -133,11 +134,30 @@ export default function Footer(props:tFooter){
             >
                 <p
                     className={css.author}
-                    dangerouslySetInnerHTML={{__html:`${props.author} | ${props.year} - ${new Date().getFullYear}`}}
+                    dangerouslySetInnerHTML={{__html:`${props.author} | ${props.year} - 2024`}}
                 />
-                <ul
-                    className={css.socials}
-                ></ul>
+                {
+                    props.socials && 
+                    <ul
+                        className={css.socials}
+                    >
+                        {
+                            props.socials.map((item,index) => {
+                                const social = getSocial(item)
+                                return (
+                                    <Link
+                                        href={item}
+                                        key={index}
+                                        target="_blank"
+                                        rel="noindex nofollow"
+                                    >
+                                        {social?.icon}
+                                    </Link>
+                                )
+                            })
+                        }
+                    </ul>
+                }
             </div>
         </footer>
     )
