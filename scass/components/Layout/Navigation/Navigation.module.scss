@@ -1,0 +1,14 @@
+@import "../../../styles/Mixins.scss";
+@import "../../../styles/Variables.scss";
+
+.wrapper {
+    background-color: $alice;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:8rem auto;
+    color:$erie;
+    font-weight: 500;
+    position:sticky;
+    top: 0;
+    z-index: 999;
+}

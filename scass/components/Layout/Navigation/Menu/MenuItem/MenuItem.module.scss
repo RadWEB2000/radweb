@@ -1,0 +1,25 @@
+@import "../../../../../styles/Mixins.scss";
+@import "../../../../../styles/Variables.scss";
+
+.wrapper {
+    @include font(clamp(2.6rem, 3vw, 3.4rem), 600, 1, uppercase, null, start);
+    color:$black;
+    height: 3.85rem;
+    position: relative;
+    &::after {
+        @include size(2px,100%);
+        background-color:$orange;
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        transform-origin: left;
+        transform: scaleX(0);
+        transition:.12s linear transform;
+    }
+    &:focus-within,
+    &:hover {
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}

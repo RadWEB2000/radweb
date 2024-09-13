@@ -13,19 +13,10 @@ export default function Footer(props:tFooter){
             <address
                 className={css.container}
             >
-                <picture
-                    className={css.image__wrapper}
-                >
-                    <Image
-                        alt={props.image.altText}
-                        className={css.image}
-                        fill
-                        loading="lazy"
-                        src={props.image.sourceUrl}
-                        title={props.image.title}
-                        quality={10}
-                    />
-                </picture>
+                <h3
+                    className={css.company}
+                    dangerouslySetInnerHTML={{__html:props.company}}
+                />
                 {
                     (props.nip || props.email || props.phone || props.location) && 
                     <ul
@@ -129,9 +120,42 @@ export default function Footer(props:tFooter){
                     }
                 </menu>
             }
+            <picture
+                className={css.image__wrapper}
+            >
+                <Image
+                    alt={props.image.altText}
+                    className={css.image}
+                    fill
+                    loading="lazy"
+                    src={props.image.sourceUrl}
+                    title={props.image.title}
+                    quality={10}
+                />
+            </picture>
             <div
                 className={css.box}
             >
+                {
+                    props.regulations &&
+                    <ul
+                        className={css.regulations}
+                    >
+                        {
+                            props.regulations.map((item,index) => {
+                                return(
+                                    <Link
+                                        className={css.statue}
+                                        dangerouslySetInnerHTML={{__html:item.title}}
+                                        href={item.url}
+                                        key={item.title}
+                                        rel="index nofollow"
+                                    />
+                                )
+                            })
+                        }
+                    </ul>
+                }
                 <p
                     className={css.author}
                     dangerouslySetInnerHTML={{__html:`${props.author} | ${props.year} - 2024`}}
@@ -146,6 +170,7 @@ export default function Footer(props:tFooter){
                                 const social = getSocial(item)
                                 return (
                                     <Link
+                                        className={css.social}
                                         href={item}
                                         key={index}
                                         target="_blank"

@@ -1,0 +1,25 @@
+export default function Hero(){
+    return(
+        <header
+            style={{
+                position:"relative",
+                width:"100%",
+                height:"85vh",
+                overflow:"hidden"
+            }}
+        >
+            <video
+                autoPlay
+                loop
+                style={{
+                    objectFit:"cover",
+                    objectPosition:"center"
+                }}
+            >
+                <source 
+                    src="https://cdn.pixabay.com/video/2021/10/05/90877-629483574_large.mp4"
+                />
+            </video>
+        </header>
+    )
+}

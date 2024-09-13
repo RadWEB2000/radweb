@@ -13,16 +13,22 @@ export default function Testimonials(props:tTestimonials){
         infinite: true,
         className:css.cards,
         speed: 350,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay:true,
         autoplaySpeed:2250,
         pauseOnHover:true,
         responsive: [
             {
-                breakpoint:780,
+                breakpoint:1080,
                 settings: {
                     arrows:false,
+                    slidesToShow: 3,
+                }
+            }, 
+            {
+                breakpoint:780,
+                settings: {
                     slidesToShow: 2,
                 }
             }, 

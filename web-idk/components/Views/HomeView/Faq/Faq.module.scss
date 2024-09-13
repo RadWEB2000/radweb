@@ -4,6 +4,7 @@
 
 .wrapper {
     background-color: color-mix(in srgb, $navy 2.5%, $space 10%);
+    background-color: $fuchsia;
     color:$black;
     display: grid;
     gap:2rem;

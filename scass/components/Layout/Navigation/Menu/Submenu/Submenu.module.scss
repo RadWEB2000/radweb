@@ -1,0 +1,56 @@
+@import "../../../../../styles/Mixins.scss";
+@import "../../../../../styles/Variables.scss";
+
+.wrapper {
+    position: relative;
+}
+
+.box {
+    @include flex(center,flex-start);
+    height: 3.5rem;
+}
+
+.link {
+    @include font(clamp(2.6rem, 3vw, 3.4rem), 600, 1, uppercase, null, start);
+    color:$black;
+}
+
+
+.button {
+    @include flex(center,center);
+    @include size(3.5rem, 3.5rem);
+    font-size: 2.3rem;
+}
+
+.submenu {
+    @include flex(flex-start,flex-start, column, null, .85rem);
+    margin-left: 4dvw;
+    &__item {
+        @include font(clamp(1.7rem, 2vw, 2.2rem), 500, 1, uppercase, null, start);
+        color:$erie;
+        margin-top: 0.25rem;
+    }
+}
+
+
+
+.link,
+.submenu__item {
+    position: relative;
+    &::after {
+        @include size(2px,100%);
+        background-color:$orange;
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        transform-origin: left;
+        transform: scaleX(0);
+        transition:.12s linear transform;
+    }
+    &:focus-within,
+    &:hover {
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}

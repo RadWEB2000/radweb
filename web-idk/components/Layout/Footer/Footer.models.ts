@@ -15,5 +15,8 @@ export type tFooter = {
         label:string;
         items:tButton[];
     }[];
+    regulations?:tButton[];
+    author:string;
     slogan:string;
+    year:number;
 }

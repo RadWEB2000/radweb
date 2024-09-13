@@ -1,0 +1,1 @@
+export type tRelUnion = "index"|"follow"|"index follow"|"noindex follow"|"index nofollow"|"noindex nofollow";
