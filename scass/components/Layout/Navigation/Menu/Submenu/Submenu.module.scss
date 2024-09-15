@@ -24,7 +24,7 @@
 
 .submenu {
     @include flex(flex-start,flex-start, column, null, .85rem);
-    margin-left: 4dvw;
+    margin: 2dvh 0 2dvh 4dvw;
     &__item {
         @include font(clamp(1.7rem, 2vw, 2.2rem), 500, 1, uppercase, null, start);
         color:$erie;
@@ -45,12 +45,55 @@
         left: 0;
         transform-origin: left;
         transform: scaleX(0);
-        transition:.12s linear transform;
+        transition:.22s linear transform;
     }
     &:focus-within,
     &:hover {
         &::after {
             transform: scaleX(1);
+        }
+    }
+}
+
+@media only screen {
+    @media (min-width:700px){
+        .box {
+            height: 4.85rem;
+        }
+        .link {
+            font-size: 4.75rem;
+        }
+        .submenu__item {
+            font-size: 2.7rem;
+        }
+        .button {
+            @include size(4.5rem, 4.5rem);
+            font-size: 3.3rem;
+        }
+    }
+    @media (min-width:1050px){
+        .box {
+            height: 2.3rem;
+        }
+        .link {
+            font-size: 1.9rem;
+        }
+        .button {
+            @include size(2.25rem, 2.25rem);
+            font-size: 2.13rem;
+        }
+        .submenu {
+            background-color: $alice;
+            border-radius: 0 0 .44rem .44rem;
+            box-shadow: .23rem .23rem .5rem rgba($black, .34), .23rem .23rem .5rem rgba($ice, .34);
+            position: absolute;
+            margin: 0;
+            padding: 2.15rem;
+            min-width:24rem;
+            &__item {
+                font-size: 1.72rem;
+                margin-top: 0;
+            }
         }
     }
 }

@@ -11,6 +11,7 @@ export default function Submenu(props:tSubmenu){
     return (
         <li
             className={css.wrapper}
+            onMouseLeave={() => setIsOpen(false)}
         >
             <div
                 className={css.box}

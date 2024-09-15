@@ -23,3 +23,22 @@
         width: 0;
     }
 }
+
+@media only screen {
+    @media (min-width:1050px){
+        .wrapper {
+            grid-column: 3/-1;
+            grid-row: 1;
+            overflow: visible;
+            height: 100%;
+            &[data-open=false]{
+                height: 100%;
+            }
+        }
+        .container {
+            @include flex(center,flex-end, row nowrap, .45rem);
+            overflow-y: visible;
+            padding: 0 2rem;
+        }
+    }
+}

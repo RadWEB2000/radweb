@@ -2,6 +2,7 @@
 @import "../../../styles/Variables.scss";
 
 .wrapper {
+
     background-color: $alice;
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -11,4 +12,13 @@
     position:sticky;
     top: 0;
     z-index: 999;
+}
+
+@media only screen {
+    @media (min-width:1050px){
+        .wrapper {
+            grid-template-columns: repeat(12,1fr);
+            grid-template-rows: 7.15rem;
+        }
+    }
 }

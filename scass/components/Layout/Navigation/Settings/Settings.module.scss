@@ -7,3 +7,11 @@
     grid-row: 1;
     padding: 0.45rem 1rem  .45rem .45rem;
 }
+
+@media only screen {
+    @media (min-width:1050px){
+        .wrapper {
+            display: none;
+        }
+    }
+}
