@@ -40,10 +40,9 @@ button {
 }
 
 body {
-	background-attachment: fixed;
-	background-image: linear-gradient(to bottom right, color-mix(in srgb, $erie 30%, $black 70%), $black);
-	color:$alice;
-	font-family: $raleway;
+	background-color: $beige;
+	color:$dark;
+	font-family: $regular;
 	font-optical-sizing: auto;
 	font-size: 1.6rem;
 	font-style: normal;

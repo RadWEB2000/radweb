@@ -1,19 +1,26 @@
 // FONTS ===================================
-$raleway:var(--raleway);
-$spectral:var(--spectral);
+$regular:var(--regular);
 
 // COLORS ===================================
-$aquamarine:rgb(40, 254, 225);
-$alice:rgb(241, 250, 255);
-$alloy:rgb(193, 96, 31);
 $black:rgb(3, 3, 5);
 $erie:rgb(24, 27, 26);
-$ice:rgb(145, 253, 239);
-$midnight:rgb(4, 54, 60);
-$orange:rgb(245, 117, 50);
+$orange:rgb(255, 105, 29);
+$yellow:rgb(249, 248, 113);
+$malachite:rgb(65, 144, 134);
+$green:rgb(0, 198, 176);
+$dark:rgb(13, 31, 42);
 $white:rgb(255, 255, 255);
-
+$night:rgb(47, 72, 88);
+$blue:#00a0f3;
+$beige:#eefbff;
+$ecri:#f1f1e6;
+$success:#00c153;
+$error:#fc555d;
 
 // GRADIENTS =================================
 
+$blackGradient:linear-gradient(to bottom right, rgb(45, 47, 57),rgb(47, 48, 59),rgb(43, 46, 55) ,rgb(26, 28, 35));
+$orangeGradient: linear-gradient(to bottom right, rgb(255, 105, 29), #ff7433, #e56528, #cc5a23);
+$yellowGradient:linear-gradient(to bottom right, rgb(249, 248, 113), #f9e971, #e0d964, #c6c558);
+$greenGradient:linear-gradient(to bottom right, rgb(0, 198, 176), #00bfae, #00a399, #008c85);
 

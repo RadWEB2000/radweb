@@ -1,9 +1,0 @@
-@import "../../../../styles/Mixins.scss";
-@import "../../../../styles/Variables.scss";
-
-.wrapper {
-    @include flex(center,flex-start);
-    grid-column: 1/3;
-    padding: 0.45rem .45rem .45rem 4dvw;
-    grid-row: 1;
-}

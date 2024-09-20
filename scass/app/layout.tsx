@@ -1,21 +1,12 @@
 
 import type { Metadata } from "next";
-import {Spectral, Raleway} from "next/font/google"
+import {Heebo} from "next/font/google"
 import "css/Global.scss";
-import { Navigation } from "nav/index";
 import { MainProvider } from "context/MainContext";
 
-const raleway = Raleway({
+const heebo = Heebo({
   subsets:["latin-ext"],
-  preload:true,
-  weight:["100","200","300","400","500","600","700","800","900"],
-  variable:"--raleway"
-})
-
-const spectral = Spectral({
-  weight:["600","700","800"],
-  subsets:["latin-ext"],
-  variable:"--spectral"
+  variable:"--regular"
 })
 
 export const metadata: Metadata = {
@@ -31,8 +22,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <MainProvider>
-        <body className={`${raleway.variable} ${spectral.variable}`}>
-          <Navigation/>
+        <body className={`${heebo.variable}`}>
           {children}
         </body>
       </MainProvider>

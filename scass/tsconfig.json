@@ -22,6 +22,7 @@
       "@/*": ["./*"],
       "app/*": ["./app/*"],
       "assets/*": ["./assets/*"],
+      "buttons/*":["./components/Utils/Buttons/*"],
       "components/*": ["./components/*"],
       "css/*": ["./styles/*"],
       "context/*": ["./context/*"],
