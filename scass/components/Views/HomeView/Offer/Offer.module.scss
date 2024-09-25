@@ -1,0 +1,50 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    display: grid;
+    margin:2vh auto 4vh;
+    width:clamp(5rem, 140rem, 95vw);
+}
+
+.title {
+    @include font(clamp(1.85rem,2.75vw,5.1rem),500, 1.1,null, null, start);
+    font-family: $bold;
+    margin-bottom: 2rem;
+}
+
+.content {
+    @include font(clamp(3rem, 8.2vw, 16rem), 200, .84, null, null, start);
+    color:$din;
+    text-wrap: pretty;
+
+    b,
+    strong {
+        color:color-mix(in srgb, $silver 40%, $white 60%);
+        font-weight: 400;
+    }
+}
+
+.cards{
+    display: grid;
+    gap:.45rem;
+    grid-template-columns: repeat(1,1fr);
+    margin-top: 2vh;
+}
+
+@media only screen {
+    @media (min-width:645px){
+        .cards {
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    @media (min-width:1345px){
+        .wrapper {
+            margin:9vh auto 4vh;
+        }
+        .cards {
+            gap:1.2vw;
+            margin-top: 12vh;
+        }
+    }
+}

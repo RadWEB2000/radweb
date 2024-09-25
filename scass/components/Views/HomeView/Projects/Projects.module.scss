@@ -1,0 +1,32 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+
+.wrapper {
+    background-attachment: fixed;
+    background-image: linear-gradient(to top left, rgba($orange,1),rgba($orange,.54), transparent,transparent,transparent) ;
+    // background-color: pink;
+}
+
+
+.container {
+    @include flex(center,center,column,null, 1rem);
+    padding: 3rem 4rem;
+}
+
+.title {
+    @include font(clamp(5rem, 15.72vw, 23rem), 700, 1,null,null, start);
+}
+
+.slogan {
+    @include font(clamp(1.85rem,2.75vw,5.1rem),500, 1.1,null, null, start);
+    color:color-mix(in srgb, $orange 40%, $white 60%);
+    font-family: $bold;
+}
+
+
+.content{
+    @include font(clamp(1.55rem, 2.5vw, 3.4rem), 300, 1.4, null, null, center);
+    text-wrap:pretty;
+    max-width: 70ch;
+}

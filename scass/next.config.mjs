@@ -4,7 +4,13 @@ const nextConfig = {
         remotePatterns:[
             {
                 hostname:"img.freepik.com"
-            }
+            },
+            {
+                hostname:"www.sunrisesystem.pl"
+            },
+            {
+                hostname:"cdn.pixabay.com"
+            },
         ]
     }
 };

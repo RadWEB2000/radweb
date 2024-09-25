@@ -1,12 +1,22 @@
 
 import type { Metadata } from "next";
-import {Heebo} from "next/font/google"
+import {Nunito_Sans, Oswald, Roboto_Mono} from "next/font/google"
 import "css/Global.scss";
 import { MainProvider } from "context/MainContext";
 
-const heebo = Heebo({
+const nuntio = Nunito_Sans({
   subsets:["latin-ext"],
-  variable:"--regular"
+  variable:"--nuntio"
+})
+
+const oswald = Oswald({
+  subsets:["latin-ext"],
+  variable:"--oswald"
+})
+
+const roboto = Roboto_Mono({
+    subsets:["latin-ext"],
+    variable:"--roboto"
 })
 
 export const metadata: Metadata = {
@@ -22,7 +32,9 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <MainProvider>
-        <body className={`${heebo.variable}`}>
+        <body 
+          className={`${nuntio.variable} ${oswald.variable} ${roboto.variable}`}
+        >
           {children}
         </body>
       </MainProvider>

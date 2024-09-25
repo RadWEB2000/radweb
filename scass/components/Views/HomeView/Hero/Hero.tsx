@@ -1,124 +1,59 @@
 import css from "v-home/Hero/Hero.module.scss"
-import getSocial from "lib/getSocial";
 import Image from "next/image"
-import Link from "next/link";
-import { FiArrowUpRight as Arrow } from "react-icons/fi";
 import {tHero} from "v-home/Hero/Hero.models"
-
-// className={css.}
+import { PrimaryButton as Button} from "buttons/index"
 
 export default function Hero(props:tHero){
-    return(
+    return (
         <header
             className={css.wrapper}
         >
-            <div
-                className={css.container}
+            {
+                props.media &&
+                <picture
+                    className={css.media}
+                >
+                    <Image
+                        alt={props.media.altText}
+                        aria-label="hero image"
+                        className={css.image}
+                        fill
+                        loading="eager"
+                        priority
+                        src={props.media.sourceSrc}
+                        title={props.media.title}
+                        quality={60}
+                    />
+                </picture>
+            }
+            <section
+                className={css.box}
             >
+                <h1
+                    className={css.title}
+                    dangerouslySetInnerHTML={{__html:props.title}}
+                />
+                <h2
+                    className={css.slogan}
+                    dangerouslySetInnerHTML={{__html:props.slogan}}
+                />
                 {
-                    props.media &&
-                    <figure
-                        className={css.media}
+                    props.buttons &&
+                    <ul
+                        className={css.buttons}
                     >
-                        {
-                            props.media.type === "image" &&
-                            <Image
-                                alt={props.media.image.altText}
-                                className={css.image}
-                                fill
-                                loading="eager"
-                                priority
-                                src={props.media.image.sourceSrc}
-                                title={props.media.image.title}
-                                quality={35}
-                            />
-                        }
-                        {
-                            props.media.type === "movie" &&
-                            <video
-                                autoPlay
-                                className={css.video}
-                                loop
-                                muted
-                            >
-                                <source
-                                    src="/childrens.mp4"
+                        {props.buttons.map((item) => {
+                            return(
+                                <Button
+                                    {...item}
+                                    key={item.title}
+                                    hrefLang="pl"
                                 />
-                            </video>
-                        }
-                    </figure>
+                            )
+                        })}
+                    </ul>
                 }
-                <section
-                    className={css.box}
-                >
-                    <h1
-                        className={css.heading}
-                    >
-                        <span
-                            className={css.title}
-                            dangerouslySetInnerHTML={{__html:`${props.title} `}}
-                        />
-                        <span
-                            className={css.slogan}
-                            dangerouslySetInnerHTML={{__html:props.slogan}}
-                        />
-                    </h1>
-                </section>
-            </div>
-            {
-                props.tiles &&
-                <ul
-                    className={css.tiles}
-                >
-                    {
-                        props.tiles.slice(0,3).map((item) => {
-                            return (
-                                <li
-                                    className={css.tile}
-                                    key={item.title}
-                                >
-                                    <p
-                                        className={css.tile__cta}
-                                        dangerouslySetInnerHTML={{__html:item.cta}}
-                                    />
-                                    <Link
-                                        className={css.tile__button}
-                                        href={item.url}
-                                    >
-                                        <Arrow/>
-                                    </Link>
-                                    <h3
-                                        className={css.tile__title}
-                                        dangerouslySetInnerHTML={{__html:item.title}}
-                                    />
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
-            }
-            {
-                props.socials &&
-                <ul
-                    className={css.socials}
-                >
-                    {
-                        props.socials.map((item) => {
-                            const {icon} = getSocial(item.url)
-                            return (
-                                <Link
-                                    className={css.social}
-                                    href={item.url}
-                                    key={item.title}
-                                    title={item.title}
-                                >
-                                    {icon}
-                                </Link>
-                            )
-                        })
-                    }
-                </ul>
-            }
+            </section>
         </header>
     )
 }
