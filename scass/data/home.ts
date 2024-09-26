@@ -5,12 +5,15 @@ import { tBlog } from 'v-home/Blog/Blog.models';
 import { tHero } from 'v-home/Hero/Hero.models';
 import { tOffer } from 'v-home/Offer/Offer.models';
 import { tProjects } from "v-home/Projects/Projects.models";
+import { tServices } from "v-home/Services/Services.models";
+
 type t_home = {
     hero:tHero;
     offer:tOffer;
     aboutUs:tAboutUs;
     blog:tBlog;
     projects:tProjects;
+    services:tServices;
 }
 
 export const home:t_home = {
@@ -309,5 +312,14 @@ export const home:t_home = {
                 title:"Agromar"
             },
         ]
+    },
+    services: {
+        content:`piciatis saepe atque minima, itaque quae deleniti non pariatur sint molestias repudiandae, eius quam nulla nesciunt repellat vitae! Aperiam, officiis. Quasi sint tenetur accusantium maxime quos unde totam cumque itaque blanditiis in eos dicta nisi amet, rerum officiis vitae mollitia molestiae dolorem repudiandae? Voluptates consequatur deserunt esse temporibus? Deserunt harum dolores quaerat repellendus totam dicta velit libero numquam? Accusamus quos magnam aliquid cum, veniam facilis nam. Asperiores quia nobis quis non ad laborum obcaecati molestias nulla praesentium est. Quis magnam a laboriosam vel, voluptates nam et quos iste itaque minima necessitatibus amet voluptate, harum dolor rem nulla odio, perferendis`,
+        title:"Usługi RadWEB",
+        button:{
+            title:"Nasza oferta",
+            url:"#"
+        },
+        slogan:"Co u nas znajdziesz?"
     }
 }
