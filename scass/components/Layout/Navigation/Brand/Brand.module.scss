@@ -1,0 +1,58 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,flex-start,row nowrap,.25rem);
+    grid-column: 1/3;
+    grid-row: 1;
+    &:focus-within,
+    &:hover {
+        .media {
+            transform: scale(.92);
+        }
+        .brand {
+            color:color-mix(in srgb, $white 60%, $orange 30%);
+        }
+    }
+}
+
+.media {
+    height: 100%;
+    width: 5rem;
+    display: block;
+    position: relative;
+    transition:.12s linear transform;
+}
+
+.image {
+    object-fit: contain;
+    object-position: center;
+}
+
+.brand {
+    @include font(2.7rem, 900, 1);
+    display: none;
+    font-family: $bold;
+    transition:.12s linear color;
+}
+
+@media only screen {
+    @media (min-width:655px){
+        .wrapper {
+            grid-column: 1/6;
+        }
+        .brand{
+            display: block;
+        }
+    }
+    @media (min-width:1050px){
+        .wrapper {
+            grid-column: 1/4;
+        }
+    }
+    @media (min-width:1225px){
+        .wrapper {
+            grid-column: 1/3;
+        }
+    }
+}

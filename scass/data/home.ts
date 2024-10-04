@@ -1,5 +1,5 @@
-import radek from "assets/images/radek-adamczyk.webp";
-import abstract from "assets/images/blob.webp"
+import radek from "img/radek-adamczyk.webp";
+import abstract from "img/blob.webp"
 import { tAboutUs } from 'v-home/AboutUs/AboutUs.models';
 import { tBlog } from 'v-home/Blog/Blog.models';
 import { tHero } from 'v-home/Hero/Hero.models';
@@ -280,7 +280,7 @@ export const home:t_home = {
                     "SEO",
                     "Strony internetowe",
                 ],
-                color:"#2682a8",
+                color:"linear-gradient(to bottom left, rgb(6, 17, 77), rgb(6, 15, 68), rgb(49, 65, 158))",
                 excerpt:`s reiciendis, ipsa explicabo commodi officia minima veritatis saepe alias? Voluptatibus facere voluptatem recusandae, quam optio neque voluptas voluptate unde, explicabo iure minus ipsa sapiente excepturi minima. Totam excepturi ducimus, repudiandae earum, rem dicta perferendis accusantium doloribus recusandae sunt praesentium quae itaque dolor natus minus.`,
                 image:{
                     altText:"",
@@ -300,7 +300,7 @@ export const home:t_home = {
                     "Strona internetowa",
                     "SEO",
                 ],
-                color:"#f6e8d4",
+                color:"radial-gradient(circle, #715539, #745638, #775737, #795835, #7c5934, #775430, #714f2b, #6c4a27, #5e3e1f, #503217, #43270f, #361c03)",
                 excerpt:`s reiciendis, ipsa explicabo commodi officia minima veritatis saepe alias? Voluptatibus facere voluptatem recusandae, quam optio neque voluptas voluptate unde, explicabo iure minus ipsa sapiente excepturi minima. Totam excepturi ducimus, repudiandae earum, rem dicta perferendis accusantium doloribus recusandae sunt praesentium quae itaque dolor natus minus.`,
                 image:{
                     altText:"",
@@ -308,7 +308,7 @@ export const home:t_home = {
                     title:""
                 },
                 slogan:`Warzywa lokalne`,
-                theme:"light",
+                theme:"dark",
                 title:"Agromar"
             },
         ]
@@ -320,6 +320,43 @@ export const home:t_home = {
             title:"Nasza oferta",
             url:"#"
         },
-        slogan:"Co u nas znajdziesz?"
+        slogan:"Co u nas znajdziesz?",
+        image:{
+            altText:"",
+            sourceSrc:"https://cdn.pixabay.com/photo/2019/11/12/09/03/proxy-4620557_1280.jpg",
+            title:""
+        },
+        cards:[
+            {
+                button:{
+                    title:"Przeczytaj więcej",
+                    url:"#"
+                },
+                content:`I've been teaching people just like you how to build better software for over 10 years. Tens of thousands of people have increased their confidence in shipping software with TestingJavaScript.com and even more have improved the performance and maintainability of their React applications from what they've learned from EpicReact.dev. My latest efforts are pushing things to the whole stack with EpicWeb.dev.`,
+                slogan:`Stabilna pozycja`,
+                title:`SEO`,
+                theme:"seo"
+            },
+            {
+                button:{
+                    title:"Przeczytaj więcej",
+                    url:"#"
+                },
+                content:`I've been teaching people just like you how to build better software for over 10 years. Tens of thousands of people have increased their confidence in shipping software with TestingJavaScript.com and even more have improved the performance and maintainability of their React applications from what they've learned from EpicReact.dev. My latest efforts are pushing things to the whole stack with EpicWeb.dev.`,
+                slogan:`Zbuduj podstawy`,
+                title:`Strony internetowe`,
+                theme:"www"
+            },
+            {
+                button:{
+                    title:"Przeczytaj więcej",
+                    url:"#"
+                },
+                content:`I've been teaching people just like you how to build better software for over 10 years. Tens of thousands of people have increased their confidence in shipping software with TestingJavaScript.com and even more have improved the performance and maintainability of their React applications from what they've learned from EpicReact.dev. My latest efforts are pushing things to the whole stack with EpicWeb.dev.`,
+                slogan:`Szybka widoczność`,
+                title:`Ads`,
+                theme:"ads"
+            },
+        ]
     }
 }

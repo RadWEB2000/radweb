@@ -1,6 +1,7 @@
 import css from "cards/PrimaryProjectCard/PrimaryProjectCard.module.scss";
 import {tPrimaryProjectCard} from "cards/PrimaryProjectCard/PrimaryProjectCard.models";
 import Image from "next/image";
+import { SecondaryButton as Button} from "buttons/index";
 
 export default function PrimaryProjectCard(props:tPrimaryProjectCard){
     return (
@@ -26,6 +27,13 @@ export default function PrimaryProjectCard(props:tPrimaryProjectCard){
                     className={css.excerpt}
                     dangerouslySetInnerHTML={{__html:props.excerpt.length <= 150 ? props.excerpt : `${props.excerpt.substring(0,147)}...`}}
                 />
+                {
+                    props.button &&
+                    <Button
+                        {...props.button}
+                        theme={props.theme}
+                    />
+                }
                 {
                     props.categories &&
                     <ul

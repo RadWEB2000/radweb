@@ -1,0 +1,109 @@
+@import "../../../../../styles/Mixins.scss";
+@import "../../../../../styles/Variables.scss";
+
+.wrapper {
+    width: 100%;
+}
+.box {
+    @include flex(center,flex-start, row nowrap,1rem);
+    height: 4rem;
+}
+
+.link {
+    @include font(3.2rem,600,1, null, null, start);
+}
+
+.button {
+    @include flex(center,center);
+    @include size(3rem,3rem);
+    font-size: 2.7rem;
+}
+
+.link,
+.button {
+    color:$white;
+    transition:.12s linear color;
+    &:focus-within,
+    &:hover {
+        color:$orange;
+    }
+}
+
+.submenu {
+    @include flex(flex-start,flex-start,column, null,1.15rem);
+    background-color: color-mix(in srgb, $erie 20%, $black 80%);
+    border-radius: 0 1rem 1rem 1rem;
+    padding: 2rem;
+    &__item {
+        @include font(1.8rem,400,1, null, null, start);
+        color:$silver;
+        transition:.12s linear background-color,.12s linear color;
+        &:focus-within,
+        &:hover {
+            color:$white;
+        }
+    }
+}
+
+
+@media only screen {
+    @media (min-width:630px){
+        .box {
+            height: 7rem;
+        }
+        
+        .link {
+            font-size: 4.7rem;
+        }
+        
+        .button {
+            @include size(5rem,5rem);
+            font-size: 4.37rem;
+        }
+        
+        .submenu {
+            padding: 2.7rem;
+            &__item {
+                font-size: 3rem;
+            }
+        }
+    }
+    @media (min-width:1050px){
+        .wrapper {
+            width: auto;
+            position: relative;
+        }
+        .box {
+            @include flex(center,flex-start, row nowrap,.4rem);
+            height: 3rem;
+        }
+        
+        .link {
+            @include font(1.5rem,600,1, null, null, start);
+        }
+        
+        .button {
+            @include size(2.53rem,2rem);
+            font-size: 1.7rem;
+        }
+        
+        .submenu {
+            min-width: max-content;
+            padding: 2rem 2.3rem;
+            position: absolute;
+            z-index: 999999;
+            &__item {
+                @include font(1.5rem,600);
+                background-color: color-mix(in srgb, $erie 80%, $din 20%);
+                border-radius: 1rem;
+                color:color-mix(in srgb, $erie 20%, $white 80%);
+                padding: .66rem 1.4rem;
+                &:focus-within,
+                &:hover {
+                    background-color: $orange;
+                    color:$black;
+                }
+            }
+        }
+    }
+}

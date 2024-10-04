@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import {Nunito_Sans, Oswald, Roboto_Mono} from "next/font/google"
 import "css/Global.scss";
 import { MainProvider } from "context/MainContext";
+import {Navigation} from "nav/index";
+import { layout } from "data/layout";
+import { Footer } from "footer/index";
 
 const nuntio = Nunito_Sans({
   subsets:["latin-ext"],
@@ -35,7 +38,13 @@ export default function RootLayout({
         <body 
           className={`${nuntio.variable} ${oswald.variable} ${roboto.variable}`}
         >
+          <Navigation
+            {...layout.nav}
+          />
           {children}
+          <Footer
+            {...layout.footer}
+          />
         </body>
       </MainProvider>
     </html>
