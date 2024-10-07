@@ -11,16 +11,21 @@ export default function Menu(props:tMenu){
                 props.menu.map((item) => {
                     return (
                         <li
+                        className={css.column}
                             key={item.title}
                         >
                             <h4
+                                className={css.title}
                                 dangerouslySetInnerHTML={{__html:item.title}}
                             />
-                            <ul>
+                            <ul
+                                className={css.menu}
+                            >
                                 {
                                     item.submenu.map((item) => {
                                         return (
                                             <Link
+                                                className={css.menu__item}
                                                 href={item.url}
                                                 key={item.title}
                                             >

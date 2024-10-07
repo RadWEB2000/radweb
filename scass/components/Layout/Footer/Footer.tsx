@@ -7,20 +7,26 @@ export default function Footer(props:tFooter){
         <footer
             className={css.wrapper}
         >
-            <div>
+            <div
+                className={css.container}
+            >
                 <Informations
                     {...props.informations}
-                />
-                <Socials
-                    {...props.socials}
                 />
                 <Menu
                     {...props.menu}
                 />
             </div>
-            <Author
-                {...props.author}
-            />
+            <div
+                className={css.box}
+            >
+                <Author
+                    {...props.author}
+                />
+                <Socials
+                    {...props.socials}
+                />
+            </div>
         </footer>
     )
 }

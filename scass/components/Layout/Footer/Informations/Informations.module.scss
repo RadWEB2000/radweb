@@ -1,2 +1,92 @@
 @import "../../../../styles/Mixins.scss";
 @import "../../../../styles/Variables.scss";
+
+.wrapper {
+    // background: red;
+}
+
+.brand,
+.cta {
+    font-family: $bold;
+    font-weight: 700;
+    text-align: start;
+}
+
+.brand {
+    color:$orange;
+    font-size: clamp(3rem,6vw,11rem);
+    line-height: 1.2;
+}
+
+.cta {
+    color:color-mix(in srgb, $orange 80% , $white 20%);
+    font-size: clamp(1.7rem,2vw,3rem);
+    line-height: 1;
+    text-wrap:balance;
+}
+
+.address__location,
+.contact__item__title {
+    @include font(clamp(1.35rem,1.55vw,1.75rem),500, 1.5,null, null, start);
+}
+
+.contact {
+    @include flex(flex-start,flex-start,column);
+    margin:2rem 0;
+    &__item {
+        @include flex(center,flex-start,row wrap, .24rem,.24rem);
+        color:$silver;
+        transition:.2s linear color;
+        position: relative;
+        &::after {
+            @include size(.85px,100%);
+            border-radius: 1rem;
+            background-color: $white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            // opacity: 0;
+            // visibility: hidden;
+            transform:scaleX(0);
+            transition:.2s linear  opacity,.32s linear transform, .2s linear visibility;
+            transform-origin: left;
+        }
+        &__icon {
+            @include flex(center,center);
+            @include size(3.2rem,3.2rem);
+            font-size: 2.4rem;
+        }
+        &:focus-within,
+        &:hover {
+            color:$white;
+            &::after {
+                opacity: 1;
+                visibility: visible;
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+.address {
+    &__location {
+        color:$silver;
+        font-style: normal;
+    }
+    &__map {
+        aspect-ratio: 16/9;
+        border-radius: 1dvw;
+        overflow: hidden;
+        margin-top: 1.7rem;
+        filter:  grayscale(100%);
+        position: relative;
+        width: 95%;
+        & >* {
+            @include size(100%,100%);
+            border:unset;
+            object-fit: cover;
+            object-position: center;
+            outline:unset;
+        }
+    }
+}

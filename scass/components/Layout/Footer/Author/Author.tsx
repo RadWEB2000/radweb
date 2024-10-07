@@ -6,7 +6,10 @@ export default function Author(props:tAuthor){
         <div
             className={css.wrapper}
         >
-            
+            <p
+                className={css.content}
+                dangerouslySetInnerHTML={{__html:props.content}}
+            />
         </div>
     )
 }
