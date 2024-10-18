@@ -1,0 +1,1 @@
+export {default as PrimaryLinkButton} from "link/PrimaryLinkButton/PrimaryLinkButton"

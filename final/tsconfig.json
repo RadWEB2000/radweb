@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "app/*":["./app/*"],
+      "assets/*":["./assets/*"],
+      "button/*":["./components/Utils/Buttons/*"],
+      "context/*":["./context/*"],
+      "css/*":["./styles/*"],
+      "data/*":["./data/*"],
+      "fonts/*":["./assets/fonts/*"],
+      "footer/*":["./components/Layout/Footer/*"],
+      "icons/*":["./assets/icons/*"],
+      "img/*":["./assets/images/*"],
+      "layout/*":["./components/Layout/*"],
+      "lib/*":["./lib/*"],
+      "link/*":["./components/Utils/LinkButtons/*"],
+      "nav/*":["./components/Layout/Navigation/*"],
+      "parts/*":["./components/*"],
+      "socials/*":["./components/Utils/SocialButton/*"],
+      "ts/*":["./types/*"],
+      "utils/*":["./components/Utils/*"],
+      "v-home/*":["./components/Views/HomeView/*"],
+      "video/*":["./assets/videos/*"],
+      "views/*":["./components/Views/*"],
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts","./types/common.d.ts"],
+  "exclude": ["node_modules"]
+}

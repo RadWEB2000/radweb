@@ -1,0 +1,92 @@
+@import "../../../../styles/Animations.scss";
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include size(95vh,100%);
+    display: grid;
+    grid-template-areas: "layer";
+    position: relative;
+    background: violet;
+    z-index: 0;
+
+    & > * {
+        @include size(100%,100%);
+        grid-area: layer;
+        position: absolute;
+    }
+
+}
+
+
+.medium {
+    background: pink;
+    // z-index: -1;
+}
+
+.image,
+.video {
+    @include size(100%,100%);
+    // display: none;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container {
+    @include flex(flex-start,flex-end,column, null,.2rem);
+    @include size(100%,100%);
+    // background: rgba(0, 255, 0, 0.308);
+    padding: 3rem 1.2rem 5vh 1.2rem;
+}
+
+.title {
+    @include font(clamp(7rem,17vw,36rem),900);
+}
+
+.slogan {
+    @include font(clamp(3rem,5vw,7rem),500);
+    opacity: 0.8;
+}
+
+.slogan,
+.title {
+    font-family: $bold !important;
+    line-height: 1;
+    text-align: start;
+    text-wrap:balance;
+}
+
+
+.buttons,
+.socials {
+    align-items: center;
+    column-gap: .6rem;
+    display: flex;
+    width: 100%;
+}
+
+.buttons {
+    justify-content: flex-start;
+    margin:3.4rem 0 1.2rem 0;
+}
+
+.socials {
+    justify-content: flex-end;
+}
+
+
+@media only screen {
+    @media (min-width:515px){
+        .container {
+            padding: 3rem 3vw 5vh 3vw;
+        }
+        
+        .title {
+            font-size: clamp(11.72rem,16vw,27rem);
+        }
+        
+        .slogan {
+            font-size: clamp(3rem,5vw,8rem);
+        }
+    }
+}

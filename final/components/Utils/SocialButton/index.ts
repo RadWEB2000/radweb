@@ -1,0 +1,1 @@
+export {default as PrimarySocialButton} from "socials/PrimarySocialButton/PrimarySocialButton"

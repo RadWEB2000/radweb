@@ -1,0 +1,108 @@
+@import "./Variables.scss";
+
+@mixin flex($align,$justify,$flow: null,$columnGap: null,$rowGap: null,$shrink: false){
+    align-items: $align;
+	display: flex;
+	justify-content: $justify;
+	@if $columnGap != null {
+		column-gap: $columnGap;
+	}
+	@if $flow != null {
+		flex-flow: $flow;
+	}
+	@if $rowGap != null {
+		row-gap: $rowGap;
+	}
+	@if $shrink != false {
+		& > * {
+			flex-shrink: 0;
+		}
+	}
+}
+
+@mixin font( $size,$weight:null,$lineHeight:null,$align:null,$wrap:null,$family:null,$transform:null,$style:null,$shadow:null,$spacing:null,$decoration:null,$featureSettings:null,$stretch:null,$indent:null,$direction:null,$mode:null,$overflow:null){
+    font-size: $size;
+    @if $weight != null {
+        font-weight: $weight;
+    } @else {
+        font-weight: 400;
+    }
+
+    @if $lineHeight != null {
+        line-height: $lineHeight;
+    }
+
+    @if $align != null{
+        text-align: $align;
+    } @else  {
+        text-align: start;
+    }
+
+    @if $wrap != null {
+        text-wrap:$wrap;
+    }
+
+    @if $family != null {
+        font-family: $family;
+    } @else {
+        font-family: inherit;
+    }
+
+    @if $transform != null {
+        text-transform: $transform;
+    }
+
+    @if $style != null {
+        font-style: $style;
+    } @else {
+        font-style: none;
+    }
+
+    @if $shadow != null {
+        text-shadow:$shadow;
+    }
+
+    @if $spacing != null {
+        letter-spacing: $spacing;
+    }
+
+    @if $decoration != null {
+        text-decoration: $decoration;
+    }
+
+    @if $direction != null and $mode != null {
+        text-orientation: $direction;
+        writing-mode: $mode;
+    }
+
+    @if $stretch != null {
+        font-stretch: $stretch;
+        font-width:$stretch;
+    }
+
+    @if $featureSettings != null {
+        font-feature-settings: $featureSettings;
+    }
+
+    @if $indent != null {
+        text-indent: $indent;
+    }
+
+    @if $overflow != null {
+        text-overflow: $overflow;
+    }
+
+}
+
+@mixin gradient($direction,$colors...){
+   background-image: linear-gradient($direction, $colors...);
+}
+
+@mixin size($height: null, $width: null) {
+	@if $height != null {
+		height: $height;
+	}
+	@if $width != null {
+		width: $width;
+	}
+}
