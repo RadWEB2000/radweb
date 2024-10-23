@@ -18,10 +18,10 @@
 	position: absolute;
 }
 
-// ::selection {
-// 	background-color: $jet;
-// 	color:$seasalt-dark;
-// }
+::selection {
+	background-color: rgba($salmon,.2);
+	color:$jet;
+}
 
 :focus,
 :focus-within {
@@ -40,10 +40,10 @@ button {
 }
 
 body {
-	@include gradient(to top left, $night_gradient);
-    background-attachment: fixed;
-	background-color: $orange;
-	color:$white;
+	@include gradient(to bottom left, $bg);
+	background-attachment: fixed;
+	background-color: $platinum;
+	color:$jet;
 	font-family: $regular;
 	font-optical-sizing: auto;
 	font-size: 1.6rem;

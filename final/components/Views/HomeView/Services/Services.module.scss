@@ -1,0 +1,114 @@
+@import "../../../../styles/Animations.scss";
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    display: grid;
+    gap:1.6rem;
+    grid-template-columns: repeat(12,1fr);
+    margin: 2rem auto 1rem;
+    width: 95vw;
+
+    & > * {
+        grid-column: 1/-1;
+    }
+}
+
+.slogan {
+    @include font(clamp(1.5rem, 1.7vw, 2rem), 700, 1.25, start, balance, $code);
+}
+
+.container {
+    padding: 0.5rem;
+}
+
+.title {
+    @include font(clamp(7.5rem, 9vw,23rem), 700, 1, start, null, $bold);
+}
+
+
+.content {
+    @include font(clamp(1.8rem,2vw,2.7rem), 500, 1.4,start, pretty);
+    color:color-mix(in srgb, $onyx 60%, $platinum 40%);
+    max-width: 75ch;
+    margin-top: 1.5rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:1rem;
+    margin-top: 3rem;
+    & >* {
+        width: 100%;
+    }
+}
+
+
+.card {
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom right, rgba($orange,.06),rgba($salmon,.04), transparent);
+    border-radius: 1rem;
+    padding: 2rem;
+
+    &__index {
+        @include font(clamp(1.5rem,1.65vw,1.77rem),400, 1.3,start,null,$code);
+    }
+
+    &__title {
+        @include font(clamp(2.3rem,3.5vw,4.23rem),500, 1.13,start,null,$bold);
+    }
+
+    &__content {
+        @include font(clamp(1.6rem,1.65vw,1.73rem),400, 1.3,start);
+        color:color-mix(in srgb, $onyx 80%, $platinum 20%);
+        margin-top: 0.45rem;
+        padding: 0.4rem;
+    }
+
+    &__subcards {
+        @include flex(flex-start,flex-start, row wrap, .6rem, .6rem);
+        margin-top: 1.3rem;
+        &__item {
+            @include font(clamp(1.5rem,1.62vw,1.74rem), 500, 1, start,$code);
+            background-color: rgba($salmon,.14);
+            border-radius: .5rem;
+            padding: 0.45rem .82rem;
+            transition:.23s linear background-color;
+            &:focus-within,
+            &:hover {
+                background-color: rgba($orange,.34);
+            }
+        }
+    }
+}
+
+@media only screen {
+    @media (min-width:600px){
+        .aside {
+            grid-column: 1/3;
+        }
+        
+        .container {
+            grid-column: 3/-1;
+        }    
+    }
+
+    @media (min-width:825px){
+        .cards {
+            grid-template-columns: repeat(2,1fr);
+        }       
+    }
+    @media (min-width:1200px){
+        .aside {
+            grid-column: 1/4;
+        }
+        
+        .container {
+            grid-column: 4/-1;
+        }
+        .cards {
+            grid-template-columns: repeat(3,1fr);
+        }       
+    }
+}

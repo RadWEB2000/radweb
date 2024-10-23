@@ -1,0 +1,104 @@
+@import "../../../../styles/Animations.scss";
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    background-color: $orange;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    overflow: hidden;
+    margin: 10vh 0 5vh;
+    padding: 9vh 0 0 5vw;
+    &> * {
+        grid-column: 1/-1;
+    }
+    ::selection {
+        background-color: rgba($jet,.92);
+	    color:$salmon;
+    }
+}
+
+.container {
+    @include flex(flex-start,flex-start, column);
+    padding: 0 1rem 0 0;
+    margin-bottom: 2rem;
+    & >* {
+        width: 100%;
+    }
+}
+
+.media {
+    display: block;
+    min-height: 50vh;
+    position: relative;
+}
+
+.image {
+    filter:drop-shadow(0 0 1.2rem rgba($black,.52));
+    object-fit: contain;
+    object-position: right bottom;
+}
+
+
+.tags {
+    @include flex(flex-start,flex-start, row wrap,2.25rem, .95rem);
+    margin:5vh 0 2rem 0;
+    padding: 0.4rem;
+}
+
+.tag {
+    @include font(clamp(1.7rem,1.97vw,2.1rem), 400, 1, start, null, $code,lowercase);
+    color:color-mix(in srgb, $salmon 50%, inherit 50%);
+    position: relative;
+    &::after {
+        @include size(2px,100%);
+        background-color: rgba($jet,.63);
+        border-radius: 1rem;
+        bottom: -2px;
+        left: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: .32s ease-in-out transform;
+    }
+    &:focus-within,
+    &:hover {
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.title {
+    @include font(clamp(7.5rem, 9vw,23rem), 700, 1, start, null, $bold);
+}
+
+.content {
+    @include font(clamp(1.6rem,2.3vw,3.4rem), 500, 1.6, start,pretty);
+    margin-top: 1.2rem;
+    max-width: 70ch;
+}
+
+@media only screen {
+    @media (min-width:740px){
+    
+        .container {
+            grid-column: 1/7;
+        }
+        
+        .media {
+            min-height: 70vh;
+            grid-column: 7/-1;
+        }
+        
+        .tags {
+            column-gap:1.7rem;
+        }
+        
+    }
+    @media  (min-width:1045px){
+        .media {
+            min-height:95vh;
+        }
+    }
+}

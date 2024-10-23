@@ -1,0 +1,142 @@
+@import "../../../../styles/Animations.scss";
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+
+.wrapper {
+    background-color:$salmon;
+    padding: 7vh 4.5vw;
+    padding: 7vh .5vw;
+    &,
+    & > * {
+        @include flex(center,center,column);
+    }
+
+}
+
+.container {
+    // @include flex(center,center,column);
+}
+
+
+.cards {
+    // background-color: black;
+    row-gap:3rem;
+    margin-top: 4.2vh;
+    width:clamp(5rem, 170rem,95%);
+}
+
+.card {
+    background-color: color-mix(in srgb, $black 45%, $jet 55%);
+    display: grid;
+    gap:.75rem;
+    grid-template-columns: repeat(9,1fr);
+    border-radius: 2rem;
+    padding: 1.2rem;
+    width: 100%;
+
+    & > *{
+        grid-column: 1/-1;
+    }
+
+    ::selection {
+        background-color: rgba($salmon,.92);
+	    color:$black;
+    }
+
+    &__box {
+        @include flex(flex-start,flex-start,column);
+        color:$platinum;
+        height: auto;
+        grid-row: 2;
+        // grid-column: 1/5;
+        padding: 3rem;
+        padding: .5rem;
+
+        &__title {
+            @include font(clamp(4rem, 6vw, 8rem), 800, 1, start, balance, $bold);
+            color:$white;
+        }
+
+        &__content {
+            @include font(clamp(1.5rem, 1.7vw, 1.9rem), 500, 1.3, start, pretty);
+            margin-top: 2rem;
+            max-width: 50ch;
+            // padding:0 2rem 2rem 0;
+        }
+
+        &__button {
+            @include font(clamp(1.7rem, 2vw, 2.6rem), 600, 1, center);
+            background-color: $platinum;
+            color:$black;
+            margin:2rem 0;
+            border-radius: 2rem;
+            padding: 1rem 2rem;
+            min-width:20rem;
+            transition:.2s linear background-color, .2s linear box-shadow;
+            &:focus-within,
+            &:hover {
+                background-color: $white;
+                box-shadow: 0 0 1.23rem .25rem rgba($platinum,.72);
+            }
+        }
+
+        &__categories {
+            @include flex(center,flex-start,row wrap, .4rem, .4rem);
+            // background: pink;
+            margin:auto auto 0 0;
+            width: 100%;
+            &__item {
+                @include font(clamp(1.6rem,1.7vw,2rem), 500, 1, center,null,$code,lowercase);
+                background-color: color-mix(in srgb, $black 40%, $platinum 60%);
+                color:$black;
+                cursor: default;
+                border-radius: .72rem;
+                padding: 0.6rem 1.37rem;
+                min-width: 10rem;
+            }
+        }
+
+    }
+
+    &__media {
+        aspect-ratio: 4/3;
+        grid-row: 1;
+        background: lime;
+        display: block;
+        border-radius: 2rem;
+        overflow: hidden;
+        // min-height:60vh;
+        // grid-column: 5/-1;
+        position: relative;
+
+        &__image {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__gallery {
+        display: grid;
+        display: none;
+        grid-template-columns: repeat(var(--cards_quantity),1fr);
+        // grid-column: 1/-1;
+        height: 20rem;
+        gap:.75rem; 
+        &__item {
+            border-radius: 2rem;
+            background: green;
+            display: block;
+            overflow: hidden;
+            position: relative;
+
+            &__image {
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+    }
+}
+
+

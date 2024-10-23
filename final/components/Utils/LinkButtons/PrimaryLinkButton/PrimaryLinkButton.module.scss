@@ -2,88 +2,40 @@
 @import "../../../../styles/Mixins.scss";
 @import "../../../../styles/Variables.scss";
 
-.wrapper {
-    @include flex(center,flex-start, row nowrap,.72rem);
-    // background: green;
-    padding: 0 0.64rem 0 0;
-    position: relative;
-    // padding: 0rem 0.35rem;
 
+.wrapper {
+    @include flex(center,center, row nowrap,.45rem);
+    color:color-mix(in srgb, $jet 60%, $platinum 40%);
+    padding: 0.63rem 0.45rem;
+    position: relative;
     &::after {
-        @include size(2px,100%);
-        background-color: $orange;
+        @include size(3px , 100%);
+        background-color:color-mix(in srgb, $jet 60%, $platinum 40%);
+        opacity: 0.6;
+        border-radius: 1rem;
         bottom: 0;
-        position: absolute;
         left: 0;
+        position: absolute;
         transform-origin: left;
         transform: scaleX(0);
-        transition: .18s linear transform;
+        transition:.2s linear transform;
     }
 
     &:focus-within,
     &:hover {
         &::after {
-            transform: scaleX(1);
-        }
-        .icon {
-            background-color: $orange;
+            transform: scaleX(1)
         }
     }
 }
 
 .icon {
     @include flex(center,center);
-    @include size(3rem,3rem);
-    background-color: rgba($platinum,.14);
-    transition:.12s linear background-color;
+    font-size: 2.3rem;
+    font-size: 2rem;
 }
+
 
 .title {
-    @include flex(center,center);
-    @include font(clamp(1.65rem,2vw,2.3rem),500, 1, center,$code);
-    @include size(100%,max-content);
-    // background: brown;
-
-}
-
-@media only screen {
-    @media (min-width:1000px){
-        .wrapper {
-            @include flex(center,flex-start, row nowrap,.72rem);
-            // background: green;
-            padding: 0 0.64rem 0 0;
-            position: relative;
-            // padding: 0rem 0.35rem;
-        
-            &::after {
-                @include size(2px,100%);
-                background-color: $orange;
-                bottom: 0;
-                position: absolute;
-                left: 0;
-                transform-origin: left;
-                transform: scaleX(0);
-                transition: .18s linear transform;
-            }
-        
-            &:focus-within,
-            &:hover {
-                &::after {
-                    transform: scaleX(1);
-                }
-                .icon {
-                    background-color: $orange;
-                }
-            }
-        }
-        
-        .icon {
-            @include size(3.24rem,3.24rem);
-            font-size: 2.12rem;
-        }
-        
-        .title {
-            font-size: clamp(1.65rem,2.2vw,2.6rem);
-        }       
-    }
+    @include font(clamp(1.7rem, 2vw,2.6rem), 700,1, start, nowrap, $code,lowercase );
 }

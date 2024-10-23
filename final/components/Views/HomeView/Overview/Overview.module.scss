@@ -1,0 +1,49 @@
+@import "../../../../styles/Animations.scss";
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    display: grid;
+    gap:1.6rem;
+    grid-template-columns: repeat(12,1fr);
+    margin: 2rem auto 1rem;
+    width: 95vw;
+}
+
+.title {
+    @include font(clamp(1.5rem, 1.7vw, 2rem), 700, 1.25, start, balance, $code);
+    grid-column: 1/-1;
+}
+
+.container {
+    align-items: baseline;
+    display: flex;
+    flex-flow:row wrap;
+    grid-column: 1/-1;
+    margin-top: 2rem;
+}
+
+.content {
+    @include font(clamp(2rem, 3.7vw, 6.17rem), 300, 1.5, start, pretty);
+    color:$onyx;
+
+}
+
+.line {
+    @include size(3.5px,clamp(2rem, 22rem, 95vw));
+    background-color: $orange;
+    border-radius: 2rem;
+    display: block;
+    margin-bottom: 1.2rem;
+}
+
+@media only screen {
+    @media (min-width:1000px){
+        .title {
+            grid-column: 1/4;
+        }
+        .container {
+            grid-column: 4/-1;
+        }
+    }
+}
