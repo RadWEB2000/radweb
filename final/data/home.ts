@@ -1,5 +1,6 @@
 import { tHero } from 'v-home/Hero/Hero.models';
 import hero_img from "img/wolf-head-big.webp";
+import projects_img from "img/projekty-i-realizacje-radweb.webp";
 import { tOverview } from 'v-home/Overview/Overview.models';
 import { tAbout } from 'v-home/About/About.models';
 import r_adamczyk from "img/r-adamczyk-gray.webp"
@@ -185,6 +186,11 @@ export const home:t_home = {
         },
         content:`At Creedz, we’re here to bring your brand to life. Whether you need eye-catching graphics, a responsive website or effective marketing strategies. Our goal is to exceed your expectations and turn your vision into reality with creativity and expertise.`,
         title:`Projekty`,
+        media:{
+            altText:"",
+            sourceSrc:projects_img.src,
+            title:""
+        },
         cards:[
             {
                 button:{
@@ -199,33 +205,9 @@ export const home:t_home = {
                 talented team creates sleek websites and powerful apps with metictlous attention to detail. Known for capturing the essence Of brands, has earned a reputation for quality and creativity. Today, they continue to innovate and push the of design and development.`,
                 title:`Borówkowy Gaj`,
                 media:{
-                    main:{
-                        altText:"",
-                        sourceSrc:`https://cdn.pixabay.com/photo/2020/03/13/07/45/aspiration-4927227_1280.jpg`,
-                        title:``
-                    },
-                    gallery:[
-                        {
-                            altText:'',
-                            sourceSrc:"https://cdn.pixabay.com/photo/2016/07/26/03/35/rolls-royce-1541922_1280.jpg",
-                            title:""
-                        },
-                        {
-                            altText:'',
-                            sourceSrc:"https://cdn.pixabay.com/photo/2015/10/03/07/25/oldtimer-969465_1280.jpg",
-                            title:""
-                        },
-                        {
-                            altText:'',
-                            sourceSrc:"https://cdn.pixabay.com/photo/2020/02/24/14/06/vietnam-4876320_1280.jpg",
-                            title:""
-                        },
-                        {
-                            altText:'',
-                            sourceSrc:"https://cdn.pixabay.com/photo/2018/01/17/00/05/wheel-3087164_1280.jpg",
-                            title:""
-                        },
-                    ]
+                    altText:"",
+                    sourceSrc:`https://cdn.pixabay.com/photo/2020/03/13/07/45/aspiration-4927227_1280.jpg`,
+                    title:``
                 }
             },
             {
@@ -242,28 +224,9 @@ export const home:t_home = {
                 talented team creates sleek websites and powerful apps with metictlous attention to detail. Known for capturing the essence Of brands, has earned a reputation for quality and creativity. Today, they continue to innovate and push the of design and development.`,
                 title:`Agromar`,
                 media:{
-                    main:{
-                        altText:"",
-                        sourceSrc:`https://cdn.pixabay.com/photo/2020/03/13/07/45/aspiration-4927227_1280.jpg`,
-                        title:``
-                    },
-                    gallery:[
-                        {
-                            altText:'',
-                            sourceSrc:"https://cdn.pixabay.com/photo/2015/10/03/07/25/oldtimer-969465_1280.jpg",
-                            title:""
-                        },
-                        {
-                            altText:'',
-                            sourceSrc:"https://cdn.pixabay.com/photo/2020/02/24/14/06/vietnam-4876320_1280.jpg",
-                            title:""
-                        },
-                        {
-                            altText:'',
-                            sourceSrc:"https://cdn.pixabay.com/photo/2018/01/17/00/05/wheel-3087164_1280.jpg",
-                            title:""
-                        },
-                    ]
+                    altText:"",
+                    sourceSrc:`https://cdn.pixabay.com/photo/2020/03/13/07/45/aspiration-4927227_1280.jpg`,
+                    title:""
                 }
             },
             {
@@ -278,28 +241,9 @@ export const home:t_home = {
                 talented team creates sleek websites and powerful apps with metictlous attention to detail. Known for capturing the essence Of brands, has earned a reputation for quality and creativity. Today, they continue to innovate and push the of design and development.`,
                 title:`Mechanik Ludomy`,
                 media:{
-                    main:{
-                        altText:"",
-                        sourceSrc:`https://cdn.pixabay.com/photo/2020/03/13/07/45/aspiration-4927227_1280.jpg`,
-                        title:``
-                    },
-                    gallery:[
-                        {
-                            altText:'',
-                            sourceSrc:"https://cdn.pixabay.com/photo/2016/07/26/03/35/rolls-royce-1541922_1280.jpg",
-                            title:""
-                        },
-                        {
-                            altText:'',
-                            sourceSrc:"https://cdn.pixabay.com/photo/2015/10/03/07/25/oldtimer-969465_1280.jpg",
-                            title:""
-                        },
-                        {
-                            altText:'',
-                            sourceSrc:"https://cdn.pixabay.com/photo/2018/01/17/00/05/wheel-3087164_1280.jpg",
-                            title:""
-                        },
-                    ]
+                    altText:"",
+                    sourceSrc:`https://cdn.pixabay.com/photo/2020/03/13/07/45/aspiration-4927227_1280.jpg`,
+                    title:""
                 }
             },
         ]
