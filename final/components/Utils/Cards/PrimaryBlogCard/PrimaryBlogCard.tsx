@@ -26,29 +26,29 @@ export default function PrimaryBlogCard(props:tPrimaryBlogCard){
                 className={css.main}
             >
                 <Link
-                    className={css.main__category}
+                    className={css.category}
                     href={props.category.url}
                 >
                     {props.category.title}
                 </Link>
                 <h3
-                    className={css.main__title}
+                    className={css.title}
                     dangerouslySetInnerHTML={{__html:props.title}}
                 />
                 <p
-                    className={css.main__excerpt}
-                    dangerouslySetInnerHTML={{__html:props.excerpt.length < 120 ? props.excerpt.length : props.excerpt.substring(0,117) + "..."}}
+                    className={css.excerpt}
+                    dangerouslySetInnerHTML={{__html:props.excerpt.length < 120 ? props.excerpt.length : props.excerpt.substring(0,117).trim() + "..."}}
                 />
             </div>
             <div
                 className={css.details}
             >
                 <p
-                    className={css.details__release}
+                    className={css.release}
                     dangerouslySetInnerHTML={{__html:props.release}}
                 />
                 <Link
-                    className={css.details__button}
+                    className={css.button}
                     href={props.url}
                 >
                     <Arrow/>

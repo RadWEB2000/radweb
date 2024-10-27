@@ -1,0 +1,19 @@
+@import "../../../../styles/Animations.scss";
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+
+.wrapper {
+    background-color: color-mix(in srgb, $black 40%, $onyx 60%);
+    // padding: 5vh 0vh 5vh 0vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:1.45rem;
+    width: 95%;
+    margin:2rem 1rem 2rem auto;
+}

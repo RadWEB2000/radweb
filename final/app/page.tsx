@@ -1,5 +1,5 @@
 import { home } from "data/home"
-import { About, Hero, Overview, Projects, Services } from "v-home/index"
+import { About, Blog, Hero, Overview, Projects, Services } from "v-home/index"
 
 export default function HomePage(){
   return (
@@ -21,6 +21,9 @@ export default function HomePage(){
           {...home.projects}
         />
         {/* Blog */}
+        <Blog
+          {...home.blog}
+        />
         {/* Dlaczego ja? */}
         {/* Marketing Twojej firmy w dobrych rękach */}
         {/* Sektory */}

@@ -4,6 +4,9 @@ const nextConfig = {
         remotePatterns:[
             {
                 hostname:`cdn.pixabay.com`
+            },
+            {
+                hostname:`www.sunrisesystem.pl`
             }
         ]
     }

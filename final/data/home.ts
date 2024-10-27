@@ -6,6 +6,7 @@ import { tAbout } from 'v-home/About/About.models';
 import r_adamczyk from "img/r-adamczyk-gray.webp"
 import { tServices } from 'v-home/Services/Services.models';
 import { tProjects } from 'v-home/Projects/Projects.models';
+import { tBlog } from 'parts/Views/HomeView/Blog/Blog.models';
 
 type t_home = {
     about:tAbout;
@@ -13,6 +14,7 @@ type t_home = {
     overview:tOverview;
     services:tServices;
     projects:tProjects;
+    blog:tBlog;
 }
 
 export const home:t_home = {
@@ -248,5 +250,104 @@ export const home:t_home = {
             },
         ]
     },
-  
+    blog: {
+        button:{
+            title:"Wszystkie wpisy",
+            url:`#`
+        },
+        content:`MySQL to jeden z najpopularniejszych obecnie silników bazodanowych, czyli systemów zarządzających relacyjnymi bazami danych. Relacyjne bazy danych są z kolei bardzo intuicyjnym i prostym sposobem na przechowywanie powiązanych ze sobą danych w formie tabel, gdzie każdy wiersz oznacza osobny rekord (wpis) o unikatowym kluczu (elemencie identyfikującym dany rekord).`,
+        title:'Blog',
+        cards:[
+            {
+                category:{
+                    title:`SEO`,
+                    url:`#`
+                },
+                excerpt:`Osiągnięcie celów biznesowych jest zawsze priorytetem - im szybciej to nastąpi, tym lepiej. Dlatego tak wiele właścicieli firm zastanawia się ile trwa pozycjonowanie strony internetowej w Google, a uzyskana odpowiedź kończy się kolejnym pytaniem: dlaczego tak długo? W tym artykule przyjrzymy się różnym czynnikom mającym wpływ na efekty SEO, a także przeszkodom, z jakimi muszą zmierzyć się nowe witryny.`,
+                image:{
+                    altText:"",
+                    sourceSrc:`https://www.sunrisesystem.pl/wp-content/uploads/2023/09/grafika-1200-x-740-kopia-4_382.png`,
+                    title:''
+                },
+                release:`21 sie 2024`,
+                title:`Samodzielne pozycjonowanie strony`,
+                url:'#'
+            },
+            {
+                category:{
+                    title:`SEO`,
+                    url:`#`
+                },
+                excerpt:`Osiągnięcie celów biznesowych jest zawsze priorytetem - im szybciej to nastąpi, tym lepiej. Dlatego tak wiele właścicieli firm zastanawia się ile trwa pozycjonowanie strony internetowej w Google, a uzyskana odpowiedź kończy się kolejnym pytaniem: dlaczego tak długo? W tym artykule przyjrzymy się różnym czynnikom mającym wpływ na efekty SEO, a także przeszkodom, z jakimi muszą zmierzyć się nowe witryny.`,
+                image:{
+                    altText:"",
+                    sourceSrc:`https://www.sunrisesystem.pl/wp-content/uploads/2020/07/grafika-1200-x-740-kopia-2-1_160.png`,
+                    title:''
+                },
+                release:`21 sie 2024`,
+                title:`Ile trwa pozycjonowanie strony internetowej w Google?`,
+                url:'#'
+            },
+            {
+                category:{
+                    title:`SEO`,
+                    url:`#`
+                },
+                excerpt:`Osiągnięcie celów biznesowych jest zawsze priorytetem - im szybciej to nastąpi, tym lepiej. Dlatego tak wiele właścicieli firm zastanawia się ile trwa pozycjonowanie strony internetowej w Google, a uzyskana odpowiedź kończy się kolejnym pytaniem: dlaczego tak długo? W tym artykule przyjrzymy się różnym czynnikom mającym wpływ na efekty SEO, a także przeszkodom, z jakimi muszą zmierzyć się nowe witryny.`,
+                image:{
+                    altText:"",
+                    sourceSrc:`https://www.sunrisesystem.pl/wp-content/uploads/2023/04/grafika-1200-x-740-kopia-2-1_109.png`,
+                    title:''
+                },
+                release:`21 sie 2024`,
+                title:`Black Hat SEO – poznaj niedozwolone techniki`,
+                url:'#'
+            },
+            {
+                category:{
+                    title:`SEO`,
+                    url:`#`
+                },
+                excerpt:`Osiągnięcie celów biznesowych jest zawsze priorytetem - im szybciej to nastąpi, tym lepiej. Dlatego tak wiele właścicieli firm zastanawia się ile trwa pozycjonowanie strony internetowej w Google, a uzyskana odpowiedź kończy się kolejnym pytaniem: dlaczego tak długo? W tym artykule przyjrzymy się różnym czynnikom mającym wpływ na efekty SEO, a także przeszkodom, z jakimi muszą zmierzyć się nowe witryny.`,
+                image:{
+                    altText:"",
+                    sourceSrc:`https://www.sunrisesystem.pl/wp-content/uploads/2023/09/grafika-1200-x-740_152.png`,
+                    title:''
+                },
+                release:`21 sie 2024`,
+                title:`Co to jest SEO?`,
+                url:'#'
+            },
+            {
+                category:{
+                    title:`Copywriting`,
+                    url:`#`
+                },
+                excerpt:`Osiągnięcie celów biznesowych jest zawsze priorytetem - im szybciej to nastąpi, tym lepiej. Dlatego tak wiele właścicieli firm zastanawia się ile trwa pozycjonowanie strony internetowej w Google, a uzyskana odpowiedź kończy się kolejnym pytaniem: dlaczego tak długo? W tym artykule przyjrzymy się różnym czynnikom mającym wpływ na efekty SEO, a także przeszkodom, z jakimi muszą zmierzyć się nowe witryny.`,
+                image:{
+                    altText:"",
+                    sourceSrc:`https://www.sunrisesystem.pl/wp-content/uploads/2008/04/20211108134246_fb_miniaturacopywritingwarsztat_397.png`,
+                    title:''
+                },
+                release:`21 sie 2024`,
+                title:`CTA – czym jest i jak je wykorzystywać?`,
+                url:'#'
+            },
+            {
+                category:{
+                    title:`Analityka`,
+                    url:`#`
+                },
+                excerpt:`Osiągnięcie celów biznesowych jest zawsze priorytetem - im szybciej to nastąpi, tym lepiej. Dlatego tak wiele właścicieli firm zastanawia się ile trwa pozycjonowanie strony internetowej w Google, a uzyskana odpowiedź kończy się kolejnym pytaniem: dlaczego tak długo? W tym artykule przyjrzymy się różnym czynnikom mającym wpływ na efekty SEO, a także przeszkodom, z jakimi muszą zmierzyć się nowe witryny.`,
+                image:{
+                    altText:"",
+                    sourceSrc:`https://www.sunrisesystem.pl/wp-content/uploads/2023/07/1200x740-google-trends_751.png`,
+                    title:''
+                },
+                release:`21 sie 2024`,
+                title:`Jak wykorzystać Google Trends w sprzedaży?`,
+                url:'#'
+            },
+        ]
+    }
 }

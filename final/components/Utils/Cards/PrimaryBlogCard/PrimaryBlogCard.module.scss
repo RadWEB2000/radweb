@@ -1,3 +1,93 @@
 @import "../../../../styles/Animations.scss";
 @import "../../../../styles/Mixins.scss";
 @import "../../../../styles/Variables.scss";
+
+
+.wrapper {
+    @include flex(flex-start,flex-start,column);
+    border-radius: 1.4rem;
+    overflow: hidden;
+    // background-color: color-mix(in srgb, $white 90%, $orange 10%);
+    margin:2rem auto;
+    width: 100%;
+    &:nth-of-type(even){
+        background-color: color-mix(in srgb, $white 10%, $platinum 90%);
+    }
+    &:nth-of-type(odd){
+        background-color: color-mix(in srgb, $white 95%, $platinum 5%);
+    }
+    & >* {
+        width: 100%;
+    }
+}
+
+
+.media {
+    aspect-ratio: 16/10;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.main {
+    @include flex(flex-start,flex-start,column, null,.4rem);
+    padding: 0.5rem 1rem;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    // background: gray;
+}
+
+.category {
+    background-color: $orange;
+    border-radius: .5rem;
+    color:$white;
+    padding: 0.15rem 1.2rem;
+    margin:.2rem 0 .7rem auto;
+    transition:.2s linear background-color;
+    &:focus-within,
+    &:hover {
+        background-color: $salmon;
+        background-color: color-mix(in srgb, $black 40%, $onyx 60%);
+    }
+}
+
+.title {
+    @include font(clamp(2.25rem,2.75vw,3.85rem), 700, 1, start, balance, $bold);
+}
+
+.excerpt {
+    @include font(clamp(1.45rem,1.55vw,1.67rem), 400, 1.75, start, pretty);
+    color:$onyx;
+    margin:.5rem 0;
+    max-width: 40ch;
+}
+
+.details {
+    align-items: baseline;
+    // background: aqua;
+    height: 6.5rem;
+    border-top: 1px solid rgba($jet,.3);
+    display: grid;
+    grid-template-columns: calc(100% - 6.5rem) 6.5rem;
+    margin-top: auto;
+    padding: 0.5rem;
+}
+
+.release {
+    @include font(clamp(1.3rem,1.4vw,1.5rem), 400, 1, start, null, $code);
+    padding: 0rem 1rem;
+}
+
+.button {
+    @include flex(center,center);
+    @include size(5rem,5rem);
+    font-size: 2.5rem;
+    // background: pink;
+    margin: 0 0 0 auto;
+    transition: .2s linear color, .2s linear filter;
+    &:focus-within,
+    &:hover {
+        color:$orange;
+        filter:drop-shadow(0 0 1rem $orange);
+    }
+}
