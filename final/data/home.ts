@@ -5,7 +5,7 @@ import { tOverview } from 'v-home/Overview/Overview.models';
 import { tAbout } from 'v-home/About/About.models';
 import r_adamczyk from "img/r-adamczyk-gray.webp"
 import { tServices } from 'v-home/Services/Services.models';
-import { tProjects } from 'parts/Views/HomeView/Projects/Projects.models';
+import { tProjects } from 'v-home/Projects/Projects.models';
 
 type t_home = {
     about:tAbout;
@@ -247,5 +247,6 @@ export const home:t_home = {
                 }
             },
         ]
-    }
+    },
+  
 }

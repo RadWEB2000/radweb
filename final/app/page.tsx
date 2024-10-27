@@ -20,6 +20,18 @@ export default function HomePage(){
         <Projects
           {...home.projects}
         />
+        {/* Blog */}
+        {/* Dlaczego ja? */}
+        {/* Marketing Twojej firmy w dobrych rękach */}
+        {/* Sektory */}
+        {/* Przejrzyste warunki współpracy / kroki: https://ks.pl/ */}
+        {/* Pozostałe usługi? */}
+        {/* Dlaczego warto? 1. Mieć stronę? 2. Mieć SEO? */}
+        {/* Opinie klientów */}
+        {/* Case studies */}
+        {/* FAQ */}
+        {/* Sociale / - ostatnie wpisy z fb / ig/ yt / x */}
+
       </main>
       <h1>home page</h1>
     </>
