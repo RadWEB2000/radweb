@@ -4,16 +4,47 @@
 
 
 .wrapper {
-    background-color: color-mix(in srgb, $black 40%, $onyx 60%);
-    // padding: 5vh 0vh 5vh 0vh;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    background-color: color-mix(in srgb, $black 60%, $onyx 40%);
+    margin:8vh 0;
+    padding: 9.5vh 1vw 9.5vh 1vw;
 }
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap:1.45rem;
-    width: 95%;
+    gap:.45rem;
+    grid-template-columns: repeat(1,1fr);
     margin:2rem 1rem 2rem auto;
+    width: 80%;
+}
+
+.container {
+    margin:2rem auto 2rem 1rem;
+    width: 95%;
+}
+
+.title {
+    @include font(clamp(7.5rem, 9vw,23rem), 700, 1, start, null, $bold);
+    color:$white;
+}
+
+.content {
+    @include font(clamp(1.6rem,2.3vw,3.4rem), 500, 1.6, start,pretty);
+    color:color-mix(in srgb, $onyx 40%, $platinum 60%);
+    margin-top: 1.2rem;
+    max-width: 70ch;
+}
+
+@media only screen {
+    @media (min-width:505px){
+        .cards {
+            grid-template-columns: repeat(2,1fr);
+            width: 95%;
+        }
+    }
+    @media (min-width:900px){
+        .cards {
+            grid-template-columns: repeat(4,1fr);
+            margin-top: 5rem;
+        }
+    }
 }
