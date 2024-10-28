@@ -7,6 +7,7 @@ import r_adamczyk from "img/r-adamczyk-gray.webp"
 import { tServices } from 'v-home/Services/Services.models';
 import { tProjects } from 'v-home/Projects/Projects.models';
 import { tBlog } from 'parts/Views/HomeView/Blog/Blog.models';
+import { tWhyWorth } from 'v-home/WhyWorth/WhyWorth.models';
 
 type t_home = {
     about:tAbout;
@@ -15,6 +16,7 @@ type t_home = {
     services:tServices;
     projects:tProjects;
     blog:tBlog;
+    whyWorth:tWhyWorth;
 }
 
 export const home:t_home = {
@@ -347,6 +349,28 @@ export const home:t_home = {
                 release:`21 sie 2024`,
                 title:`Jak wykorzystać Google Trends w sprzedaży?`,
                 url:'#'
+            },
+        ]
+    },
+    whyWorth:{
+        content:`Naszą misją jest pomoc przedsiębiorstwom i firmom w działaniach marketingowych. Kierujemy się przy tym etyką i uczciwością w relacjach z naszymi Partnerami.`,
+        title:`Przejrzystość współpracy`,
+        cards: [
+            {
+                content:`Zgodnie z polityką naszej agencji marketingowej nie zaproponujemy Państwu długoterminowej umowy na działania marketingowe. Współpraca ma się opłacać i to ma być jej podstawą. Utrzymujemy klientów dzięki skuteczności i wartościowym usługom.`,
+                title:`Bez umowy długoterminowej`
+            },
+            {
+                content:`Jasno określamy zasady współpracy i przedstawiamy cennik przed rozpoczęciem działań. Informujemy, na czym polega promocja stron internetowych przez nasz zespół, co zawiera audyt SEO, a także jak wygląda współpraca na każdym etapie realizacji.`,
+                title:`Brak ukrytych kosztów`
+            },
+            {
+                content:`Niektóre agencje SEO obiecują szybki efekt kosztem bezpieczeństwa. Nasze działania nie zagrażają Twojej witrynie i marce. Unikamy ryzykownych praktyk. Skupiamy się na osiągnięciu dobrych pozycji oraz szybkiego efektu w działaniach SEO, SEM i innych.`,
+                title:`Bezpieczne działania`
+            },
+            {
+                content:`Cyklicznie otrzymasz raporty z działań wykonywanych dla Twojej firmy. Dzięki temu będziesz miał pewność, że prace są wykonywane systematycznie, profesjonalnie i zgodnie z założeniami ustalonymi na początku współpracy.`,
+                title:`Cykliczne raporty`
             },
         ]
     }
