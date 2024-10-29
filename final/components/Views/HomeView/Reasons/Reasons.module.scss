@@ -1,0 +1,106 @@
+@import "../../../../styles/Animations.scss";
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin: 0 0 6vh 0;
+}
+
+.container {
+    &:nth-of-type(even){
+        background-color: $orange;
+        padding: 4vh 3vw 7vh 3vw;
+    }
+    &:nth-of-type(odd){
+        background-color: $salmon;
+        padding: 7vh 3vw 4vh 3vw;
+    }
+
+    & >*{
+        margin-bottom: 1rem;
+    }
+}
+
+.title {
+    @include font(clamp(4rem, 7vw, 11rem), 700, 1, start, balance, $bold);
+}
+
+.content {
+    @include font(clamp(1.6rem, 1.9vw, 2.3rem), 400, 1.7, start, balance);
+    opacity: 0.9;
+}
+
+.card {
+    @include font(clamp(1.6rem, 1.9vw, 2.3rem), 400, 1.7, start, balance);
+    list-style: circle inside;
+}
+
+.button {
+    @include flex(center,center);
+    @include font(clamp(1.6rem, 1.8vw, 2rem), 700, 1, center);
+    background-color: $black;
+    border-radius: .5rem;
+    color:$white;
+    margin:2rem 0 0 auto;
+    padding: 1.36rem 2.3rem;
+    transition: .2s linear background-color;
+    width:max-content;
+
+    &:focus-within,
+    &:hover {
+        background-color: rgba($jet,.97);
+    }
+}
+
+@media only screen {
+    @media (min-width:600px){
+        .container {
+            &:nth-of-type(even){
+                padding: 8vh 7vw 13vh 7vw;
+            }
+            &:nth-of-type(odd){
+                padding: 13vh 7vw 8vh 7vw;
+            }
+            & > *{
+                margin-bottom: 1.5vh;
+            }
+        }
+        .title {
+            font-size: clamp(4rem, 9vw, 15rem);
+        }
+    }
+    @media (min-width:900px){
+        .wrapper {
+            grid-template-columns: repeat(2,1fr);
+            min-height: 80vh;
+            & >*{
+                margin-bottom: unset;
+            }
+        }
+
+        .container {
+            @include flex(flex-start,flex-start,column, null, 1.2rem);
+
+            &,
+            &:nth-of-type(even)
+            &:nth-of-type(odd){
+                padding: 4vh 7vw !important;
+            }
+        }
+
+        .title{
+            font-size: clamp(4rem, 7vw, 11rem);
+        }
+    }
+    @media (min-width:1400px){
+        .container {
+            &,
+            &:nth-of-type(even)
+            &:nth-of-type(odd){
+                padding: 14vh 7vw !important;
+            }
+        }
+    }
+}

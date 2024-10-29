@@ -8,6 +8,7 @@ import { tServices } from 'v-home/Services/Services.models';
 import { tProjects } from 'v-home/Projects/Projects.models';
 import { tBlog } from 'parts/Views/HomeView/Blog/Blog.models';
 import { tWhyWorth } from 'v-home/WhyWorth/WhyWorth.models';
+import { tReasons } from 'v-home/Reasons/Reasons.models';
 
 type t_home = {
     about:tAbout;
@@ -17,6 +18,7 @@ type t_home = {
     projects:tProjects;
     blog:tBlog;
     whyWorth:tWhyWorth;
+    reasons:tReasons;
 }
 
 export const home:t_home = {
@@ -371,6 +373,40 @@ export const home:t_home = {
             {
                 content:`Cyklicznie otrzymasz raporty z działań wykonywanych dla Twojej firmy. Dzięki temu będziesz miał pewność, że prace są wykonywane systematycznie, profesjonalnie i zgodnie z założeniami ustalonymi na początku współpracy.`,
                 title:`Cykliczne raporty`
+            },
+        ]
+    },
+    reasons:{
+        cards:[
+            {
+                button:{
+                    title:'Sprawdź',
+                    url:'#'
+                },
+                cards:[
+                    "Lepsza widoczność",
+                    "Więcej klientów",
+                    "Większa wiarygodoność",
+                    "Przewaga nad konkurencją",
+                    "Długoterminowy zysk",
+                ],
+                content:`Zgodnie z polityką naszej agencji marketingowej nie zaproponujemy Państwu długoterminowej umowy na działania marketingowe. Współpraca ma się opłacać i to ma być jej podstawą. Utrzymujemy klientów dzięki skuteczności i wartościowym usługom.`,
+                title:'Dlaczego warto mieć SEO?'
+            },
+            {
+                button:{
+                    title:'Sprawdź',
+                    url:'#'
+                },
+                cards:[
+                    "Budowanie wiarygodności",
+                    "Świadomość marki",
+                    "Lepsza komunikacja z klientami",
+                    "Większa skalowalność biznesu",
+                    "Pozyskiwanie partnerów biznesowych"
+                ],
+                content:`Zgodnie z polityką naszej agencji marketingowej nie zaproponujemy Państwu długoterminowej umowy na działania marketingowe. Współpraca ma się opłacać i to ma być jej podstawą. Utrzymujemy klientów dzięki skuteczności i wartościowym usługom.`,
+                title:'Dlaczego warto mieć stronę?'
             },
         ]
     }

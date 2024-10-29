@@ -1,5 +1,5 @@
 import { home } from "data/home"
-import { About, Blog, Hero, Overview, Projects, Services, WhyWorth } from "v-home/index"
+import { About, Blog, Hero, Overview, Projects, Reasons, Services, WhyWorth } from "v-home/index"
 
 export default function HomePage(){
   return (
@@ -8,15 +8,23 @@ export default function HomePage(){
         {...home.hero}
       />
       <main>
+        {/* Wstęp */}
         <Overview
           {...home.overview}
         />
+         {/* Przejrzyste warunki współpracy / kroki: https://ks.pl/ */}
+         <WhyWorth
+          {...home.whyWorth}
+        />
+        {/* O mnie */}
         <About
           {...home.about}
         />
+        {/* Usługi */}
         <Services
           {...home.services}
         />
+        {/* Projekty */}
         <Projects
           {...home.projects}
         />
@@ -24,17 +32,16 @@ export default function HomePage(){
         <Blog
           {...home.blog}
           />
-        {/* Przejrzyste warunki współpracy / kroki: https://ks.pl/ */}
-        <WhyWorth
-          {...home.whyWorth}
+       
+        {/* Dlaczego warto? 1. Mieć stronę? 2. Mieć SEO? */}
+        <Reasons
+          {...home.reasons}
         />
-
 
         {/* Dlaczego ja? */}
         {/* Marketing Twojej firmy w dobrych rękach */}
         {/* Sektory */}
         {/* Pozostałe usługi? */}
-        {/* Dlaczego warto? 1. Mieć stronę? 2. Mieć SEO? */}
         {/* Opinie klientów */}
         {/* Case studies */}
         {/* FAQ */}
