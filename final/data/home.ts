@@ -1,4 +1,5 @@
 import { tHero } from 'v-home/Hero/Hero.models';
+import ash_img from "img/ashes.webp";
 import hero_img from "img/wolf-head-big.webp";
 import projects_img from "img/projekty-i-realizacje-radweb.webp";
 import { tOverview } from 'v-home/Overview/Overview.models';
@@ -9,7 +10,17 @@ import { tProjects } from 'v-home/Projects/Projects.models';
 import { tBlog } from 'parts/Views/HomeView/Blog/Blog.models';
 import { tWhyWorth } from 'v-home/WhyWorth/WhyWorth.models';
 import { tReasons } from 'v-home/Reasons/Reasons.models';
-
+import { tReviews } from 'v-home/Reviews/Reviews.models';
+import { tIndustries } from 'v-home/Industries/Industries.models';
+import lawyer_ico from "icons/prawo.png";
+import automotive_ico from "icons/motoryzacja.png";
+import beauty_ico from "icons/beauty.png";
+import agriculture_ico from "icons/rolnictwo.png"
+import aquapark_ico from "icons/parki-rozrywki.png";
+import hotel_ico from "icons/hotel.png";
+import church_ico from "icons/koscioly.png";
+import health_ico from "icons/medycyna.png";
+import factory_ico from "icons/przemysl.png";
 type t_home = {
     about:tAbout;
     hero:tHero;
@@ -19,6 +30,8 @@ type t_home = {
     blog:tBlog;
     whyWorth:tWhyWorth;
     reasons:tReasons;
+    reviews:tReviews;
+    industries:tIndustries;
 }
 
 export const home:t_home = {
@@ -407,6 +420,205 @@ export const home:t_home = {
                 ],
                 content:`Zgodnie z polityką naszej agencji marketingowej nie zaproponujemy Państwu długoterminowej umowy na działania marketingowe. Współpraca ma się opłacać i to ma być jej podstawą. Utrzymujemy klientów dzięki skuteczności i wartościowym usługom.`,
                 title:'Dlaczego warto mieć stronę?'
+            },
+        ]
+    },
+    reviews: {
+        cards:[
+            {
+                fullname:{
+                    firstname:`Piotr Jerzy`,
+                    lastname:`Wyrzykowski`
+                },
+                image:{
+                    altText:'',
+                    logo:true,
+                    sourceSrc:'https://www.ministerstworeklamy.pl/media/img/reference/dorota-leszek.png',
+                    title:''
+                },
+                review:`Widać, że specjaliści mają ogromną wiedzę i wyczucie biznesu. Jednym z ważniejszych plusów jest ich stuprocentowe zaangażowanie w nasz biznes, maksymalnie szybka reakcja na nieoczekiwane sytuacje i ekspresowo wdrażane rozwiązania.`,
+                company:`Silpol`
+            },
+            {
+                fullname:{
+                    firstname:`Zuzanna`,
+                    lastname:`Putka-Twardowska`
+                },
+                image:{
+                    altText:'',
+                    logo:true,
+                    sourceSrc:'https://www.ministerstworeklamy.pl/media/img/reference/mikfol.svg',
+                    title:''
+                },
+                review:`Widać, że specjaliści mają ogromną wiedzę i wyczucie biznesu. Jednym z ważniejszych plusów jest ich stuprocentowe zaangażowanie w nasz biznes, maksymalnie szybka reakcja na nieoczekiwane sytuacje i ekspresowo wdrażane rozwiązania.`,
+                company:`Putka`
+            },
+            {
+                fullname:{
+                    firstname:`Dorota`,
+                    lastname:`Lasek`
+                },
+                image:{
+                    altText:'',
+                    logo:true,
+                    sourceSrc:'https://www.ministerstworeklamy.pl/media/img/reference/lemar.svg',
+                    title:''
+                },
+                review:`Widać, że specjaliści mają ogromną wiedzę i wyczucie biznesu. Jednym z ważniejszych plusów jest ich stuprocentowe zaangażowanie w nasz biznes, maksymalnie szybka reakcja na nieoczekiwane sytuacje i ekspresowo wdrażane rozwiązania.`,
+                company:`Vet Expert`
+            },
+            {
+                fullname:{
+                    firstname:`Michał`,
+                    lastname:`Mazurkiewicz`
+                },
+                image:{
+                    altText:'',
+                    logo:true,
+                    sourceSrc:'https://www.ministerstworeklamy.pl/media/img/reference/ots.svg',
+                    title:''
+                },
+                review:`Widać, że specjaliści mają ogromną wiedzę i wyczucie biznesu. Jednym z ważniejszych plusów jest ich stuprocentowe zaangażowanie w nasz biznes, maksymalnie szybka reakcja na nieoczekiwane sytuacje i ekspresowo wdrażane rozwiązania.`,
+                company:`ProAgri`
+            },
+            {
+                fullname:{
+                    firstname:`Joanna`,
+                    lastname:`Obiegło`
+                },
+                image:{
+                    altText:'',
+                    logo:false,
+                    sourceSrc:'https://4real.pl/files/pl/wojciech-l-1717579271-1718098134.webp',
+                    title:''
+                },
+                review:`Widać, że specjaliści mają ogromną wiedzę i wyczucie biznesu. Jednym z ważniejszych plusów jest ich stuprocentowe zaangażowanie w nasz biznes, maksymalnie szybka reakcja na nieoczekiwane sytuacje i ekspresowo wdrażane rozwiązania.`,
+                company:`4Real`
+            },
+        ],
+        title:`Opinie i rekomendacje`
+    },
+    industries:{
+        content:`Zapraszamy także do skorzystania z systemu umawiania spotkań on line. W tym celu, w kalendarzu rezerwacji, prosimy o wybranie odpowiedniej usługi: spotkania w kancelarii prawnej, spotkania związanego z mediacją bądź spotkania w celu przygotowania oferty rzeczników patentowych.`,
+    
+        title:'Z jakimi branżami współpracuję?',
+        cards:[
+            {
+                button:{
+                    title:'Więcej',
+                    url:'#'
+                },
+                content:`Jakie metale najczęściej występują w produkcyjnym przemyśle lotniczym?`,
+                image:{
+                    altText:"",
+                    sourceSrc:automotive_ico.src,
+                    title:""
+                },
+                title:"Motoryzacja"
+            },
+            {
+                button:{
+                    title:'Więcej',
+                    url:'#'
+                },
+                content:`Jakie metale najczęściej występują w produkcyjnym przemyśle lotniczym?`,
+                image:{
+                    altText:"",
+                    sourceSrc:beauty_ico.src,
+                    title:""
+                },
+                title:"Beauty"
+            },
+            {
+                button:{
+                    title:'Więcej',
+                    url:'#'
+                },
+                content:`Jakie metale najczęściej występują w produkcyjnym przemyśle lotniczym?`,
+                image:{
+                    altText:"",
+                    sourceSrc:agriculture_ico.src,
+                    title:""
+                },
+                title:"Rolnictwo"
+            },
+            {
+                button:{
+                    title:'Więcej',
+                    url:'#'
+                },
+                content:`Jakie metale najczęściej występują w produkcyjnym przemyśle lotniczym?`,
+                image:{
+                    altText:"",
+                    sourceSrc:aquapark_ico.src,
+                    title:""
+                },
+                title:"Parki rozrywki"
+            },
+            {
+                button:{
+                    title:'Więcej',
+                    url:'#'
+                },
+                content:`Jakie metale najczęściej występują w produkcyjnym przemyśle lotniczym?`,
+                image:{
+                    altText:"",
+                    sourceSrc:hotel_ico.src,
+                    title:""
+                },
+                title:"Hotele i noclegi"
+            },
+            {
+                button:{
+                    title:'Więcej',
+                    url:'#'
+                },
+                content:`Jakie metale najczęściej występują w produkcyjnym przemyśle lotniczym?`,
+                image:{
+                    altText:"",
+                    sourceSrc:church_ico.src,
+                    title:""
+                },
+                title:"Kościoły"
+            },
+            {
+                button:{
+                    title:'Więcej',
+                    url:'#'
+                },
+                content:`Jakie metale najczęściej występują w produkcyjnym przemyśle lotniczym?`,
+                image:{
+                    altText:"",
+                    sourceSrc:lawyer_ico.src,
+                    title:""
+                },
+                title:"Prawo"
+            },
+            {
+                button:{
+                    title:'Więcej',
+                    url:'#'
+                },
+                content:`Jakie metale najczęściej występują w produkcyjnym przemyśle lotniczym?`,
+                image:{
+                    altText:"",
+                    sourceSrc:health_ico.src,
+                    title:""
+                },
+                title:"Zdrowie i medycyna"
+            },
+            {
+                button:{
+                    title:'Więcej',
+                    url:'#'
+                },
+                content:`Jakie metale najczęściej występują w produkcyjnym przemyśle lotniczym?`,
+                image:{
+                    altText:"",
+                    sourceSrc:factory_ico.src,
+                    title:""
+                },
+                title:"Przemysł"
             },
         ]
     }

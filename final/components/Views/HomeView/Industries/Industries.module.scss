@@ -1,0 +1,105 @@
+@import "../../../../styles/Animations.scss";
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    margin:7vh auto;
+    // width:92vw;
+}
+
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(1,1fr);
+    gap:3rem 1rem;
+    grid-row: 2;
+    padding: 2vh 4vw;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 17rem calc(100% - 17rem);
+    gap:.72rem;
+    grid-template-columns: 12rem calc(100% - 12rem);
+
+    &__media {
+        // background: red;
+        display: block;
+        position: relative;
+        &__image {
+            object-fit: contain;
+            object-position: center;
+            transform: scale(.9);
+        }
+    }
+    &__details {
+        // background-color: aqua;
+        padding: 0.4rem;
+        &__title {
+            @include font(clamp(1.9rem, 2.9vw, 4.1rem), 600, 1, start, null, $bold, uppercase);
+            color:$salmon;
+        }
+        &__content{
+            @include font(clamp(1.5rem, 1.67vw, 1.76rem), 300, 1.3, start);
+            margin-bottom: 2.5rem;
+        }
+        &__button {
+            @include font(1.5rem, 500, 1, center, null, $code);
+            position: relative;
+            padding: 0 0.5rem;
+            transition:.2s linear color;
+            &::after {
+                @include size(1.5px,100%);
+                position: absolute;
+                border-radius: 1rem;
+                bottom: -5px;
+                left: 0;
+                background-color: $salmon;
+                transform-origin: left;
+                transform: scaleX(0);
+                transition:.2s linear transform;
+            }
+
+            &:focus-within,
+            &:hover {
+                color:$salmon;
+                &::after {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
+
+
+.container {
+    padding: 2vh 4vw;
+    grid-row: 1;
+}
+
+.title {
+    @include font(clamp(5rem, 9vw,14rem), 700, 1, start, null, $bold);
+}
+
+.content {
+    @include font(clamp(1.8rem,2vw,2.7rem), 500, 1.4,start, pretty);
+    color:color-mix(in srgb, $onyx 60%, $platinum 40%);
+    max-width: 75ch;
+    margin-top: 1.5rem;
+}
+
+
+@media only screen {
+    @media (min-width:650px){
+        .cards {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @media (min-width:1150px){
+        .cards {
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+}

@@ -22,4 +22,9 @@ declare global {
     type tSocial = tLink & {
         color?:string;
     }
+
+    type tFullname = {
+        firstname:string;
+        lastname:string;
+    }
 }

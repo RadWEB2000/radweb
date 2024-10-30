@@ -7,6 +7,18 @@ const nextConfig = {
             },
             {
                 hostname:`www.sunrisesystem.pl`
+            },
+            {
+                hostname:`lumo.pl`
+            },
+            {
+                hostname:`4real.pl`
+            },
+            {
+                hostname:"widoczni.com"
+            },
+            {
+                hostname:"www.ministerstworeklamy.pl"
             }
         ]
     }

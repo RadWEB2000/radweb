@@ -6,6 +6,11 @@
     display: grid;
     grid-template-columns: repeat(1,1fr);
     margin: 0 0 6vh 0;
+    
+    ::selection {
+        background-color: rgba($jet,.92);
+	    color:$salmon;
+    }
 }
 
 .container {
