@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import {Mukta, Protest_Strike ,Source_Code_Pro} from "next/font/google";
 import "../styles/Global.scss";
+import {Footer} from "footer/index";
+import { main } from "data/main";
+import { MainProvider } from 'context/MainContext';
 
 const mukta = Mukta({ // REGURAL
   subsets:["latin-ext"],
@@ -32,9 +35,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className={`${mukta.variable} ${protest.variable} ${source.variable}`}>
-        {children}
-      </body>
+      <MainProvider>
+        <body className={`${mukta.variable} ${protest.variable} ${source.variable}`}>
+          {children}
+          <Footer
+            {...main.footer}
+          />
+        </body>
+      </MainProvider>
     </html>
   );
 }

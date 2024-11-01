@@ -1,0 +1,62 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.container {
+    @include flex(center,space-between, row wrap-reverse,null,.5rem);
+    margin-top: 1rem;
+}
+
+.policies,
+.menu,
+.socials {
+    align-items: center;
+    display: flex;
+    gap:.95rem;
+}
+
+
+.policies {
+    justify-content: flex-start;
+}
+
+.menu,
+.socials {
+    justify-content: flex-end;
+}
+
+.menu,
+.policies {
+    &__item {
+        color:$platinum;
+        position: relative;
+        transition: .32s linear color;
+        &::after {
+            @include size(1px,100%);
+            background-color: $white;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: .32s linear transform;
+        }
+        &:hover {
+            color:$white;
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+.socials {
+    &__item {
+        @include flex(center,center);
+        @include size(2.75rem, 2.75rem);
+        font-size: 2.52rem;
+        transition: .2s linear color;
+        &:focus-within,
+        &:hover {
+            color:$orange;
+        }
+    }
+}

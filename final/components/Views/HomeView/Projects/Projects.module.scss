@@ -10,7 +10,6 @@
     margin:10vh 0 2vh auto;
 }
 
-
 .container {
     grid-row: 1;
 }
@@ -22,24 +21,24 @@
 .content {
     @include font(clamp(1.8rem,2vw,2.7rem), 500, 1.4,start, pretty);
     color:color-mix(in srgb, $onyx 60%, $platinum 40%);
-    max-width: 75ch;
     margin-top: 1.5rem;
+    max-width: 75ch;
 }
 
 .media {
     display: none;
-    grid-row: 1;
     grid-column: 4/-1;
-    z-index: 1;
-    position: relative;
+    grid-row: 1;
     opacity: 0.62;
+    position: relative;
+    z-index: 1;
 }
 
 .image {
-    position: sticky;
-    top: 5rem;
     object-fit: contain;
     object-position: center left;
+    position: sticky;
+    top: 5rem;
     transform: scale(1.15) rotateY(180deg);
 }
 
@@ -58,7 +57,6 @@
         .cards {
             z-index: 2;
         }
-        
         
         .container {
             grid-column: 1/5;

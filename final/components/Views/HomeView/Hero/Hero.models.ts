@@ -1,4 +1,3 @@
-import { VideoHTMLAttributes } from "react";
 
 export type tHero = {
     buttons:tLink[];
