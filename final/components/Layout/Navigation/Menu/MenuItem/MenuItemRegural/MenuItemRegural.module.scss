@@ -1,0 +1,38 @@
+@import "../../../../../../styles/Mixins.scss";
+@import "../../../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,center);
+    a {
+        @include font(clamp(1.6rem, 2.5vw, 3.3rem), 500, 1, start, null, $code, uppercase);
+        position: relative;
+        transition: .32s linear color;
+        &::after {
+            @include size(2px,100%);
+            background-color: $orange;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: .32s linear transform;
+        }
+        &:focus-within,
+        &:hover {
+            color:$orange;
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+@media only screen {
+    @media (min-width:800px){
+        .wrapper {
+            a {
+                font-size: clamp(1.55rem, 1.7vw, 1.9rem);
+            }
+        }
+    }
+}

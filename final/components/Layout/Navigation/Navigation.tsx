@@ -1,20 +1,33 @@
 import css from "nav/Navigation.module.scss";
 import {tNavigation} from "nav/Navigation.models"
+import {Brand,Menu,Settings} from "nav/index"
 
-export default function Navigation(){
+export default function Navigation(props:tNavigation){
     return (
-        <nav>
+        <nav
+            className={css.wrapper}
+        >
             {/* brand */}
-            <div>
-
+            <div
+                className={css.brand}
+            >
+                <Brand
+                    {...props.brand}
+                />
             </div>
             {/* menu */}
-            <div>
-
+            <div
+                className={css.menu}
+            >
+                <Menu
+                    menu={props.menu}
+                />
             </div>
             {/* settings */}
-            <div>
-
+            <div
+                className={css.settings}
+            >
+                <Settings/>
             </div>
         </nav>
     )

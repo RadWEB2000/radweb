@@ -4,6 +4,7 @@ import "../styles/Global.scss";
 import {Footer} from "footer/index";
 import { main } from "data/main";
 import { MainProvider } from 'context/MainContext';
+import { Navigation } from "nav/index";
 
 const mukta = Mukta({ // REGURAL
   subsets:["latin-ext"],
@@ -37,6 +38,9 @@ export default function RootLayout({
     <html lang="pl">
       <MainProvider>
         <body className={`${mukta.variable} ${protest.variable} ${source.variable}`}>
+          <Navigation
+            {...main.nav}
+          />
           {children}
           <Footer
             {...main.footer}

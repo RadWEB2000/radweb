@@ -41,6 +41,8 @@ button {
 
 body {
 	@include gradient(to bottom left, $bg);
+	background-image: linear-gradient(to bottom right, color-mix(in srgb, $platinum 20%, $white 80%), $white);
+	// color:color-mix(in srgb, $platinum 20%, $white 80%);
 	background-attachment: fixed;
 	background-color: $platinum;
 	color:$jet;

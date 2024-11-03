@@ -1,7 +1,10 @@
 import { tFooter } from 'footer/Footer.models';
+import { tNavigation } from 'nav/Navigation.models';
+import logo from "img/wolf-head-white.png";
 
 type t_main = {
     footer:tFooter;
+    nav:tNavigation;
 }
 
 export const main:t_main = {
@@ -295,6 +298,67 @@ export const main:t_main = {
                     }
                 ]
             },
+        ]
+    },
+    nav:{ 
+        brand: {
+            title:`RadWEB`,
+            url:`/`,
+            icon:{
+                altText:``,
+                sourceSrc:logo.src,
+                title:``
+            }
+        },
+        menu:[
+            {
+                title:`Start`,
+                url:`/`,
+            },
+            {
+                title:`O mnie`,
+                url:`/o-mnie`,
+                dropdown:[
+                    {
+                        title:`Kim jestem`,
+                        url:`/o-mnie`
+                    },
+                    {
+                        title:`Doświadczenie`,
+                        url:`/o-mnie/doswiadczenie`
+                    },
+                    {
+                        title:`Certyfikaty`,
+                        url:`/o-mnie/certyfikaty`
+                    },
+                ]
+            },
+            {
+                title:`Blog`,
+                url:`/blog`
+            },
+            {
+                title:`Oferta`,
+                url:`/oferta`,
+                dropdown:[
+                    {
+                        title:`SEO`,
+                        url:`/seo`
+                    },
+                    {
+                        title:`Strony www`,
+                        url:`/strony-internetowe`
+                    },
+                ]
+            },
+            {
+                title:`Projekty`,
+                url:`/projekty`,
+            },
+            {
+                title:`Kontakt`,
+                url:`/kontakt`,
+            }
         ]
     }
 }

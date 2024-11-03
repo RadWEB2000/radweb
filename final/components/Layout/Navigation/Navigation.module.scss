@@ -1,0 +1,65 @@
+@import "../../../styles/Mixins.scss";
+@import "../../../styles/Variables.scss";
+
+.wrapper {
+    background-image: linear-gradient(to bottom right, rgba($platinum,.91), color-mix(in srgb, rgba($platinum,.91) 40%, rgba($white,.91) 60%), rgba($white,.91));
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 6rem auto;
+    position:sticky;
+    top: 0;
+    z-index: 9999999;
+}
+
+.brand,
+.settings {
+    grid-row: 1;
+}
+
+.brand  {
+    grid-column: 1/7;
+}
+
+.settings {
+    grid-column: 7/-1;
+    // background: aqua;
+}
+
+
+.menu {
+    grid-column: 1/-1;
+}
+
+@media only screen {
+    @media (min-width:800px){
+        .wrapper {
+    background-image: linear-gradient(to bottom right, rgba($platinum,1), color-mix(in srgb, rgba($platinum,1) 40%, rgba($white,1) 60%), rgba($white,1));
+            grid-template-rows: 6.5rem;
+            box-shadow: 0 0 1rem rgba($platinum,.45),0 0 1rem rgba($black,.35);
+
+        }
+        
+        .brand,
+        .settings,
+        .menu {
+            grid-row: 1;
+        }
+        
+        .brand  {
+            grid-column: 1/3;
+        }
+        
+        .settings {
+            display: none;
+            // grid-column: 12/-1;
+            // background: aqua;
+        }
+        
+        
+        .menu {
+            // background: pink;
+            grid-column: 3/-1;
+            padding: 0 1.5vw 0 0;
+        }       
+    }
+}

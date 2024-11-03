@@ -1,8 +1,9 @@
 export {default as Brand} from "nav/Brand/Brand"
 export {default as Button} from "nav/Settings/MenuButton/MenuButton"
-export {default as Langs} from "nav/Settings/Langs/Langs"
+export {default as Dropdown} from "nav/Menu/Dropdown/Dropdown"
 export {default as Menu} from "nav/Menu/Menu";
-export {default as MenuItem} from "nav/Menu/MenuItem/MenuItem";
-export {default as MenuSubmenu} from "nav/Menu/MenuSubmenu/MenuSubmenu";
+export {default as MenuItemExpand} from "nav/Menu/MenuItem/MenuItemExpand/MenuItemExpand"
+export {default as MenuItemRegural} from "nav/Menu/MenuItem/MenuItemRegural/MenuItemRegural"
+export {default as MenuItemSubmenu} from "nav/Menu/MenuItem/MenuItemSubmenu/MenuItemSubmenu"
 export {default as Navigation} from "nav/Navigation";
 export {default as Settings} from "nav/Settings/Settings";

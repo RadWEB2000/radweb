@@ -46,7 +46,7 @@
 }
 
 .image {
-    filter:drop-shadow(0 0 2rem rgba($onyx,.53),);
+    filter:drop-shadow(0 0 .5rem rgba($onyx,.53),);
     object-fit: contain;
     object-position: center;
     transform: rotateY(180deg) scale(1.46);

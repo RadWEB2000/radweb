@@ -134,8 +134,7 @@
             @include flex(flex-start,flex-start,column, null, 2rem);
             grid-column: 1;
             grid-row: 1;
-            position: sticky;
-            top: 5rem;
+            top: 6.5rem;
         }
         
         .title {
@@ -176,7 +175,7 @@
             grid-column: 1;
             grid-row: 1;
             position: sticky;
-            top: 5rem;
+            top: 7rem;
         }
         
         .title {
