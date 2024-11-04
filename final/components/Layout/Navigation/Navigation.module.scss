@@ -33,9 +33,9 @@
 @media only screen {
     @media (min-width:800px){
         .wrapper {
-    background-image: linear-gradient(to bottom right, rgba($platinum,1), color-mix(in srgb, rgba($platinum,1) 40%, rgba($white,1) 60%), rgba($white,1));
+            background-image: linear-gradient(to bottom right, rgba($platinum,1), color-mix(in srgb, rgba($platinum,1) 40%, rgba($white,1) 60%), rgba($white,1));
             grid-template-rows: 6.5rem;
-            box-shadow: 0 0 1rem rgba($platinum,.45),0 0 1rem rgba($black,.35);
+            box-shadow: 0 0 .5rem rgba($black,.075);
 
         }
         

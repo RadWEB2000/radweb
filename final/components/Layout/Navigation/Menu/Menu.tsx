@@ -10,7 +10,7 @@ export default function Menu(props:tMenu){
     return (
         <div
             className={css.wrapper}
-            data-open={true}
+            data-open={isOpen}
         >
             <menu
                 className={css.container}

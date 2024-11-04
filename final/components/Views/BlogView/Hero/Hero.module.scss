@@ -1,0 +1,42 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    align-items: start;
+    display: grid;
+    margin:1vh 0 3vh;
+    background-color: rgba($platinum,.13);
+    padding: 3rem 2rem;
+}
+
+
+.title {
+    @include font(clamp(4rem, 5vw, 16rem), 900, 1, start, balance, $bold);
+    color:$orange;
+}
+
+.content {
+    @include font(clamp(1.5rem, 1.7vw, 2.15rem), 400, 1.9, start, pretty);
+    color:$onyx;
+    max-width: 70ch;
+    margin-top: 2rem;
+}
+
+@media only screen {
+    @media (min-width:610px){
+        .wrapper {
+            grid-template-columns: repeat(12,1fr);
+        }
+        
+        
+        .title {
+            text-align: center;
+            grid-column: 1/5;
+        }
+        
+        .content {
+            grid-column: 5/-1;
+        }
+                
+    }
+}

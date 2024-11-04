@@ -1,5 +1,11 @@
 import { home } from "data/home"
 import { About, Blog, Hero, Industries, Overview, Projects, Reasons, Reviews, Services, WhyWorth } from "v-home/index"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Strona główna - RadWEB",
+  description: "",
+};
 
 export default function HomePage(){
   return (

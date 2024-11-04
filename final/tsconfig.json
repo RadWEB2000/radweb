@@ -38,6 +38,7 @@
       "socials/*":["./components/Utils/SocialButton/*"],
       "ts/*":["./types/*"],
       "utils/*":["./components/Utils/*"],
+      "v-blog/*":["./components/Views/BlogView/*"],
       "v-home/*":["./components/Views/HomeView/*"],
       "video/*":["./assets/videos/*"],
       "views/*":["./components/Views/*"],
