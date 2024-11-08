@@ -1,0 +1,31 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:3vh;
+    margin:4vh 2rem 15vh auto;
+    width: 120rem;
+}
+
+.slider {
+    background-color: pink;
+    padding: 4rem;
+}
+
+.dots {
+    display: flex !important;
+    align-items: center;
+    justify-items: flex-end;
+    gap: 1rem;
+    background: red;
+    li {
+        list-style: circle inside;
+    }
+}

@@ -1,5 +1,5 @@
 import { home } from "data/home"
-import { Hero, Offer, Overview } from "v-home/index"
+import { Hero, Offer, Overview, Services } from "v-home/index"
 
 export default function HomePage(){
   return (
@@ -13,6 +13,9 @@ export default function HomePage(){
         />
         <Offer
           {...home.offer}
+        />
+        <Services
+          {...home.services}
         />
       </main>
       <p>radweb</p>

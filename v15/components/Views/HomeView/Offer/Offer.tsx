@@ -38,9 +38,6 @@ export default function Offer(props:tOffer){
                 props.cards &&
                 <ul
                     className={css.cards}
-                    style={{
-                            // gridTemplateColumns:`repeat(${props.cards.length},1fr)`
-                    }}
                 >
                     {
                         props.cards.map((item) => {

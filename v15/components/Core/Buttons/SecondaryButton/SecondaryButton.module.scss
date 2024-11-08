@@ -3,7 +3,6 @@
 
 .wrapper {
     @include flex(center,flex-start, row nowrap, .5rem);
-    // border-bottom: 2px solid lime;
     max-width: max-content;
     padding: 0.5rem 0.6rem;
     position: relative;
@@ -13,16 +12,14 @@
     &::after ,
     &::before {
         @include size(2px,100%);
-        // background-color: $white;
         bottom: 0;
-        transform-origin: left;
         left: 0;
+        transform-origin: left;
     }
 
     &::after {
         background-color: light-dark($white, $black);
         z-index: 0;
-
     }
 
     &::before {
@@ -40,7 +37,6 @@
             transform: scaleX(1);
         }
     }
-
 }
 
 .icon {
@@ -51,5 +47,4 @@
 
 .title {
     @include font(clamp(1.6rem, 1.9vw,2.4rem), 500, 1, start,null,$syne-mono, lowercase);
-    
 }
