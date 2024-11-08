@@ -1,0 +1,8 @@
+@import "./Mixins.scss";
+@import "./Variables.scss";
+
+@mixin heading_section ($fontSize){
+    @include font($fontSize, 600, 1, start, balance, $righteous);
+}
+
+$heading_section_regural: clamp(4.5rem,7vw, 13rem);

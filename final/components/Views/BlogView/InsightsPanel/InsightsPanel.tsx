@@ -7,44 +7,64 @@ export default function InsightsPanel(props:tInsightsPanel){
         <div
             className={css.wrapper}
         >
-            <div
-                className={css.container}
-            >
-                <section
-                    className={css.box}
-                >
-                    <h2
-                        className={css.title}
-                        dangerouslySetInnerHTML={{__html:props.title}}
-                    />
-                    <p
-                        className={css.content}
-                        dangerouslySetInnerHTML={{__html:props.content}}
-                    />
-                </section>
-                <Link 
-                    className={css.button}
-                    href={props.button.url}
-                >
-                    {props.button.title}
-                </Link>
-            </div>
             {
-                props.cards &&
-                <ul
-                    className={css.cards}
-                >
-                    {
-                        props.cards.slice(0,4).map((item) => {
-                            return (
-                                <Card
-                                    {...item}
-                                    key={item.title}
-                                />
-                            )
-                        })
-                    }
-                </ul>
+                props.sections.map((item) => {
+                    return (
+                        <div
+                            className={css.container}
+                        >
+                            <div
+                                className={css.box}
+                            >
+                                <section
+                                    className={css.details}
+                                >
+                                    <h2
+                                        className={css.title}
+                                        dangerouslySetInnerHTML={{__html:item.title}}
+                                    />
+                                    <p
+                                        className={css.overview}
+                                        dangerouslySetInnerHTML={{__html:item.overview}}
+                                    />
+                                </section>
+                                <Link 
+                                    className={css.button}
+                                    href={item.button.url}
+                                >
+                                    {item.button.title}
+                                </Link>
+                            </div>
+                            {
+                                item.cards &&
+                                <ul
+                                    className={css.cards}
+                                >
+                                    {
+                                        item.cards.slice(0,4).map((item) => {
+                                            return (
+                                                <Card
+                                                    {...item}
+                                                    key={item.title}
+                                                />
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            }
+                            {
+                                item.content &&
+                                <section
+                                    className={css.content}
+                                >
+                                    <p
+                                        dangerouslySetInnerHTML={{__html:item.content}}
+                                    />
+                                </section>
+                            }
+                        </div>
+                    )
+                })
             }
         </div>
     )

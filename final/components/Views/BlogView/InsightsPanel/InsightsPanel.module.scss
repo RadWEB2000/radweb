@@ -1,0 +1,53 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+
+.wrapper {
+    padding: 0rem 5vw;
+}
+
+.container {
+    // background: pink;
+    margin:0 auto;
+    &:not(:first-of-type){
+        // background: aqua;
+        margin:1.75vh auto;
+    }
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
+
+.details{
+    padding: 1rem;
+    grid-column: 1/6;
+    // background: lime;
+}
+
+.title {
+    @include font(clamp(1.8rem, 4.4vw,8rem), 900, 1, start, balance);
+}
+
+.content > p,
+.overview {
+    @include font(clamp(1.5rem, 1.94vw, 2.4rem), 300, 1.9, start, pretty);
+    max-width: 95ch;
+}
+
+.button {
+    margin:auto;
+    grid-column: 6/-1;
+}
+
+.cards {
+    margin:1.5vh 0;
+    // background: salmon;
+    gap:.45rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
+}
+

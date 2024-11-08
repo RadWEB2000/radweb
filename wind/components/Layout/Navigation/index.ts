@@ -1,1 +1,0 @@
-export {default as Menu}  from "components/Layout/Navigation/Menu"

@@ -1,0 +1,55 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,flex-start, row nowrap, .5rem);
+    // border-bottom: 2px solid lime;
+    max-width: max-content;
+    padding: 0.5rem 0.6rem;
+    position: relative;
+    transition:.2s linear color;
+    z-index: 1;
+
+    &::after ,
+    &::before {
+        @include size(2px,100%);
+        // background-color: $white;
+        bottom: 0;
+        transform-origin: left;
+        left: 0;
+    }
+
+    &::after {
+        background-color: light-dark($white, $black);
+        z-index: 0;
+
+    }
+
+    &::before {
+        @include size(2px,100%);
+        background-color: $orange;
+        transform: scaleX(0);
+        transition:.2s linear transform;
+        z-index: 3;
+    }
+
+    &:focus-within,
+    &:hover {
+        color:$orange;
+        &::before {
+            transform: scaleX(1);
+        }
+    }
+
+}
+
+.icon {
+    @include flex(center,center);
+    @include size(4.5rem,4.5rem);
+    font-size: 3.6rem;
+}
+
+.title {
+    @include font(clamp(1.6rem, 1.9vw,2.4rem), 500, 1, start,null,$syne-mono, lowercase);
+    
+}

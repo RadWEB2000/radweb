@@ -1,9 +1,8 @@
 import { tHero } from 'v-blog/Hero/Hero.models';
 import main_img from "img/blog.webp";
 import { tInsightsPanel } from 'v-blog/InsightsPanel/InsightsPanel.models';
-type t_blog = {
+type t_blog = tInsightsPanel & {
     hero:tHero;
-    sections:tInsightsPanel[];
 }
 
 export const blog:t_blog = {
@@ -17,7 +16,7 @@ export const blog:t_blog = {
                 title:`Więcej`,
                 url:`#`
             },
-            
+            overview:`Social media involves the ultimate balancing act of the creative and the analytical.`,
             content:`Social media involves the ultimate balancing act of the creative and the analytical. But if creativity is the intriguing icing on the cake, social media metrics are the essential ingredients to bringing the final dish to life.`,
             title:`Programowanie`,
             cards:[
@@ -112,7 +111,7 @@ export const blog:t_blog = {
                 title:`Więcej`,
                 url:`#`
             },
-            
+            overview:`Social media involves the ultimate balancing act of the creative and the analytical.`,
             content:`Social media involves the ultimate balancing act of the creative and the analytical. But if creativity is the intriguing icing on the cake, social media metrics are the essential ingredients to bringing the final dish to life.`,
             title:`Programowanie`,
             cards:[
@@ -207,6 +206,7 @@ export const blog:t_blog = {
                 title:`Więcej`,
                 url:`#`
             },
+            overview:`Social media involves the ultimate balancing act of the creative and the analytical.`,
             content:`Social media involves the ultimate balancing act of the creative and the analytical. But if creativity is the intriguing icing on the cake, social media metrics are the essential ingredients to bringing the final dish to life.`,
             title:`Programowanie`,
             cards:[
@@ -301,6 +301,7 @@ export const blog:t_blog = {
                 title:`Więcej`,
                 url:`#`
             },
+            overview:`Social media involves the ultimate balancing act of the creative and the analytical.`,
             content:`Social media involves the ultimate balancing act of the creative and the analytical. But if creativity is the intriguing icing on the cake, social media metrics are the essential ingredients to bringing the final dish to life.`,
             title:`Programowanie`,
             cards:[
@@ -395,6 +396,7 @@ export const blog:t_blog = {
                 title:`Więcej`,
                 url:`#`
             },
+            overview:`Social media involves the ultimate balancing act of the creative and the analytical.`,
             content:`Social media involves the ultimate balancing act of the creative and the analytical. But if creativity is the intriguing icing on the cake, social media metrics are the essential ingredients to bringing the final dish to life.`,
             title:`Programowanie`,
             cards:[

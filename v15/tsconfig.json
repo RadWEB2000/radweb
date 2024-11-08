@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "app/*":["./app/*"],
+      "assets/*":["./assets/*"],
+      "buttons/*":["./components/Core/Buttons/*"],
+      "context/*":["./context/*"],
+      "core/*":["./components/Core/*"],
+      "css/*":["./styles/*"],
+      "data/*":["./data/*"],
+      "fonts/*":["./assets/fonts/*"],
+      "icons/*":["./assets/icons/*"],
+      "img/*":["./assets/images/*"],
+      "layout/*":["./components/Layout/*"],
+      "lib/*":["./lib/*"],
+      "parts/*":["./components/*"],
+      "ts/*":["./types/*"],
+      "video/*":["./assets/videos/*"],
+      "views/*":["./components/Views/*"],
+      "v-home/*":["./components/Views/HomeView/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

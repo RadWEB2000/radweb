@@ -1,0 +1,97 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    margin:7vh 0 5vh;
+}
+
+.container {
+    @include flex(flex-start,flex-start,column);
+    gap:1rem;
+    padding: 2rem 4vw;
+}
+
+.box {
+    grid-column: 1/6;
+    width: 100%;
+}
+
+.title {
+    @include heading_section($heading_section_regural);
+}
+
+.content {
+    @include font(clamp(1.6rem,1.7vw, 2.4rem),400, 1.6, start, pretty);
+    margin-top: 2rem;
+    max-width: 75ch;
+}
+
+.button {
+    @include flex(flex-start,flex-end);
+    @include size(100%,100%);
+    padding: 0.45rem;
+    grid-column:6/-1;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,1fr);
+    margin-top: 5rem;
+}
+
+.card {
+    &:nth-of-type(1){
+        background-color:light-dark(
+            color-mix(in srgb, $davy 40%, $erie 60%),
+            color-mix(in srgb, $platinum 40%, $seasalt 60%)
+        );
+    }
+    &:nth-of-type(2){
+        background-color:light-dark(
+            color-mix(in srgb, $davy 20%, $erie 80%),
+            color-mix(in srgb, $platinum 20%, $seasalt 80%)
+        ) ;
+
+    }
+    &:nth-of-type(3){
+        background-color: light-dark($erie,$seasalt);
+    }
+    @include flex(flex-start,space-evenly, column);
+    color:light-dark($white,$black);
+    gap:4rem;
+    min-height:max-content;
+    padding:5vh 4rem;
+
+
+    &__title {
+        @include font(clamp(3rem,4.75vw, 8rem), 700, 1, start, balance,$syne-mono);
+    }
+
+    &__content {
+        @include font(clamp(1.7rem,2vw, 2.3rem), 400, 1.7, pretty);
+    }
+
+}
+
+@media (min-width:660px){
+    .container {
+        align-items: center;
+        display: grid;
+        gap:1rem;
+        justify-items: center;
+        padding:0 6vw 0 2vw;
+        grid-template-columns: repeat(7,1fr);
+    }
+}
+
+@media (min-width:960px){
+    .cards {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .card {
+        padding:5vh 2vw;
+        min-height:75vh;
+    }
+}

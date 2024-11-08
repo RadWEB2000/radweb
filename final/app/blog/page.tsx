@@ -1,5 +1,5 @@
 import { blog } from "data/blog"
-import { Hero } from "v-blog/index"
+import { Hero, InsightsPanel } from "v-blog/index"
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,6 +12,11 @@ export default function BlogPage(){
             <Hero
                 {...blog.hero}
             />
+            <main>
+                <InsightsPanel
+                    sections={blog.sections}
+                />
+            </main>
             <h1>poznan</h1>
         </>
     )

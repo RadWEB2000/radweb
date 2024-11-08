@@ -1,0 +1,56 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    display: grid;
+    grid-template-areas: "layer";
+    overflow: hidden;
+    width: 100vw;
+    z-index: 0;
+    & >* {
+        grid-area: layer;
+    }
+}
+
+.container {
+    @include flex(flex-start,center, column, null, .45rem);
+    background-image: linear-gradient(to bottom right, rgba($black,.85), rgba($black,.45), transparent);
+    color:$white;
+    min-height: 99vh;
+    padding: 4vw;
+    z-index: 2;
+}
+
+.title {
+    @include font(clamp(6.5rem,15vw,22rem), 900, .8, start, null, $righteous);
+    color:$white;
+}
+
+.slogan {
+    @include font(clamp(3.5rem,5vw,11rem), 400, .8 , start, null, $syne-mono);
+    color:$silver;
+    margin-top: 1.2rem;
+}
+
+
+.buttons {
+    @include flex(center,flex-start, row wrap, 1.5rem, .5rem);
+    margin-top: 4vh;
+}
+
+.media {
+    background-color: $orange;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.image{ 
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    object-position:center right;
+    transform: rotateY(180deg) scale(1.2);
+    user-select: none;
+}
+
