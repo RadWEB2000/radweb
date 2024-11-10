@@ -3,7 +3,9 @@
 @import "../../../../styles/Variables.scss";
 
 .wrapper {
+    background-color: rgba($davy,.15);
     margin:7vh 0 5vh;
+    padding-top: 2rem;
 }
 
 .container {

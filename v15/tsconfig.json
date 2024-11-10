@@ -23,6 +23,7 @@
       "app/*":["./app/*"],
       "assets/*":["./assets/*"],
       "buttons/*":["./components/Core/Buttons/*"],
+      "carousel/*":["./components/Core/Carousel/*"],
       "cards/service/*":["./components/Core/Cards/ServiceCards/*"],
       "context/*":["./context/*"],
       "core/*":["./components/Core/*"],

@@ -151,7 +151,7 @@ export const home:t_home = {
                 url:`#`
             },
             {
-                content:`Nasi Klienci mówią często, że jesteśmy ich zewnętrznym działem marketingu. A co to właściwie oznacz Cały zespół specjalistów do dyspozycji. Kompleksowe działania dające efekt synergii. Lepsze efekty, mniejszym nakładem.`,
+                content:`Nasi Klienci mówią często, że jesteśmy ich zewnętrznym działem marketingu. A co to właściwie oznacz Cały zespół specjalistów do dyspozycji. Kompleksowe działania dające efekt synergii. Lepsze efekty, mniejszym nakładem. `,
                 title:`Strony dla firm`,
                 tag:"WWW",
                 url:`#`
