@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
-import {Mukta, Righteous, Syne_Mono} from "next/font/google"
+import { Antonio, Mukta, Martian_Mono, Ubuntu} from "next/font/google"
 import "css/Global.scss"
+
+const antonio = Antonio({
+  subsets:["latin-ext"],
+  variable:"--antonio"
+})
 
 const mukta = Mukta({
   weight:["300","400","500", "600","700"],
@@ -8,18 +13,16 @@ const mukta = Mukta({
   variable:"--mukta"
 })
 
-const righteous = Righteous({
-  weight:["400"],
-  subsets:["latin-ext","latin"],
-  variable:"--righteous"
+const martian = Martian_Mono({
+  subsets:["latin-ext"],
+  variable:"--martian"
 })
 
-const syne_mono = Syne_Mono({
-  weight:["400"],
-  subsets:["latin-ext","latin"],
-  variable:"--syne-mono"
+const ubuntu = Ubuntu({
+  subsets:["latin-ext"],
+  weight:["300", "400","500","700"],
+  variable:"--ubuntu"
 })
-
 
 
 export const metadata: Metadata = {
@@ -35,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body 
-        className={`${mukta.variable} ${righteous.variable} ${syne_mono.variable}`}
+        className={` ${antonio.variable} ${mukta.variable} ${martian.variable} ${ubuntu.variable}`}
       >
         {children}
       </body>

@@ -43,10 +43,9 @@ button {
 
 body {
 	background-attachment: fixed;
-	// background-color: light-dark(color-mix(in srgb, $white 55%, $platinum 45%),color-mix(in srgb, $black 55%, $jet 45%) );
-	background-image: linear-gradient(to bottom right, $seasalt, color-mix(in srgb, $platinum 45%, $seasalt 55%));
-    color:light-dark($erie, $seasalt);
-	font-family: $mukta;
+	background-image: linear-gradient(to bottom right, $black_1 , $blue_oxford, $black_2);
+    color:$white_smoke;
+	font-family: $ubuntu;
 	font-optical-sizing: auto;
 	font-size: 1.6rem;
 	font-style: normal;
@@ -85,11 +84,11 @@ input[type="search"]{
     }
 }
 
-@media (prefers-color-scheme:dark){
-    body {
-		background-image: linear-gradient(to bottom right, $black, $jet, color-mix(in srgb, $onyx 25%, $black 75%));
-    }
-}
+// @media (prefers-color-scheme:dark){
+//     body {
+// 		background-image: linear-gradient(to bottom right, $black, $jet, color-mix(in srgb, $onyx 25%, $black 75%));
+//     }
+// }
 
 // @media (prefers-color-scheme:light){
 //     body {
