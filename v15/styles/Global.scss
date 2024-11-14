@@ -7,7 +7,7 @@
 	text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	-webkit-tap-highlight-color: rgba($black, 0);
+	-webkit-tap-highlight-color: rgba($black_1, 0);
 }
 
 :root {
@@ -22,28 +22,29 @@
 
 ::selection {
 	background-color: $orange;
-	color:light-dark($white,$black);
+	color:$black_1;
 }
 
-:focus,
-:focus-within {
-	outline: none;
+:focus, 
+:focus-within { 
+	outline: none; 
 }
 
 a {
-	background: transparent;
-	color: inherit;
-	cursor: pointer;
-	text-decoration: none;
+	background: transparent; 
+	color: inherit; 
+	cursor: pointer; 
+	text-decoration: none; 
 }
 
-button {
-	cursor: pointer;
+button { 
+	cursor: pointer; 
 }
 
-body {
+body { 
 	background-attachment: fixed;
-	background-image: linear-gradient(to bottom right, $black_1 , $blue_oxford, $black_2);
+	background-image: linear-gradient(to bottom right, $black_1 , color-mix(in srgb, $black_2 90%, $blue_oxford 10%),color-mix(in srgb, $black_2 70%, $blue_oxford 30%), $black_2);
+	
     color:$white_smoke;
 	font-family: $ubuntu;
 	font-optical-sizing: auto;

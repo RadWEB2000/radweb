@@ -1,0 +1,88 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    background-image: linear-gradient(to bottom left, transparent,transparent, rgba($blue_delift,.2));
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    margin:2vh 0;
+    overflow-x: hidden;
+    padding:4vh 0 0 3vw;
+
+    & > * {
+        grid-column: 1/-1;
+    }
+}
+
+.container {
+    margin-bottom: 2rem;
+    min-height: 70vh;
+    z-index: 1;
+}
+
+.title {
+    @include heading_section;
+}
+
+.content {
+    @include content_section($lineHeight:1.99);
+    margin:2vh 0 .8vh;
+    padding: 0.45rem;
+}
+
+.tags {
+    @include flex(flex-start,flex-start, column,1.5rem, 1.5rem);
+    margin-top: 2.5rem;
+}
+
+.tag {
+    @include flex(center,center);
+    @include font(clamp(1.5rem, 1.65vw, 1.95rem), 300, 1, center, null, $martian);
+    background-color: $white_ghost;
+    border-radius: .25dvw;
+    color:$black_2;
+    min-height: 3.75rem;
+    padding: 0.25rem 1.1rem;
+    transition: .2s linear background-color, .2s linear transform;
+    &:focus-within,
+    &:hover {
+        background-color: color-mix(in srgb, $orange 40%, $tangerine 60%);
+        transform: scale(.97);
+    }
+}
+
+.media {
+    display: block;
+    min-height: 30rem;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+.image {
+    filter:drop-shadow(0 0 .5rem $white);
+    object-fit: contain;
+    object-position:bottom right;
+}
+
+
+@media (min-width:640px){
+    .wrapper { 
+        & > * {
+            grid-row: 1;
+        }
+    }
+    .container {
+        grid-column: 1/7;
+        margin-bottom: 12vh;
+    }
+    .media {
+        grid-column: 7/-1;
+    }
+
+    .tags {
+        flex-flow:row wrap;
+    }
+    
+}

@@ -1,0 +1,59 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,flex-start, row nowrap, .24rem);
+    max-width: max-content;
+    padding:.72rem 0;
+    position: relative;
+    &::after {
+        @include size(2px,100%);
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: .32s linear transform;
+    }
+
+    &:focus-within,
+    &:hover {
+        &::after {
+            transform: scaleX(1);
+        }
+
+        .icon > * {
+            transform:translateX(1rem);
+        }
+    }
+
+}
+
+.title {
+    @include font(clamp(1.5rem, 1.8vw,2.3rem), 400, 1, start, null, $martian, lowercase);
+}
+
+.icon {
+    @include flex(center,center);
+    @include size(3rem,3rem);
+    font-size: 2.7rem;
+    font-family: $martian;
+    & > * {
+        transition: .4s linear transform;
+    }
+}
+
+.wrapper {
+    &[data-theme="light"]{
+        color:$white;
+        &::after {
+            background-color: rgba($white,.82);
+        }
+    }
+    &[data-theme="dark"]{
+        color:$black_1;
+        &::after {
+            background-color: rgba($black_1,.82);
+        }
+    }
+}

@@ -1,0 +1,1 @@
+export {default as PrimaryOfferCard} from "cards/offer/PrimaryOfferCard/PrimaryOfferCard"

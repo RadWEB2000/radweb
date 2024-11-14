@@ -1,8 +1,25 @@
 @import "./Mixins.scss";
 @import "./Variables.scss";
 
-@mixin heading_section ($fontSize){
-    @include font($fontSize, 600, 1, start, balance, $antonio);
+@mixin heading_section ($color:$white,$fontSize:clamp(4.5rem,7vw, 11rem)){
+    @include font($fontSize, 800, 1, start, balance, $antonio);
+    color:$color;
 }
 
-$heading_section_regural: clamp(4.5rem,7vw, 13rem);
+$heading_section_regural: clamp(4.5rem,7vw, 11rem);
+
+@mixin bottomBar($color,$height){
+    @include size($height, 100%);
+    background-color: $color;
+    bottom: -1rem;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: .2s linear transform;
+}
+
+@mixin content_section ($color:$white_platinum,$font:clamp(1.5rem, 1.65vw, 1.7rem), $lineHeight:1.7){
+    @include font($font, 400, $lineHeight, start, pretty);
+    color: $color;
+    max-width: 75ch;
+}

@@ -1,0 +1,49 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    display: grid;
+    gap:5rem;
+    margin:15vh auto 10vh auto;
+    width:95vw;
+}
+
+.container {
+    padding: 0rem 2rem;
+}
+
+.title {
+    @include heading_section($heading_section_regural);
+}
+
+.content {
+    @include content_section($lineHeight:1.75);
+    margin:3.5dvh 0 1.2rem;
+}
+
+.cards {
+    display: grid;
+    gap:1.2rem;
+    grid-template-columns: repeat(1,1fr);
+}
+
+@media (min-width:810px){
+    .cards {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (min-width:1550px){
+    .wrapper {
+        grid-template-columns: repeat(12,1fr);
+    }
+    .container {
+        grid-column: 1/5;
+    }
+
+    .cards {
+        grid-column: 5/-1;
+        grid-template-columns: repeat(3,1fr);
+    }
+}

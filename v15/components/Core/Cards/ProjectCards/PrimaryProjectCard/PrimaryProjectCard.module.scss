@@ -1,0 +1,76 @@
+@import "../../../../../styles/Mixins.scss";
+@import "../../../../../styles/Utils.scss";
+@import "../../../../../styles/Variables.scss";
+
+.media {
+    aspect-ratio: 16/10;
+    border-radius: 1rem;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.category {
+    @include font(clamp(1.3rem, 1.5rem, 1.65rem), 700, 1, start);
+    background-color: $white;
+    border-radius: .45rem;
+    left: 4rem;
+    padding: 0.65rem 2rem;
+    position: absolute;
+    top: 4rem;
+    user-select: none;
+    z-index: 2;
+}
+
+.image {
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.line {
+    background-color: rgba($black_1,.35);
+    border-radius: .24rem;
+    display: block;
+
+    &__horizontal {
+        @include size(2px,100%);
+        margin:.5rem 0;
+    }
+    
+    &__vertical {
+        @include size(100%,2px);
+    }
+}
+
+.container {
+    display: grid;
+    gap:2rem;
+    min-height: 15rem;
+    padding: 0.2rem;
+    grid-template-columns: 4fr 2px 7fr;
+}
+
+.details {
+    @include flex(flex-start,flex-start,column, null, .5rem);
+    background-color: rgba($white_ghost,.5);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.title {
+    @include heading_section($color:inherit,$fontSize:clamp(1.75rem,2.1vw,3.75rem))
+}
+
+.excerpt {
+    @include content_section($color:color-mix(in srgb, $jet 70%, $white_platinum 30%));
+}
+
+.button {
+    margin-top: 1.2rem;
+    transition: .2s linear color;
+    &:focus-within,
+    &:hover {
+        color:$orange;
+    }
+}

@@ -34,4 +34,6 @@ declare global {
         firstname:string;
         lastname:string;
     }
+
+    type tTheme = "dark" | "light";
 }

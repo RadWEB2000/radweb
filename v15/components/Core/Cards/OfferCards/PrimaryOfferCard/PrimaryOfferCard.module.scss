@@ -1,0 +1,79 @@
+@import "../../../../../styles/Mixins.scss";
+@import "../../../../../styles/Utils.scss";
+@import "../../../../../styles/Variables.scss";
+
+.wrapper {
+    border:2px solid $blue_delift;
+    border-radius: 1.15dvw;
+    display: grid;
+    grid-template-areas: "layer";
+    overflow: hidden;
+    transition:.2s linear border;
+
+    & > * {
+        grid-area: layer;
+    }
+
+    &:focus-within,
+    &:hover {
+        border:2px solid rgba($orange,.5);
+        .image {
+            filter:grayscale(.25) opacity(.3);
+            transform: scale(.45);
+        }
+        .title {
+            color:$orange;
+        }
+    }
+}
+
+.media {
+    display: block;
+    position: relative;
+    z-index: 0;
+}
+
+.image {
+    filter:grayscale(1) opacity(.045);
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    object-position: bottom left;
+    transform: scale(.6);
+    transform-origin: bottom right;
+    transition:.2s linear filter, .4s linear transform;
+}
+
+.container {
+    @include flex(flex-start,space-around,column, null, 1.25rem);
+    padding:4rem 2rem;
+    z-index: 1;
+}
+
+.title {
+    @include heading_section($white_smoke, clamp(3.5rem,5.2vw, 9.25rem));
+    text-transform: uppercase;
+    transition:.2s linear color;
+}
+
+.content {
+    @include content_section(color-mix(in srgb, $white_platinum 60%, $jet  40%), clamp(1.45rem,1.5vw, 1.65rem));
+}
+
+.button {
+    @include font(clamp(1.45rem, 1.55vw, 1.7rem), 500, 1, center,null, $martian,lowercase);
+    color:color-mix(in srgb, $white_platinum 95%, $jet  5%);
+    position: relative;
+    transition: .15s linear color;
+
+    &::after {
+        @include bottomBar($orange, 2px);
+    }
+
+    &:focus-within,
+    &:hover {
+        color:$orange;
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}
