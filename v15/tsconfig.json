@@ -24,6 +24,7 @@
       "assets/*":["./assets/*"],
       "buttons/*":["./components/Core/Buttons/*"],
       "carousel/*":["./components/Core/Carousel/*"],
+      "cards/blog/*":["./components/Core/Cards/BlogCards/*"],
       "cards/offer/*":["./components/Core/Cards/OfferCards/*"],
       "cards/project/*":["./components/Core/Cards/ProjectCards/*"],
       "cards/service/*":["./components/Core/Cards/ServiceCards/*"],

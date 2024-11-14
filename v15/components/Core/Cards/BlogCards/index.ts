@@ -1,0 +1,1 @@
+export {default as PrimaryBlogCard} from "cards/blog/PrimaryBlogCard/PrimaryBlogCard"

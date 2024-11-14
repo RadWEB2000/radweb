@@ -1,5 +1,5 @@
 import { home } from "data/home"
-import { About, Hero, Offer, Projects, Services } from "v-home/index"
+import { About, Blog, Hero, Offer, Projects, Services } from "v-home/index"
 
 export default function HomePage(){
   return (
@@ -19,6 +19,9 @@ export default function HomePage(){
         />
         <Services
           {...home.services}
+        />
+        <Blog
+          {...home.blog}
         />
       <ul>
         <li>lorem</li>

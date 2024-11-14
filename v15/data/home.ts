@@ -1,17 +1,20 @@
 import about_img from "img/r-adamczyk-gray.webp"
 import hero_img from "img/business_grayscale_no_bg.webp"
 import project_img from "img/abstract-one.webp";
+import article_img from "img/dashes.webp";
 import { tHero } from "v-home/Hero/Hero.models";
 import { tOffer } from "v-home/Offer/Offer.models";
 import { tAbout } from "v-home/About/About.models";
 import { tProjects } from "v-home/Projects/Projects.models";
 import { tServices } from "v-home/Services/Services.models";
+import { tBlog } from "v-home/Blog/Blog.models";
 type t_home = {
     hero:tHero;
     offer:tOffer;
     about:tAbout;
     projects:tProjects;
     services:tServices;
+    blog:tBlog;
 }
 
 export const home:t_home = {
@@ -328,6 +331,94 @@ export const home:t_home = {
                 w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
                 title:`WhiteHat SEO`
             }
+        ]
+    },
+    blog:{
+        button:{
+            title:`Wszystkie wpisy`,
+            url:`/blog`
+        },
+        content:`The Forter Trust Platform makes real-time identity-based decisions for known and unknown forms of fraud, enabling G2A.COM to scale seamlessly to meet any burst in demand and accommodate growth without additional resources. Forter’s identity and risk insights are also helping G2A.COM approve more borderline transactions – increasing approval rates and minimizing friction for customers.`,
+        title:`Blog`,
+        cards:[
+            {
+                button:{
+                    url:`#`
+                },
+                category:`SEO`,
+                image:{
+                    altText:"",
+                    sourceSrc:article_img.src,
+                    title:""
+                },
+                release:`21 Sie 2023`,
+                title:`Marketing internetowy dla branży TSL`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                category:`SEO`,
+                image:{
+                    altText:"",
+                    sourceSrc:article_img.src,
+                    title:""
+                },
+                release:`21 Sie 2023`,
+                title:`Co zmieniają i jak wpływają na SEO nowe aktualizacje algorytmów Google`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                category:`SEO`,
+                image:{
+                    altText:"",
+                    sourceSrc:article_img.src,
+                    title:""
+                },
+                release:`21 Sie 2023`,
+                title:`Co nowego w content marketingu?`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                category:`SEO`,
+                image:{
+                    altText:"",
+                    sourceSrc:article_img.src,
+                    title:""
+                },
+                release:`21 Sie 2023`,
+                title:`Jak wykorzystać social media do promocji wydarzeń?`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                category:`SEO`,
+                image:{
+                    altText:"",
+                    sourceSrc:article_img.src,
+                    title:""
+                },
+                release:`21 Sie 2023`,
+                title:`Monitoring social media sposobem na internetowych oszustów`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                category:`SEO`,
+                image:{
+                    altText:"",
+                    sourceSrc:article_img.src,
+                    title:""
+                },
+                release:`21 Sie 2023`,
+                title:`Wykorzystanie SEO w pozycjonowaniu brand'u`
+            },
         ]
     }
 }
