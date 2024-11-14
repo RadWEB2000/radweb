@@ -5,11 +5,13 @@ import { tHero } from "v-home/Hero/Hero.models";
 import { tOffer } from "v-home/Offer/Offer.models";
 import { tAbout } from "v-home/About/About.models";
 import { tProjects } from "v-home/Projects/Projects.models";
+import { tServices } from "v-home/Services/Services.models";
 type t_home = {
     hero:tHero;
     offer:tOffer;
     about:tAbout;
     projects:tProjects;
+    services:tServices;
 }
 
 export const home:t_home = {
@@ -180,6 +182,152 @@ export const home:t_home = {
                 release:`Marzec 2023`,
                 title:`Filip Bukowiecki`
            }, 
+        ]
+    },
+    services: {
+        button:{
+            title:`Wszystkie usługi`,
+            url:`/uslugi`
+        },
+        content:`G2A.COM is trusted by users from 180 countries, where visitors can choose from more than 75,000 digital offerings. The global nature of its business required G2A.COM to scale its fraud prevention and payments program to meet growing demand. Forter was selected for its fully automated decisioning, global network of identities and market-leading service. Forter’s technology uses the speed and sophistication of AI to detect patterns across vast datasets and the savvy of fraud experts to continuously update its models.`,
+        title:`Moje usługi`,
+        cards:[
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`SEO Google`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`SEO Bing`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`Link building`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`Content marketing`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`Audyty SEO`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`Analityka`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`Audyt UI/UX`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`Portfolio`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`Blog`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`Landing page`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`Certyfikaty SSL`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`Hosting stron`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`Wizytówki Google`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`SEO lokalne`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`Optymalizacje stron`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`Aktualizacje Wordpress`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`WhiteHat SEO`
+            }
         ]
     }
 }

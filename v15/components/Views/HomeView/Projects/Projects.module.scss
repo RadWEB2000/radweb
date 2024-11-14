@@ -7,6 +7,10 @@
     padding: 20vh 4vw;
 }
 
+.slogan {
+    color:color-mix(in srgb, $jet 40%, $black_1 60%);
+}
+
 .container {
     @include flex(center,center,column);
 }

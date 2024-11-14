@@ -1,0 +1,56 @@
+@import "../../../../../styles/Mixins.scss";
+@import "../../../../../styles/Utils.scss";
+@import "../../../../../styles/Variables.scss";
+
+.wrapper {
+    display: grid;
+    grid-template-columns: calc(100% - 4rem) 4rem;
+    padding: 1.85rem;
+    border-radius: 1.25rem;
+    min-width: 30rem;
+    border:1px solid rgba($blue_delift,.4);
+    transition:.12s linear border;
+    &:focus-within,
+    &:hover {
+        border:1px solid color-mix(in srgb, $blue_delift 30%, $white 70%);
+    }
+}
+
+
+.container {
+    @include flex(flex-start,space-between, column, null, 1rem);
+}
+
+.title {
+    @include heading_section($orange, clamp(1.7rem, 2.2vw, 5.4rem));
+}
+
+.content {
+    @include content_section(color-mix(in srgb, $jet 45%, $white_platinum 55%),clamp(1.34rem,1.45vw,1.6rem),1.5);
+}
+
+.box {
+    @include flex(flex-start,flex-end);
+}
+
+.button {
+    @include flex(center,center);
+    @include size(3.72rem,3.72rem);
+    border:2px solid rgba($white,.4);
+    border-radius: 50%;
+    color:$white;
+    font-size: 2.2rem;
+    transition:.2s linear border, .2s linear color;
+
+    &:focus-within,
+    &:hover {
+        border:2px solid rgba($orange,1);
+        color:$orange;
+    }
+}
+
+@media (min-width:680px){
+    .wrapper {
+        min-width: unset;
+    }
+}

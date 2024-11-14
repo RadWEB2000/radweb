@@ -1,0 +1,1 @@
+export {default as PrimaryServiceCard} from "cards/service/PrimaryServiceCard/PrimaryServiceCard"
