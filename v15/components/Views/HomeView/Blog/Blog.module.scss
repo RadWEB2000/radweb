@@ -1,0 +1,35 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    width:95vw;
+    margin:10vh auto;
+}
+
+.container {
+    max-width: 75vw;
+}
+
+.title {
+    @include heading_section;
+}
+
+.content {
+    @include content_section;
+    margin:2.5vh 0 1.2vh;
+    max-width: 75chs;
+}
+
+
+.cards {
+    justify-content: center;
+    align-items: baseline;
+    gap:1.2rem;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 40rem));
+    padding: 0.5rem 1rem;
+    margin:5vh 0 5vh auto;
+    max-width: calc(40rem * 3 + 1.2rem * 3 + 2rem);
+}

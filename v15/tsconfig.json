@@ -32,6 +32,7 @@
       "core/*":["./components/Core/*"],
       "css/*":["./styles/*"],
       "data/*":["./data/*"],
+      "footer/*":["./components/Layout/Footer/*"],
       "fonts/*":["./assets/fonts/*"],
       "ico/*":["./assets/icons/*"],
       "img/*":["./assets/images/*"],

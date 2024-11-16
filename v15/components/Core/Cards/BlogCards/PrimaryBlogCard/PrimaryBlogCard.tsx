@@ -2,7 +2,9 @@ import css from "cards/blog/PrimaryBlogCard/PrimaryBlogCard.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import {tPrimaryBlogCard} from "cards/blog/PrimaryBlogCard/PrimaryBlogCard.models";
+import getExceprtLength from "lib/getExceprtLength";
 export default function PrimaryBlogCard(props:tPrimaryBlogCard){
+    console.log(props.tag)
     return (
         <Link
             className={css.wrapper}
@@ -14,6 +16,7 @@ export default function PrimaryBlogCard(props:tPrimaryBlogCard){
             >
                 <p
                     className={css.category}
+                    data-category={props.tag}
                 >
                     {props.category}
                 </p>
@@ -32,6 +35,14 @@ export default function PrimaryBlogCard(props:tPrimaryBlogCard){
                 className={css.title}
                 dangerouslySetInnerHTML={{__html:props.title}}
             />
+            {
+                props.excerpt &&
+                <p
+                    className={css.excerpt}
+                >
+                    {getExceprtLength(props.excerpt, 120)}
+                </p>
+            }
             <p
                 className={css.release}
                 dangerouslySetInnerHTML={{__html:props.release}}

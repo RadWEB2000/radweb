@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Antonio, Mukta, Martian_Mono, Ubuntu} from "next/font/google"
 import "css/Global.scss"
+import {Footer} from "footer/index";
+import { main } from "data/main";
 
 const antonio = Antonio({
   subsets:["latin-ext"],
@@ -41,6 +43,9 @@ export default function RootLayout({
         className={` ${antonio.variable} ${mukta.variable} ${martian.variable} ${ubuntu.variable}`}
       >
         {children}
+        <Footer
+          {...main.footer}
+        />
       </body>
     </html>
   );

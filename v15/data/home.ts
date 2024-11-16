@@ -346,11 +346,13 @@ export const home:t_home = {
                     url:`#`
                 },
                 category:`SEO`,
+                tag:"www",
                 image:{
                     altText:"",
                     sourceSrc:article_img.src,
                     title:""
                 },
+                excerpt:`Something to note as we create this layout is that we haven't needed to explicitly position every element on the grid at each breakpoint. We have been able to inherit the placement set up for earlier breakpoints `,
                 release:`21 Sie 2023`,
                 title:`Marketing internetowy dla branży TSL`
             },
@@ -359,11 +361,13 @@ export const home:t_home = {
                     url:`#`
                 },
                 category:`SEO`,
+                tag:"www",
                 image:{
                     altText:"",
                     sourceSrc:article_img.src,
                     title:""
                 },
+                excerpt:`Something to note as we create this layout is that we haven't needed to explicitly position every element on the grid at each breakpoint. We have been able to inherit the placement set up for earlier breakpoints `,
                 release:`21 Sie 2023`,
                 title:`Co zmieniają i jak wpływają na SEO nowe aktualizacje algorytmów Google`
             },
@@ -371,12 +375,14 @@ export const home:t_home = {
                 button:{
                     url:`#`
                 },
+                tag:"www",
                 category:`SEO`,
                 image:{
                     altText:"",
                     sourceSrc:article_img.src,
                     title:""
                 },
+                excerpt:`Something to note as we create this layout is that we haven't needed to explicitly position every element on the grid at each breakpoint. We have been able to inherit the placement set up for earlier breakpoints `,
                 release:`21 Sie 2023`,
                 title:`Co nowego w content marketingu?`
             },
@@ -385,11 +391,13 @@ export const home:t_home = {
                     url:`#`
                 },
                 category:`SEO`,
+                tag:"seo",
                 image:{
                     altText:"",
                     sourceSrc:article_img.src,
                     title:""
                 },
+                excerpt:`Something to note as we create this layout is that we haven't needed to explicitly position every element on the grid at each breakpoint. We have been able to inherit the placement set up for earlier breakpoints `,
                 release:`21 Sie 2023`,
                 title:`Jak wykorzystać social media do promocji wydarzeń?`
             },
@@ -398,11 +406,13 @@ export const home:t_home = {
                     url:`#`
                 },
                 category:`SEO`,
+                tag:"care",
                 image:{
                     altText:"",
                     sourceSrc:article_img.src,
                     title:""
                 },
+                excerpt:`Something to note as we create this layout is that we haven't needed to explicitly position every element on the grid at each breakpoint. We have been able to inherit the placement set up for earlier breakpoints `,
                 release:`21 Sie 2023`,
                 title:`Monitoring social media sposobem na internetowych oszustów`
             },
@@ -411,11 +421,13 @@ export const home:t_home = {
                     url:`#`
                 },
                 category:`SEO`,
+                tag:"news",
                 image:{
                     altText:"",
                     sourceSrc:article_img.src,
                     title:""
                 },
+                excerpt:`Something to note as we create this layout is that we haven't needed to explicitly position every element on the grid at each breakpoint. We have been able to inherit the placement set up for earlier breakpoints `,
                 release:`21 Sie 2023`,
                 title:`Wykorzystanie SEO w pozycjonowaniu brand'u`
             },

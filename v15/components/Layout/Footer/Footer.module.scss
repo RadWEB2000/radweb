@@ -1,0 +1,49 @@
+@import "../../../styles/Mixins.scss";
+@import "../../../styles/Utils.scss";
+@import "../../../styles/Variables.scss";
+
+.wrapper {
+    background-color: green;
+    background-color: color-mix(in srgb, $black_1 55%, $blue_delift 45%);
+    min-height: 75vh;
+    display: grid;
+    padding:10vh 4vw 5vh 4vw;
+    grid-template-areas: 
+        "details menu menu menu menu"
+        "details menu menu menu menu"
+        "details menu menu menu menu"
+        "details menu menu menu menu"
+        "details menu menu menu menu"
+        "details menu menu menu menu"
+        "details menu menu menu menu"
+        "line line line line line"
+        "author author author socials socials"
+        "author author author socials socials"
+    ;
+}
+
+.details {
+    grid-area: details;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 35rem));
+    // gap:1rem;
+    grid-template-columns: repeat(5,1fr);
+    grid-area: menu;
+    li {
+        ul {
+            @include flex(flex-start,flex-start, column);
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+.author {
+    grid-area: author;
+}
+
+.socials {
+    grid-area: socials;
+}

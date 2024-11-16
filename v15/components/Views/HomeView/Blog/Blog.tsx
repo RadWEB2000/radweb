@@ -5,8 +5,12 @@ import { PrimaryBlogCard as Card} from "cards/blog/index";
 
 export default function Blog(props:tBlog){
     return (
-        <div>
-            <section>
+        <div
+            className={css.wrapper}
+        >
+            <section
+                className={css.container}
+            >
                 {
                     props.slogan &&
                     <h3
@@ -30,7 +34,9 @@ export default function Blog(props:tBlog){
             </section>
             {
                 props.cards &&
-                <ul>
+                <ul
+                    className={css.cards}
+                >
                     {
                         props.cards.map((item) => {
                             return (

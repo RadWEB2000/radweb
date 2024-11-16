@@ -23,62 +23,7 @@ export default function HomePage(){
         <Blog
           {...home.blog}
         />
-      <ul>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-      </ul>
+     
       </main>
     </>
   )

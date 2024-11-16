@@ -18,8 +18,8 @@ $heading_section_regural: clamp(4.5rem,7vw, 11rem);
     transition: .2s linear transform;
 }
 
-@mixin content_section ($color:$white_platinum,$font:clamp(1.5rem, 1.65vw, 1.7rem), $lineHeight:1.7){
-    @include font($font, 400, $lineHeight, start, pretty);
+@mixin content_section ($color:$white_platinum,$fontSize:clamp(1.5rem, 1.65vw, 1.7rem), $lineHeight:1.7){
+    @include font($fontSize, 400, $lineHeight, start, pretty);
     color: $color;
     max-width: 75ch;
 }
