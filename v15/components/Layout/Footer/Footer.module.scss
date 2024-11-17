@@ -27,15 +27,28 @@
 }
 
 .menu {
+    // background: pink;
+    align-items: center;
+    direction: rtl;
+    justify-items: start;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(5rem, 35rem));
-    // gap:1rem;
-    grid-template-columns: repeat(5,1fr);
+    gap:1rem;
     grid-area: menu;
     li {
+        @include size(100%,100%);
+        // background: red;
+        direction: ltr;
+        h4 {
+            @include heading_section($fontSize:clamp(1.45rem, 1.92vw, 2.42rem));
+            // background: rgb(0, 0, 0);
+        }
         ul {
             @include flex(flex-start,flex-start, column);
             margin-top: 0.5rem;
+            a {
+                @include content_section;
+            }
         }
     }
 }
@@ -45,5 +58,11 @@
 }
 
 .socials {
+    @include flex(center, flex-end, row wrap, .65rem, .65rem);
     grid-area: socials;
+    a {
+        @include flex(center,center);
+        @include size(4rem, 4rem);
+        font-size: 2.3rem;
+    }
 }
