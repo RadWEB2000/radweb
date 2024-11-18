@@ -16,7 +16,6 @@
     color:$white;
     font-size: 3rem;
     transition:.2s linear color, .2s linear transform;
-    &:focus-within,
     &:hover {
         color:$orange;
         transform: scale(.97);
@@ -44,8 +43,9 @@
     .submenu {
         background-image: linear-gradient(to bottom , $black_1 , color-mix(in srgb, $black_1 55%, $blue_delift 45%));
         position: absolute;
-        margin:.5rem 0 0 0;
+        margin:0 0 0 0;
         border-radius: 0 1rem 1rem 1rem;
         padding: 1.7rem;
     }
 }
+

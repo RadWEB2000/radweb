@@ -12,6 +12,7 @@ export default function MenuDropdown(props:tMenuDropdown){
     return (
         <li
             className={css.wrapper}
+            onMouseLeave={() => toggleOpen(false)}
         >
             <div
                 className={css.container}
@@ -41,6 +42,9 @@ export default function MenuDropdown(props:tMenuDropdown){
                                     {...item}
                                     key={item.title}
                                     theme="submenu"
+                                    props={{
+                                        onClick:() => toggleOpen(false)
+                                    }}
                                     {...item.props}
                                 />              
                             )
