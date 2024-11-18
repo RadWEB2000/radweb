@@ -1,5 +1,4 @@
 export type tDetails = {
-    image?:tImage;
     title:string;
     slogan?:string;
     contact:Array<tLink & {

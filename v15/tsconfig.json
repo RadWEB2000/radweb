@@ -38,6 +38,7 @@
       "img/*":["./assets/images/*"],
       "layout/*":["./components/Layout/*"],
       "lib/*":["./lib/*"],
+      "nav/*":["./components/Layout/Navigation/*"],
       "parts/*":["./components/*"],
       "ts/*":["./types/*"],
       "video/*":["./assets/videos/*"],

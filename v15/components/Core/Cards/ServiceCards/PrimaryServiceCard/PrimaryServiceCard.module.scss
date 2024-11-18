@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: calc(100% - 4rem) 4rem;
     padding: 1.85rem;
+    min-height: 100%;
     border-radius: 1.25rem;
     min-width: 30rem;
     border:1px solid rgba($blue_delift,.4);
@@ -22,7 +23,7 @@
 }
 
 .title {
-    @include heading_section($orange, clamp(1.7rem, 2.2vw, 5.4rem));
+    @include heading_section($orange, clamp(1.7rem, 2.2vw, 3.8rem));
 }
 
 .content {

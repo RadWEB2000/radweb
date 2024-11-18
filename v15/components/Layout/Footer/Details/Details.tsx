@@ -3,7 +3,6 @@ import {tDetails} from "footer/Details/Details.models";
 import Link from "next/link";
 import { IoMailOutline as Mail, IoPhonePortraitOutline as Phone } from "react-icons/io5";
 
-
 export default function Details(props:tDetails){
     return (
         <address

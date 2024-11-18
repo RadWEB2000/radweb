@@ -34,6 +34,13 @@
     row-gap: .5rem;
     &__item {
         @include flex(center,flex-start, row wrap, .25rem, .75rem);
+        transition:.15s linear color;
+        
+        &:focus-within,
+        &:hover {
+            color:$orange;
+        }
+
         &__icon {
             @include flex(center,center);
             font-size: 2.2rem;

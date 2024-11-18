@@ -1,3 +1,4 @@
+import logo_img from "img/logo-light.webp";
 import { tFooter } from "footer/Footer.models"
 
 type t_main = {

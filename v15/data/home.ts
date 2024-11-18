@@ -201,6 +201,14 @@ export const home:t_home = {
                 },
                 content:`no i tak - trochę jestem w szoku.
                 w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
+                title:`SEO zagraniczne`
+            },
+            {
+                button:{
+                    url:`#`
+                },
+                content:`no i tak - trochę jestem w szoku.
+                w najśmielszych oczekiwaniach nie  spodziewałam się takich technik. słyszałam o tym, że Duolingo jest mistrzem budowania poczucia winy i postanowiłam to sprawdzić.`,
                 title:`SEO Google`
             },
             {
