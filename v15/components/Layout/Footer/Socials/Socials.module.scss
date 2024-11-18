@@ -1,0 +1,23 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+
+.wrapper {
+    @include flex(center,flex-end, row wrap-reverse, .72rem , .72rem);
+    // background-color: pink;
+}
+
+.item {
+    @include flex(center,center);
+    @include size(3.4rem,3.4rem);
+    color:color-mix(in srgb, $blue_delift 40%, $white 60%);
+    font-size: 2.3rem;
+    position: relative;
+    transition:.12s linear color;
+
+    &:focus-within,
+    &:hover {
+        color:$white;
+    }
+}

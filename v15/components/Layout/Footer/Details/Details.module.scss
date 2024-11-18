@@ -1,0 +1,62 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+
+.wrapper {
+    font-style: unset;
+    grid-column: 1/-1;
+    margin-bottom: 5rem;
+    row-gap:2rem;
+}
+
+.wrapper,  
+.address,
+.contact {
+    @include flex(center,flex-start,column);
+}
+
+.title {
+    @include heading_section;
+}
+
+.slogan {
+    @include heading_section($color:color-mix(in srgb, $white_ghost 55%, $jet 45%), $fontSize:clamp(2rem,2.5vw, 4.4rem));
+}
+
+.address,
+.contact {
+    @include content_section;
+    font-weight: 500;
+}
+
+.contact {
+    row-gap: .5rem;
+    &__item {
+        @include flex(center,flex-start, row wrap, .25rem, .75rem);
+        &__icon {
+            @include flex(center,center);
+            font-size: 2.2rem;
+        }
+    }
+}
+
+
+@media (min-width:750px){
+    .wrapper {
+        grid-column: 1/5;
+    }
+}
+@media (min-width:1120px){
+    .wrapper,  
+    .address,
+    .contact {
+        align-items: flex-start;   
+    }
+}
+
+@media (min-width:1440px){
+    .wrapper {
+        grid-column: 1/4;
+    }
+}

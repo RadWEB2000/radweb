@@ -3,66 +3,23 @@
 @import "../../../styles/Variables.scss";
 
 .wrapper {
-    background-color: green;
-    background-color: color-mix(in srgb, $black_1 55%, $blue_delift 45%);
-    min-height: 75vh;
+    background-image: linear-gradient(to bottom, $black_1 , $black_3);
+    padding: 9vh 3.2vw 3vh 3.2vw;
+}
+
+.main {
     display: grid;
-    padding:10vh 4vw 5vh 4vw;
-    grid-template-areas: 
-        "details menu menu menu menu"
-        "details menu menu menu menu"
-        "details menu menu menu menu"
-        "details menu menu menu menu"
-        "details menu menu menu menu"
-        "details menu menu menu menu"
-        "details menu menu menu menu"
-        "line line line line line"
-        "author author author socials socials"
-        "author author author socials socials"
-    ;
+    grid-template-columns: repeat(12,1fr);
+}
+
+.line {
+    @include size(2px,100%);
+    background-color: rgba($white_platinum, .2);
+    display: block;
+    margin:2.4rem 0;
 }
 
 .details {
-    grid-area: details;
-}
-
-.menu {
-    // background: pink;
-    align-items: center;
-    direction: rtl;
-    justify-items: start;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(5rem, 35rem));
-    gap:1rem;
-    grid-area: menu;
-    li {
-        @include size(100%,100%);
-        // background: red;
-        direction: ltr;
-        h4 {
-            @include heading_section($fontSize:clamp(1.45rem, 1.92vw, 2.42rem));
-            // background: rgb(0, 0, 0);
-        }
-        ul {
-            @include flex(flex-start,flex-start, column);
-            margin-top: 0.5rem;
-            a {
-                @include content_section;
-            }
-        }
-    }
-}
-
-.author {
-    grid-area: author;
-}
-
-.socials {
-    @include flex(center, flex-end, row wrap, .65rem, .65rem);
-    grid-area: socials;
-    a {
-        @include flex(center,center);
-        @include size(4rem, 4rem);
-        font-size: 2.3rem;
-    }
+    grid-template-columns: repeat(2,1fr);
 }

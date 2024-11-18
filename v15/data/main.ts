@@ -72,7 +72,7 @@ export const main:t_main = {
         menus:[
             {
                 title:`Szybkie linki`,
-                links:[
+                menu:[
                     {
                         title:`Start`,
                         url:`#`
@@ -105,7 +105,7 @@ export const main:t_main = {
             },
             {
                 title:`SEO`,
-                links:[
+                menu:[
                     {
                         title:`SEO Google`,
                         url:`#`
@@ -138,7 +138,7 @@ export const main:t_main = {
             },
             {
                 title:`WWW`,
-                links:[
+                menu:[
                     {
                         title:`Strony internetowe`,
                         url:`#`
@@ -171,7 +171,7 @@ export const main:t_main = {
             },
             {
                 title:`Web Care`,
-                links:[
+                menu:[
                     {
                         title:`Certyfikaty SSL`,
                         url:`#`
@@ -204,7 +204,7 @@ export const main:t_main = {
             },
             {
                 title:`Wiedza`,
-                links:[
+                menu:[
                     {
                         title:`Co nowego w content marketingu?`,
                         url:`#`
@@ -225,7 +225,7 @@ export const main:t_main = {
             },
             {
                 title:`Informacje`,
-                links:[
+                menu:[
                     {
                         title:`Kontakt`,
                         url:`#`

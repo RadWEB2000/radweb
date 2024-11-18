@@ -1,76 +1,35 @@
 import css from "footer/Footer.module.scss";
 import {tFooter} from "footer/Footer.models";
-import Link from "next/link";
-import getSocial from "lib/getSocial";
+import {Author, Details, Menus, Socials} from "footer/index";
 
 export default function Footer(props:tFooter){
     return (
         <footer
             className={css.wrapper}
         >
-            <address
-                className={css.details}
+            <div
+                className={css.main}
             >
-                dane kontaktowe
-            </address>
-            <menu
-                className={css.menu}
-            >
-                {
-                    props.menus.map((item) => {
-                        return (
-                            <li
-                                key={item.title}
-                            >
-                                <h4>{item.title}</h4>
-                                {
-                                    item.links &&
-                                    <ul>
-                                        {
-                                            item.links.map((item) => {
-                                                return (
-                                                    <Link
-                                                        href={item.url}
-                                                        key={item.title}
-                                                    >
-                                                        {item.title}
-                                                    </Link>
-                                                )
-                                            })
-                                        }
-                                    </ul>
-                                }
-                            </li>
-                        )
-                    })
-                }
-            </menu>
+                <Details
+                    {...props.details}
+                />
+                <Menus
+                    menus={props.menus}
+                />
+            </div>
             <span
                 className={css.line}
             />
             <div
-                className={css.author}
-                dangerouslySetInnerHTML={{__html:props.author}}
-            />
-            <ul
-                className={css.socials}
+                className={css.details}
             >
-                {
-                    props.socials.map((item) => {
-                        const icon = getSocial(item.url)
-                        return (
-                            <Link
-                                href={item.url}
-                                key={item.title}
-                                title={item.title}
-                                {...item.props}
-                            >
-                                {icon}
-                            </Link>
-                        )
-                    })
-                }
-            </ul>
+                <Author
+                    author={props.author}
+                />
+                <Socials
+                    socials={props.socials}
+                />
+            </div>
         </footer>
     )
 }

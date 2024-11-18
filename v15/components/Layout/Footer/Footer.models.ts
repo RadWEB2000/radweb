@@ -1,20 +1,8 @@
-export type tFooter = {
-    details: {
-        image?:tImage;
-        title:string;
-        slogan:string;
-        contact:Array<tLink & {
-            type:"e-mail"|"phone"
-        }>;
-        address: {
-            location:string;
-            zipCode:string;
-        }
-    };
-    socials:tLink[];
-    menus:{
-        title:string;
-        links:tLink[];
-    }[];
-    author:string;
+import { tAuthor } from "footer/Author/Author.models";
+import { tDetails } from "footer/Details/Details.models";
+import { tMenus } from "footer/Menus/Menus.models";
+import { tSocials } from "footer/Socials/Socials.models";
+
+export type tFooter = tAuthor & tMenus & tSocials &{
+    details: tDetails;
 }

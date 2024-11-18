@@ -1,0 +1,70 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    display: grid;
+    gap:3rem 1rem;
+    grid-column: 1/-1;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.container,
+.menu {
+    @include flex(center,flex-start,column);
+}
+
+.container {
+    row-gap:2rem;
+}
+
+.menu {
+    row-gap: 1.25rem;
+}
+
+.title {
+    @include font(clamp(1.5rem, 2vw, 3.5rem), 600, 1, start, balance,$antonio);
+}
+
+.item {
+    @include font(clamp(1.3rem, 1.4vw, 1.55rem), 400, 1.3, center, balance);
+    color:color-mix(in srgb, $jet 35%, $white_ghost 65%);
+    position: relative;
+
+    &::after {
+        @include bottomBar(rgba($white,.6), 1px);
+        bottom: 0;
+    }
+    &:focus-within,
+    &:hover {
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+@media (min-width:750px){
+    .wrapper {
+        grid-column: 5/-1;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .container,
+    .menu {
+        align-items: flex-start;
+    }
+    .item {
+        text-align: start;
+    }
+}
+@media (min-width:1120px){
+    .wrapper {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (min-width:1440px){
+    .wrapper {
+        grid-template-columns: repeat(6,1fr);
+        padding: 0rem 1rem;
+        grid-column: 4/-1;
+    }
+}
