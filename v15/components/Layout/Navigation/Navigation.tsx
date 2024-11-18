@@ -1,5 +1,5 @@
 import css from "nav/Navigation.module.scss";
-import {Brand, Menu} from "nav/index";
+import {Brand, Menu, MenuButton as Button} from "nav/index";
 import {tNavigation} from "nav/Navigation.models"
 
 export default function Navigation(props:tNavigation){
@@ -13,6 +13,11 @@ export default function Navigation(props:tNavigation){
             <Menu
                 menu={props.menu}
             />
+            <div
+                className={css.settings}
+            >
+                <Button/>
+            </div>
         </nav>
     )
 }

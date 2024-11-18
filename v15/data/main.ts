@@ -1,11 +1,70 @@
 import logo_img from "img/logo-light.webp";
 import { tFooter } from "footer/Footer.models"
+import { tNavigation } from "nav/Navigation.models";
 
 type t_main = {
+    nav:tNavigation;
     footer:tFooter;
 }
 
 export const main:t_main = {
+    nav:{
+        brand: {
+            image:{
+                altText:"",
+                sourceSrc:logo_img.src,
+                title:""
+            },
+            props:{
+                hrefLang:"pl_PL"
+            },
+            url:'/'
+        },
+        menu: [
+            {
+                title:`Start`,
+                url:`/`
+            },
+            {
+                title:`O mnie`,
+                url:`/`,
+            },
+            {
+                title:`Blog`,
+                url:`/`,
+            },
+            {
+                title:`Oferta`,
+                url:`/uslugi`,
+                submenu:[
+                    {
+                        title:`SEO`,
+                        url:`/uslugi/seo`
+                    },
+                    {
+                        title:`Strony internetowe`,
+                        url:`/uslugi/strony-internetowe`
+                    },
+                    {
+                        title:`Web Care`,
+                        url:`/uslugi/web-care`
+                    },
+                ]
+            },
+            {
+                title:`Projekty`,
+                url:`/projekty`
+            },
+            {
+                title:`Słownik`,
+                url:`/slownik`,
+            },
+            {
+                title:`Kontakt`,
+                url:`/kontakt`,
+            },
+        ]
+    },
     footer: {
         author:`RadWEB &copy; ${new Date().getFullYear()}`,
         details:{

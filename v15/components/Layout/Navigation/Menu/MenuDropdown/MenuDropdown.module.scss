@@ -1,0 +1,51 @@
+@import "../../../../../styles/Mixins.scss";
+@import "../../../../../styles/Utils.scss";
+@import "../../../../../styles/Variables.scss";
+
+.wrapper {
+    // background: pink;
+}
+
+.container {
+    @include flex(flex-end, flex-start, row nowrap, .45rem);
+}
+
+.button {
+    @include flex(center,center);
+    @include size(4rem,4rem);
+    color:$white;
+    font-size: 3rem;
+    transition:.2s linear color, .2s linear transform;
+    &:focus-within,
+    &:hover {
+        color:$orange;
+        transform: scale(.97);
+    }
+}
+
+.submenu {
+    @include flex(flex-start,flex-start,column, null, .45rem);
+    margin:2vh 0 2vh 3vw;
+    transition:.2s linear all;
+}
+
+@media (min-width:1000px){
+    .wrapper {
+        position: relative;
+    }
+    .container {
+        grid-column: .7rem;
+    }
+    .button {
+        @include size(3rem,max-content);
+        font-size: 2.2rem;
+    }
+
+    .submenu {
+        background-image: linear-gradient(to bottom , $black_1 , color-mix(in srgb, $black_1 55%, $blue_delift 45%));
+        position: absolute;
+        margin:.5rem 0 0 0;
+        border-radius: 0 1rem 1rem 1rem;
+        padding: 1.7rem;
+    }
+}

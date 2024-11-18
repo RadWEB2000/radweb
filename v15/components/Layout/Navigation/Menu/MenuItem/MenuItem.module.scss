@@ -1,0 +1,57 @@
+@import "../../../../../styles/Mixins.scss";
+@import "../../../../../styles/Utils.scss";
+@import "../../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,center);
+    @include font(unset, 400, 1, center, null);
+    border:2px solid;
+    border-radius: 1rem;
+    min-width:max-content;
+    padding: 0.5rem 1rem;
+}
+
+.wrapper[data-theme="regural"] {
+    border-color: $white;
+    font-size: clamp(2.2rem, 2.7vw, 3.6rem);
+    min-height:4rem;
+    transition:.2s linear border-color, .2s linear color;
+
+    &:focus-within,
+    &:hover {
+        border-color: $orange;
+        color:$orange;
+    }
+}
+
+.wrapper[data-theme="submenu"] {
+    @include flex(center,center);
+    font-size: clamp(1.5rem, 2vw, 2.6rem);
+    border-color: color-mix(in srgb, $jet 45%, $white_ghost 55%);
+    color: color-mix(in srgb, $jet 45%, $white_ghost 55%);
+    min-height:3rem;
+    transition:.2s linear border-color, .2s linear color;
+    &:focus-within,
+    &:hover {
+        border-color: $tangerine;
+        color:$tangerine;
+    }
+}
+
+@media (min-width:1000px){
+    .wrapper[data-theme="regural"] ,
+    .wrapper[data-theme="submenu"] { 
+        border:none;
+    }
+    
+    .wrapper[data-theme="regural"] {
+        font-size: clamp(1.4rem, 1.6vw, 1.7rem);
+        min-height:3rem;
+    }
+
+    .wrapper[data-theme="submenu"] {
+        font-size: clamp(1.3rem, 1.4vw, 1.5rem);
+        min-height:2rem;
+    }
+    
+}

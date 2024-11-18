@@ -5,22 +5,26 @@ import {tBrand} from "nav/Brand/Brand.models";
 
 export default function Brand(props:tBrand){
     return (
-        <Link
+        <div
             className={css.wrapper}
-            href={props.url}
-            {...props.props}
         >
-            <Image
-                alt={props.image.altText}
-                className={css.image}
-                fill
-                loading="eager"
-                priority
-                src={props.image.sourceSrc}
-                title={props.image.title}
-                quality={30}
-                {...props.image.props}
-            />
-        </Link>
+            <Link
+                className={css.container}
+                href={props.url}
+                {...props.props}
+            >
+                <Image
+                    alt={props.image.altText}
+                    className={css.image}
+                    fill
+                    loading="eager"
+                    priority
+                    src={props.image.sourceSrc}
+                    title={props.image.title}
+                    quality={30}
+                    {...props.image.props}
+                />
+            </Link>
+        </div>
     )
 }

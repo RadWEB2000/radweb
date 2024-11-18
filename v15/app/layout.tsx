@@ -3,6 +3,8 @@ import { Antonio, Mukta, Martian_Mono, Ubuntu} from "next/font/google"
 import "css/Global.scss"
 import {Footer} from "footer/index";
 import { main } from "data/main";
+import { Navigation } from "nav/index";
+import { MainProvider } from "context/MainContext";
 
 const antonio = Antonio({
   subsets:["latin-ext"],
@@ -38,15 +40,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body 
-        className={` ${antonio.variable} ${mukta.variable} ${martian.variable} ${ubuntu.variable}`}
-      >
-        {children}
-        <Footer
-          {...main.footer}
-        />
-      </body>
+    <html lang="pl">
+      <MainProvider>
+        <body 
+          className={` ${antonio.variable} ${mukta.variable} ${martian.variable} ${ubuntu.variable}`}
+        >
+          <Navigation
+            {...main.nav}
+          />
+          {children}
+          <Footer
+            {...main.footer}
+          />
+        </body>
+      </MainProvider>
     </html>
   );
 }

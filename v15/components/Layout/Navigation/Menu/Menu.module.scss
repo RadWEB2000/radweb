@@ -1,0 +1,66 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+
+.wrapper {
+    grid-column: 1/-1;
+    grid-row: 2;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: .2s linear height, .2s linear opacity, .2s linear transform, .2s linear visibility;
+    visibility: hidden;
+
+    &[data-open=true]{
+        height:calc(100vh - 7rem);
+        opacity: 1;
+        transform: scaleY(1);
+        visibility: visible;
+    }
+
+
+}
+
+.container {
+    @include flex(flex-start,flex-start, column, null, 1.2rem);
+    padding: 5vh 8dvw;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        @include size(0,0);
+    }
+}
+
+@media (min-width:1000px){
+    .wrapper {
+        height: 100%;
+        grid-column: 3/-1;
+        grid-row: 1;
+        opacity: 1;
+        overflow: visible;
+        padding: 0 2.3vw 0 1.3rem;
+        transform: scaleY(1);
+        transform-origin: unset;
+        visibility: visible;
+        &[data-open=true]{
+            height:100%;
+            opacity: 1;
+            transform: scaleY(1);
+            visibility: visible;
+        }
+    }
+    .container {
+        @include flex(center,flex-start, row nowrap, 1.25rem);
+        @include size(100%,100%);
+        padding: unset;
+        overflow-y: visible;
+    }
+}
+
+@media (min-width:1600px){
+    .wrapper {
+        grid-column: 2;
+    }
+}
