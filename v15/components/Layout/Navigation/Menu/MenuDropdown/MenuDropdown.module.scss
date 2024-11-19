@@ -41,7 +41,7 @@
     }
 
     .submenu {
-        background-image: linear-gradient(to bottom , $black_1 , color-mix(in srgb, $black_1 55%, $blue_delift 45%));
+        background-image: linear-gradient(to bottom , $black_1 , color-mix(in srgb, $black_1 85%, $blue_delift 15%));
         position: absolute;
         margin:0 0 0 0;
         border-radius: 0 1rem 1rem 1rem;
