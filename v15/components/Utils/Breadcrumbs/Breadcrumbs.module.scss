@@ -1,0 +1,52 @@
+@import "../../../styles/Mixins.scss";
+@import "../../../styles/Utils.scss";
+@import "../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,flex-start, row wrap, .15rem, .15rem);
+    @include size(100%,100%);
+}
+
+.icon, 
+.home, 
+.link {
+    @include flex(center,center);
+
+}
+
+.home,
+.icon {
+    @include size(2.5rem,2.5rem);
+    font-size: 2.4rem;
+}
+
+.link {
+    @include font(clamp(1.3rem, 1.45vw, 1.6rem), 400, 1, start, null, $martian);
+    min-height:2.4rem;
+
+}
+
+
+.home, 
+.link {
+    position: relative;
+    transition:.2s linear color;
+    &::after {
+        @include bottomBar($tangerine, 1px);
+        bottom: -2.5px;
+    }
+    &:focus-within,
+    &:hover {
+        color:$tangerine;
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.wrapper[data-theme="dark"]{
+    color:$black_1;
+}
+.wrapper[data-theme="light"]{
+    color:$white;
+}

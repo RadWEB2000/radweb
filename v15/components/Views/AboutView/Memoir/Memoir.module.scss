@@ -1,0 +1,55 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(flex-start,center,column);
+    background-color: $black_3;
+    min-height:80vh;
+    padding:10vh 1vw 10vh 5vw;
+    position: relative;
+    &::after {
+        @include size(100%, 20rem);
+        background-image: linear-gradient(to right, transparent, rgba($black_3,.64),$black_3);
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    & >*{
+        width: 100%;
+    }
+}
+
+.title {
+    @include heading_section;
+}
+
+.cards {
+    @include flex(flex-start,flex-start, row nowrap, 1rem, null, true);
+    margin-top: 5rem;
+    min-height:max-content;
+    padding-bottom: 10rem;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+        height: 0;
+    }
+
+    &::-webkit-scrollbar-track{
+        background-color: red;
+    }
+}
+
+.card {
+    @include flex(flex-start,flex-start,column);
+    min-height:max-content;
+    width:30rem;
+    &__title {
+        @include heading_section($tangerine,clamp(1.8rem, 2.5vw, 3.7rem));
+    }
+    &__content {
+        margin-top: 2rem;
+        @include content_section(color-mix(in srgb, $jet 45%, $white 55%),clamp(1.4rem, 1.5vw, 1.65rem), 1.4);
+        
+    }
+}

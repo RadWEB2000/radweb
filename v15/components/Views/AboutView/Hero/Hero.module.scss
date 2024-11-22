@@ -1,0 +1,84 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    background-color: $black_1;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    margin-bottom: 4rem;
+}
+.breadcrumbs {
+    @include flex(center,flex-start);
+    grid-column: 1/-1;
+    margin:1rem 0 2rem 0;
+    min-height: 3rem;
+    padding: 0rem 1vw;
+}
+
+.container {
+    @include flex(flex-start,flex-start,column);
+    grid-column: 1/-1;
+    margin-bottom: 3rem;
+    padding:0 2rem;
+}
+.headings {
+    @include flex(flex-start,flex-start,column);
+}
+
+.title, 
+.slogan {
+    @include heading_section;
+}
+
+.title {
+    color:$orange;
+    font-size: clamp(2rem, 10.5vw, 17rem);
+}
+
+.slogan {
+    font-size: clamp(2rem, 4vw, 5rem);
+    font-weight: 500;
+    margin-top: 1.75rem;
+}
+
+.content {
+    @include content_section;
+    color:color-mix(in srgb, $jet 40%, $white_platinum 60%);
+    font-size: clamp(1.6rem, 2vw, 2.25rem);
+    margin-top: 2rem;
+}
+
+.media {
+    aspect-ratio: 4/3;
+    display: block;
+    grid-column: 1/-1;
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    filter:grayscale(1);
+    object-fit: contain;
+    object-position: bottom left;
+    transform: rotateY(180deg);
+}
+
+@media (min-width:560px){
+    
+    .container {
+        min-height:70dvh;
+        grid-column: 1/8;
+        margin-bottom: 12vh;
+    }
+
+    .content {
+        @include content_section;
+        margin-top: 3rem;
+    }
+    
+    .media {
+        aspect-ratio: unset;
+        grid-column:8/-1;
+    }
+}

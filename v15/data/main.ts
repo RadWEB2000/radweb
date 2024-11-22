@@ -27,11 +27,11 @@ export const main:t_main = {
             },
             {
                 title:`O mnie`,
-                url:`/`,
+                url:`/o-mnie`,
             },
             {
                 title:`Blog`,
-                url:`/`,
+                url:`/blog`,
             },
             {
                 title:`Oferta`,

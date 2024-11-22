@@ -1,0 +1,12 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    margin:15vh auto;
+    width:90vw;
+}
+
+.content {
+    @include font(clamp(1.7rem, 2vw, 3.73rem), 400, 1.6, start, pretty);
+}
