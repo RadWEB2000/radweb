@@ -1,3 +1,9 @@
 @import "../../../../styles/Mixins.scss";
 @import "../../../../styles/Utils.scss";
 @import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center, flex-end, row wrap, .5rem);
+    grid-column: 3;
+    // background: darkgreen;
+}

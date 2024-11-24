@@ -1,6 +1,6 @@
 import BlogProvider from "context/BlogContext"
 import { blog } from "data/blog"
-import { Hero, Search, Sort } from "v-blog/index"
+import {  Container,  Hero } from "v-blog/index"
 
 export default function BlogPage() {
     return (
@@ -10,12 +10,12 @@ export default function BlogPage() {
             />
             <main>
                 <BlogProvider>
-                    <Search
-                        label="Znajdź artykuł"
-                        placeholder="Szukaj"
-                    />
-                    <Sort
-                        {...blog.sort}
+                    <Container
+                        categories={blog.categories}
+                        controlPanel={{
+                            search:blog.search,
+                            sort:blog.sort
+                        }}
                     />
                 </BlogProvider>
             </main>

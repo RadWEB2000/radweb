@@ -1,0 +1,26 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    // background-color: brown;
+    grid-row: 1/4;
+}
+
+.title {
+    @include heading_section;
+    font-size: clamp(1.6rem, 2vw,3rem);
+}
+
+.categories {
+    @include flex(flex-start,flex-start, column, .4rem,.4rem);
+    margin-top: 1.75rem;
+}
+
+.category {
+    @include flex(center,flex-start, row nowrap, .24rem);
+    background-color: darkslategray;
+    display: grid;
+    grid-template-columns: 2.65rem calc(100% - 2.65rem);
+    width:max-content;
+}
