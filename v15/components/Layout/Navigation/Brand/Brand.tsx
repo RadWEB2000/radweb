@@ -11,6 +11,7 @@ export default function Brand(props:tBrand){
             <Link
                 className={css.container}
                 href={props.url}
+                prefetch
                 {...props.props}
             >
                 <Image

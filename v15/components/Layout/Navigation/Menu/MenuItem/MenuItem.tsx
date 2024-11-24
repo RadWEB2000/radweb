@@ -16,6 +16,7 @@ export default function MenuItem(props:tMenuItem){
             href={props.url}
             data-theme={props.theme}
             onClick={toggle}
+            prefetch
             {...props.props}
         >
             {props.title}

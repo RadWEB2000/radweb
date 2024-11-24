@@ -1,5 +1,6 @@
+import BlogProvider from "context/BlogContext"
 import { blog } from "data/blog"
-import { Hero } from "v-blog/index"
+import { Hero, Search, Sort } from "v-blog/index"
 
 export default function BlogPage() {
     return (
@@ -7,6 +8,17 @@ export default function BlogPage() {
             <Hero
                 {...blog.hero}
             />
+            <main>
+                <BlogProvider>
+                    <Search
+                        label="Znajdź artykuł"
+                        placeholder="Szukaj"
+                    />
+                    <Sort
+                        {...blog.sort}
+                    />
+                </BlogProvider>
+            </main>
             <h1>blog</h1>
         </>
     )

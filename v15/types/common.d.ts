@@ -2,7 +2,7 @@
 export {};
 
 import { ImageProps } from "next/image";
-import { AnchorHTMLAttributes, VideoHTMLAttributes } from "react";
+import { AnchorHTMLAttributes, InputHTMLAttributes, VideoHTMLAttributes } from "react";
 declare global {
     type tImage = {
         altText:string;
@@ -36,4 +36,6 @@ declare global {
     }
 
     type tTheme = "dark" | "light";
+
+    type tInput = InputHTMLAttributes<HTMLInputElement>;
 }
