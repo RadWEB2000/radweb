@@ -1,0 +1,33 @@
+@import "../../../../styles/Mixins.scss";
+@import "../../../../styles/Utils.scss";
+@import "../../../../styles/Variables.scss";
+
+.wrapper {
+    align-items: start;
+    display: grid;
+    gap:1.2rem;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 34rem));
+    justify-items: center;
+}
+
+@media (min-width:585px){
+    .wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(10rem, calc(50vw - 2.2rem)));
+    }
+}
+
+@media (min-width:800px){
+    .wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 27rem));
+    }
+}
+@media (min-width:1000px){
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width:1350px){
+    .wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

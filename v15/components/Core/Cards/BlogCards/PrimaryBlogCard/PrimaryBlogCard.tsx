@@ -4,7 +4,6 @@ import Link from "next/link";
 import {tPrimaryBlogCard} from "cards/blog/PrimaryBlogCard/PrimaryBlogCard.models";
 import getExceprtLength from "lib/getExceprtLength";
 export default function PrimaryBlogCard(props:tPrimaryBlogCard){
-    console.log(props.tag)
     return (
         <Link
             className={css.wrapper}

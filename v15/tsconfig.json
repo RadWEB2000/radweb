@@ -53,7 +53,7 @@
       "v-glossary/*":["./components/Views/GlossaryView/*"],
       "v-home/*":["./components/Views/HomeView/*"],
       "v-policy/*":["./components/Views/PolicyView/*"],
-      "v-post/*":["./components/Views/PostView/*"],
+      "v-article/*":["./components/Views/ArticleView/*"],
       "v-project/*":["./components/Views/ProjectView/*"],
       "v-projects/*":["./components/Views/ProjectsView/*"],
       "v-service/*":["./components/Views/ServiceView/*"],

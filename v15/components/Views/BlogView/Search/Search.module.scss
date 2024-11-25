@@ -1,3 +1,31 @@
 @import "../../../../styles/Mixins.scss";
 @import "../../../../styles/Utils.scss";
 @import "../../../../styles/Variables.scss";
+
+.wrapper {
+    @include flex(center,flex-start, row nowrap, 1.3rem, .3rem);
+    min-height:4rem;
+    padding: 0rem 1rem;
+    width:clamp(10rem, 120rem, 98%);
+}
+
+.label {
+    @include font(clamp(1.5rem, 1.6vw, 1.9rem), 400, 1, start, null);
+}
+
+.field {
+    @include font(clamp(1.3rem, 1.4vw, 1.5rem), 400, 1, start);
+    @include size(100%,clamp(10rem, 120rem, 95%));
+    background-color: color-mix(in srgb, $white_ghost 80%, $jet 20%);
+    border:unset;
+    border-radius: .64rem;
+    padding: 0.8rem 1rem;
+    transition:.2s linear background-color, .2s linear color;
+    &::placeholder {
+        color: $black_1;
+    }
+    &:focus-within,
+    &:hover {
+        background-color: $white_ghost;
+    }
+}

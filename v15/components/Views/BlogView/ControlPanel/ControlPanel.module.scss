@@ -3,7 +3,16 @@
 @import "../../../../styles/Variables.scss";
 
 .wrapper {
-    @include flex(center, flex-end, row wrap, .5rem);
-    grid-column: 3;
-    // background: darkgreen;
+    @include flex(center, flex-end, row wrap, 1.5rem, .65rem);
+    grid-column: 1/-1;
+    grid-row: 1;
+    min-height: 5rem;
+    padding: 0rem 2rem;
+    width: 100%;
+}
+
+@media (min-width:1000px){
+    .wrapper {
+        grid-column: 3;
+    }
 }

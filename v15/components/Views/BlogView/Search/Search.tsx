@@ -15,6 +15,7 @@ export default function Search(props:tSearch){
             <input 
                 className={css.field}
                 id="search"
+                placeholder={props.placeholder}
                 name="search"
                 type="search" 
                 {...props.props}

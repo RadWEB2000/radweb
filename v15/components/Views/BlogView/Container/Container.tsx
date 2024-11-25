@@ -1,6 +1,6 @@
 import css from "v-blog/Container/Container.module.scss";
 import {tContainer} from "v-blog/Container/Container.models"
-import {Categories, ControlPanel as Panel} from "v-blog/index"
+import {Articles, Categories, ControlPanel as Panel} from "v-blog/index"
 
 export default function Container(props:tContainer){
     return (
@@ -22,7 +22,14 @@ export default function Container(props:tContainer){
             <div
                 className={css.articles}
             >
-                <h2>teksty</h2>
+                {
+                    props.articles ?
+                    <Articles
+                        {...props.articles}
+                    /> :
+                    <p>Brak wpisów</p>
+                
+                }
             </div>
         </div>
     )

@@ -5,7 +5,6 @@
 .wrapper {
     @include flex(flex-start,center,column);
     background-color: $black_3;
-    // min-height:80vh;
     padding:7vh 1vw 7vh 5vw;
     & >*{
         width: 100%;
@@ -21,13 +20,10 @@
     margin-top: 5rem;
     min-height:max-content;
     overflow-x: scroll;
+    scrollbar-width: 0;
 
     &::-webkit-scrollbar {
         height: 0;
-    }
-
-    &::-webkit-scrollbar-track{
-        background-color: red;
     }
 }
 
@@ -39,14 +35,13 @@
         @include heading_section($tangerine,clamp(1.8rem, 2.5vw, 3.7rem));
     }
     &__content {
-        margin-top: 2rem;
         @include content_section(color-mix(in srgb, $jet 45%, $white 55%),clamp(1.4rem, 1.5vw, 1.65rem), 1.4);
+        margin-top: 2rem;
         
     }
 }
 
 @media (min-width:950px){
-
     .wrapper {
         min-height:60vh;
     }

@@ -16,6 +16,7 @@ export default function BlogPage() {
                             search:blog.search,
                             sort:blog.sort
                         }}
+                        articles={blog.articles}
                     />
                 </BlogProvider>
             </main>

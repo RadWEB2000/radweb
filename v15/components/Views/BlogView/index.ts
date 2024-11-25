@@ -1,3 +1,4 @@
+export {default as Articles} from "v-blog/Articles/Articles"
 export {default as Categories} from "v-blog/Categories/Categories";
 export {default as Container} from "v-blog/Container/Container";
 export {default as ControlPanel} from "v-blog/ControlPanel/ControlPanel";

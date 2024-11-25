@@ -1,3 +1,36 @@
 @import "../../../../styles/Mixins.scss";
 @import "../../../../styles/Utils.scss";
 @import "../../../../styles/Variables.scss";
+
+
+.wrapper {
+    @include flex(center,flex-start, row nowrap, 1.3rem, .3rem);
+    display: none;
+    min-height:4rem;
+    width:max-content;
+}
+
+.label {
+    @include font(clamp(1.5rem, 1.6vw, 1.9rem), 400, 1, start, null);
+}
+
+.options {
+    @include font(clamp(1.3rem, 1.4vw, 1.5rem), 400, 1, start);
+    cursor: pointer;
+    background-color: color-mix(in srgb, $white_ghost 80%, $jet 20%);
+    border-radius: .64rem;
+    min-height: 2rem;
+    padding: 0.7rem 1rem;
+    transition:.2s linear background-color;
+    &:focus-within,
+    &:hover {
+        background-color: $white_ghost;
+    }
+}
+
+.option {
+    &:checked{
+        background-color: $tangerine;
+        color:$black_1;
+    }
+}

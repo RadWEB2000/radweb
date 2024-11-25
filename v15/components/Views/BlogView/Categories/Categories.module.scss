@@ -3,8 +3,11 @@
 @import "../../../../styles/Variables.scss";
 
 .wrapper {
-    // background-color: brown;
-    grid-row: 1/4;
+    grid-column: 1/-1;
+    grid-row: 2;
+    height:max-content;
+    margin-top: 1rem;
+    padding: .4rem;
 }
 
 .title {
@@ -13,14 +16,56 @@
 }
 
 .categories {
-    @include flex(flex-start,flex-start, column, .4rem,.4rem);
-    margin-top: 1.75rem;
+    @include flex(flex-start,flex-start, column, .4rem,1.4rem);
+    margin-top: 2rem;
 }
 
 .category {
     @include flex(center,flex-start, row nowrap, .24rem);
-    background-color: darkslategray;
     display: grid;
-    grid-template-columns: 2.65rem calc(100% - 2.65rem);
+    grid-template-columns: 1.7rem calc(100% - 1.7rem);
     width:max-content;
+
+    &__icon {
+        @include flex(center,center);
+        @include size(1.7rem,1.7rem);
+        color:transparent;
+        font-size: 1.52rem;
+        opacity: 0;
+        transition:.2s linear color, .2s linear opacity, .2s linear visibility;
+        visibility: hidden;
+    }
+
+    &__label {
+        @include font(clamp(1.45rem,1.5vw, 1.65rem), 400, 1, start, null);
+        transition:.2s linear color, .2s linear transform;
+        transform:translateX(calc(-1 * (1.7rem + .24rem)))
+    }
+    &:focus-within,
+    &:hover {
+        .category__icon,
+        .category__label {
+            color:$orange;
+        }
+
+        .category__icon {
+            opacity: 1;
+            visibility: visible;
+        }
+        .category__label {
+            transform:translateX(0)
+        }
+    }
+}
+
+@media (min-width:800px){
+    .wrapper {
+        grid-column: 1/2;
+        grid-row: 2/4;
+    }   
+}
+@media (min-width:1000px){
+    .wrapper {
+        grid-row: 1/4;
+    }   
 }
