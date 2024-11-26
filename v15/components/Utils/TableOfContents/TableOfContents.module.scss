@@ -1,0 +1,37 @@
+@import "../../../styles/Mixins.scss";
+@import "../../../styles/Utils.scss";
+@import "../../../styles/Variables.scss";
+
+.wrapper {
+    background-color: color-mix(in srgb, $black_2 70%, $blue_delift 30%);
+    border-radius: 2rem;
+    margin:5rem auto;
+    padding: 3vh 4vw;
+}
+
+.title {
+    @include heading_section;
+    font-size: clamp(2.3rem, 3.5vw, 5.25rem);
+    font-family: $ubuntu;
+}
+
+.menu {
+    margin-top: 2rem;
+    @include flex(flex-start,flex-start, column, null, .6rem);
+
+    &__item {
+        @include content_section;
+        transition: .12s linear color;
+        &:focus-within,
+        &:hover {
+            color:color-mix(in srgb, $jet 30%, $white_ghost 70%);
+        }
+    }
+
+}
+
+@media (min-width:800px){
+    .wrapper {
+        padding: 4rem 4.25vw;
+    }
+}

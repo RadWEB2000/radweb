@@ -1,54 +1,42 @@
 import css from "v-article/Hero/Hero.module.scss"
 import Image from "next/image"
 import { Breadcrumbs } from "parts/Utils"
-
-export default function Hero(){
+import { tHero } from "v-article/Hero/Hero.models"
+export default function Hero(props:tHero){
     return (
         <header
             className={css.wrapper}
         >
             <Breadcrumbs
                 theme="light"
-                url={[
-                    {
-                        title:`Start`,
-                        url:`/`
-                    },
-                    {
-                        title:`Blog`,
-                        url:`/blog`
-                    },
-                    {
-                        title:`Dokumentacje React: która jest najlepsza?`,
-                        url:`/blog/wpis`
-                    },
-                ]}
+                url={props.breadcrumbs}
             />
             <h1
                 className={css.title}
             >
-                Dokumentacje React: Która jest najlepsza?
+                {props.title}
             </h1>
             <p
                 className={css.excerpt}
             >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ab, asperiores exercitationem labore recusandae nesciunt dignissimos omnis odio consectetur, laboriosam id ex inventore corrupti consequuntur. Praesentium vero aliquid ex exercitationem?
+                {props.excerpt}
             </p>
             <p
                 className={css.release}
             >
-                21 sierpnia 2021
+                {props.release}
             </p>
             <picture
                 className={css.media}
             >
                 <Image
-                     alt={""}
+                     alt={props.image.altText}
                      className={css.image}
                      fill
                      loading="eager"
                      priority
-                     src={`https://images.unsplash.com/photo-1429734956993-8a9b0555e122?q=80&w=2104&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+                     src={props.image.sourceSrc}
+                     title={props.image.title}
                      quality={40}
                 />
             </picture>

@@ -21,7 +21,7 @@
 }
 
 .link {
-    @include font(clamp(1.3rem, 1.45vw, 1.6rem), 400, 1, start, null, $martian);
+    @include font(clamp(1.3rem, 1.45vw, 1.6rem), 400, 1.5, start, null, $martian);
     min-height:2.4rem;
 
 }
