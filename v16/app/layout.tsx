@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Anton, Ubuntu } from 'next/font/google';
-import './globals.css';
+import '../styles/Global.css';
 
 const anton = Anton({
 	weight: ['400'],
