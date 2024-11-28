@@ -3,7 +3,7 @@ import { Hero } from "v-article/index"
 import { article } from 'data/article';
 import { TableOfContents } from "utils/index";
 
-export default function BlogPage() {
+export default function ArticlePage() {
     return (
         <>
             <Hero

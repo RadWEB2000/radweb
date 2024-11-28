@@ -1,0 +1,5 @@
+touch .husky/pre-commit
+chmod +x .husky/pre-commit
+
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"

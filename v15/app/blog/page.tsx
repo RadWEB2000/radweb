@@ -20,7 +20,6 @@ export default function BlogPage() {
                     />
                 </BlogProvider>
             </main>
-            <h1>blog</h1>
         </>
     )
 }

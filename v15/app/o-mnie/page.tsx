@@ -18,7 +18,6 @@ export default function AboutPage() {
                     {...about.career}
                 />
             </main>
-            <h1>blog</h1>
         </>
     )
 }

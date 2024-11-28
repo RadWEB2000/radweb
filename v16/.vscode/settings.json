@@ -1,0 +1,46 @@
+{
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.autoClosingBrackets": "always",
+	"editor.autoClosingComments": "always",
+	"editor.autoClosingDelete": "always",
+	"editor.autoIndent": "brackets",
+	"editor.fontLigatures": true,
+	"editor.fontSize": 13,
+	"editor.autoClosingQuotes": "always",
+	"editor.autoClosingOvertype": "always",
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"prettier.requireConfig": true,
+	"eslint.format.enable": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "always",
+		"source.organizeImports": "always"
+	},
+	"editor.tabSize": 2,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false
+}
