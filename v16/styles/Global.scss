@@ -1,6 +1,4 @@
-@import './base.css';
-@import './components.css';
-@import './utilities.css';
+@use 'variables' as *;
 
 :root {
 	--black: rgb(3, 3, 3);
@@ -9,4 +7,10 @@
 	--platinum: rgb(226, 226, 226);
 	--tangerine: rgb(250, 114, 60);
 	--white: rgb(255, 255, 255);
+}
+
+body {
+	background-color: $platinum;
+	font-family: var(--ubuntu);
+	transition: 0.12s linear all;
 }

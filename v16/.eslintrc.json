@@ -1,24 +1,17 @@
 {
-  "extends": [
-      "next/core-web-vitals", 
-      "next/typescript",
-      "prettier",
-      "plugin:tailwindcss/recommended"
-  ],
-  "parserOptions": {
-    "ecmaVersion": 2020,
-    "sourceType": "module"
-  },
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
-  },
-  "plugins": ["react", "tailwindcss"],
-  "rules": {
-    "indent": ["error", "tab"],
-    "tailwindcss/classnames-order": "warn",
-    "tailwindcss/no-custom-classname": "off",
-    "@next/next/no-img-element": "off" 
-  }
+	"extends": ["next/core-web-vitals", "next/typescript", "prettier"],
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module"
+	},
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node": true
+	},
+	"plugins": ["react", "tailwindcss"],
+	"rules": {
+		"indent": ["tab"],
+		"@next/next/no-img-element": "off"
+	}
 }

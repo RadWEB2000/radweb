@@ -1,6 +1,6 @@
+import "css/Global.scss";
 import type { Metadata } from 'next';
 import { Anton, Ubuntu } from 'next/font/google';
-import '../styles/Global.css';
 
 const anton = Anton({
 	weight: ['400'],
@@ -27,8 +27,13 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='pl'>
-			<body className={`${anton.variable} ${ubuntu.variable} antialiased`}>
+		<html
+			lang='pl'
+			suppressHydrationWarning
+		>
+			<body
+				className={`${anton.variable} ${ubuntu.variable} antialiased`}
+			>
 				{children}
 			</body>
 		</html>
