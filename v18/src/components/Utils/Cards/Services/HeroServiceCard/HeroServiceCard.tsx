@@ -1,3 +1,4 @@
+"use client";
 import css from "@/cards/Services/HeroServiceCard/HeroServiceCard.module.scss";
 import { tHeroServiceCard } from "@/cards/Services/HeroServiceCard/HeroServiceCard.models";
 import Link from "next/link";
