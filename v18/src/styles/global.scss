@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: rgb(3, 3, 3);
+  --brown: rgb(41, 24, 21);
+  --gray: rgb(136, 136, 136);
+  --jet: rgb(51, 51, 51);
+  --orange: rgb(255, 89, 0);
+  --platinum: rgb(226, 226, 226);
+  --purple: rgb(67, 66, 113);
+  --rosewood: rgb(82, 0, 0);
+  --tangerine: rgb(250, 114, 60);
+  --white: rgb(255, 255, 255);
+}
+
+::after,
+::before {
+  content: "";
+  position: absolute;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--black),
+    color-mix(in srgb, var(--black) 80%, var(--jet) 20%),
+    color-mix(in srgb, var(--black) 60%, var(--brown) 40%)
+  );
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+  font-family: var(--inter);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li,
+ul,
+ol {
+  list-style: none;
+}

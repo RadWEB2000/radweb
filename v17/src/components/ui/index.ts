@@ -1,2 +1,2 @@
-export {default as Badge} from "./Badge"
-export {default as BlogCard} from "./BlogCard";
+export { default as Badge } from "@/ui/Badge";
+export { default as BlogCard } from "@/ui/BlogCard";

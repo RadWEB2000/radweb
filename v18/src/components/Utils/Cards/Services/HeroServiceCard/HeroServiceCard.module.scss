@@ -1,0 +1,77 @@
+@import "../../../../../styles/vars.scss";
+.wrapper {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  flex-flow: column;
+  width: 100%;
+}
+
+.container {
+  background-color: color-mix(
+    in srgb,
+    rgba($jet, 0.9) 80%,
+    rgba($purple, 0.9) 20%
+  );
+  border-radius: 1rem;
+  color: $white;
+  min-height: 20rem;
+  display: grid;
+  gap: 1.35rem;
+  padding: 0.65rem;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+}
+
+.media {
+  padding: 0.35rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  grid-column: 1/4;
+  position: relative;
+  display: block;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.box {
+  //   background-color: pink;
+  grid-column: 4/-1;
+  width: 100%;
+}
+
+.title {
+  font-size: clamp(1.5rem, 1.8vw, 3rem);
+  display: inline-block;
+  line-height: 1;
+  margin-top: 1rem;
+  font-family: var(--anton);
+}
+
+.button {
+  display: flex;
+  float: right;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  font-size: 3.4rem;
+  width: 4rem;
+  color: $white;
+  transition: 0.12s linear color;
+  &:focus-within,
+  &:hover {
+    color: color-mix(in srgb, $jet 30%, $platinum 70%);
+  }
+}
+
+.excerpt {
+  font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+  font-weight: 300;
+  max-width: 30ch;
+  line-height: 1.5;
+  text-wrap: pretty;
+  margin-top: 1.5rem;
+}

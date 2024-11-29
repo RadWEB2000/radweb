@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: rgb(3, 3, 3);
+  --gray: rgb(136, 136, 136);
+  --jet: rgb(51, 51, 51);
+  --orange: rgb(255, 89, 0);
+  --platinum: rgb(226, 226, 226);
+  --tangerine: rgb(250, 114, 60);
+  --white: rgb(255, 255, 255);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--black),
+    color-mix(in srgb, var(--black) 60%, var(--jet) 40%)
+  );
+
+  font-size: 1.6rem;
+  font-family: var(--inter);
+}
+
+li,
+ul,
+ol {
+  list-style: none;
+}

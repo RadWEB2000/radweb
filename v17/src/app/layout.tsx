@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import "../styles/input.css";
-import "../styles/output.css";
+import "@/css/input.css";
+import "@/css/global.css";
+import { anton, inter } from "@/data/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` antialiased`}>{children}</body>
+      <body className={` ${anton.variable} ${inter.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
