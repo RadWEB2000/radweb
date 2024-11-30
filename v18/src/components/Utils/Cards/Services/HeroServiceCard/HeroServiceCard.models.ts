@@ -10,4 +10,5 @@ export type tHeroServiceCard = {
     title: string;
     excerpt: string;
   }[];
+  className?:string;
 };

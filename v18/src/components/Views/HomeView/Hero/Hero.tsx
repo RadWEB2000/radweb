@@ -17,15 +17,13 @@ export default function Hero() {
       </figure>
       <section className={css.container}>
         <span className={css.line} />
-        <div className={css.box}>
-          <h1 className={css.title}>RadWEB</h1>
+          <h1 className={css.title}>IdeaCraft</h1>
           <p className={css.content}>
             Aker invests in residential communities at the intersection of urban
             and outdoor environments.
           </p>
-        </div>
-        <div className={css.details}>
           <Services
+            className={css.services}
             cards={[
               {
                 button: {
@@ -65,12 +63,13 @@ export default function Hero() {
               },
             ]}
           />
-          <ul className={css.buttons}>
+          <ul
+            className={css.buttons}
+          >
             <Button variant="link" title="Blog" url="#" />
             <Button variant="link" title="Oferta" url="#" />
             <Button variant="link" title="Kontakt" url="#" />
           </ul>
-        </div>
       </section>
     </header>
   );

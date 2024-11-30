@@ -2,28 +2,29 @@
 .wrapper {
   background-color: color-mix(
     in srgb,
-    rgba($jet, 0.9) 80%,
-    rgba($purple, 0.9) 20%
+    rgba($jet, 0.75) 80%,
+    rgba($purple, 0.75) 20%
   );
+  backdrop-filter: blur(5px);
   border-radius: 1rem;
   display: flex;
+  height: 100%;
+  overflow: hidden;
   align-items: start;
   justify-content: flex-start;
+  max-height: 30rem;
   flex-flow: column;
   width: 100%;
+  position: relative;
 }
 
 .container {
-  background-color: color-mix(
-    in srgb,
-    rgba($jet, 0.9) 80%,
-    rgba($purple, 0.9) 20%
-  );
   border-radius: 1rem;
   color: $white;
-  min-height: 20rem;
+  height: 100%;
   display: grid;
   gap: 1.35rem;
+  position: absolute;
   padding: 0.65rem;
   grid-template-columns: repeat(7, 1fr);
   width: 100%;
@@ -50,7 +51,7 @@
 }
 
 .title {
-  font-size: clamp(1.5rem, 1.8vw, 3rem);
+  font-size: clamp(1.8rem, 2.4vw, 5rem);
   display: inline-block;
   line-height: 1;
   margin-top: 1rem;
@@ -81,3 +82,5 @@
   text-wrap: pretty;
   margin-top: 1.5rem;
 }
+
+
