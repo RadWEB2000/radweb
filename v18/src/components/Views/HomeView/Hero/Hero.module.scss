@@ -5,7 +5,11 @@
   display: grid;
   grid-template-areas: "layer";
   height: 100vh;
+  margin-bottom: 10vh;
   position: relative;
+  position: sticky;
+  top: 0;
+  z-index: -1;
   & > * {
     grid-area: layer;
   }
@@ -13,7 +17,7 @@
 
 .media {
   display: block;
-  filter: brightness(60%) grayscale(0.34);
+  filter: brightness(90%);
   height: 100%;
   position: relative;
   width: 100%;
@@ -30,25 +34,26 @@
 }
 
 .container {
-  background-color: rgba($black, .5);
+  background-color: rgba($black, .15);
   bottom: 0;
   color: $white;
   display: grid;
   gap:.5rem;
   grid-template-rows:2px repeat(7,1fr);
   height: 90%;
-  padding: 3rem 1rem 1rem 1rem;
+  padding: 3rem 1rem 2.5rem 1rem;
   position: absolute;
   width: 100%;
   z-index: 0;
 }
 
 .line {
+  background-color: $platinum;
   border-radius: 1rem;
   grid-column: 1/-1;
   grid-row: 1;
-  height: 1.6px;
-  opacity: 0.5;
+  height: 1px;
+  opacity: 0.35;
   width: 100%;
 }
 
@@ -65,7 +70,7 @@
   align-items: end;
   display: flex;
   font-family: var(--anton);
-  font-size: clamp(4rem, 12vw,32rem);
+  font-size: clamp(4rem, 10vw,20rem);
   grid-row: 3/5;
   justify-content: flex-start;
   line-height: 1;
@@ -89,7 +94,7 @@
   .container {
     grid-template-columns: repeat(12, 1fr);
     height: 60%;
-    padding: 3rem 2rem 1rem 2rem;
+    padding: 3rem 2rem 6rem 2rem;
   }
   
   .content {
@@ -111,6 +116,9 @@
   }
 
   .services {
-    grid-row: 2/8;
+    grid-row: 3/7;
+  }
+  .buttons {
+    grid-row: 7/8;
   }
 }

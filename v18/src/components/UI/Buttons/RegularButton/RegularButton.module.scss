@@ -15,6 +15,6 @@
   transition: 0.12s linear background-color;
   &:focus-within,
   &:hover {
-    background-color: rgba($platinum, 0.3);
+    background-color: rgba($platinum, 0.5);
   }
 }
