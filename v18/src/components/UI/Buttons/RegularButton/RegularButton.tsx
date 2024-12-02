@@ -1,6 +1,7 @@
 import css from "@/buttons/RegularButton/RegularButton.module.scss";
-import { tRegularButton } from "@/buttons/RegularButton/RegularButton.models";
 import Link from "next/link";
+import { tRegularButton } from "@/buttons/RegularButton/RegularButton.models";
+
 export default function RegularButton(props: tRegularButton) {
   if (props.variant === "link") {
     return (

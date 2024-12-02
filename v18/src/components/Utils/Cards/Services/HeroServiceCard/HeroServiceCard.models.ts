@@ -1,14 +1,16 @@
 import { AnchorHTMLAttributes } from "react";
 
 export type tHeroServiceCard = {
-  cards: {
-    button: {
-      url: string;
-      props?: AnchorHTMLAttributes<HTMLAnchorElement>;
-    };
-    image: tImage;
-    title: string;
-    excerpt: string;
-  }[];
-  className?:string;
+  button: {
+    url: string;
+    props?: AnchorHTMLAttributes<HTMLAnchorElement>;
+  };
+  image: tImage;
+  title: string;
+  excerpt: string;
+};
+
+export type tHeroServiceCards = {
+  cards: tHeroServiceCard[];
+  className?: string;
 };

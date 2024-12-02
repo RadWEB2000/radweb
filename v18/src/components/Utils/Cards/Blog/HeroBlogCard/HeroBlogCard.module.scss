@@ -1,0 +1,55 @@
+@import "../../../../../styles/vars.scss";
+
+.wrapper {
+  align-items: center;
+  backdrop-filter: blur(2.5px);
+  background-color: rgba($black, 0.85);
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  max-height: 7.5rem;
+  overflow: hidden !important;
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 7rem calc(100% - 7rem - 4.5rem) 4.5rem;
+  height: 100%;
+  left: 0;
+  padding: 0rem 1rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.release {
+  color: color-mix(in srgb, $platinum 60%, $jet 40%);
+  font-size: clamp(0.9rem, 1.4vw, 1.48rem);
+}
+
+.title {
+  font-size: clamp(1.1rem, 1.5vw, 1.7rem);
+}
+
+.button {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 2.53rem;
+  height: 3.85rem;
+  transition: 0.2s linear color;
+  width: 3.85rem;
+  &:focus-within,
+  &:hover {
+    color: color-mix(in srgb, $jet 40%, $platinum 60%);
+  }
+}
+
+@media (min-width: 850px) {
+  .container {
+    grid-template-columns: 10rem calc(100% - 10rem - 4.5rem) 4.5rem;
+  }
+}
