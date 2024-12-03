@@ -3,7 +3,7 @@ import service_img_1 from "@/img/abstract-one.webp";
 import service_img_2 from "@/img/abstract-two.webp";
 import service_img_3 from "@/img/girls.webp";
 import overview_img from "@/img/overview.webp";
-import about_img from "@/img/business_grayscale_no_bg.webp";
+import about_img from "@/img/r-adamczyk-gray.webp";
 
 export default function HomePage() {
   return (

@@ -6,8 +6,9 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
+  gap: 2rem;
   margin: 15vh 0;
-  padding: 0rem 10rem;
+  padding: 0 0 0 10rem;
 }
 
 .container {
