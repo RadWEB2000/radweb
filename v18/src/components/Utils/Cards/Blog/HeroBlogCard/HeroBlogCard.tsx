@@ -11,9 +11,9 @@ export default function HeroBlogCard(props: tHeroBlogCards) {
   const { currentIndex, setIsPaused } = useCarousel(props.cards.length);
 
   const slideVariants = {
-    enter: { x: 25, opacity: 0 },
+    enter: { x: -25, opacity: 0 },
     center: { x: 0, opacity: 1 },
-    exit: { x: -25, opacity: 0 },
+    exit: { x: 25, opacity: 0 },
   };
 
   return (

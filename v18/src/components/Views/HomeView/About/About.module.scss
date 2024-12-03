@@ -1,0 +1,50 @@
+@import "../../../../styles/vars.scss";
+
+.wrapper {
+  background-image: linear-gradient(to bottom right, $orange, $giants);
+  color: $black;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  margin: 15vh 0;
+  padding: 0rem 10rem;
+}
+
+.container {
+  grid-column: 1/7;
+  min-height: 95vh;
+  margin: 3rem 0 5rem;
+  padding: 3rem;
+}
+
+.title {
+  font-family: var(--anton);
+  font-size: clamp(2rem, 8vw, 16rem);
+  font-weight: 700;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.media {
+  margin-top: 10rem;
+  display: block;
+  grid-column: 7/-1;
+  position: relative;
+}
+.image {
+  object-fit: contain;
+  object-position: bottom right;
+  transform-origin: bottom;
+}
+
+.content {
+  color: $black;
+  font-size: clamp(1.35rem, 1.75vw, 2rem);
+  line-height: 1.95;
+  margin: 1.5rem 0;
+  max-width: 70ch;
+  text-wrap: pretty;
+}
+
+@media (min-width: 725px) {
+}

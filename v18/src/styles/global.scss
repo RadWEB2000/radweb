@@ -1,3 +1,4 @@
+@import "./vars.scss";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -56,10 +57,29 @@ ol {
   list-style: none;
 }
 
-main {
-  background: #000;
+@keyframes main_home {
+  from {
+    background-color: rgba($black, 0);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    background-color: rgba($black, 1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.main__home {
+  animation-range: entry 0% cover 15%;
+  animation-name: main_home;
+  animation-fill-mode: both;
+  animation-duration: 1ms;
+  animation-timing-function: linear;
+  animation-timeline: view(y);
   color: #fff;
   position: relative;
-  padding: 3rem;
+  min-height: 170vh;
+  padding: 15vh 0 10rem 0;
   z-index: 3;
 }

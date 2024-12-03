@@ -1,5 +1,6 @@
 $black: rgb(3, 3, 3);
 $brown: rgb(41, 24, 21);
+$giants: rgb(253, 58, 14);
 $gray: rgb(136, 136, 136);
 $jet: rgb(51, 51, 51);
 $orange: rgb(255, 89, 0);
@@ -8,3 +9,5 @@ $purple: rgb(16, 16, 53);
 $rosewood: rgb(44, 2, 2);
 $tangerine: rgb(250, 114, 60);
 $white: rgb(255, 255, 255);
+
+$content: color-mix(in srgb, $platinum 60%, $jet 40%);

@@ -1,0 +1,119 @@
+@import "../../../../styles/vars.scss";
+
+@keyframes show_x_right {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-15%);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+@keyframes show_x_left {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(15%);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+.wrapper {
+  display: grid;
+  gap: 1.5rem;
+  margin: 12vh auto 2vh;
+  width: clamp(5rem, 150rem, 95%);
+}
+
+.title,
+.content,
+.media {
+  animation-duration: 2ms;
+  animation-fill-mode: both;
+  animation-range: entry 5% cover 30%;
+  animation-timeline: view(y);
+  animation-timing-function: linear;
+}
+
+.slogan {
+  background-color: $orange;
+  border-radius: 2rem 0.45rem 2rem 0.45rem;
+  box-shadow: 0 0 1rem 1rem rgba($black, 0.5);
+  color: $black;
+  font-size: clamp(1.5rem, 1.7vw, 2.4rem);
+  left: -0.5rem;
+  padding: 1.15rem 2rem;
+  position: absolute;
+  top: -0.85rem;
+}
+
+.media {
+  aspect-ratio: 4/3;
+  animation-name: show_x_right;
+  display: block;
+  grid-column: 1/5;
+  max-height: 60rem;
+  position: relative;
+  z-index: 0;
+}
+
+.image {
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: left;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.content,
+.title {
+  animation-name: show_x_left;
+}
+
+.container {
+  grid-column: 5/-1;
+  min-height: 60vh;
+}
+
+.title {
+  font-family: var(--anton);
+  font-size: clamp(2rem, 8vw, 16rem);
+  font-weight: 700;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.content {
+  color: $content;
+  font-size: clamp(1.35rem, 1.75vw, 2rem);
+  line-height: 1.5;
+  margin-top: 1.5rem;
+  max-width: 70ch;
+  text-wrap: pretty;
+}
+
+@media (min-width: 725px) {
+  .wrapper {
+    gap: 3rem;
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  .media {
+    aspect-ratio: unset;
+  }
+
+  .title {
+    font-size: clamp(2rem, 5vw, 12rem);
+  }
+
+  .content {
+    margin-top: 3rem;
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../../../styles/vars.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  width: max-content;
+  //   background-color: #000;
+  border-radius: 1rem;
+  border: 2px solid #000;
+  color: #fff;
+  color: $black;
+  padding: 1.25rem 3rem;
+}
+
+.title {
+  font-size: clamp(1.45rem, 1.5vw, 1.9rem);
+  font-weight: 600;
+}
+
+.icon {
+  line-height: 1;
+  font-size: 2rem;
+}
