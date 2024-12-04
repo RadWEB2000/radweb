@@ -15,6 +15,7 @@ export default function About(props: tAbout) {
         <Button
           title={props.button.title}
           url={props.button.url}
+          theme="dark"
           variant="link"
           props={props.button.props}
         />

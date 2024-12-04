@@ -9,7 +9,7 @@ export default function PrimaryButton(props: tPrimaryButton) {
       <Link
         className={css.wrapper}
         href={props.url}
-        // theme={props.theme}
+        data-theme={props.theme}
         {...props.props}
       >
         <span className={css.title}>{props.title}</span>
@@ -20,11 +20,7 @@ export default function PrimaryButton(props: tPrimaryButton) {
     );
   } else {
     return (
-      <button
-        className={css.wrapper}
-        // theme={props.theme}
-        {...props.props}
-      >
+      <button className={css.wrapper} data-theme={props.theme} {...props.props}>
         <span className={css.title}>{props.title}</span>
         <i className={css.icon}>
           <Arrow />

@@ -2,7 +2,7 @@ import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 
 export type tPrimaryButton = {
   title: string;
-  // theme?: tTheme;
+  theme: tTheme;
 } & (
   | {
       variant: "link";

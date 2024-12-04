@@ -1,18 +1,38 @@
 @import "../../../../styles/vars.scss";
 
 .wrapper {
-  display: flex;
   align-items: center;
-  justify-content: center;
+  border: 2px solid;
+  border-radius: 1rem;
+  display: flex;
   flex-flow: row nowrap;
   gap: 1rem;
-  width: max-content;
-  //   background-color: #000;
-  border-radius: 1rem;
-  border: 2px solid #000;
-  color: #fff;
-  color: $black;
+  justify-content: center;
+  overflow: hidden;
   padding: 1.25rem 3rem;
+  position: relative;
+  transition: 0.12s linear color;
+  width: max-content;
+  z-index: 0;
+
+  &::after {
+    height: 100%;
+    transform: translateY(115%);
+    transition: 0.12s linear transform;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &:focus-within,
+  &:hover {
+    &::after {
+      transform: translateY(0%);
+    }
+
+    .icon {
+      transform: scale(1.05);
+    }
+  }
 }
 
 .title {
@@ -23,4 +43,33 @@
 .icon {
   line-height: 1;
   font-size: 2rem;
+  transition: 0.12s linear transform;
+}
+
+.wrapper[data-theme="dark"] {
+  border-color: $black;
+  color: $black;
+
+  &::after {
+    background-color: $black;
+  }
+
+  &:focus-within,
+  &:hover {
+    color: $white;
+  }
+}
+
+.wrapper[data-theme="light"] {
+  border-color: $white;
+  color: $white;
+
+  &::after {
+    background-color: $white;
+  }
+
+  &:focus-within,
+  &:hover {
+    color: $black;
+  }
 }
