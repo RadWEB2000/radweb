@@ -43,7 +43,7 @@ body {
   font-size: 1.6rem;
   font-family: var(--inter);
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 

@@ -1,13 +1,13 @@
 @import "../../../../../styles/vars.scss";
+
 .wrapper {
   align-items: center;
   backdrop-filter: blur(2.5px);
   background-color: rgba($black, 0.35);
   border-radius: 0.75rem;
   display: flex;
-  justify-items: center;
-  // background: lime;
   height: 15rem;
+  justify-items: center;
   position: relative;
   padding: 0.5rem 1rem;
 }
