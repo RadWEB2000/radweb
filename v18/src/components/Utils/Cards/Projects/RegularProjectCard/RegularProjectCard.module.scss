@@ -1,0 +1,93 @@
+@import "../../../../../styles/vars.scss";
+
+.wrapper {
+  align-items: start;
+  justify-content: flex-start;
+  flex-flow: column;
+  margin: 2rem auto;
+  display: flex;
+  width: clamp(7rem, 65rem, 100%);
+
+  &:focus-within,
+  &:hover {
+    .image {
+      transform: scale(1.2);
+    }
+
+    .subtitle {
+      color: color-mix(in srgb, $white 75%, $jet 25%);
+    }
+
+    .title {
+      color: $orange;
+    }
+  }
+}
+
+.media {
+  aspect-ratio: 1/1;
+  position: relative;
+  border-radius: 1rem;
+
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  z-index: 0;
+}
+
+.categories {
+  align-items: flex-start;
+  justify-content: flex-end;
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+  //   background: blue;
+  gap: 0.75rem;
+  inset: 2rem;
+  z-index: 1;
+}
+
+.category {
+  border-radius: 1.25rem;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+  background: black;
+  padding: 1rem 2rem;
+}
+
+.image {
+  object-fit: cover;
+  transition: 0.15s linear transform;
+  object-position: center;
+}
+
+.details {
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column-reverse;
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 2rem;
+  //   background: red;
+}
+
+.subtitle {
+  align-items: center;
+  display: flex;
+  font-size: clamp(1.75rem, 1.82vw, 1.9rem);
+  font-weight: 400;
+  text-align: start;
+  color: color-mix(in srgb, $white 55%, $jet 45%);
+  gap: 0.34rem;
+  line-height: 1.3;
+  transition: 0.15s linear color;
+}
+
+.title {
+  font-family: var(--anton);
+  font-size: clamp(2.3rem, 3.5vw, 6.25rem);
+  text-wrap: balance;
+  line-height: 1.3;
+  transition: 0.15s linear color;
+}

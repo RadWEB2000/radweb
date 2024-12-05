@@ -1,9 +1,11 @@
-import { About, Hero, Overview, Services } from "@/v-home/index";
+import { About, Hero, Overview, Projects, Services } from "@/v-home/index";
 import service_img_1 from "@/img/abstract-one.webp";
 import service_img_2 from "@/img/abstract-two.webp";
 import service_img_3 from "@/img/girls.webp";
 import overview_img from "@/img/overview.webp";
 import about_img from "@/img/r-adamczyk-gray.webp";
+import vr_img from "@/img/vr.webp";
+import girl_img from "@/img/girl.webp";
 
 export default function HomePage() {
   return (
@@ -185,6 +187,65 @@ export default function HomePage() {
               title: "Web care",
             },
           ]}
+        />
+        <Projects
+          button={{
+            title: `Wszystkie prace`,
+            url: "/",
+          }}
+          content="An independent web design and branding agency in Manchester set up in 2010 who care, build relationships, have industry experience, and win awards."
+          title="Projekty"
+          cards={[
+            {
+              categories: ["SEO", "WWw", "Identyfikacja wizualna"],
+              image: {
+                altText: "",
+                sourceSrc: vr_img.src,
+                title: "",
+              },
+              release: "2024",
+              subtitle: `Agromar`,
+              title: "Refreshing Gary Neville's digital presence",
+              url: "#",
+            },
+            {
+              categories: ["SEO", "WWw", "Identyfikacja wizualna"],
+              image: {
+                altText: "",
+                sourceSrc: girl_img.src,
+                title: "",
+              },
+              release: "2024",
+              subtitle: `Agromar`,
+              title: "A workplace consultancy creating inspiring environments",
+              url: "#",
+            },
+            {
+              categories: ["SEO", "WWw", "Identyfikacja wizualna"],
+              image: {
+                altText: "",
+                sourceSrc: vr_img.src,
+                title: "",
+              },
+              release: "2024",
+              subtitle: `Agromar`,
+              title: "Reimagining the built environment",
+              url: "#",
+            },
+            {
+              categories: ["SEO", "WWw", "Identyfikacja wizualna"],
+              image: {
+                altText: "",
+                sourceSrc: girl_img.src,
+                title: "",
+              },
+              release: "2024",
+              subtitle: `Agromar`,
+              title: "Bringing architectural ideas to life",
+              url: "#",
+            },
+          ]}
+          slogan="Take a look at our projects"
         />
         <div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga fugiat
