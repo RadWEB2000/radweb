@@ -6,7 +6,7 @@ import { GoDotFill as Dot } from "react-icons/go";
 
 export default function RegularProjectCard(props: tRegularProjectCard) {
   return (
-    <Link className={css.wrapper} href={props.url}>
+    <Link className={css.wrapper} href={props.url} title={props.title}>
       <picture className={css.media}>
         {props.categories && (
           <ul className={css.categories}>

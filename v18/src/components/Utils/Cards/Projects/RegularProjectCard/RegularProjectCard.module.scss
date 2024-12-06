@@ -1,11 +1,29 @@
 @import "../../../../../styles/vars.scss";
 
+@keyframes show_x_left {
+  from {
+    opacity: 0;
+    scale: 0.64;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    visibility: visible;
+  }
+}
+
 .wrapper {
   align-items: start;
-  justify-content: flex-start;
-  flex-flow: column;
-  margin: 2rem auto;
+  animation-duration: 2ms;
+  animation-fill-mode: both;
+  animation-name: show_x_left;
+  animation-range: entry 5% cover 25%;
+  animation-timeline: view(y);
+  animation-timing-function: linear;
   display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
   width: clamp(7rem, 65rem, 100%);
 
   &:focus-within,
@@ -26,68 +44,78 @@
 
 .media {
   aspect-ratio: 1/1;
-  position: relative;
   border-radius: 1rem;
-
-  overflow: hidden;
   display: block;
+  overflow: hidden;
+  position: relative;
   width: 100%;
   z-index: 0;
 }
 
 .categories {
-  align-items: flex-start;
-  justify-content: flex-end;
+  align-items: flex-end;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
+  gap: 0.1rem 0.75rem;
+  inset: 0.75rem;
+  justify-content: flex-start;
   position: absolute;
-  //   background: blue;
-  gap: 0.75rem;
-  inset: 2rem;
   z-index: 1;
 }
 
 .category {
-  border-radius: 1.25rem;
+  border-radius: 1.45rem;
+  background: color-mix(in srgb, $jet 40%, $black 60%);
   font-size: 1.5rem;
-  line-height: 1.3;
   font-weight: 600;
-  background: black;
+  line-height: 1.3;
+  margin: 0;
+  max-height: max-content;
   padding: 1rem 2rem;
 }
 
 .image {
   object-fit: cover;
-  transition: 0.15s linear transform;
   object-position: center;
+  transition: 0.25s linear transform;
 }
 
 .details {
   align-items: flex-start;
-  justify-content: flex-start;
-  flex-flow: column-reverse;
   display: flex;
+  flex-flow: column-reverse;
   gap: 0.65rem;
+  justify-content: flex-start;
   margin-top: 2rem;
-  //   background: red;
+}
+
+.subtitle,
+.title {
+  line-height: 1.3;
+  text-align: start;
+  transition: 0.25s linear color;
 }
 
 .subtitle {
   align-items: center;
+  color: color-mix(in srgb, $white 55%, $jet 45%);
   display: flex;
   font-size: clamp(1.75rem, 1.82vw, 1.9rem);
   font-weight: 400;
-  text-align: start;
-  color: color-mix(in srgb, $white 55%, $jet 45%);
   gap: 0.34rem;
-  line-height: 1.3;
-  transition: 0.15s linear color;
 }
 
 .title {
   font-family: var(--anton);
   font-size: clamp(2.3rem, 3.5vw, 6.25rem);
   text-wrap: balance;
-  line-height: 1.3;
-  transition: 0.15s linear color;
+}
+
+@media (min-width: 900px) {
+  .categories {
+    align-items: start;
+    flex-flow: row wrap;
+    inset: 1.25rem;
+    justify-content: flex-end;
+  }
 }
