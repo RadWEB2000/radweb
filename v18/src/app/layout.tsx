@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className={`${anton.variable} ${inter.variable}`}>{children}</body>
+      <body className={`${anton.variable} ${inter.variable}`} suppressHydrationWarning={false}>{children}</body>
     </html>
   );
 }

@@ -1,0 +1,68 @@
+@import "../../../../styles/vars.scss";
+
+.wrapper {
+    align-items: center;
+    // display: grid;
+    gap:2rem;
+    width:95vw;
+    margin:5vh 0 5vh auto;
+    margin:5vh auto;
+    // grid-template-columns: repeat(12,1fr);
+
+}
+
+.container {
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow:column;
+    gap:1.2rem;
+    grid-column: 1/5;
+}
+
+.title {
+    color:$white;
+    font-family: var(--anton);
+    font-size: clamp(4rem, 8.25vw, 14.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+.container {
+    color: $content;
+    font-size: clamp(1.35rem, 1.55vw, 1.6rem);
+    line-height: 1.95;
+    max-width: 60ch;
+    padding-bottom: 4rem;
+    text-wrap: pretty;
+}
+
+.cards {
+    // display: grid;
+    // grid-template-areas: repeat(auto-fill, 45rem);
+    align-items: baseline;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    gap:2rem;
+    scroll-snap-align:start;
+    scroll-behavior: smooth;
+    scroll-snap-type:x mandatory;
+    scroll-snap-stop: always;
+    scroll-padding-inline-end: 1em;
+    grid-column: 5/-1;
+    & >* {
+        flex-shrink: 0;
+    }
+}
+
+
+@media (min-width:680px){
+    .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    margin:5vh 0 5vh auto;
+
+    }
+}

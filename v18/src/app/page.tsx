@@ -1,8 +1,9 @@
-import { About, Hero, Overview, Projects, Services } from "@/v-home/index";
+import { About, Blog, Hero, Overview, Projects, Services, WhyUs } from "@/v-home/index";
 import service_img_1 from "@/img/abstract-one.webp";
 import service_img_2 from "@/img/abstract-two.webp";
 import service_img_3 from "@/img/girls.webp";
 import overview_img from "@/img/overview.webp";
+import hands_img from "@/img/hands.jpg";
 import about_img from "@/img/r-adamczyk-gray.webp";
 import vr_img from "@/img/vr.webp";
 import girl_img from "@/img/girl.webp";
@@ -246,6 +247,154 @@ export default function HomePage() {
             },
           ]}
           slogan="Take a look at our projects"
+        />
+        <div className="into-light-bg" >
+        <WhyUs
+          cards={[
+            {
+              content:`Andronis Hotels, a leader in the Tourism & Hospitality sector, needed a unified communication system to ensure seamless collaboration between its hotels. modulus undertook the creation of a comprehensive telephony solution with 3CX and VoIP telephony, connecting the telephone system with their hotel management system (PMS), providing smooth operation and enhancement of internal communication across all the hotels in the group.`,
+              title:`Andronis Hotels: Integrated Communication`
+            },
+            {
+              content:`Andronis Hotels, a leader in the Tourism & Hospitality sector, needed a unified communication system to ensure seamless collaboration between its hotels. modulus undertook the creation of a comprehensive telephony solution with 3CX and VoIP telephony, connecting the telephone system with their hotel management system (PMS), providing smooth operation and enhancement of internal communication across all the hotels in the group.`,
+              title:`Andronis Hotels: Integrated Communication`
+            },
+            {
+              content:`Andronis Hotels, a leader in the Tourism & Hospitality sector, needed a unified communication system to ensure seamless collaboration between its hotels. modulus undertook the creation of a comprehensive telephony solution with 3CX and VoIP telephony, connecting the telephone system with their hotel management system (PMS), providing smooth operation and enhancement of internal communication across all the hotels in the group.`,
+              title:`Andronis Hotels: Integrated Communication`
+            },
+          ]}
+          content="The installation and customization of the 3CX cloud system by modulus has significantly improved internal communication in our hotels. The integration with the management system was smooth, and the support was immediate and helpful, ensuring that our needs were effectively met."
+          image={{
+            altText:``,
+            sourceSrc:hands_img.src,
+            title:``
+          }}
+          title="Dlaczego właśnie ja?"
+        />
+        </div>
+        <Blog
+          button={{
+            title:`Wszystkie wpisy`,
+            url:`/`
+          }}
+          content=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga fugiat sed, cupiditate pariatur eligendi commodi eum tempora laborum
+          blanditiis ipsa illolestiae soluta nulla magnam ipsa
+          ea. Tempore, impedit hic facilis excepturi voluptatem est sit?
+          Nesciunt aspernatur, amet omnis et corporis enim inventore aliquam
+          harum minima, sequi fugiat distinctio optio modi magnam quis tempore
+          ratione corrupti accusamus iusto itaque. Hic quidem "
+          title="Blog"
+          cards={[
+            {
+              categories:[
+                {
+                  title:`SEO`,
+                  url:`/`
+                },
+                {
+                  title:`Google`,
+                  url:`/`
+                },
+                {
+                  title:`Copywriting`,
+                  url:`/`
+                },
+              ],
+              image:{
+                altText:``,
+                sourceSrc:service_img_1.src,
+                title:``
+              },
+              release:`21 kwi 2024`,
+              title:`CTA – czym jest i jak je wykorzystywać?`,
+              url:`/`
+            },
+            {
+              categories:[
+                {
+                  title:`Sprzedaź`,
+                  url:`/`
+                }
+              ],
+              image:{
+                altText:``,
+                sourceSrc:service_img_1.src,
+                title:``
+              },
+              release:`21 kwi 2024`,
+              title:`Cross-selling i Up-selling – jak je stosować, aby zwiększyć sprzedaż w swoim sklepie?`,
+              url:`/`
+            },
+            {
+              categories:[
+                {
+                  title:`SEO`,
+                  url:`/`
+                },
+                {
+                  title:`Google`,
+                  url:`/`
+                },
+                {
+                  title:`Analityka`,
+                  url:`/`
+                },
+              ],
+              image:{
+                altText:``,
+                sourceSrc:service_img_1.src,
+                title:``
+              },
+              release:`21 kwi 2024`,
+              title:`Jak wykorzystać Google Trends w sprzedaży?`,
+              url:`/`
+            },
+            {
+              categories:[
+                {
+                  title:`Strony internetowe`,
+                  url:`/`
+                },
+                {
+                  title:`Analityka`,
+                  url:`/`
+                },
+                {
+                  title:`JavaScript`,
+                  url:`/`
+                },
+              ],
+              image:{
+                altText:``,
+                sourceSrc:service_img_1.src,
+                title:``
+              },
+              release:`21 kwi 2024`,
+              title:`Czym jest evergreen content i jak go stworzyć?`,
+              url:`/`
+            },
+            {
+              categories:[
+                {
+                  title:`Copywriting`,
+                  url:`/`
+                },
+                {
+                  title:`Content marketing`,
+                  url:`/`
+                },
+              ],
+              image:{
+                altText:``,
+                sourceSrc:service_img_1.src,
+                title:``
+              },
+              release:`21 kwi 2024`,
+              title:`Co to jest storytelling?`,
+              url:`/`
+            },
+          ]}
         />
         <div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga fugiat

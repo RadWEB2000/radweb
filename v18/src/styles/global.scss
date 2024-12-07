@@ -71,8 +71,25 @@ ol {
   }
 }
 
+
+@keyframes into-light-bg {
+  0%{
+    background-color: transparent;
+  }
+
+  15%{
+    background-color: $platinum;
+  }
+  75%{
+    background-color: $platinum;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
 .main__home {
-  animation-range: entry 0% cover 15%;
+  animation-range: entry 0% cover 10%;
   animation-name: main_home;
   animation-fill-mode: both;
   animation-duration: 1ms;
@@ -83,4 +100,21 @@ ol {
   min-height: 170vh;
   padding: 15vh 0 10rem 0;
   z-index: 3;
+}
+
+
+.into-light-bg {
+  animation-range: entry 0% cover 100%;
+  animation-name: into-light-bg;
+  animation-fill-mode: both;
+  animation-duration: 1ms;
+  animation-timing-function: linear;
+  animation-timeline: view(y); 
+
+
+  background-color: $platinum;
+  color:$black;
+  padding: 10vh 0;
+  margin:15vh 0;
+
 }
