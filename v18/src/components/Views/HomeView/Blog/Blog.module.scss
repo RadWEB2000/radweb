@@ -39,22 +39,13 @@
 }
 
 .cards {
-    // display: grid;
-    // grid-template-areas: repeat(auto-fill, 45rem);
+    background: pink;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     align-items: baseline;
-    display: flex;
-    justify-content: flex-start;
     overflow-x: scroll;
     gap:2rem;
-    scroll-snap-align:start;
-    scroll-behavior: smooth;
-    scroll-snap-type:x mandatory;
-    scroll-snap-stop: always;
-    scroll-padding-inline-end: 1em;
     grid-column: 5/-1;
-    & >* {
-        flex-shrink: 0;
-    }
 }
 
 
