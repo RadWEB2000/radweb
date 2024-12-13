@@ -1,7 +1,7 @@
 import css from "@/v-home/Projects/Projects.module.scss";
 import { tProjects } from "@/v-home/Projects/Projects.models";
 import { PrimaryButton as Button } from "@/buttons/index";
-import { RegularProjectCard as Card } from "@/cards/Projects/index";
+import { RegularProjectCard as Card } from "@/cards/index";
 
 export default function Projects(props: tProjects) {
   return (

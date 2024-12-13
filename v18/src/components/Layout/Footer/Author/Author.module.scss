@@ -1,0 +1,28 @@
+@import "../../../../styles/vars.scss";
+
+.wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  // background: #000;
+  // color: #fff;
+  line-height: 1;
+  grid-row: 4;
+  grid-row: 6;
+  grid-column: 1/5;
+  text-align: center;
+  text-wrap: balance;
+  grid-column: 1/-1;
+}
+
+@media (min-width: 550px) {
+  .wrapper {
+    text-align: start;
+  }
+}
+@media (min-width: 800px) {
+  .wrapper {
+    grid-column: 1/5;
+    grid-row: 5;
+  }
+}

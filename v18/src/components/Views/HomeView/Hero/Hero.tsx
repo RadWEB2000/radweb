@@ -1,7 +1,9 @@
 // import service_img from "@/img/abstract-one.webp";
 import css from "@/v-home/Hero/Hero.module.scss";
-import { HeroBlogCard as Blog } from "@/cards/Blog/index";
-import { HeroServiceCard as Services } from "@/cards/Services/index";
+import {
+  HeroBlogCard as Blog,
+  HeroServiceCard as Services,
+} from "@/cards/index";
 import { RegularButton as Button } from "@/buttons/index";
 import { tHero } from "@/v-home/Hero/Hero.models";
 

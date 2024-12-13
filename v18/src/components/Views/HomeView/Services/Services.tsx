@@ -1,7 +1,7 @@
 import css from "@/v-home/Services/Services.module.scss";
 import { tServices } from "@/v-home/Services/Services.models";
 import { PrimaryButton as Button } from "@/buttons/index";
-import { HomeServiceCard as Card } from "@/cards/Services/index";
+import { HomeServiceCard as Card } from "@/cards/index";
 
 export default function Services(props: tServices) {
   return (

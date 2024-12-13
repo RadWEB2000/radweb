@@ -1,4 +1,12 @@
-import { About, Blog, Hero, Overview, Projects, Services, WhyUs } from "@/v-home/index";
+import {
+  About,
+  Blog,
+  Hero,
+  Overview,
+  Projects,
+  Services,
+  WhyUs,
+} from "@/v-home/index";
 import service_img_1 from "@/img/abstract-one.webp";
 import service_img_2 from "@/img/abstract-two.webp";
 import service_img_3 from "@/img/girls.webp";
@@ -53,11 +61,11 @@ export default function HomePage() {
         ]}
         title="RadWEB"
         video={{
-          src: `/bridge.mp4`,
+          src: `/sidewalk.mp4`,
           props: {
             // autoPlay: true,
             controls: false,
-            muted: true,
+            // muted: true,
             // loop: true,
             disablePictureInPicture: true,
             disableRemotePlayback: true,
@@ -248,35 +256,35 @@ export default function HomePage() {
           ]}
           slogan="Take a look at our projects"
         />
-        <div className="into-light-bg" >
-        <WhyUs
-          cards={[
-            {
-              content:`Andronis Hotels, a leader in the Tourism & Hospitality sector, needed a unified communication system to ensure seamless collaboration between its hotels. modulus undertook the creation of a comprehensive telephony solution with 3CX and VoIP telephony, connecting the telephone system with their hotel management system (PMS), providing smooth operation and enhancement of internal communication across all the hotels in the group.`,
-              title:`Andronis Hotels: Integrated Communication`
-            },
-            {
-              content:`Andronis Hotels, a leader in the Tourism & Hospitality sector, needed a unified communication system to ensure seamless collaboration between its hotels. modulus undertook the creation of a comprehensive telephony solution with 3CX and VoIP telephony, connecting the telephone system with their hotel management system (PMS), providing smooth operation and enhancement of internal communication across all the hotels in the group.`,
-              title:`Andronis Hotels: Integrated Communication`
-            },
-            {
-              content:`Andronis Hotels, a leader in the Tourism & Hospitality sector, needed a unified communication system to ensure seamless collaboration between its hotels. modulus undertook the creation of a comprehensive telephony solution with 3CX and VoIP telephony, connecting the telephone system with their hotel management system (PMS), providing smooth operation and enhancement of internal communication across all the hotels in the group.`,
-              title:`Andronis Hotels: Integrated Communication`
-            },
-          ]}
-          content="The installation and customization of the 3CX cloud system by modulus has significantly improved internal communication in our hotels. The integration with the management system was smooth, and the support was immediate and helpful, ensuring that our needs were effectively met."
-          image={{
-            altText:``,
-            sourceSrc:hands_img.src,
-            title:``
-          }}
-          title="Dlaczego właśnie ja?"
-        />
+        <div className="into-light-bg">
+          <WhyUs
+            cards={[
+              {
+                content: `Andronis Hotels, a leader in the Tourism & Hospitality sector, needed a unified communication system to ensure seamless collaboration between its hotels. modulus undertook the creation of a comprehensive telephony solution with 3CX and VoIP telephony, connecting the telephone system with their hotel management system (PMS), providing smooth operation and enhancement of internal communication across all the hotels in the group.`,
+                title: `Andronis Hotels: Integrated Communication`,
+              },
+              {
+                content: `Andronis Hotels, a leader in the Tourism & Hospitality sector, needed a unified communication system to ensure seamless collaboration between its hotels. modulus undertook the creation of a comprehensive telephony solution with 3CX and VoIP telephony, connecting the telephone system with their hotel management system (PMS), providing smooth operation and enhancement of internal communication across all the hotels in the group.`,
+                title: `Andronis Hotels: Integrated Communication`,
+              },
+              {
+                content: `Andronis Hotels, a leader in the Tourism & Hospitality sector, needed a unified communication system to ensure seamless collaboration between its hotels. modulus undertook the creation of a comprehensive telephony solution with 3CX and VoIP telephony, connecting the telephone system with their hotel management system (PMS), providing smooth operation and enhancement of internal communication across all the hotels in the group.`,
+                title: `Andronis Hotels: Integrated Communication`,
+              },
+            ]}
+            content="The installation and customization of the 3CX cloud system by modulus has significantly improved internal communication in our hotels. The integration with the management system was smooth, and the support was immediate and helpful, ensuring that our needs were effectively met."
+            image={{
+              altText: ``,
+              sourceSrc: hands_img.src,
+              title: ``,
+            }}
+            title="Dlaczego właśnie ja?"
+          />
         </div>
         <Blog
           button={{
-            title:`Wszystkie wpisy`,
-            url:`/`
+            title: `Wszystkie wpisy`,
+            url: `/`,
           }}
           content=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga fugiat sed, cupiditate pariatur eligendi commodi eum tempora laborum
           blanditiis ipsa illolestiae soluta nulla magnam ipsa
@@ -287,157 +295,331 @@ export default function HomePage() {
           title="Blog"
           cards={[
             {
-              categories:[
+              categories: [
                 {
-                  title:`SEO`,
-                  url:`/`
+                  title: `SEO`,
+                  url: `/`,
                 },
                 {
-                  title:`Google`,
-                  url:`/`
+                  title: `Google`,
+                  url: `/`,
                 },
                 {
-                  title:`Copywriting`,
-                  url:`/`
+                  title: `Copywriting`,
+                  url: `/`,
                 },
               ],
-              image:{
-                altText:``,
-                sourceSrc:service_img_1.src,
-                title:``
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
               },
-              release:`21 kwi 2024`,
-              title:`CTA – czym jest i jak je wykorzystywać?`,
-              url:`/`
+              release: `21 kwi 2024`,
+              title: `CTA – czym jest i jak je wykorzystywać?`,
+              url: `/`,
             },
             {
-              categories:[
+              categories: [
                 {
-                  title:`Sprzedaź`,
-                  url:`/`
-                }
+                  title: `Sprzedaź`,
+                  url: `/`,
+                },
               ],
-              image:{
-                altText:``,
-                sourceSrc:service_img_1.src,
-                title:``
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
               },
-              release:`21 kwi 2024`,
-              title:`Cross-selling i Up-selling – jak je stosować, aby zwiększyć sprzedaż w swoim sklepie?`,
-              url:`/`
+              release: `21 kwi 2024`,
+              title: `Cross-selling i Up-selling – jak je stosować, aby zwiększyć sprzedaż w swoim sklepie?`,
+              url: `/`,
             },
             {
-              categories:[
+              categories: [
                 {
-                  title:`SEO`,
-                  url:`/`
+                  title: `SEO`,
+                  url: `/`,
                 },
                 {
-                  title:`Google`,
-                  url:`/`
+                  title: `Google`,
+                  url: `/`,
                 },
                 {
-                  title:`Analityka`,
-                  url:`/`
+                  title: `Analityka`,
+                  url: `/`,
                 },
               ],
-              image:{
-                altText:``,
-                sourceSrc:service_img_1.src,
-                title:``
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
               },
-              release:`21 kwi 2024`,
-              title:`Jak wykorzystać Google Trends w sprzedaży?`,
-              url:`/`
+              release: `21 kwi 2024`,
+              title: `Jak wykorzystać Google Trends w sprzedaży?`,
+              url: `/`,
             },
             {
-              categories:[
+              categories: [
                 {
-                  title:`Strony internetowe`,
-                  url:`/`
+                  title: `Strony internetowe`,
+                  url: `/`,
                 },
                 {
-                  title:`Analityka`,
-                  url:`/`
+                  title: `Analityka`,
+                  url: `/`,
                 },
                 {
-                  title:`JavaScript`,
-                  url:`/`
+                  title: `JavaScript`,
+                  url: `/`,
                 },
               ],
-              image:{
-                altText:``,
-                sourceSrc:service_img_1.src,
-                title:``
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
               },
-              release:`21 kwi 2024`,
-              title:`Czym jest evergreen content i jak go stworzyć?`,
-              url:`/`
+              release: `21 kwi 2024`,
+              title: `Czym jest evergreen content i jak go stworzyć?`,
+              url: `/`,
             },
             {
-              categories:[
+              categories: [
                 {
-                  title:`Copywriting`,
-                  url:`/`
+                  title: `Copywriting`,
+                  url: `/`,
                 },
                 {
-                  title:`Content marketing`,
-                  url:`/`
+                  title: `Content marketing`,
+                  url: `/`,
                 },
               ],
-              image:{
-                altText:``,
-                sourceSrc:service_img_1.src,
-                title:``
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
               },
-              release:`21 kwi 2024`,
-              title:`Co to jest storytelling?`,
-              url:`/`
+              release: `21 kwi 2024`,
+              title: `Co to jest storytelling?`,
+              url: `/`,
+            },
+            {
+              categories: [
+                {
+                  title: `SEO`,
+                  url: `/`,
+                },
+                {
+                  title: `Google`,
+                  url: `/`,
+                },
+                {
+                  title: `Copywriting`,
+                  url: `/`,
+                },
+              ],
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
+              },
+              release: `21 kwi 2024`,
+              title: `CTA – czym jest i jak je wykorzystywać?`,
+              url: `/`,
+            },
+            {
+              categories: [
+                {
+                  title: `Sprzedaź`,
+                  url: `/`,
+                },
+              ],
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
+              },
+              release: `21 kwi 2024`,
+              title: `Cross-selling i Up-selling – jak je stosować, aby zwiększyć sprzedaż w swoim sklepie?`,
+              url: `/`,
+            },
+            {
+              categories: [
+                {
+                  title: `SEO`,
+                  url: `/`,
+                },
+                {
+                  title: `Google`,
+                  url: `/`,
+                },
+                {
+                  title: `Analityka`,
+                  url: `/`,
+                },
+              ],
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
+              },
+              release: `21 kwi 2024`,
+              title: `Jak wykorzystać Google Trends w sprzedaży?`,
+              url: `/`,
+            },
+            {
+              categories: [
+                {
+                  title: `Strony internetowe`,
+                  url: `/`,
+                },
+                {
+                  title: `Analityka`,
+                  url: `/`,
+                },
+                {
+                  title: `JavaScript`,
+                  url: `/`,
+                },
+              ],
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
+              },
+              release: `21 kwi 2024`,
+              title: `Czym jest evergreen content i jak go stworzyć?`,
+              url: `/`,
+            },
+            {
+              categories: [
+                {
+                  title: `Copywriting`,
+                  url: `/`,
+                },
+                {
+                  title: `Content marketing`,
+                  url: `/`,
+                },
+              ],
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
+              },
+              release: `21 kwi 2024`,
+              title: `Co to jest storytelling?`,
+              url: `/`,
+            },
+            {
+              categories: [
+                {
+                  title: `SEO`,
+                  url: `/`,
+                },
+                {
+                  title: `Google`,
+                  url: `/`,
+                },
+                {
+                  title: `Copywriting`,
+                  url: `/`,
+                },
+              ],
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
+              },
+              release: `21 kwi 2024`,
+              title: `CTA – czym jest i jak je wykorzystywać?`,
+              url: `/`,
+            },
+            {
+              categories: [
+                {
+                  title: `Sprzedaź`,
+                  url: `/`,
+                },
+              ],
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
+              },
+              release: `21 kwi 2024`,
+              title: `Cross-selling i Up-selling – jak je stosować, aby zwiększyć sprzedaż w swoim sklepie?`,
+              url: `/`,
+            },
+            {
+              categories: [
+                {
+                  title: `SEO`,
+                  url: `/`,
+                },
+                {
+                  title: `Google`,
+                  url: `/`,
+                },
+                {
+                  title: `Analityka`,
+                  url: `/`,
+                },
+              ],
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
+              },
+              release: `21 kwi 2024`,
+              title: `Jak wykorzystać Google Trends w sprzedaży?`,
+              url: `/`,
+            },
+            {
+              categories: [
+                {
+                  title: `Strony internetowe`,
+                  url: `/`,
+                },
+                {
+                  title: `Analityka`,
+                  url: `/`,
+                },
+                {
+                  title: `JavaScript`,
+                  url: `/`,
+                },
+              ],
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
+              },
+              release: `21 kwi 2024`,
+              title: `Czym jest evergreen content i jak go stworzyć?`,
+              url: `/`,
+            },
+            {
+              categories: [
+                {
+                  title: `Copywriting`,
+                  url: `/`,
+                },
+                {
+                  title: `Content marketing`,
+                  url: `/`,
+                },
+              ],
+              image: {
+                altText: ``,
+                sourceSrc: service_img_1.src,
+                title: ``,
+              },
+              release: `21 kwi 2024`,
+              title: `Co to jest storytelling?`,
+              url: `/`,
             },
           ]}
         />
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga fugiat
-          sed, cupiditate pariatur eligendi commodi eum tempora laborum
-          blanditiis ipsa illum sequi consectetur suscipit aspernatur nemo esse
-          necessitatibus voluptate autem? Magni ipsa repellendus fugit nulla
-          dolorum maxime omnis eligendi nobis iusto adipisci et expedita
-          obcaecati eveniet non, reprehenderit nostrum voluptatum, iure sunt
-          accusamus dolor officiis odit sed dolorem? At, veniam. Reprehenderit
-          iure itaque nisi saepe temporibus odit expedita aspernatur vero, ut
-          numquam eaque nostrum nam molestias molestiae soluta nulla magnam ipsa
-          ea. Tempore, impedit hic facilis excepturi voluptatem est sit?
-          Nesciunt aspernatur, amet omnis et corporis enim inventore aliquam
-          harum minima, sequi fugiat distinctio optio modi magnam quis tempore
-          ratione corrupti accusamus iusto itaque. Hic quidem possimus ratione
-          rem nisi! Vel obcaecati odit quisquam molestias unde distinctio
-          reiciendis illo vitae recusandae sunt laboriosam corporis, quos et
-          inventore voluptate voluptatum amet, reprehenderit hic quia
-          repellendus minus? Ullam ipsam dolorem similique repellat! Ducimus
-          atque aliquid quisquam dolorem odit aperiam dolor dolorum quia, quae
-          illo dicta quam exercitationem corrupti tempore vel optio voluptates
-          reiciendis. Aliquam ex provident accusamus at. Quas, tempore beatae.
-          Facere? Illum voluptas eum veritatis vel adipisci harum ipsam rem.
-          Dignissimos molestiae repellat porro at obcaecati ad, facilis
-          accusantium quibusdam natus, earum ea recusandae suscipit ut vero nemo
-          illo maiores molestias? Cum itaque fugiat, ullam nemo at placeat
-          veritatis distinctio expedita, doloribus dignissimos eveniet ipsam
-          eaque, fugit quia odio alias quo praesentium. Quas, nostrum commodi
-          optio fugiat totam veritatis esse delectus. Distinctio ea sed fuga
-          labore non vel, enim optio nostrum aut. Aliquam sapiente distinctio
-          libero, expedita ab facere alias. Adipisci officia velit quis alias
-          nam magni mollitia nihil eius ea? Quaerat accusamus iusto sed eaque
-          unde error non ipsam eveniet quod, odio quae, eligendi, veniam
-          nesciunt ea? Dicta cum quisquam, blanditiis repellendus adipisci eius
-          ratione, dolores facilis dolore doloremque natus? Quos illum, tenetur
-          odio praesentium cumque animi corrupti odit provident ipsa est
-          blanditiis dolorum delectus nobis earum excepturi eos totam natus
-          laboriosam consectetur iusto quas vitae sapiente! Enim, architecto
-          temporibus! Iure nisi mollitia accusantium atque asperiores eveniet
-          aliquid, et nulla. Harum asperiores nesciunt quia numquam explicabo
-          consequatur voluptatum quas at inventore reprehenderit, nemo officiis?
-          Dolor exercitationem distinctio voluptas iusto perspiciatis?
-        </div>
       </main>
     </>
   );

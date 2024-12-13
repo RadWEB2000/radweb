@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { anton, inter } from "@/data/fonts";
 import "@/css/global.scss";
+import { Footer } from "@/footer/index";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className={`${anton.variable} ${inter.variable}`} suppressHydrationWarning={false}>{children}</body>
+      <body
+        className={`${anton.variable} ${inter.variable}`}
+        suppressHydrationWarning={false}
+      >
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

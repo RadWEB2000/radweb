@@ -1,59 +1,67 @@
 @import "../../../../styles/vars.scss";
 
 .wrapper {
-    align-items: center;
-    // display: grid;
-    gap:2rem;
-    width:95vw;
-    margin:5vh 0 5vh auto;
-    margin:5vh auto;
-    // grid-template-columns: repeat(12,1fr);
-
+  align-items: center;
+  gap: 2rem;
+  width: 98vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 5vh 0 5vh auto;
 }
 
 .container {
-    align-items: flex-start;
-    display: flex;
-    justify-content: flex-start;
-    flex-flow:column;
-    gap:1.2rem;
-    grid-column: 1/5;
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column;
+  grid-column: 1/4;
+  grid-column: 1/-1;
+  gap: 1.2rem;
 }
 
 .title {
-    color:$white;
-    font-family: var(--anton);
-    font-size: clamp(4rem, 8.25vw, 14.5rem);
-    font-weight: 700;
-    line-height: 1.1;
-    text-wrap: balance;
+  color: $white;
+  font-family: var(--anton);
+  font-size: clamp(4rem, 8.25vw, 14.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  text-wrap: balance;
 }
 
-.container {
-    color: $content;
-    font-size: clamp(1.35rem, 1.55vw, 1.6rem);
-    line-height: 1.95;
-    max-width: 60ch;
-    padding-bottom: 4rem;
-    text-wrap: pretty;
+.content {
+  color: $content;
+  font-size: clamp(1.35rem, 1.55vw, 1.6rem);
+  line-height: 1.95;
+  max-width: 60ch;
+  padding-bottom: 4rem;
+  text-wrap: pretty;
+}
+
+.box {
+  grid-column: 4/-1;
+  grid-column: 1/-1;
 }
 
 .cards {
-    background: pink;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    align-items: baseline;
-    overflow-x: scroll;
-    gap:2rem;
-    grid-column: 5/-1;
+  display: flex;
+  gap: 1em;
+  margin-top: 5rem;
+  overflow-x: scroll;
+  padding: 0rem 3rem 0rem 0rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+
+  & > * {
+    scroll-snap-align: start;
+  }
 }
 
+@media (min-width: 1024px) {
+  .container {
+    grid-column: 1/5;
+  }
 
-@media (min-width:680px){
-    .wrapper {
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    margin:5vh 0 5vh auto;
-
-    }
+  .box {
+    grid-column: 5/-1;
+  }
 }

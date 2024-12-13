@@ -1,0 +1,45 @@
+@import "../../../../styles/vars.scss";
+
+.wrapper {
+  display: grid;
+  grid-row: 2;
+  gap: 2rem 0;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 1/-1;
+}
+
+.title {
+  font-size: clamp(1.6rem, 1.82vw, 2.2rem);
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column;
+  margin-top: 1.7rem;
+  row-gap: 1rem;
+  &__item {
+    color: color-mix(in srgb, $jet 75%, $platinum 25%);
+    font-size: clamp(1.45rem, 1.52vw, 1.67rem);
+    transition: 0.2s linear color;
+    &:focus-within,
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+@media (min-width: 820px) {
+  .wrapper {
+    grid-column: 6/-1;
+    grid-row: 1;
+  }
+}
+@media (min-width: 1250px) {
+  .wrapper {
+    grid-column: 5/-1;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

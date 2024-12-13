@@ -1,0 +1,47 @@
+@import "../../../../styles/vars.scss";
+
+.wrapper {
+  grid-column: 1/-1;
+  grid-row: 5;
+  margin: 0 auto;
+  background-color: $jet;
+  height: max-content;
+  width: max-content;
+  display: grid;
+  padding: 1px;
+  border-radius: 1rem;
+  gap: 1px;
+  overflow: hidden;
+  grid-template-columns: repeat(8, 3.5rem);
+  grid-auto-rows: 3.5rem;
+}
+
+.item {
+  background-color: $black;
+  color: $platinum;
+  align-items: center;
+  justify-items: center;
+  display: flex;
+  font-size: 2rem;
+  height: 3.5rem;
+  transition: 0.12s linear background-color;
+  width: 3.5rem;
+  & > * {
+    margin: auto;
+  }
+
+  &:hover {
+    background-color: color-mix(in srgb, $jet 63%, $black 37%);
+  }
+}
+
+@media (min-width: 550px) {
+  .wrapper {
+    margin: 0 0 0 auto;
+  }
+}
+@media (min-width: 800px) {
+  .wrapper {
+    grid-column: 5/-1;
+  }
+}

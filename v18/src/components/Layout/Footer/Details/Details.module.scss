@@ -1,0 +1,84 @@
+@import "../../../../styles/vars.scss";
+
+.wrapper {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  font-style: normal;
+  flex-flow: column;
+  row-gap: 1rem;
+  // background: purple;
+  grid-column: 1/-1;
+  grid-row: 1;
+}
+
+.brand {
+  font-family: var(--anton);
+  font-size: clamp(5rem, 7vw, 11rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.address {
+  margin-top: 1.5rem;
+}
+
+.nip,
+.regon {
+  font-size: clamp(1.5rem, 1.65vw, 1.7rem);
+  b,
+  strong {
+    margin-right: 0.6rem;
+  }
+}
+
+.contact {
+  align-items: flex-start;
+  justify-content: flex-start;
+  display: flex;
+  flex-flow: column;
+  row-gap: 0.5rem;
+}
+
+.address,
+.contact__item {
+  align-items: center;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 3.5rem calc(100% - 5rem);
+  &__icon {
+    align-items: center;
+    display: flex;
+    font-size: 2.7rem;
+    height: 3.5rem;
+    justify-content: center;
+    width: 3.5rem;
+  }
+}
+
+.address__location,
+.contact__item__label {
+  font-size: clamp(1.5rem, 1.65vw, 1.7rem);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.contact__item {
+  transition: 0.2s linear color;
+  &:focus-within,
+  &:hover {
+    color: $orange;
+  }
+}
+
+@media (min-width: 820px) {
+  .wrapper {
+    grid-column: 1/6;
+  }
+}
+
+@media (min-width: 1250px) {
+  .wrapper {
+    grid-column: 1/5;
+  }
+}
