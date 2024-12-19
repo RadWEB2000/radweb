@@ -1,0 +1,15 @@
+.wrapper {
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column;
+  gap: 1.75rem;
+  display: flex;
+  scrollbar-width: 0;
+  overflow-y: scroll;
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  & > * {
+    width: 100%;
+  }
+}

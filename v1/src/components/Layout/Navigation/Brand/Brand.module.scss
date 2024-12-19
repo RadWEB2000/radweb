@@ -1,0 +1,16 @@
+@import "../../../../styles/vars.scss";
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-height: max-content;
+  position: relative;
+  width: 100%;
+}
+
+.logo {
+  object-fit: contain;
+  object-position: center;
+  width: 75%;
+}

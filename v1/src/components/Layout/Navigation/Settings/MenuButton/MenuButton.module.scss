@@ -23,7 +23,7 @@
       top: 50%;
       left: 50%;
       position: absolute;
-      width: 85%;
+      width: 60%;
 
       &:nth-of-type(1) {
         transform: translate(-50%, -50%) rotate(45deg);
@@ -42,7 +42,8 @@
 
 .line {
   display: block;
-  height: 2px;
+  height: 4px;
+  border-radius: 0.2em;
   background-color: $alabaster;
   transition: 0.12s linear transform;
   width: 100%;

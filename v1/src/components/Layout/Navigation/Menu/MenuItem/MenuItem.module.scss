@@ -1,8 +1,62 @@
+@import "../../../../../styles/vars.scss";
+
 .wrapper {
+  width: 100%;
+  &[data-dropdown="true"] {
+    display: grid;
+    grid-template-columns: calc(100% - 4rem) 4rem;
+  }
+}
+
+.link {
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  color: $smoke;
+  height: 100%;
+  width: 100%;
+}
+
+.link[data-submenu="false"] {
+  font-size: 1.2em;
+  font-weight: 800;
+  transition: 0.2s linear color;
+  &:focus,
+  &:focus-within,
+  &:hover {
+    color: $orange;
+  }
+}
+.link[data-submenu="true"] {
+  color: color-mix(in srgb, $alabaster 75%, $night);
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: 0.2s linear color;
+  &:focus-within,
+  &:hover {
+    color: $white;
+  }
+}
+
+.button {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.72rem;
+  width: 2.72rem;
+  &:focus,
+  &:focus-within,
+  &:hover {
+    .icon {
+      fill: $orange;
+    }
+  }
 }
 
 .icon {
-  fill: pink;
-  height: 4rem;
-  width: 4rem;
+  height: 75%;
+  width: 75%;
+  fill: $alabaster;
+  transition: 0.2s linear fill;
 }

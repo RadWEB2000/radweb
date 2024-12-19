@@ -1,5 +1,3 @@
-import { MenuItem } from "@/components/Layout/Navigation";
-
 export default function Home() {
   return (
     <div>
