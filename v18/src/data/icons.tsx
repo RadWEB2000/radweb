@@ -10,6 +10,8 @@ import {
   RiBehanceLine as Behance,
 } from "react-icons/ri";
 
+import { GoArrowDown as MenuArrowIcon } from "react-icons/go";
+
 import { FaMediumM as Medium, FaLinkedinIn as LinkedIn } from "react-icons/fa";
 
 import { IoShareSocialSharp as Share } from "react-icons/io5";
@@ -24,6 +26,7 @@ export {
   Instagram,
   LinkedIn,
   Medium,
+  MenuArrowIcon,
   Share,
   Spotify,
   Threads,

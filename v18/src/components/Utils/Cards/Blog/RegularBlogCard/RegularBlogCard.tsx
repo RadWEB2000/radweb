@@ -32,7 +32,7 @@ export default function RegularBlogCard(props: tRegularBlogCard) {
                     <Link
                       className={css.category}
                       href={item.url}
-                      key={item.title}
+                      key={`${item.title}-${index}`}
                     >
                       {item.title}
                     </Link>
@@ -43,7 +43,7 @@ export default function RegularBlogCard(props: tRegularBlogCard) {
                       <Link
                         className={css.category}
                         href={item.url}
-                        key={item.title}
+                        key={`${item.title}-${index}`}
                       >
                         {item.title}
                       </Link>
@@ -58,7 +58,7 @@ export default function RegularBlogCard(props: tRegularBlogCard) {
                   <Link
                     className={css.category}
                     href={item.url}
-                    key={item.title}
+                    key={`${item.title}-${index}`}
                   >
                     {item.title}
                   </Link>

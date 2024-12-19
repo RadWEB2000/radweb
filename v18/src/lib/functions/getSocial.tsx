@@ -1,4 +1,18 @@
-import * as Icon from "@/data/icons";
+import {
+  Awwwards,
+  Behance,
+  Dribbble,
+  Facebook,
+  Instagram,
+  LinkedIn,
+  Medium,
+  Share,
+  Spotify,
+  Threads,
+  TikTok,
+  Twitter,
+  YouTube,
+} from "@/data/icons";
 
 type tGetSocialReturn = {
   color: string;
@@ -10,79 +24,79 @@ export function getSocial(url: string): tGetSocialReturn {
   if (url.includes("awwwards")) {
     return {
       color: "",
-      icon: <Icon.Awwwards />,
+      icon: <Awwwards />,
       title: "Awwwards",
     };
   } else if (url.includes("behance")) {
     return {
       color: "",
-      icon: <Icon.Behance />,
+      icon: <Behance />,
       title: "Behance",
     };
   } else if (url.includes("dribbble")) {
     return {
       color: "",
-      icon: <Icon.Dribbble />,
+      icon: <Dribbble />,
       title: "Dribbble",
     };
   } else if (url.includes("facebook")) {
     return {
       color: "",
-      icon: <Icon.Facebook />,
+      icon: <Facebook />,
       title: "Facebook",
     };
   } else if (url.includes("instagram")) {
     return {
       color: "",
-      icon: <Icon.Instagram />,
+      icon: <Instagram />,
       title: "Instagram",
     };
   } else if (url.includes("medium")) {
     return {
       color: "",
-      icon: <Icon.Medium />,
+      icon: <Medium />,
       title: "Medium",
     };
   } else if (url.includes("spotify")) {
     return {
       color: "",
-      icon: <Icon.Spotify />,
+      icon: <Spotify />,
       title: "Spotify",
     };
   } else if (url.includes("threads")) {
     return {
       color: "",
-      icon: <Icon.Threads />,
+      icon: <Threads />,
       title: "Threads",
     };
   } else if (url.includes("tiktok")) {
     return {
       color: "",
-      icon: <Icon.TikTok />,
+      icon: <TikTok />,
       title: "TikTok",
     };
   } else if (url.includes("x.com")) {
     return {
       color: "",
-      icon: <Icon.Twitter />,
+      icon: <Twitter />,
       title: "Twitter",
     };
   } else if (url.includes("youtube")) {
     return {
       color: "",
-      icon: <Icon.YouTube />,
+      icon: <YouTube />,
       title: "YouTube",
     };
   } else if (url.includes("linkedin")) {
     return {
       color: "",
-      icon: <Icon.LinkedIn />,
+      icon: <LinkedIn />,
       title: "LinkedIn",
     };
   } else {
     return {
       color: "",
-      icon: <Icon.Share />,
+      icon: <Share />,
       title: "",
     };
   }

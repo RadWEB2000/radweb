@@ -1,0 +1,26 @@
+@import "../../../styles/vars.scss";
+
+.wrapper {
+  align-items: center;
+  background-color: rgba($black, 0.24);
+  display: grid;
+  grid-template-columns: calc(100% - 12rem) 12rem;
+  grid-template-rows: 7rem auto;
+  left: 0;
+  padding: 0rem 1.2rem;
+  position: fixed;
+  top: 0;
+  transition: 0.2s linear background-color;
+  width: 100%;
+  z-index: 99;
+  &[data-expand="true"] {
+    background-color: rgba($black, 1);
+  }
+}
+
+@media (min-width: 825px) {
+  .wrapper {
+    background-color: rgba($black, 1);
+    grid-template-columns: 9rem calc(100% - 9rem - 7rem) 7rem;
+  }
+}

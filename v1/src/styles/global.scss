@@ -1,0 +1,79 @@
+@import "./vars.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba($black, 0.4);
+}
+
+::after,
+::before {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+::selection {
+  background-color: $gray;
+  color: $night;
+}
+
+:focus,
+:focus-visible,
+:focus-within {
+  outline: none;
+}
+
+:root {
+  color-scheme: dark light;
+}
+
+a,
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+body {
+  background-attachment: fixed;
+  background-image: $background-gradient;
+  color: $smoke;
+  font-family: $regular;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  transition: 0.2s linear background-image;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+input,
+textarea {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  outline: none;
+}
+
+li,
+ol,
+ul {
+  list-style: none;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+input[type="search"] {
+  &::-webkit-search-cancel-button {
+    appearance: none;
+  }
+}

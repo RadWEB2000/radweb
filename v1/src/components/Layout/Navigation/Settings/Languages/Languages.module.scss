@@ -1,0 +1,67 @@
+@import "../../../../../styles/vars.scss";
+
+.wrappper {
+  background: black;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  width: 3.75rem;
+}
+
+.button {
+  position: relative;
+  width: 3.25rem;
+  height: 3.25rem;
+  &:focus-within,
+  &:hover {
+    .globe {
+      fill: $orange;
+    }
+  }
+}
+
+.globe {
+  fill: $alabaster;
+  height: 100%;
+  width: 100%;
+  transition: 0.15s linear fill;
+}
+
+.status {
+  position: absolute;
+  height: 1.75rem;
+  //   display: none;
+  top: 0;
+  right: 0;
+  width: 1.75rem;
+}
+
+.languages {
+  border-radius: 1em;
+  align-items: center;
+  transition: 0.2s linear;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  position: absolute;
+
+  background-color: $erie;
+  //   width: 5rem;
+  height: auto;
+  gap: 1rem;
+  //   top: 0;
+  padding: 1.14rem 0.5rem 1.14rem 0.5rem;
+  z-index: 9999;
+}
+
+.language {
+  height: 3.2rem;
+  width: 3.2rem;
+  transition: 0.12s linear filter;
+  &:focus-within,
+  &:hover {
+    filter: grayscale(0.85);
+  }
+}

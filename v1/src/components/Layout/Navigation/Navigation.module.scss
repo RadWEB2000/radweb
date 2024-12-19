@@ -1,0 +1,35 @@
+@import "../../../styles/vars.scss";
+
+.wrapper {
+  background-color: $gunmetal;
+  color: $white;
+  position: sticky;
+  display: grid;
+  grid-template-rows: 6.15rem 0;
+  grid-template-areas:
+    "settings"
+    "brand"
+    "menu_box";
+  //   overflow: hidden;
+  z-index: 9;
+  top: 0;
+  &[data-expand="true"] {
+    grid-template-rows: 6.15rem calc(100vh - 6.15rem);
+    .container {
+      height: 100%;
+      opacity: 1;
+      visibility: visible;
+      transform: scaleY(1);
+    }
+  }
+}
+
+.container {
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  display: grid;
+  transition: 0.12s linear height, 0.12s linear opacity, 0.12s linear visibility;
+  grid-template-columns: 1fr 2fr;
+}

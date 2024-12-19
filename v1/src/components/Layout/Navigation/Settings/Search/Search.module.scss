@@ -1,0 +1,63 @@
+@import "../../../../../styles/vars.scss";
+
+.wrapper {
+  display: flex;
+
+  height: 3.75rem;
+  gap: 1rem;
+}
+.field {
+  background-color: $black;
+  border-radius: 0.35em;
+  font-size: 0.975em;
+  color: $white;
+  padding: 0.375em;
+  transition: 0.12s linear width;
+  width: 12em;
+  width: 9em;
+  &:focus,
+  &:focus-within {
+    width: clamp(10em, 25em, 60%);
+    width: 12em;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 2px 2px $orange;
+  }
+
+  &::placeholder {
+    color: color-mix(in srgb, $alabaster 60%, $gunmetal);
+  }
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    width: clamp(15em, 25em, 60%);
+    width: 12em;
+  }
+}
+
+.button {
+  align-items: center;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  &:hover,
+  &:focus-within {
+    .peel {
+      fill: $orange;
+    }
+  }
+}
+
+.peel {
+  fill: $alabaster;
+  height: 75%;
+  width: 75%;
+  transition: 0.12s linear fill;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .field {
+    transition: none;
+  }
+}

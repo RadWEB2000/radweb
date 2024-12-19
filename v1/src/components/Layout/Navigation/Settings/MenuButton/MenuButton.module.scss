@@ -1,0 +1,49 @@
+@import "../../../../../styles/vars.scss";
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  height: 3.75rem;
+  padding: 0.45rem;
+  position: relative;
+  overflow: hidden;
+  width: 3.75rem;
+
+  &:focus-visible,
+  &:hover {
+    .line {
+      background-color: $orange;
+    }
+  }
+
+  &[data-active="true"] {
+    .line {
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      width: 85%;
+
+      &:nth-of-type(1) {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &:nth-of-type(2) {
+        transform: translate(-50%, -50%) scaleX(0);
+      }
+
+      &:nth-of-type(3) {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+}
+
+.line {
+  display: block;
+  height: 2px;
+  background-color: $alabaster;
+  transition: 0.12s linear transform;
+  width: 100%;
+}

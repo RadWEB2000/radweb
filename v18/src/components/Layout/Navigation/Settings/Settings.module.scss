@@ -1,0 +1,13 @@
+.wrapper {
+  align-items: center;
+  display: flex;
+  grid-column: 2;
+  grid-row: 1;
+  justify-content: flex-end;
+}
+
+@media (min-width: 825px) {
+  .wrapper {
+    grid-column: 3;
+  }
+}
