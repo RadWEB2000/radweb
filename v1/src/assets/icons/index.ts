@@ -24,3 +24,5 @@ export { default as FlagPoland } from "@/ico/FlagPoland";
 export { default as FlagUSA } from "@/ico/FlagUSA";
 export { default as FlagFrench } from "@/ico/FlagFrench";
 export { default as FlagGermany } from "@/ico/FlagGermany";
+export {default as Phone} from '@/ico/Phone'
+export {default as EMail} from '@/ico/EMail'

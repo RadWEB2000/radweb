@@ -13,5 +13,5 @@ export type tDetails = {
         title:string;
         content:string;
         url:string;
-    }
+    }[]
 }
