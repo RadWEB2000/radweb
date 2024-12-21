@@ -10,10 +10,10 @@
 
 .link {
   align-items: center;
-  justify-content: flex-start;
-  display: flex;
   color: $smoke;
+  display: flex;
   height: 100%;
+  justify-content: flex-start;
   width: 100%;
 }
 
@@ -39,11 +39,11 @@
 }
 
 .button {
-  margin: auto;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
   height: 2.72rem;
+  justify-content: center;
+  margin: auto;
   width: 2.72rem;
   &:focus,
   &:focus-within,
@@ -55,8 +55,49 @@
 }
 
 .icon {
-  height: 75%;
-  width: 75%;
   fill: $alabaster;
+  height: 75%;
   transition: 0.2s linear fill;
+  width: 75%;
+}
+
+
+@media (min-width:675px){
+  .wrapper {
+    min-width: max-content;
+    &[data-dropdown="true"] {
+      gap:.33em;
+      grid-template-columns: max-content 1.03em;
+    }
+  }
+  .link[data-submenu="false"] {
+    font-size: 1.03em;
+  }
+  .link[data-submenu="true"] {
+    font-size: .73em;
+  }
+  .button {
+    height: 1.03em;
+    width: 1.03em;
+  }
+}
+@media (min-width:1270px){
+  .wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow:row nowrap;
+    max-width: max-content;
+    &[data-dropdown="true"] {
+      max-width: max-content;
+    }
+  }
+  .link[data-submenu="false"] {
+    font-size: 1.102em;
+    font-weight: 500;
+  }
+  .link[data-submenu="true"] {
+    font-size: .93em;
+    font-weight: 400;
+  }
 }

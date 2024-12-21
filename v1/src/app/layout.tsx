@@ -16,7 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl" className={TungstenBold.variable}>
+    <html 
+      lang="pl" 
+      className={TungstenBold.variable}
+
+    >
       <body>
         <MenuProvider>
           <Navigation {...main.nav} />

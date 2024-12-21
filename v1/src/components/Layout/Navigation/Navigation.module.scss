@@ -3,34 +3,69 @@
 .wrapper {
   background-color: $gunmetal;
   color: $white;
-  position: sticky;
   display: grid;
   grid-template-rows: 6.15rem 0;
-  grid-template-areas:
-    "settings"
-    "brand"
-    "menu_box";
-  //   overflow: hidden;
+  position: sticky;
   z-index: 9;
   top: 0;
-  &[data-expand="true"] {
+  &[data-expand="true"] {  
     grid-template-rows: 6.15rem calc(100vh - 6.15rem);
     .container {
       height: 100%;
       opacity: 1;
       visibility: visible;
-      transform: scaleY(1);
     }
   }
 }
 
 .container {
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: 1fr 2fr;
+  height: 0;
   padding: 2rem;
   opacity: 0;
-  gap: 0.5em;
-  visibility: hidden;
-  height: 0;
-  display: grid;
   transition: 0.12s linear height, 0.12s linear opacity, 0.12s linear visibility;
-  grid-template-columns: 1fr 2fr;
+  visibility: hidden;
+}
+
+@media (min-width:1000px){
+ .wrapper {
+   align-items: center;
+  display: flex;
+  flex-flow:row nowrap;
+  justify-content: space-between;
+  padding: 0rem 1rem;
+  &[data-expand="false"] ,
+  &[data-expand="true"] {
+    grid-template-rows: unset;
+    height: 7rem;
+    overflow-y: visible;
+  }
+  &> * {
+    height: 100%;
+  }
+ }
+
+.container {
+  align-items: center;
+  grid-row: 1;
+  grid-template-columns: 7.5rem calc(100% - 7.5rem);
+  opacity: 1;
+  padding: 0;
+  visibility: visible;
+}
+
+}
+
+
+@media (min-width:1270px){
+
+  .wrapper {
+    padding: 0rem 1.4em;
+  }
+
+  .container {
+    gap:2.13rem;
+  }
 }

@@ -6,11 +6,24 @@
   justify-content: center;
   max-height: max-content;
   position: relative;
+  transition:.12s linear filter;
   width: 100%;
+  &:focus-within,
+  &:hover {
+    filter:grayscale(1);
+  }
 }
 
 .logo {
   object-fit: contain;
   object-position: center;
   width: 75%;
+}
+
+
+@media (min-width:1000px) {
+  .wrapper,
+  .logo {
+    height: 100%;
+  }
 }

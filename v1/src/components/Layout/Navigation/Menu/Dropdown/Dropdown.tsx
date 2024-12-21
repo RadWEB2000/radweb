@@ -15,12 +15,16 @@ export default function Dropdown(props: tDropdown) {
   };
 
   return (
-    <li className={css.wrapper} onMouseLeave={() => toggleExpand(false)}>
+    <li 
+      className={css.wrapper} 
+      onMouseLeave={() => toggleExpand(false)}
+    >
       <MenuItem
         {...props.link}
         isDropdown
         props={{
           onClick: close,
+          suppressHydrationWarning:true
         }}
         button={{
           onClick: () => toggleExpand(!isExpand),

@@ -2,7 +2,6 @@
 
 .wrapper {
   display: flex;
-
   height: 3.75rem;
   gap: 1rem;
 }
@@ -60,4 +59,21 @@
   .field {
     transition: none;
   }
+}
+
+
+@media (min-width:1270px){
+  .field {
+    width: 12em;
+    &:focus,
+    &:focus-within {
+      width: 20em;
+    }
+  
+    &:focus,
+    &:not(:placeholder-shown) {
+      width: 20em;
+    }
+  }
+  
 }
