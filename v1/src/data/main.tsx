@@ -6,9 +6,11 @@ import {
   FlagPoland as Poland,
   FlagUSA as Usa,
 } from "@/ico/index";
+import { tFooter } from "@/footer/Footer.models";
 
 interface main_structure {
   nav: tNavigation;
+  footer:tFooter;
 }
 
 export const main: main_structure = {
@@ -156,4 +158,67 @@ export const main: main_structure = {
     },
     menuButton: `Przycisk rozwijający menu`,
   },
+  footer:{
+    author:'RadWEB',
+    details:{
+        brand:'RadWEB',
+        logo: {
+          altText:'',
+          sourceSrc:logo_light.src,
+          title:''
+        },
+        contact:[
+          {
+            content:'radoslaw.adamczyk2000@radweb.pl',
+            title:'📧 Napisz do mnie: radoslaw.adamczyk2000@gmail.com',
+            type:'e-mail',
+            url:'mailto:radoslaw.adamczyk2000@gmail.com'
+          },
+          {
+            content:'+48 794-100-413',
+            title:'☎️ Zadzwoń do mnie: +48 794-100-413',
+            type:'telephone',
+            url:'tel:+48794100413'
+          },
+        ]
+    },
+    menus:[
+      {
+        title:'',
+        menu:[
+          {
+            title:'',
+            url:'/'
+          }
+        ]
+      },
+      {
+        title:'',
+        menu:[
+          {
+            title:'',
+            url:'/'
+          }
+        ]
+      },
+      {
+        title:'',
+        menu:[
+          {
+            title:'',
+            url:'/'
+          }
+        ]
+      },
+      {
+        title:'',
+        menu:[
+          {
+            title:'',
+            url:'/'
+          }
+        ]
+      },
+    ]
+  }
 };
