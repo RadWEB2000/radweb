@@ -10,7 +10,7 @@ import { tFooter } from "@/footer/Footer.models";
 
 interface main_structure {
   nav: tNavigation;
-  footer:tFooter;
+  footer: tFooter;
 }
 
 export const main: main_structure = {
@@ -158,67 +158,192 @@ export const main: main_structure = {
     },
     menuButton: `Przycisk rozwijający menu`,
   },
-  footer:{
-    author:'RadWEB',
-    details:{
-        brand:'RadWEB',
-        logo: {
-          altText:'',
-          sourceSrc:logo_light.src,
-          title:''
+  footer: {
+    author: "RadWEB",
+    details: {
+      brand: "RadWEB",
+      contact: [
+        {
+          content: "r.adamczyk@radweb.pl",
+          title: "📧 Napisz do mnie: radoslaw.adamczyk2000@gmail.com",
+          type: "e-mail",
+          url: "mailto:radoslaw.adamczyk2000@gmail.com",
         },
-        contact:[
-          {
-            content:'radoslaw.adamczyk2000@radweb.pl',
-            title:'📧 Napisz do mnie: radoslaw.adamczyk2000@gmail.com',
-            type:'e-mail',
-            url:'mailto:radoslaw.adamczyk2000@gmail.com'
-          },
-          {
-            content:'+48 794-100-413',
-            title:'☎️ Zadzwoń do mnie: +48 794-100-413',
-            type:'telephone',
-            url:'tel:+48794100413'
-          },
-        ]
+        {
+          content: "+48 794-100-413",
+          title: "☎️ Zadzwoń do mnie: +48 794-100-413",
+          type: "telephone",
+          url: "tel:+48794100413",
+        },
+      ],
     },
-    menus:[
+    menus: [
       {
-        title:'',
-        menu:[
+        title: "Na skróty",
+        menu: [
           {
-            title:'',
-            url:'/'
-          }
-        ]
+            title: "Start",
+            url: "/",
+          },
+          {
+            title: "O mnie",
+            url: "/o-mnie",
+          },
+          {
+            title: "Blog",
+            url: "/blog",
+          },
+          {
+            title: "Projekty i realizacje",
+            url: "/projekty",
+          },
+          {
+            title: "Słownik",
+            url: "/slownik",
+          },
+          {
+            title: "Case study",
+            url: "/case-study",
+          },
+          {
+            title: "Kontakt",
+            url: "/kontakt",
+          },
+          {
+            title: "Oferta",
+            url: "/oferta",
+          },
+        ],
       },
       {
-        title:'',
-        menu:[
+        title: "Oferta SEO",
+        menu: [
           {
-            title:'',
-            url:'/'
-          }
-        ]
+            title: "Pozycjonowanie stron",
+            url: "/oferta/seo",
+          },
+          {
+            title: "Pozycjonowanie e-commerce",
+            url: "/oferta/seo/e-commerce",
+          },
+          {
+            title: "Audyty SEO",
+            url: "/oferta/seo/audyty",
+          },
+          {
+            title: "Wizytówki Google",
+            url: "/oferta/seo/wizytowki-google",
+          },
+          {
+            title: "Migracja stron",
+            url: "/oferta/seo/migracja-stron",
+          },
+          {
+            title: "Pozycjonowanie lokalne",
+            url: "/oferta/seo/lokalne",
+          },
+          {
+            title: "Strategia SEO",
+            url: "/oferta/seo/strategia",
+          },
+          {
+            title: "SEO Copywriting",
+            url: "/oferta/seo/copywriting",
+          },
+          {
+            title: "SEO techniczne",
+            url: "/oferta/seo/techniczne",
+          },
+          {
+            title: "Pozycjonowanie zagraniczne",
+            url: "/oferta/seo/techniczne",
+          },
+          {
+            title: "Konsultacje",
+            url: "/oferta/seo/konsultacje",
+          },
+        ],
       },
       {
-        title:'',
-        menu:[
+        title: "Oferta WWW",
+        menu: [
           {
-            title:'',
-            url:'/'
-          }
-        ]
+            title: "Strony internetowe",
+            url: "/oferta/strony-internetowe",
+          },
+          {
+            title: "Sklepy internetowe",
+            url: "/oferta/strony-internetowe/e-commerce",
+          },
+          {
+            title: "Landing page",
+            url: "/oferta/strony-internetowe/landing-page",
+          },
+          {
+            title: "Szablony stron",
+            url: "/oferta/strony-internetowe/szablony-stron",
+          },
+          {
+            title: "Hosting",
+            url: "/oferta/strony-internetowe/hosting",
+          },
+          {
+            title: "Certyfikaty SSL",
+            url: "/oferta/strony-internetowe/certyfikaty-ssl",
+          },
+          {
+            title: "Aktualizacje stron",
+            url: "/oferta/strony-internetowe/aktualizacje",
+          },
+          {
+            title: "Modernizacja stron",
+            url: "/oferta/strony-internetowe/modernizacja",
+          },
+          {
+            title: "Integracje API",
+            url: "/oferta/strony-internetowe/integracje-api",
+          },
+          {
+            title: "Aplikacje webowe",
+            url: "/oferta/strony-internetowe/aplikacje-webowe",
+          },
+          {
+            title: "Konsultacje",
+            url: "/oferta/strony-internetowe/konsultacje",
+          },
+        ],
       },
       {
-        title:'',
-        menu:[
+        title: "",
+        menu: [
           {
-            title:'',
-            url:'/'
-          }
-        ]
+            title: "",
+            url: "/",
+          },
+        ],
       },
-    ]
-  }
+    ],
+    policies: [
+      {
+        title: "Polityka prywatności",
+        url: "/polityka-prywatnosci",
+      },
+      {
+        title: "Polityka Cookies",
+        url: "/polityka-cookies",
+      },
+      {
+        title: "Regulamin",
+        url: "/regulamin",
+      },
+    ],
+    socials: [
+      "https://www.facebook.com/radoslaw.adamczyk.2000",
+      "https://www.youtube.com/@radweb-programowanieiseo2410",
+      "https://www.instagram.com/radoslaw.adamczyk.2000/",
+      "https://github.com/RadWEB2000",
+      "https://www.linkedin.com/in/rados%C5%82aw-adamczyk-853948195/",
+      "https://x.com/rAdaCreative",
+    ],
+  },
 };

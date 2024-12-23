@@ -1,0 +1,41 @@
+@import "../../../styles/vars.scss";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 8.5rem repeat(2, 1fr);
+  margin: 10rem auto 1.5rem;
+  width: 99%;
+}
+
+.socials {
+  grid-column: 1/-1;
+  grid-row: 3;
+}
+
+.container {
+  background-color: $night;
+  border-radius: 0.5em;
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 4rem 4.5rem;
+}
+
+.line {
+  background-color: rgba($alabaster, 0.3);
+  display: block;
+  grid-column: 1/-1;
+  height: 1px;
+  margin: 3.5rem 0;
+  width: 100%;
+}
+
+@media (min-width: 1250px) {
+  .socials {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .container {
+    grid-column: 2/-1;
+  }
+}

@@ -1,14 +1,14 @@
 @import "../../../styles/vars.scss";
 
 .wrapper {
-  background-color: $gunmetal;
+  background-color: $night;
   color: $white;
   display: grid;
   grid-template-rows: 6.15rem 0;
   position: sticky;
   z-index: 9;
   top: 0;
-  &[data-expand="true"] {  
+  &[data-expand="true"] {
     grid-template-rows: 6.15rem calc(100vh - 6.15rem);
     .container {
       height: 100%;
@@ -29,43 +29,40 @@
   visibility: hidden;
 }
 
-@media (min-width:1000px){
- .wrapper {
-   align-items: center;
-  display: flex;
-  flex-flow:row nowrap;
-  justify-content: space-between;
-  padding: 0rem 1rem;
-  &[data-expand="false"] ,
-  &[data-expand="true"] {
-    grid-template-rows: unset;
-    height: 7rem;
-    overflow-y: visible;
+@media (min-width: 1000px) {
+  .wrapper {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    &[data-expand="false"],
+    &[data-expand="true"] {
+      grid-template-rows: unset;
+      height: 7rem;
+      overflow-y: visible;
+    }
+    & > * {
+      height: 100%;
+    }
   }
-  &> * {
-    height: 100%;
-  }
- }
 
-.container {
-  align-items: center;
-  grid-row: 1;
-  grid-template-columns: 7.5rem calc(100% - 7.5rem);
-  opacity: 1;
-  padding: 0;
-  visibility: visible;
+  .container {
+    align-items: center;
+    grid-row: 1;
+    grid-template-columns: 7.5rem calc(100% - 7.5rem);
+    opacity: 1;
+    padding: 0;
+    visibility: visible;
+  }
 }
 
-}
-
-
-@media (min-width:1270px){
-
+@media (min-width: 1270px) {
   .wrapper {
     padding: 0rem 1.4em;
   }
 
   .container {
-    gap:2.13rem;
+    gap: 2.13rem;
   }
 }

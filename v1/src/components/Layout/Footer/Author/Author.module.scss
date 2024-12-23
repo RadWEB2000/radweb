@@ -1,0 +1,9 @@
+@import "../../../../styles/vars.scss";
+
+.wrapper {
+  grid-column: 1/5;
+  font-size: 0.94em;
+  font-weight: 500;
+  color: $smoke;
+  height: 100%;
+}

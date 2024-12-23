@@ -29,7 +29,7 @@
       "@/css/*": ["./src/styles/*"],
       "@/data/*": ["./src/data/*"],
       "@/footer/*": ["./src/components/Layout/Footer/*"],
-      "@/functions/*": ["./src/lib/functions/*"],
+      "@/func/*": ["./src/lib/functions/*"],
       "@/hooks/*": ["./src/lib/hooks/*"],
       "@/ico/*": ["./src/assets/icons/*"],
       "@/img/*": ["./src/assets/images/*"],

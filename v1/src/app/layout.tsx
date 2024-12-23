@@ -4,6 +4,7 @@ import { TungstenBold } from "@/assets/fonts/fonts";
 import { Navigation } from "@/nav/index";
 import { main } from "@/data/main";
 import MenuProvider from "@/context/MenuContext";
+import { Footer } from "@/footer/index";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,15 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html 
-      lang="pl" 
-      className={TungstenBold.variable}
-
-    >
+    <html lang="pl" className={TungstenBold.variable}>
       <body>
         <MenuProvider>
           <Navigation {...main.nav} />
           {children}
+          <Footer {...main.footer} />
         </MenuProvider>
       </body>
     </html>

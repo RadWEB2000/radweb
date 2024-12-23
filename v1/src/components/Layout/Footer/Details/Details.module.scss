@@ -1,0 +1,73 @@
+@import "../../../../styles/vars.scss";
+
+.wrapper {
+  grid-column: 1/-1;
+}
+
+.wrapper,
+.identification,
+.contact {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+}
+.brand {
+  color: $orange;
+  font-size: 6.82em;
+  font-family: $heading;
+  font-weight: 500;
+}
+
+.contact {
+  gap: 1rem;
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    &__icon {
+      align-items: center;
+      display: flex;
+      height: 3.62rem;
+      justify-content: center;
+      width: 3.62rem;
+      & > * {
+        fill: $alabaster;
+        height: 70%;
+        transition: 0.12s linear fill;
+        width: 70%;
+      }
+    }
+    &__content {
+      color: $alabaster;
+      font-size: 1.02em;
+      font-weight: 450;
+      transition: 0.12s linear color;
+    }
+
+    &:focus,
+    &:focus-within,
+    &:hover {
+      .contact__item {
+        &__icon > * {
+          fill: $brick;
+        }
+        &__content {
+          color: $brick;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .wrapper {
+    grid-column: 1/5;
+  }
+}
+@media (min-width: 1250px) {
+  .brand {
+    font-size: 8em;
+  }
+}

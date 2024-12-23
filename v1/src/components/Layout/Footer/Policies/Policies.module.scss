@@ -1,0 +1,25 @@
+@import "../../../../styles/vars.scss";
+
+.wrapper {
+  align-items: center;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+  display: flex;
+  gap: 0.35em;
+  grid-column: 5/-1;
+}
+
+.item {
+  background-color: transparent;
+  border-radius: 0.3em;
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  transition: 0.12s linear background-color;
+
+  &:focus,
+  &:focus-within,
+  &:hover {
+    background-color: $gunmetal;
+  }
+}
