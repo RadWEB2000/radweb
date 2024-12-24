@@ -1,11 +1,6 @@
-export default async function Page(params: {
-  params: Promise<{ other: string }>;
-}) {
-  const slug = (await params).other;
-
+export default async function Page() {
   return (
     <div>
-      <h1 style={{ marginTop: "26rem" }}>{slug}</h1>
       <ul>
         <li>Lorem.</li>
         <li>Rem?</li>

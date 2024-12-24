@@ -1,4 +1,5 @@
 import { ImageProps } from "next/image";
+import { LinkProps } from "next/link";
 import {
   AnchorHTMLAttributes,
   SVGAttributes,
@@ -31,7 +32,7 @@ declare global {
   type tLink = {
     title: string;
     url: string;
-    props?: AnchorHTMLAttributes<HTMLAnchorElement>;
+    props?: AnchorHTMLAttributes<HTMLAnchorElement> | LinkProps;
   };
 
   type tVideo = {
@@ -44,4 +45,6 @@ declare global {
     attributes?: SVGAttributes<SVGElement>;
     className?: string;
   };
+
+  type tTheme = "dark" | "light";
 }

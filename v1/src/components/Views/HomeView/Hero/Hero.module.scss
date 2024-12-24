@@ -1,0 +1,113 @@
+@import "../../../../styles/vars.scss";
+
+$radius: 1em;
+
+.wrapper {
+  display: grid;
+  grid-template-areas: "layer";
+  height: 85vh;
+  margin: 2rem auto 10em;
+  position: relative;
+  width: 98%;
+}
+
+.media {
+  border-radius: $radius;
+  display: block;
+  grid-area: layer;
+  overflow: hidden;
+  position: relative;
+  & > * {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.headings,
+.corner {
+  background-attachment: fixed;
+  background-image: $background-gradient;
+  position: absolute;
+  top: 0;
+}
+
+.headings {
+  align-items: flex-start;
+  border-radius: 0 0 $radius $radius;
+  display: flex;
+  flex-flow: column-reverse;
+  justify-content: flex-start;
+  left: 0;
+  padding: 1rem 3rem 3rem 2.2rem;
+  height: fit-content;
+  width: clamp(5rem, 65rem, 92rem);
+  inset: 0 2vw;
+
+  .title,
+  .slogan {
+    font-family: $heading;
+    text-wrap: balance;
+  }
+  .slogan {
+    color: $orange;
+    font-size: clamp(1.67rem, 7.45rem, 13.55rem);
+    line-height: 0.8;
+  }
+
+  .title {
+    color: $smoke;
+    font-size: clamp(1.1em, 1.75em, 2.75em);
+  }
+}
+
+.buttons {
+  align-items: center;
+  bottom: 1.2em;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  justify-content: flex-end;
+  padding: 0rem 3rem;
+  position: absolute;
+  width: 100%;
+}
+
+@media (min-width: 615px) {
+  .headings {
+    inset: 0 2vw;
+    padding: 2rem 3rem 3rem 3rem;
+
+    .slogan {
+      font-size: clamp(1.67em, 6.45em, 9.55em);
+    }
+  }
+}
+
+@media (min-width: 1270px) {
+  $radius: 2em;
+
+  .wrapper {
+    width: 95%;
+  }
+  .media {
+    border-radius: $radius;
+  }
+
+  .buttons {
+    bottom: 4rem;
+  }
+
+  .headings {
+    border-radius: 0 0 $radius $radius;
+    inset: 0 1.5vw;
+    padding: 2rem 2.3vw 3vw 2.3vw;
+
+    .slogan {
+      font-size: clamp(1.67em, 7.45em, 9.55em);
+    }
+
+    .title {
+      margin-top: 2rem;
+    }
+  }
+}

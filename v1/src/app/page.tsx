@@ -1,6 +1,11 @@
+import { Hero } from "@/v-home/index";
+import { homePage } from "@/data/homePage";
+
 export default function Home() {
   return (
     <div>
+      <Hero {...homePage.hero} />
+
       <ul>
         <li>Lorem.</li>
         <li>Minus.</li>
