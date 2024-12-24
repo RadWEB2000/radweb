@@ -1,0 +1,51 @@
+@import "../../../../styles/vars.scss";
+
+.wrapper {
+  display: grid;
+  gap: 2rem;
+  margin: 15vh auto;
+  padding: 4rem;
+  width: 99%;
+}
+
+.content {
+  color: color-mix(in srgb, $smoke 45%, $gunmetal);
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: start;
+  text-indent: 0;
+  text-wrap: pretty;
+}
+
+@media (min-width: 725px) {
+  .wrapper {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .title {
+    grid-column: 1/4;
+  }
+
+  .content {
+    grid-column: 4/-1;
+  }
+}
+
+@media (min-width: 1025px) {
+  .content {
+    font-size: 2.96em;
+    text-indent: 2.96em;
+    line-height: 1.6;
+  }
+}
+@media (min-width: 1215px) {
+  .wrapper {
+    padding: 0;
+    width: 90%;
+  }
+  .content {
+    font-size: 3.66em;
+    text-indent: 3.66em;
+  }
+}

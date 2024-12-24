@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/css/global.scss";
+import "@/css/utils.scss";
 import { TungstenBold } from "@/assets/fonts/fonts";
 import { Navigation } from "@/nav/index";
 import { main } from "@/data/main";

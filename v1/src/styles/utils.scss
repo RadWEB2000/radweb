@@ -1,0 +1,19 @@
+@import "./vars.scss";
+
+.slogan {
+  color: $orange;
+  font-family: $heading;
+  position: relative;
+  font-size: 1.65em;
+  height: max-content;
+  &::after {
+    height: 1rem;
+    width: 1rem;
+    background-color: $orange;
+    border-radius: 50%;
+    left: 0;
+    top: 50%;
+    transform: translate(-1.5rem, -50%);
+    position: absolute;
+  }
+}

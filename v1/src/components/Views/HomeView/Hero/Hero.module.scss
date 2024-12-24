@@ -6,7 +6,7 @@ $radius: 1em;
   display: grid;
   grid-template-areas: "layer";
   height: 85vh;
-  margin: 2rem auto 10em;
+  margin: 2rem auto 5vh;
   position: relative;
   width: 98%;
 }
@@ -40,7 +40,7 @@ $radius: 1em;
   left: 0;
   padding: 1rem 3rem 3rem 2.2rem;
   height: fit-content;
-  width: clamp(5rem, 65rem, 92rem);
+  width: clamp(5rem, 65rem, 95%);
   inset: 0 2vw;
 
   .title,
@@ -50,7 +50,7 @@ $radius: 1em;
   }
   .slogan {
     color: $orange;
-    font-size: clamp(1.67rem, 7.45rem, 13.55rem);
+    font-size: clamp(1.67rem, 7rem, 13.55rem);
     line-height: 0.8;
   }
 
