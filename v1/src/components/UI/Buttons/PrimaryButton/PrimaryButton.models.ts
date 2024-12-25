@@ -10,5 +10,5 @@ export type tPrimaryButton = (
       props?: ButtonHTMLAttributes<HTMLButtonElement>;
     }
 ) & {
-  theme: tTheme;
+  theme: tTheme | "white" | "black";
 };

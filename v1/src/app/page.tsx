@@ -1,4 +1,4 @@
-import { Hero, Overview } from "@/v-home/index";
+import { About, Hero, Overview } from "@/v-home/index";
 import { homePage } from "@/data/homePage";
 
 export default function Home() {
@@ -7,6 +7,7 @@ export default function Home() {
       <Hero {...homePage.hero} />
       <main>
         <Overview {...homePage.overview} />
+        <About {...homePage.about} />
       </main>
       <ul>
         <li>Lorem.</li>

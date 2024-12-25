@@ -1,0 +1,93 @@
+@import "../../../../styles/vars.scss";
+
+.wrapper {
+  background: $orange;
+  display: grid;
+  gap: 2rem;
+  overflow-x: clip;
+  padding: 4rem 0 0 1rem;
+}
+
+.container {
+  grid-column: 1/6;
+  padding: 0 1rem 0 0;
+  z-index: 1;
+}
+
+.title {
+  font-family: $heading;
+  font-size: clamp(3.2rem, 7.65rem, 13.25em);
+  text-wrap: balance;
+}
+
+.content {
+  font-size: clamp(1.5rem, 1.7rem, 1.25em);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 60ch;
+  text-wrap: pretty;
+}
+
+.media {
+  aspect-ratio: 1/1;
+  display: block;
+  grid-column: 6/-1;
+  position: relative;
+  z-index: 0;
+}
+
+.image {
+  object-fit: contain;
+  object-position: bottom right;
+  transform-origin: bottom right;
+}
+
+@media (min-width: 525px) {
+  .wrapper {
+    align-items: end;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .container {
+    grid-column: 1/8;
+    grid-row: 1;
+    margin-bottom: 5rem;
+  }
+  .content {
+    font-size: clamp(1.5rem, 1.7rem, 1.25em);
+  }
+
+  .media {
+    aspect-ratio: 1/1;
+    grid-column: 6/-1;
+    grid-row: 1;
+  }
+}
+
+@media (min-width: 1125px) {
+  .wrapper {
+    align-items: start;
+    padding: 4rem 0 0 4vw;
+  }
+  .container {
+    margin-bottom: 15rem;
+  }
+
+  .media {
+    aspect-ratio: unset;
+    margin-top: 15rem;
+    min-height: 60vh;
+  }
+
+  .title {
+    font-size: clamp(3.2rem, 12.65rem, 13.25em);
+  }
+
+  .content {
+    font-size: clamp(1.5rem, 1.8rem, 1.25em);
+  }
+
+  .image {
+    scale: 1.5;
+  }
+}

@@ -33,6 +33,24 @@
       fill: $lavender;
     }
   }
+  &[data-theme="white"] {
+    box-shadow: 0 0 2px 3px $white;
+    .title {
+      color: $white;
+    }
+    .icon {
+      fill: $white;
+    }
+  }
+  &[data-theme="black"] {
+    box-shadow: 0 0 2px 3px $black;
+    .title {
+      color: $black;
+    }
+    .icon {
+      fill: $black;
+    }
+  }
 
   &:focus,
   &:focus-within,
