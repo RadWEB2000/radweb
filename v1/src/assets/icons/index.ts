@@ -1,3 +1,4 @@
+export { default as ArrowExpand } from "@/ico/ArrowExpand";
 export { default as ArrowRight } from "@/ico/ArrowRight";
 export { default as ArrowDown } from "@/ico/ArrowDown";
 export { default as Behance } from "@/ico/Behance";

@@ -1,3 +1,4 @@
+import { ArrowExpand } from "@/ico/index";
 import { tHomePageOfferCard } from "@/c-offers/HomePageOfferCard/HomePageOfferCardOfferCards.models";
 import css from "@/c-offers/HomePageOfferCard/HomePageOfferCardOfferCards.module.scss";
 import Image from "next/image";
@@ -6,22 +7,8 @@ import Link from "next/link";
 export default function HomePageOfferCard(props: tHomePageOfferCard) {
   return (
     <li className={css.wrapper}>
-      <div className={css.details}>
-        <h3
-          className={css.title}
-          dangerouslySetInnerHTML={{ __html: props.title }}
-        />
-        <Link
-          aria-label={props.button.title}
-          className={css.button}
-          href={props.button.url}
-          {...props.button.props}
-        >
-          więcej
-        </Link>
-      </div>
-      <section className={css.container}>
-        <picture className={css.media}>
+      <div className={css.box}>
+      <picture className={css.media}>
           <Image
             alt={props.image.altText}
             className={css.image}
@@ -33,8 +20,29 @@ export default function HomePageOfferCard(props: tHomePageOfferCard) {
             {...props.image.props}
           />
         </picture>
-        <p></p>
-      </section>
+        <h3
+          className={css.title}
+          dangerouslySetInnerHTML={{ __html: props.title }}
+        />
+        <Link
+          aria-label={props.button.title}
+          className={css.button}
+          href={props.button.url}
+          {...props.button.props}
+        >
+          <ArrowExpand
+            className={css.icon}
+            attributes={{
+              fill:'#fff'
+            }}
+          />
+        </Link>
+      </div>
+      <section className={css.container}>
+        <p
+        className={css.content}
+          dangerouslySetInnerHTML={{__html:props.content}}
+        />
       {props.subservices && (
         <ul className={css.cards}>
           {props.subservices.map((item) => {
@@ -46,6 +54,7 @@ export default function HomePageOfferCard(props: tHomePageOfferCard) {
           })}
         </ul>
       )}
+      </section>
     </li>
   );
 }
