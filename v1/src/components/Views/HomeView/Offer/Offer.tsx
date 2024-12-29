@@ -14,7 +14,7 @@ export default function Offer(props: tOffer) {
           className={css.content}
           dangerouslySetInnerHTML={{ __html: props.content }}
         />
-        <Button {...props.button} mode="link" theme="light" />
+        <Button {...props.button} mode="link" theme="white" />
       </section>
       {props.cards && (
         <ul className={css.cards}>

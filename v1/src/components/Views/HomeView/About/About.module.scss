@@ -75,19 +75,17 @@
 
   .media {
     aspect-ratio: unset;
-    margin-top: 15rem;
-    min-height: 60vh;
+    height: 100%;
+  }
+  .image {
+    scale: 1.14;
   }
 
   .title {
-    font-size: clamp(3.2rem, 12.65rem, 13.25em);
+    font-size: clamp(3.2rem, 16.65rem, 28.25rem);
   }
 
   .content {
     font-size: clamp(1.5rem, 1.8rem, 1.25em);
-  }
-
-  .image {
-    scale: 1.5;
   }
 }

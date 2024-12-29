@@ -1,0 +1,112 @@
+@import "../../../../styles/vars.scss";
+
+.wrapper {
+  margin: 5rem auto;
+  width: 97.5%;
+}
+
+.cards {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column;
+  gap: 4rem;
+  padding: 4rem 0;
+}
+
+.container {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column;
+  gap: 2rem;
+  padding: 0.5rem;
+  max-height: max-content;
+}
+
+.title {
+  color: $white;
+  font-family: $heading;
+  font-size: 3.7em;
+  text-wrap: balance;
+  line-height: 1;
+}
+
+.content {
+  color: $alabaster;
+  font-size: 0.98em;
+  line-height: 1.95;
+  max-width: 70ch;
+}
+
+@media (min-width: 940px) {
+  .title {
+    font-size: 5.27em;
+  }
+
+  .content {
+    font-size: 1.1em;
+  }
+}
+@media (min-width: 1175px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 5rem 0 5rem auto;
+    width: 97.5%;
+  }
+
+  .cards {
+    gap: 4rem;
+    padding: 4rem 0;
+    grid-column: 6/-1;
+  }
+
+  .container {
+    position: sticky;
+    top: 12rem;
+    grid-column: 1/6;
+  }
+
+  .title {
+    font-size: 4.55em;
+  }
+
+  .content {
+    font-size: 0.96em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    width: 98.2%;
+  }
+
+  .cards {
+    gap: 2.4rem;
+    padding: 0 0.72rem;
+    grid-column: 6/-1;
+  }
+
+  .container {
+    grid-column: 1/6;
+  }
+
+  .title {
+    font-size: 5.25em;
+  }
+
+  .content {
+    font-size: 1.04em;
+  }
+}
+
+@media (min-width: 1670px) {
+  .wrapper {
+    margin: 9rem 1rem 9rem auto;
+    width: 96.2%;
+  }
+  .title {
+    font-size: 6.87em;
+  }
+}

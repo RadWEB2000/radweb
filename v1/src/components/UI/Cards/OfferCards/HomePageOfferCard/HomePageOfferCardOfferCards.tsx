@@ -8,7 +8,7 @@ export default function HomePageOfferCard(props: tHomePageOfferCard) {
   return (
     <li className={css.wrapper}>
       <div className={css.box}>
-      <picture className={css.media}>
+        <picture className={css.media}>
           <Image
             alt={props.image.altText}
             className={css.image}
@@ -33,27 +33,28 @@ export default function HomePageOfferCard(props: tHomePageOfferCard) {
           <ArrowExpand
             className={css.icon}
             attributes={{
-              fill:'#fff'
+              fill: "#fff",
             }}
           />
         </Link>
       </div>
+      <span className={css.line} />
       <section className={css.container}>
         <p
-        className={css.content}
-          dangerouslySetInnerHTML={{__html:props.content}}
+          className={css.content}
+          dangerouslySetInnerHTML={{ __html: props.content }}
         />
-      {props.subservices && (
-        <ul className={css.cards}>
-          {props.subservices.map((item) => {
-            return (
-              <Link className={css.card} href={item.url} key={item.title}>
-                {item.title}
-              </Link>
-            );
-          })}
-        </ul>
-      )}
+        {props.subservices && (
+          <ul className={css.cards}>
+            {props.subservices.map((item) => {
+              return (
+                <Link className={css.card} href={item.url} key={item.title}>
+                  {item.title}
+                </Link>
+              );
+            })}
+          </ul>
+        )}
       </section>
     </li>
   );

@@ -35,7 +35,7 @@ export const homePage: t_home = {
     ],
     media: {
       type: "video",
-      src: "https://videos.pexels.com/video-files/3196685/3196685-hd_1920_1080_25fps.mp4",
+      src: "https://videos.pexels.com/video-files/1741279/1741279-hd_1920_1080_30fps.mp4",
       props: {
         autoPlay: true,
         loop: true,
