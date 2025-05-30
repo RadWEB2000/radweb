@@ -1,0 +1,44 @@
+@use "../../../../../styles/variables" as *;
+
+.wrapper {
+    // background-color: darkblue;
+
+    &__primary {
+        color: color-mix(in srgb, $color-gray-battleship 45%, $color-white-smoke);
+        // background: pink;
+        font-weight: 600;
+        font-size: 1.672em;
+        transition: .182s linear color;
+
+        &:focus,
+        &:focus-within,
+        &:hover {
+            color: color-mix(in srgb, $color-white 15%, $color-cinnabar-light);
+        }
+    }
+
+    &__secondary {
+        color: color-mix(in srgb, $color-gray-battleship 45%, $color-white-smoke);
+        // background: salmon;
+        font-size: 1.32em;
+        transition: .182s linear color;
+
+        &:focus,
+        &:focus-within,
+        &:hover {
+            color: color-mix(in srgb, $color-white 15%, $color-cinnabar-light);
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .wrapper {
+        &__primary {
+            font-size: 1.012em;
+        }
+
+        &__secondary {
+            font-size: .972em;
+        }
+    }
+}

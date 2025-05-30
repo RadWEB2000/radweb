@@ -1,0 +1,50 @@
+@use "./variables" as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::after,
+::before {
+    content: '';
+    position: absolute;
+}
+
+a {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: $color-black-night;
+    color: $color-white-smoke;
+    font-family: $font-nunito;
+    font-size: 1.6rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+a,
+button {
+    cursor: pointer;
+}
+
+
+button,
+iframe,
+input,
+textarea {
+    all: unset;
+}
+
+li,
+ol,
+ul {
+    list-style: none;
+}

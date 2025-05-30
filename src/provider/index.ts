@@ -1,0 +1,1 @@
+export { default as MenuProvider } from "@/provider/menu-provider"

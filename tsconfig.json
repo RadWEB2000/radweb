@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,9 +23,69 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@/app/*": [
+        "./src/app/*"
+      ],
+      "@/buttons/*": [
+        "./src/components/utils/buttons/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/hooks/*": [
+        "./src/lib/hooks/*"
+      ],
+      "@/lib/*": [
+        "./src/lib/*"
+      ],
+      "@/css/*": [
+        "./src/styles/*"
+      ],
+      "@/ts/*": [
+        "./src/types/*"
+      ],
+      "@/assets/*": [
+        "./src/assets/*"
+      ],
+      "@/ico/*": [
+        "./src/assets/icons/*"
+      ],
+      "@/img/*": [
+        "./src/assets/images/*"
+      ],
+      "@/video/*": [
+        "./src/assets/videos/*"
+      ],
+      "@/nav/*": [
+        "./src/components/layout/navigation/*"
+      ],
+      "@/views/*": [
+        "./src/components/views/*"
+      ],
+      "@/utils/*": [
+        "./src/components/utils/*"
+      ],
+      "@/layout/*": [
+        "./src/components/layout/*"
+      ],
+      "@/configs/*": [
+        "./src/lib/configs/*"
+      ],
+      "@/funcs/*": [
+        "./src/lib/functions/*"
+      ],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
