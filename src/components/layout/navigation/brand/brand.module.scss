@@ -8,6 +8,13 @@
     flex-flow: row nowrap;
     grid-column: 1/6;
     grid-row: 1;
+    &:focus,
+    &:focus-within ,
+    &:hover{
+        .brand {
+            color:$color-coquelicot;
+        }
+    }
 }
 
 .logo {
@@ -18,6 +25,7 @@
     font-family: $font-oswald;
     font-size: clamp(1em, 4dvw + 0.5em, 2.75em);
     font-weight: 900;
+    transition:.2s linear color;
 }
 
 @media (min-width:1024px) {

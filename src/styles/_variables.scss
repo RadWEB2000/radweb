@@ -1,12 +1,12 @@
-$color-black: lch(0% 0 0);
-$color-black-night: lch(6.96% 1.38 199.49);
-$color-black-erie: lch(12.25% 2.41 198.86);
-$color-gray-battleship: lch(61.46% 1.15 199.68);
-$color-white-smoke: lch(96.54% 0.01 296.81);
-$color-white: lch(100% 0.01 296.81);
-$color-coquelicot: lch(58.14% 91.07 42.87);
-$color-cinnabar-light: lch(56.95% 76.46 42.45);
-$color-cinnabar-dark: lch(53.67% 81.16 39.55);
+$color-black: hsl(0, 0%, 0%);
+$color-black-night: hsl(180, 7%, 8%);
+$color-black-erie: hsl(180, 8%, 12%);
+$color-gray-battleship: hsl(180, 1%, 58%);
+$color-white-smoke: hsl(0, 0%, 96%);
+$color-white: hsl(0, 0%, 100%);
+$color-coquelicot: hsl(12, 100%, 56%);
+$color-cinnabar-light: hsl(12, 84%, 56%);
+$color-cinnabar-dark: hsl(8, 83%, 54%);
 
 $font-oswald: var(--font-oswald);
 $font-nunito: var(--font-nunito);

@@ -23,6 +23,8 @@ export default function Hero() {
                 <Image
                     alt="Radosław Adamczyk - Specjalista SEO / SEM / SXO"
                     className={css.image}
+                    priority
+                    loading="eager"
                     src={gray_face.src}
                     fill
                     // height={650}

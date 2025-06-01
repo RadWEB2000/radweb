@@ -1,11 +1,14 @@
-import Image from "next/image";
-import me from "@/img/r-adamczyk-gray.webp"
-import { Hero } from "@/views/home-view";
+// import Image from "next/image";
+// import me from "@/img/r-adamczyk-gray.webp"
+import { About, Hero } from "@/views/home-view";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
+      <main>
+        <About/>
+      </main>
       <ul>
 
         <li>lorem59</li>

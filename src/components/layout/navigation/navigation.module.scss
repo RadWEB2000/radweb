@@ -28,7 +28,7 @@
         height: 100vh;
         top: 0;
         grid-template-rows: 6.25rem auto;
-        transition: .25s ease-in-out all, .25s .65s ease-in-out top, .25s .25s ease-in-out width;
+        transition: .15s ease-in-out all, .15s .2s ease-in-out top, .15s .15s ease-in-out width;
     }
 
 }
