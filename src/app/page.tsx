@@ -1,6 +1,6 @@
 // import Image from "next/image";
 // import me from "@/img/r-adamczyk-gray.webp"
-import { About, Hero, Projects, Services } from "@/views/home-view";
+import { About, Blog, Hero, Projects, Services } from "@/views/home-view";
 
 export default function HomePage() {
   return (
@@ -10,6 +10,7 @@ export default function HomePage() {
         <About />
         <Services />
         <Projects />
+        <Blog />
       </main>
       <ul>
 
