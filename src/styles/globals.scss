@@ -12,6 +12,14 @@
     position: absolute;
 }
 
+
+mark {
+    background-color: change-color($color: $color-cinnabar-dark, $saturation: 80%, $lightness: 50%, $alpha: 1.0);
+    border-radius: 1rem;
+    padding: 0rem 1rem;
+    line-height: 1;
+}
+
 a {
     color: inherit;
     outline: none;
@@ -19,7 +27,9 @@ a {
 }
 
 body {
-    background-color: $color-black-night;
+    background-attachment: fixed;
+    // background-color: $color-black-night;
+    background-image: linear-gradient(to top left, $color-black-night, $color-black);
     color: $color-white-smoke;
     font-family: $font-nunito;
     font-size: 1.6rem;
@@ -47,4 +57,11 @@ li,
 ol,
 ul {
     list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: $color-white;
 }

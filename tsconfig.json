@@ -56,7 +56,7 @@
       "@/img/*": [
         "./src/assets/images/*"
       ],
-      "@/video/*": [
+      "@/vids/*": [
         "./src/assets/videos/*"
       ],
       "@/nav/*": [

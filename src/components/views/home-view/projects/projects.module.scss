@@ -1,0 +1,193 @@
+@use "../../../../styles/variables" as *;
+
+.cards,
+.container,
+.separator {
+    margin: 1rem auto;
+    width: min(150rem, 95%);
+}
+
+.cards {
+    display: grid;
+    gap: 2rem;
+}
+
+.card {
+
+
+
+    background-color: rgba($color-black-erie, .27);
+    border-radius: 2.2rem;
+    padding: 1.2rem 1.2rem 2rem 1.2rem;
+    position: relative;
+    transition: .32s linear background-color;
+
+    &:focus,
+    &:focus-within,
+    &:hover {
+
+        background-color: rgba($color-black-erie, .67);
+
+        .card__media__image {
+            transform: scale(1.04);
+        }
+    }
+
+    &__media {
+        aspect-ratio: 4/4.6;
+        border-radius: 2.2rem;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+
+        &__image {
+            object-fit: cover;
+            object-position: center;
+            transition: .32s ease-in-out transform;
+        }
+    }
+
+    &__box {
+        margin-top: 1rem;
+    }
+
+    &__title {
+        font-size: clamp(1.3em, 3vw + .9em, 3em);
+        font-weight: 850;
+        line-height: 1.05;
+    }
+
+    &__excerpt {
+        font-size: clamp(.7em, 2.6vw + .35em, 1.02em);
+        margin-top: 0.74rem;
+    }
+
+    &__release {
+        left: 4rem;
+        position: absolute;
+        top: 4rem;
+    }
+
+    &__tags {
+        align-items: center;
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+        margin-top: 2rem;
+    }
+
+    &__tag {
+        align-items: center;
+        border: 2px solid $color-platinum;
+        border-radius: 1.2rem;
+        color: $color-platinum;
+        display: flex;
+        font-size: 1.01em;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 1.4;
+        padding: 0.3rem 1.32rem;
+    }
+}
+
+.container {
+    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    &__title {
+        color: $color-coquelicot;
+        font-family: $font-oswald;
+        font-size: clamp(2em, 10vw + 1em, 6.5em);
+        grid-column: 1/5;
+        line-height: 1;
+    }
+
+    &__description {
+        font-size: 1.02em;
+        grid-column: 1/-1;
+        line-height: 1.72;
+        margin-top: 3rem;
+        max-width: 105ch;
+    }
+
+    &__button {
+        align-items: center;
+        border: 4px solid $color-white;
+        border-radius: 50%;
+        display: flex;
+        font-size: 5em;
+        grid-row: 1;
+        height: 6rem;
+        justify-content: center;
+        margin: 2.4rem 0 2.4rem 0;
+        transition: .2s linear color;
+        width: 6rem;
+
+        &:focus,
+        &:focus-within,
+        &:hover {
+            color: $color-coquelicot;
+        }
+    }
+}
+
+
+
+.separator {
+    background-color: $color-gray-battleship;
+    border-radius: 2.2rem;
+    display: block;
+    height: 2px;
+    margin: 2rem auto;
+}
+
+
+
+@media (min-width:700px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        grid-template-columns: calc(100% - 12rem) 12rem;
+
+        &__title,
+        &__description {
+            grid-column: 1;
+        }
+
+        &__button {
+            font-size: 7rem;
+            grid-column: 2;
+            grid-row: 1/3;
+            height: 9rem;
+            margin: .5rem auto auto;
+            width: 9rem;
+        }
+    }
+
+    .card {
+        &:nth-of-type(3n) {
+            grid-column: 1/-1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: calc(100% - 10rem) 10rem;
+
+            .card__media {
+                height: 50rem;
+                grid-column: 1;
+                grid-row: 1/3;
+            }
+
+            .card__tags,
+            .card__box {
+                grid-column: 2;
+            }
+
+            .card__box {
+                padding: 4rem;
+            }
+        }
+    }
+}

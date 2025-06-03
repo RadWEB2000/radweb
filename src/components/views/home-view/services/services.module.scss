@@ -1,0 +1,172 @@
+@use "../../../../styles/variables" as *;
+
+.wrapper {
+    // background: green;
+    border: .85rem solid rgba($color-black-erie, .7);
+    border-radius: 2.2rem;
+    display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    margin: 12vh auto 5vh;
+    position: relative;
+    width: min(170rem, 95%);
+    z-index: 0;
+}
+
+.container {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    // min-height: 60rem;
+    padding: 3rem;
+
+    &__title {
+        text-shadow: 0 0 2.5rem change-color($color: $color-black-erie, $alpha: .60);
+        font-family: $font-oswald;
+        font-size: clamp(2em, 8vw + 1em, 6em);
+        line-height: 1;
+        text-wrap: balance;
+    }
+
+    &__description {
+        color: $color-platinum;
+        font-size: clamp(1em, 2vw + 0.5em, 1.18em);
+        font-weight: 600;
+        line-height: 1.6;
+        margin-top: 2rem;
+    }
+}
+
+.media {
+    grid-column: 1/-1;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.movie {
+    border-radius: 2.2rem;
+    filter: brightness(65%);
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.cards {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    justify-content: flex-start;
+    padding: 2rem;
+    position: sticky;
+}
+
+.card {
+    align-items: flex-start;
+    background-color: change-color($color: $color-black-erie, $alpha: .8);
+    border-radius: 2.2rem;
+    display: flex;
+    flex-flow: column;
+    // height: 30rem;
+    justify-content: center;
+    padding: 4rem;
+    padding: 2rem;
+    transition: .2s linear background-color;
+
+    &:focus,
+    &:focus-within,
+    &:hover {
+        background-color: change-color($color: $color-black-erie, $alpha: .98);
+    }
+
+    &__title {
+        font-size: clamp(1.45em, 2vw + .972em, 2.45em);
+        font-weight: 800;
+    }
+
+    &__description {
+        color: $color-platinum;
+        font-size: 1.12em;
+        font-size: clamp(.89em, 1.5vw + .62em, 1.12em);
+        margin-top: 1rem;
+        text-wrap: balance;
+    }
+
+    &__button {
+        background-color: $color-white;
+        border-radius: 2.2rem;
+        color: $color-black-night;
+        display: flex;
+        font-size: 0.9em;
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        width: fit-content;
+    }
+}
+
+.suboffers {
+    // border: .2rem solid $color-black-erie;
+    // background-color: $color-black-erie;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto 12vh;
+    gap: .2rem;
+    width: min(170rem, 95%);
+}
+
+.suboffer {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    background-attachment: fixed;
+    background-image: linear-gradient(to top left, $color-black-night, $color-black);
+    padding: 2rem;
+    transition: .2s linear filter;
+
+    &:focus,
+    &:focus-within,
+    &:hover {
+        filter: brightness(185%);
+    }
+
+    &__title {
+        font-size: clamp(1.06em, 3.75vw + .45em, 1.68em);
+        font-weight: 800;
+        text-wrap: balance;
+    }
+
+    &__description {
+        color: $color-gray-battleship;
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width:650px) {
+    .suboffers {
+        border: .2rem solid $color-black-erie;
+        background-color: $color-black-erie;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:1100px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        padding: 2rem 4rem;
+    }
+
+    .suboffers {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .suboffer {
+        min-height: 35rem;
+    }
+}
