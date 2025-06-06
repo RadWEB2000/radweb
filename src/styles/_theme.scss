@@ -1,0 +1,9 @@
+@use "./variables" as *;
+
+$background: light-dark($color-black-night, $color-white-smoke);
+$foreground: light-dark($color-white-smoke, $color-black-erie);
+$primary: $color-coquelicot;
+
+$nav-primary: light-dark(color-mix(in lab, change-color($color: $color-white-smoke, $alpha: .75) 95%, change-color($color: $color-white, $alpha: .75)) color-mix(in lab, change-color($color: $color-black-erie, $alpha: .75) 95%, change-color($color: $color-black-night, $alpha: .75)));
+$nav-secondary: light-dark(rgba($color-black-night, 1), rgba($color-white-smoke, 1));
+$shadow-primary: light-dark(rgba($color-white-smoke, .15), rgba($color-black-erie, .15));

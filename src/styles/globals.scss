@@ -1,9 +1,14 @@
+@use "./theme" as *;
 @use "./variables" as *;
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+:root {
+    color-scheme: light dark;
 }
 
 ::after,
@@ -29,10 +34,11 @@ a {
 body {
     background-attachment: fixed;
     // background-color: $color-black-night;
-    background-image: linear-gradient(to top left, $color-black-night, $color-black);
-    color: $color-white-smoke;
+    background: $background;
+    color: $foreground;
     font-family: $font-nunito;
     font-size: 1.6rem;
+    transition: .14s linear all;
 }
 
 html {
@@ -64,4 +70,8 @@ h2,
 h3,
 h4 {
     color: $color-white;
+}
+
+.special-text {
+    color: $color-cinnabar-dark;
 }

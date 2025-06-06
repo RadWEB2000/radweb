@@ -1,7 +1,4 @@
-// import Image from "next/image";
-// import me from "@/img/r-adamczyk-gray.webp"
 import { home_page } from "@/data/static/home-page";
-import { About, Blog, Hero, Projects, Services } from "@/views/home-view";
 
 export default function HomePage() {
 
@@ -9,12 +6,8 @@ export default function HomePage() {
 
   return (
     <>
-      <Hero {...hero} />
       <main>
-        <About />
-        <Services />
-        <Projects />
-        <Blog />
+
       </main>
       <ul>
 

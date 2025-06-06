@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Oswald, Nunito_Sans } from "next/font/google";
 import "@/css/globals.scss";
-import { Navigation } from "@/nav/index";
+// import { Navigation } from "@/nav/index";
 import { MenuProvider } from "@/provider";
 
 const oswald = Oswald({
@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="pl_PL">
       <MenuProvider>
         <body className={`${oswald.variable} ${nunito.variable}`}>
-          <Navigation />
+          {/* <Navigation /> */}
           {children}
         </body>
       </MenuProvider>

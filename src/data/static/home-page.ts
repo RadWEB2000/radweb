@@ -57,8 +57,8 @@ export const home_page: home_page = {
             uri: '#'
         },
         description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo et maxime beatae sapiente aut offi Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam itaque aliquam expedita quisquam impedit excepturi quis hic. Facilis, incidunt excepturi. Quod excepturi nesciunt molestiae velit debitis. Tenetur quisquam maxime error. Repellendus, id. Deleniti expedita, reiciendis eum atque at repellat sunt totam, architecto facere soluta ratione cumque ut molestiae delectus ad! Unde nesciunt dolore eos amet velit quidem quis blanditiis non. Dolorum numquam impedit beatae aut laboriosam architecto ad deserunt voluptates veritatis, reiciendis quidem. Illum minima, totam reiciendis sequi exercitationem incidunt expedita? Harum minima delectus, sequi facilis sit libero mollitia obcaecati! Ratione a corrupti, architecto animi quasi omnis alias libero laborum aliquid, repellat doloribus modi pariatur beatae eveniet quidem`,
-        slogan: `Empower <span class="special-text" >youre business</span> /n Financal Future Ettorlessy`,
-        title: `O mnie`
+        title: `Empower <span class="special-text" >youre business</span> <br/> Financal Future Ettorlessy`,
+        slogan: `O mnie`
     },
     blog: {
         button: {
