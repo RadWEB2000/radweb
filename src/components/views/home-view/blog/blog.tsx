@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CiCalendar as Calendar, CiClock2 as Clock } from "react-icons/ci";
-
+import css from "@/views/home-view/blog/blog.module.scss";
+import abstract_squartes from "@/img/abstract-squares.webp";
 const posts: Array<{
     image: image,
     title: string;
@@ -111,46 +112,61 @@ const posts: Array<{
 
 export default function Blog() {
     return (
-        <div>
-            <section>
-                <h2>Blog</h2>
-                <strong>Wondering how well we know your industry? Curious which tech stacks we support?</strong>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex cupiditate similique beatae vel expedita obcaecati tempore harum. Placeat eveniet cupiditate qui at quia tenetur voluptatem commodi explicabo nisi culpa, tempore, soluta quas enim dolores similique! Facilis esse nesciunt eligendi voluptates, iusto neque, illum fuga necessitatibus perspiciatis, dolorem alias hic velit vitae nemo? Dolore deleniti exercitationem asperiores incidunt beatae omnis quis obcaecati accusamus eius atque consequuntur et placeat commodi.</p>
+        <div
+            className={css.wrapper}
+        >
+            <section className={css.container}>
+                <h2 className={css.container__title}>Blog</h2>
+                <strong className={css.container__slogan} >Wondering how well we <span className={css.special} >know your industry</span>? Curious which tech stacks we support?</strong>
+                <p className={css.container__description} >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex cupiditate similique beatae vel expedita obcaecati tempore harum. Placeat eveniet cupiditate qui at quia tenetur voluptatem commodi explicabo nisi culpa, tempore, soluta quas enim dolores similique! Facilis esse nesciunt eligendi voluptates, iusto neque, illum fuga necessitatibus perspiciatis, dolorem alias hic velit vitae nemo? Dolore deleniti exercitationem asperiores incidunt beatae omnis quis obcaecati accusamus eius atque consequuntur et placeat commodi.</p>
             </section>
-            <ul>
-                {
-                    posts.slice(0, 6).map(({ button, category, image, readingTime, release, title, uri }) => {
-                        return (
-                            <li>
-                                <figure>
-                                    <Image
-                                        {...image}
-                                        loading="lazy"
-                                        fill
-                                    />
-                                </figure>
-                                <div>
-                                    <Link href={category.label} >{category.label}</Link>
-                                    <h3>{title}</h3>
-                                    <div>
-                                        <p>
-                                            <i><Calendar /></i>
-                                            <span>{release}</span>
-                                        </p>
-                                        <p>
-                                            <i><Clock /></i>
-                                            <span>{`${readingTime}min`}</span>
-                                        </p>
+            <div
+                className={css.box}
+            >
+                <figure className={css.media} >
+                    <Image
+                        alt=""
+                        className={css.image}
+                        src={abstract_squartes.src}
+                        fill
+                        quality={85}
+                        loading="lazy"
+                    />
+                </figure>
+                <ul className={css.cards} >
+                    {
+                        posts.slice(0, 6).map(({ button, category, image, readingTime, release, title, uri }) => {
+                            return (
+                                <Link className={css.card} href={uri} >
+                                    <figure className={css.card__media} >
+                                        <Image
+                                            {...image}
+                                            className={css.card__media__image}
+                                            loading="lazy"
+                                            fill
+                                        />
+                                    </figure>
+                                    <div className={css.card__details} >
+                                        <Link className={css.card__details__category} href={category.label} >{category.label}</Link>
+                                        <h3 className={css.card__details__title} >{title}</h3>
+                                        <div className={css.card__details__info} >
+                                            <p className={css.card__details__info__item}>
+                                                <i className={css.card__details__info__item__icon} ><Calendar /></i>
+                                                <span className={css.card__details__info__item__label} >{release}</span>
+                                            </p>
+                                            <p className={css.card__details__info__item} >
+                                                <i className={css.card__details__info__item__icon}  ><Clock /></i>
+                                                <span className={css.card__details__info__item__label}  >{`${readingTime}min`}</span>
+                                            </p>
+                                        </div>
+
                                     </div>
-                                    <Link href={uri} >
-                                        {button}
-                                    </Link>
-                                </div>
-                            </li>
-                        )
-                    })
-                }
-            </ul>
+                                </Link>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
         </div>
     )
 }

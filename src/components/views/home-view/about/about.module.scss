@@ -30,6 +30,7 @@
 
     .title {
         font-size: clamp(2em, 10vw + 1em, 6.5em);
+        color: color-mix(in srgb, rgba($color-gray-battleship, .79) 50%, rgba($color-platinum, .8));
     }
 
     .slogan {

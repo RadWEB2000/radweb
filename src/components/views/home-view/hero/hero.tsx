@@ -23,33 +23,28 @@ const images: Array<image> = [
     },
 ]
 
-export default function Hero() {
+type hero = {
+    title: string;
+    slogan: string;
+    gallery: Array<image>;
+}
+
+export default function Hero({ gallery, slogan, title }: hero) {
     return (
         <>
             <header
                 className={css.wrapper}
             >
                 <section className={css.box} >
-                    <h1 className={css.title} >RadWEB</h1>
-                    <h2 className={css.subtitle}>Współczesny marketing online</h2>
-                    <div className={css.details} >
-                        <li className={css.detail} >Blog</li>
-                        <li className={css.detail} >Strony internetowe</li>
-                        <li className={css.detail} >SEO</li>
-                        <li className={css.detail} >Kontakt</li>
-                    </div>
+                    <h1 className={css.title} >{title}</h1>
+                    <h2 className={css.subtitle}>{slogan}</h2>
                 </section>
-                <figure
-                    className={css.media}
-                >
-                    {/* <video playsInline muted loop autoPlay src="/videos/spinning-lines-full-hd.mov"></video> */}
-                </figure>
             </header>
             <ul
                 className={css.gallery}
             >
                 {
-                    images.map(({ alt, src, title }, index) => {
+                    gallery?.map(({ alt, src, title }, index) => {
                         return (
                             <picture
                                 className={`${css.gallery__item} ${index - 1 < images.length && css.gallery__item__last}`}

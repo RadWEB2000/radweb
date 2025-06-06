@@ -1,11 +1,15 @@
 // import Image from "next/image";
 // import me from "@/img/r-adamczyk-gray.webp"
+import { home_page } from "@/data/static/home-page";
 import { About, Blog, Hero, Projects, Services } from "@/views/home-view";
 
 export default function HomePage() {
+
+  const { about, blog, hero, services } = home_page;
+
   return (
     <>
-      <Hero />
+      <Hero {...hero} />
       <main>
         <About />
         <Services />

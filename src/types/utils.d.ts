@@ -15,4 +15,6 @@ declare global {
         uri: string;
         attrs?: AnchorHTMLAttributes<HTMLAnchorElement>;
     }
+
+    type service_type = "www" | "seo" | "insurance"
 }

@@ -104,6 +104,40 @@ const menu: Array<{
             ]
         },
         {
+            label: 'Ubezpieczenia',
+            uri: '/ubezpieczenia',
+            submenu: [
+                {
+                    label: 'Polisy komunikacyjne',
+                    uri: '/ubezpieczenia/komunikacyjne'
+                },
+                {
+                    label: 'Polisy turystyczne',
+                    uri: '/ubezpieczenia/turystyczne'
+                },
+                {
+                    label: 'Polisy majątkowe',
+                    uri: '/ubezpieczenia/majątkowe'
+                },
+                {
+                    label: 'Polisy na życie',
+                    uri: '/ubezpieczenia/na-zycie'
+                },
+                {
+                    label: 'Polisy NNW szkolne',
+                    uri: '/ubezpieczenia/szkolne'
+                },
+                {
+                    label: 'Polisy NNW',
+                    uri: '/ubezpieczenia/nnw'
+                },
+                {
+                    label: 'Polisy OZE',
+                    uri: '/ubezpieczenia/oze'
+                },
+            ]
+        },
+        {
             label: 'Projekty',
             uri: '/projekty',
             submenu: null

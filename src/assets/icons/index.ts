@@ -1,0 +1,1 @@
+export { default as OrangeSquares } from "@/ico/orange-squares"
